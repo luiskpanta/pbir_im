@@ -1,0 +1,23 @@
+table Dim_TipoServicio
+	lineageTag: 66a40f38-4c1b-46b6-a8f0-c2e658e63192
+
+	column tiposervicio_codigo
+		dataType: string
+		lineageTag: 551e05c1-1bbb-486d-865b-c80f416ac2df
+		summarizeBy: none
+		sourceColumn: tiposervicio_codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_TipoServicio = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select distinct tiposervicio_codigo from view_gen_tiposervicio"])
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

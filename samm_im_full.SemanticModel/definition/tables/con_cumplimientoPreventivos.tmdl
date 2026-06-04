@@ -1,0 +1,284 @@
+table con_cumplimientoPreventivos
+	lineageTag: 5267ab6b-53a0-452d-9392-dda580807db7
+
+	measure 'Suma de cumplida dividido por Recuento de id' =
+			
+			DIVIDE(
+				SUM('con_cumplimientoPreventivos'[PMCumple]),
+				COUNTA('con_cumplimientoPreventivos'[id]),
+			    0
+			)*1
+		lineageTag: 94710bf8-fabb-454c-9d25-1238f55a9d3c
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha_ff
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9acdcae0-d34c-47a5-8b0f-5d4b4886a325
+		summarizeBy: none
+		sourceColumn: fecha_ff
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		lineageTag: 2fbd7de2-c41e-4c1b-beae-05526cdf7780
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_serial
+		dataType: string
+		lineageTag: 4bfa0055-eb48-42dd-92bc-df01f0bd8aa8
+		summarizeBy: none
+		sourceColumn: equipo_serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrato
+		dataType: string
+		lineageTag: 77772455-afac-445c-829f-6370feab312b
+		summarizeBy: none
+		sourceColumn: contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c87e2fe-4087-4464-b9e7-70db892d6c0b
+		summarizeBy: sum
+		sourceColumn: id_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: string
+		lineageTag: 35b9a38e-21bd-4bee-ab8d-6abbaba19cc6
+		summarizeBy: none
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechaInicio_ff
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 52bd76ca-3096-407a-b238-229bae63f2f7
+		summarizeBy: none
+		sourceColumn: fechaInicio_ff
+
+		variation Variación
+			isDefault
+			relationship: f3563c73-6d6e-49c0-b400-f53551692e35
+			defaultHierarchy: LocalDateTable_66cf5409-939c-4dd4-a35f-eb7320826716.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechaFin_ff
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 31f75515-9ed1-4d30-b51f-8ad976e1ab78
+		summarizeBy: none
+		sourceColumn: fechaFin_ff
+
+		variation Variación
+			isDefault
+			relationship: fb92c7d7-15ea-4486-95fd-09680930503c
+			defaultHierarchy: LocalDateTable_901d9d08-69fb-4140-b661-1a3973a46af2.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column totalContrato
+		dataType: double
+		lineageTag: bd3dd9c6-7153-425b-a0d3-a2a341512af2
+		summarizeBy: sum
+		sourceColumn: totalContrato
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column periodocontrato
+		dataType: string
+		lineageTag: cb3e5dd8-dbe5-453d-a27e-cf391801c86a
+		summarizeBy: none
+		sourceColumn: periodocontrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column documento_numero
+		dataType: int64
+		formatString: 0
+		lineageTag: 4d7d68ab-d802-43f0-872a-775ffc2f871b
+		summarizeBy: sum
+		sourceColumn: documento_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column prefijo
+		dataType: string
+		lineageTag: d198419e-2e62-496e-b914-ba71ac876f41
+		summarizeBy: none
+		sourceColumn: prefijo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tercero
+		dataType: string
+		lineageTag: e1eb64d3-04aa-4035-a2a7-f3018ebf784a
+		summarizeBy: none
+		sourceColumn: tercero
+
+		annotation SummarizationSetBy = Automatic
+
+	column tercero_nit
+		dataType: string
+		lineageTag: d528251d-98b5-4d48-995d-2da51841d719
+		summarizeBy: none
+		sourceColumn: tercero_nit
+
+		annotation SummarizationSetBy = Automatic
+
+	column direccion_tercero
+		dataType: string
+		lineageTag: 98fa0a68-524d-409d-927e-ceb84e6c2098
+		summarizeBy: none
+		sourceColumn: direccion_tercero
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		lineageTag: 8c39774a-1a0d-4992-8629-5b5379b8579f
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column direccion_sucursal
+		dataType: string
+		lineageTag: f4a72f43-2c33-4ad4-855a-06251f717226
+		summarizeBy: none
+		sourceColumn: direccion_sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column active
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: b649fe93-6399-4613-bea6-f195b41ac90d
+		summarizeBy: none
+		sourceColumn: active
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona
+		dataType: string
+		lineageTag: d5e1c54d-9825-4041-a2cc-105c4e033884
+		summarizeBy: none
+		sourceColumn: zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column idOT
+		dataType: int64
+		formatString: 0
+		lineageTag: e919c5c0-3784-4fb9-94c1-4daadd139245
+		summarizeBy: sum
+		sourceColumn: idOT
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempario
+		dataType: string
+		lineageTag: 3241a407-8fde-4fbf-81f9-ba0099e0ab06
+		summarizeBy: none
+		sourceColumn: tempario
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: 26717578-56c6-4dc2-b72c-d89b13330800
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: aa0dec72-9860-4344-bbb1-066544de8262
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: b72b97b2-b3d3-479a-8828-45d9c645f95f
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column PMCumple = IF( or(con_cumplimientoPreventivos[estado]="programada",con_cumplimientoPreventivos[estado]="Cancelada"),0,1)
+		formatString: 0
+		lineageTag: 946f9877-872b-41ee-9c20-906f529702fc
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad
+		dataType: string
+		lineageTag: c952fec9-40b9-4e80-a847-48d6f6b90ef8
+		summarizeBy: none
+		sourceColumn: ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_reporte
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6d0a5b9f-508b-4937-a657-efa702693c74
+		summarizeBy: none
+		sourceColumn: fecha_reporte
+
+		variation Variación
+			isDefault
+			relationship: 2ec9b67c-c6e3-4547-8968-f6dd9693b254
+			defaultHierarchy: LocalDateTable_b1071eae-c4fb-42c7-9503-18c6dc779e0b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column tecnico
+		dataType: string
+		lineageTag: 58e13b60-3baf-48bd-908e-d46af5fab431
+		summarizeBy: none
+		sourceColumn: tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_cumplimientoPreventivos = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select * from v_ind_cumplimientoPMs", CreateNavigationProperties=false]),
+				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"cumplida"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

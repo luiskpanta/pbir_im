@@ -1,0 +1,20 @@
+VAR HoraInicio = [hora_inicio]  -- Campo tipo datetime
+VAR HoraFin = [hora_fin]        -- Campo tipo datetime
+
+-- Tramos definidos
+VAR InicioAlmuerzo = TIME(12,0,0)
+VAR FinAlmuerzo = TIME(13,0,0)
+
+-- Convertir solo la parte de hora para comparar
+VAR SoloHoraInicio = TIME(HOUR(HoraInicio), MINUTE(HoraInicio), SECOND(HoraInicio))
+VAR SoloHoraFin = TIME(HOUR(HoraFin), MINUTE(HoraFin), SECOND(HoraFin))
+
+-- Calcular diferencia total en horas
+VAR TotalHoras = DATEDIFF(HoraInicio, HoraFin, MINUTE) / 60
+
+-- Verificar si hay traslape con la hora de almuerzo
+VAR RestaAlmuerzo = 
+    IF(SoloHoraInicio < FinAlmuerzo && SoloHoraFin > InicioAlmuerzo, 1, 0)
+
+RETURN
+    TotalHoras - RestaAlmuerzo

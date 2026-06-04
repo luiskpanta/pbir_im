@@ -1,0 +1,351 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "1838d2e7f50bfb5d091f",
+  "position": {
+    "x": 1202.4,
+    "y": 17.28,
+    "z": 11000,
+    "height": 28.8,
+    "width": 73.44,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "fecha_DOC"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.fecha_DOC",
+              "nativeQueryRef": "fecha_DOC"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "cliente"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.cliente",
+              "nativeQueryRef": "cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "tiposervicio"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.tiposervicio",
+              "nativeQueryRef": "tiposervicio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "marca"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.marca",
+              "nativeQueryRef": "marca"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "tipoServicioDetallado"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.tipoServicioDetallado",
+              "nativeQueryRef": "tipoServicioDetallado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
+                    }
+                  },
+                  "Property": "Tecnico"
+                }
+              },
+              "queryRef": "con_indice_de_ocupacion.Tecnico",
+              "nativeQueryRef": "Tecnico"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "duracion"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_indice_de_ocupacion.duracion)",
+              "nativeQueryRef": "Horas",
+              "displayName": "Horas"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_indice_de_ocupacion"
+                  }
+                },
+                "Property": "fecha_DOC"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "204D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_indice_de_ocupacion.cliente"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_indice_de_ocupacion.duracion)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "151D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_indice_de_ocupacion.marca"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "106D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_indice_de_ocupacion.Tecnico"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "185D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_indice_de_ocupacion.tipoServicioDetallado"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Detalle'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,150 @@
+table con_equipos
+	lineageTag: def03de1-1667-48fb-84b5-2a8e198981a9
+
+	measure 'Recuento de equipo_serial para Inactivo' =
+			
+			CALCULATE(
+				COUNTA('con_equipos'[equipo_serial]),
+				'con_equipos'[estadoEquipo] IN { "Inactivo" }
+			)
+		formatString: 0
+		lineageTag: a313024c-ffe8-48f6-a35d-7d968d258a11
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "FilteredMeasure"
+				}
+
+		changedProperty = FormatString
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cf1e2c0-992c-426a-9faf-b89b159a24fe
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		lineageTag: f90891e4-b2db-4c67-a2e5-c448cdd3d49a
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_serial
+		dataType: string
+		lineageTag: ac593683-3420-4f24-acb2-f4c1d86508e6
+		summarizeBy: none
+		sourceColumn: equipo_serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column tercero
+		dataType: string
+		lineageTag: 15b8a519-228d-4299-b343-3701564b75ed
+		summarizeBy: none
+		sourceColumn: tercero
+
+		annotation SummarizationSetBy = Automatic
+
+	column tercero_nit
+		dataType: string
+		lineageTag: 9da50d0c-8be7-4226-8bc6-4d3ee9fc7e37
+		summarizeBy: none
+		sourceColumn: tercero_nit
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		lineageTag: 9b5bd170-8a31-4e7e-b37a-de1a96814056
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona
+		dataType: string
+		lineageTag: 6f244d59-4c2a-4ba1-9dd6-799b326c665c
+		summarizeBy: none
+		sourceColumn: zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column ciudad
+		dataType: string
+		lineageTag: 0132e368-4c8a-4ef1-a9d1-486e2e0ab125
+		summarizeBy: none
+		sourceColumn: ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: fde0759b-78db-41cd-9b25-05f170e11089
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: d170d84c-cd5b-4269-a2b7-8a81efe1c735
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: cb7f3a02-3860-4d62-b574-755bb92b991d
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column estadoEquipo
+		dataType: string
+		lineageTag: 61b5566e-08fb-405d-b49b-f0c3d88839ee
+		summarizeBy: none
+		sourceColumn: estadoEquipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechaInicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 887ec5a7-c6b6-441b-afef-20dc417a88fe
+		summarizeBy: none
+		sourceColumn: fechaInicio
+
+		variation Variación
+			isDefault
+			relationship: 8b5b1205-3657-4e9a-913e-a11121a39636
+			defaultHierarchy: LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column fechaFin
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b7361edc-b1ce-43a2-a928-8432995546e6
+		summarizeBy: none
+		sourceColumn: fechaFin
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_equipos = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select * from v_ind_equipos"])
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,34 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["con_indice_de_ocupacion","con_primer_visita","con_ocupacion_meta","con_cumplimientoPreventivos","Dim_TipoServicio","Dim_Marca","Dim_Cliente","con_clasificacionOTs","con_equipos"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["WebModelingEdit","DevMode"]
+
+ref table DateTableTemplate_83e35d0c-ca17-45bd-90b2-f469ca42206a
+ref table con_indice_de_ocupacion
+ref table con_primer_visita
+ref table LocalDateTable_740bf13e-0d89-423a-8501-efd8226ec78c
+ref table con_ocupacion_meta
+ref table Dim_Fecha
+ref table con_cumplimientoPreventivos
+ref table LocalDateTable_66cf5409-939c-4dd4-a35f-eb7320826716
+ref table LocalDateTable_901d9d08-69fb-4140-b661-1a3973a46af2
+ref table Dim_TipoServicio
+ref table Dim_Marca
+ref table Dim_Cliente
+ref table LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a
+ref table con_clasificacionOTs
+ref table LocalDateTable_b1071eae-c4fb-42c7-9503-18c6dc779e0b
+ref table con_equipos
+ref table LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431
+
+ref cultureInfo es-CO
+

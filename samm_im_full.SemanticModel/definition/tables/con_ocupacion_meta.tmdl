@@ -1,0 +1,80 @@
+table con_ocupacion_meta
+	lineageTag: 72cefbb5-78df-430e-a750-9eec3d79e996
+
+	measure horasdisponiblesmes =
+			125.4*
+			DISTINCTCOUNT(con_ocupacion_meta[mes])*
+			DISTINCTCOUNT(con_ocupacion_meta[id_usuario])
+		lineageTag: 69249500-3707-496d-98d8-760b5dab8447
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id_usuario
+		dataType: int64
+		formatString: 0
+		lineageTag: 076f17d1-1738-439e-b1c5-9c07605c647e
+		summarizeBy: none
+		sourceColumn: id_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 008721b3-4cea-4700-8b12-c9e771ced531
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 96a1af81-2dfb-4def-a18b-4610465e51cd
+		summarizeBy: sum
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_horas
+		dataType: double
+		lineageTag: 05568558-9a08-4bdb-a394-a64441eef1e8
+		summarizeBy: sum
+		sourceColumn: total_horas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column llave_mes
+		dataType: string
+		lineageTag: c6ee442c-774b-44d6-9934-57cf94eef6d7
+		summarizeBy: none
+		sourceColumn: llave_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 64096fa2-6f58-4b4a-86a7-34c7f173849d
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition con_ocupacion_meta = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from v_indice_ocupacion_meta"]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"fecha", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

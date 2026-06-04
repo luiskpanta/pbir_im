@@ -1,0 +1,118 @@
+table con_primer_visita
+	lineageTag: 1336de14-832b-4542-a951-63b125617e34
+
+	measure Cumple_Visita = DIVIDE(SUM('con_primer_visita'[cumple_meta]),DISTINCTCOUNT(con_primer_visita[num_OTT]),0)
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: a88455de-59d4-41b5-b944-b7e84ab3c9e3
+
+	column fecha_OT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 93ff871e-0c92-4d5d-b533-61caa52fe700
+		summarizeBy: none
+		sourceColumn: fecha_OT
+
+		variation Variación
+			isDefault
+			relationship: f157bc7c-3a76-42a8-8d9e-7263ba9feb19
+			defaultHierarchy: LocalDateTable_740bf13e-0d89-423a-8501-efd8226ec78c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column num_OTT
+		dataType: string
+		lineageTag: fd7ee2ca-2db7-46ed-9a83-19d8080708fe
+		summarizeBy: none
+		sourceColumn: num_OTT
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tecnico
+		dataType: string
+		lineageTag: c7ddb957-c85a-4379-8c57-0b6ecbee89e4
+		summarizeBy: none
+		sourceColumn: Tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trabajos_realizados
+		dataType: string
+		lineageTag: acd63d36-c7d1-4d42-a553-8b993f0a2aae
+		summarizeBy: none
+		sourceColumn: Trabajos_realizados
+
+		annotation SummarizationSetBy = Automatic
+
+	column cumple_meta
+		dataType: int64
+		formatString: 0
+		lineageTag: cc82fb77-0806-45aa-a1dd-49c12fd362d0
+		summarizeBy: sum
+		sourceColumn: cumple_meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column tiposervicio
+		dataType: string
+		lineageTag: fa568a11-f228-4b66-8dcd-4c0d019d8207
+		summarizeBy: none
+		sourceColumn: tiposervicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipoServicioDetallado
+		dataType: string
+		lineageTag: f214377b-c5d3-4b7d-a0a1-7dd6c5b0357a
+		summarizeBy: none
+		sourceColumn: tipoServicioDetallado
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 5048ef60-6482-4337-8f58-e5b6914e4486
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 90d20298-22c2-4954-867f-93ea1e1035e7
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		lineageTag: 059df0b8-bea2-4fe5-8cc8-d2c9beebf71e
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: d4a35acd-1ea0-4021-bf23-754a43eefb3e
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_primer_visita = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from [v_reparacion_primer_visita]"]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"fecha_OT", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

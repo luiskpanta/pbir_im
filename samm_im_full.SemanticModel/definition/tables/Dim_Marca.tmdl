@@ -1,0 +1,21 @@
+table Dim_Marca
+	lineageTag: a97a8c62-caa1-4a76-a1ca-f26eccf448e4
+
+	column marca
+		dataType: string
+		lineageTag: f0fb36e6-d204-4450-91d8-7bd2703706b0
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Marca = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select distinct marca from cat_marca"])
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+

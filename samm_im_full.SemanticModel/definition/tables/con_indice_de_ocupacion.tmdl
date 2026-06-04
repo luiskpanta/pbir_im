@@ -1,0 +1,314 @@
+table con_indice_de_ocupacion
+	lineageTag: 5fe143c7-10d8-4d6b-8e6b-2d06e349cf9e
+
+	measure %Ocupación =
+			
+			DIVIDE(
+			    SUM('con_indice_de_ocupacion'[duracion]),
+			    con_indice_de_ocupacion[estandarmes]
+			)
+		lineageTag: 1ac7653f-6114-476c-a100-86c71e17fc03
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure %Remoto = ```
+			
+			DIVIDE(
+			    SUM('con_indice_de_ocupacion'[EsRemoto]), 
+			    SUM('con_indice_de_ocupacion'[EsCorrectivo]),
+			    0)
+			```
+		lineageTag: 7d8e7732-c2f7-4e70-8b66-fd82b767f0c4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure %Abiertas =
+			
+			DIVIDE(
+			    SUM('con_indice_de_ocupacion'[abierta]),
+			    COUNT('con_indice_de_ocupacion'[id]),
+			    0)
+		lineageTag: 2de5307a-3edb-4000-9a3c-d304824c02b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure %Remoto_cerrado =
+			
+			DIVIDE(
+			    CALCULATE(SUM('con_indice_de_ocupacion'[EsRemoto]), con_indice_de_ocupacion[estadoOT]="Cerrada"),
+			    SUM('con_indice_de_ocupacion'[EsRemoto]),
+			    0)
+		lineageTag: c91bed9e-38b1-4153-827e-de0ec7dbd236
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PromTiempoRemoto =
+			
+			CALCULATE(AVERAGE('con_indice_de_ocupacion'[duracion]), 'con_indice_de_ocupacion'[EsRemoto]=1, con_indice_de_ocupacion[estadoOT]="Cerrada")
+		lineageTag: cc811bf0-718c-466e-936f-7fd3acae5564
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure estandarmes =
+			114.166*
+			DISTINCTCOUNT(Dim_Fecha[Mes])*
+			AVERAGE(con_indice_de_ocupacion[EsCargo])
+		lineageTag: 9afcbb81-2a72-457a-9d35-ec0c1e78dbb3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha_OT
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6bf1796a-91cc-4fc8-a114-9481e8392789
+		summarizeBy: none
+		sourceColumn: fecha_OT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column num_OTT
+		dataType: string
+		lineageTag: 8a9bb81e-c1b2-4488-b052-5684e82fa223
+		summarizeBy: none
+		sourceColumn: num_OTT
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_ort
+		dataType: string
+		lineageTag: b7908df2-3195-44f3-a2b8-e618d3e908cd
+		summarizeBy: none
+		sourceColumn: fecha_ort
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tecnico
+		dataType: string
+		lineageTag: a0f6cac1-c0cb-4592-a128-31fb70b8cee5
+		summarizeBy: none
+		sourceColumn: Tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	column hora_inicio
+		dataType: string
+		lineageTag: 46bbadf8-a1c6-4402-8522-615511181c3e
+		summarizeBy: none
+		sourceColumn: hora_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column hora_fin
+		dataType: string
+		lineageTag: f11a881d-d841-43d7-bb60-748d6c4645f0
+		summarizeBy: none
+		sourceColumn: hora_fin
+
+		annotation SummarizationSetBy = Automatic
+
+	column duracion
+		dataType: double
+		lineageTag: cd81bac0-df04-434e-86cc-5e851ef63009
+		summarizeBy: sum
+		sourceColumn: duracion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Actividad
+		dataType: string
+		lineageTag: d51f107e-3902-4a6e-8d33-6ad13f53b1a0
+		summarizeBy: none
+		sourceColumn: Actividad
+
+		annotation SummarizationSetBy = Automatic
+
+	column productiva
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0bb38b8e-a734-41c2-b42b-cf4349f1b950
+		summarizeBy: none
+		sourceColumn: productiva
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trabajos_realizados
+		dataType: string
+		lineageTag: e4844de8-e290-458c-80f3-92be33838534
+		summarizeBy: none
+		sourceColumn: Trabajos_realizados
+
+		annotation SummarizationSetBy = Automatic
+
+	column cumple_meta
+		dataType: int64
+		formatString: 0
+		lineageTag: 97c9186d-3550-4867-8b8f-f6ab0a0e7f04
+		summarizeBy: sum
+		sourceColumn: cumple_meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desplazamiento
+		dataType: int64
+		formatString: 0
+		lineageTag: b84237b5-3a73-45cb-b1c8-4f6ce733b93b
+		summarizeBy: sum
+		sourceColumn: Desplazamiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column tiposervicio
+		dataType: string
+		lineageTag: f94240c1-2efb-4b42-aea9-b9f8a923996f
+		summarizeBy: none
+		sourceColumn: tiposervicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipoServicioDetallado
+		dataType: string
+		lineageTag: cde0088a-da9a-4951-90fb-a99f2bdc0d27
+		summarizeBy: none
+		sourceColumn: tipoServicioDetallado
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta
+		dataType: int64
+		lineageTag: 06c0bf2b-9518-4c1b-8dd4-c0da7de56f9a
+		summarizeBy: sum
+		sourceColumn: meta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 21897ef5-af08-47f9-b791-759fbb2153b7
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 30e61136-6239-4ba7-b5ac-f85d9f8e5aee
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column descripcion
+		dataType: string
+		lineageTag: e893228f-9f71-41d3-9302-2962285fce06
+		summarizeBy: none
+		sourceColumn: descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_usuario
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e9d8b5e-b502-44ce-99b6-fee870cc791e
+		summarizeBy: none
+		sourceColumn: id_usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column llave_mes
+		dataType: string
+		lineageTag: 8ee5cece-f3c4-421a-8ab7-7e0879f4f84a
+		summarizeBy: none
+		sourceColumn: llave_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_DOC
+		dataType: string
+		lineageTag: 63b796b1-3925-465f-9791-3288a246b62b
+		summarizeBy: none
+		sourceColumn: fecha_DOC
+
+		annotation SummarizationSetBy = Automatic
+
+	column zona
+		dataType: string
+		lineageTag: 96a5fe5c-563f-4d25-8022-f3d02d026c27
+		summarizeBy: none
+		sourceColumn: zona
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: 50b03802-d641-4236-9766-7d9aaf394bbd
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	column cargo
+		dataType: string
+		lineageTag: ef1b31b6-9748-466c-b48c-17a1dcb82819
+		summarizeBy: none
+		sourceColumn: cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsRemoto =
+			
+			IF(
+			    'con_indice_de_ocupacion'[TipoServicio] = "04 SOPORTE REMOTO",
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 18f1d3d3-5cbc-41ec-83ce-2423c86e0557
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsCorrectivo =
+			IF(
+			    OR(
+			    'con_indice_de_ocupacion'[TipoServicio] = "04 SOPORTE REMOTO", 'con_indice_de_ocupacion'[TipoServicio] = "02 CORRECTIVO"),
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: a48cda03-25ea-48b5-afbb-239a91a2664b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsCargo =
+			
+			IF('con_indice_de_ocupacion'[cargo] = "APLICACIONISTA",
+			    2,
+			    10
+			)
+		formatString: 0
+		lineageTag: 8669859e-450d-45d3-bab4-055da16e1bb8
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_indice_de_ocupacion = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from v_indice_ocupacion"]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"fecha_OT", type date}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

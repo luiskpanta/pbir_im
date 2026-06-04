@@ -1,0 +1,106 @@
+table Dim_Fecha
+	lineageTag: 6be4d61f-5393-44d5-b3cf-777061406a56
+
+	column Date
+		formatString: General Date
+		lineageTag: c8a156fc-7582-483a-b6f6-4eef77dcff97
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 61710894-9d2f-49ca-be69-e1f51e3a271f
+			defaultHierarchy: LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: ce653682-9a58-4698-8179-739f204c8136
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation __PBI_SemanticLinks = [{"LinkTarget":{"TableName":"Dim_Fecha","TableItemName":"Recientes","ObjectType":4},"LinkType":"UsedInGroup"}]
+
+	column Mes
+		lineageTag: 4441e09f-2072-46c7-9373-044e9b085ae4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNúmero
+		formatString: 0
+		lineageTag: 5792affa-a216-46b8-85e0-78c030242d68
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNúmero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año-Mes
+		lineageTag: ba4b7789-2718-4e05-ae56-b420b813f183
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año-Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recientes =
+			SWITCH(
+				TRUE,
+				ISBLANK('Dim_Fecha'[Año]),
+				"(En blanco)",
+				'Dim_Fecha'[Año] IN {2024,
+					2025,
+					2026},
+				"2024 & 2025 & 2026",
+				"Otros"
+			)
+		lineageTag: c2a7bf58-15c8-48bf-9286-f3af64898f9d
+		summarizeBy: none
+
+		extendedProperty GroupingMetadata =
+				{
+				  "version": 0,
+				  "groupedColumns": [
+				    {
+				      "Column": {
+				        "Expression": {
+				          "SourceRef": {
+				            "Entity": "Dim_Fecha"
+				          }
+				        },
+				        "Property": "Año"
+				      }
+				    }
+				  ]
+				}
+
+		annotation GroupingDesignState = {"Version":0,"Sources":[{"Name":"d","Entity":"Dim_Fecha"}],"GroupedColumns":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Año"}}],"GroupItems":[{"DisplayName":"(En blanco)","BlankDefaultPlaceholder":true},{"DisplayName":"2024 & 2025 & 2026","Expression":{"In":{"Expressions":[{"Column":{"Expression":{"SourceRef":{"Source":"d"}},"Property":"Año"}}],"Values":[[{"Literal":{"Value":"2024L"}}],[{"Literal":{"Value":"2025L"}}],[{"Literal":{"Value":"2026L"}}]]}}},{"DisplayName":"Otros"}]}
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Fecha = calculated
+		mode: import
+		source = ```
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        DATE(2020, 1, 1), 
+				        DATE(2030, 12, 31)
+				    ),
+				    "Año", YEAR([Date]),
+				    "Mes", FORMAT([Date], "MMM"),
+				    "MesNúmero", MONTH([Date]),
+				    "Año-Mes", FORMAT([Date], "YYYY-MM")
+				)
+				```
+
+	annotation PBI_Id = 175aa3c7b0584773959227b9c69ba73b
+

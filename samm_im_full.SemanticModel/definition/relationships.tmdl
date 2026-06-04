@@ -1,0 +1,106 @@
+relationship f157bc7c-3a76-42a8-8d9e-7263ba9feb19
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_primer_visita.fecha_OT
+	toColumn: LocalDateTable_740bf13e-0d89-423a-8501-efd8226ec78c.Date
+
+relationship 1cef1b2f-0ad6-93fc-0bf2-c5e2bab003bc
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: con_ocupacion_meta.id_usuario
+	toColumn: con_indice_de_ocupacion.id_usuario
+
+relationship 17c76990-9fbc-4915-c902-27b6be272428
+	fromColumn: con_indice_de_ocupacion.num_OTT
+	toColumn: con_primer_visita.num_OTT
+
+relationship f3563c73-6d6e-49c0-b400-f53551692e35
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_cumplimientoPreventivos.fechaInicio_ff
+	toColumn: LocalDateTable_66cf5409-939c-4dd4-a35f-eb7320826716.Date
+
+relationship fb92c7d7-15ea-4486-95fd-09680930503c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_cumplimientoPreventivos.fechaFin_ff
+	toColumn: LocalDateTable_901d9d08-69fb-4140-b661-1a3973a46af2.Date
+
+relationship a2eee028-552b-bc8c-19c8-5e205807a392
+	fromColumn: con_primer_visita.tiposervicio
+	toColumn: Dim_TipoServicio.tiposervicio_codigo
+
+relationship 5fc31528-6cf0-fe65-dd20-4c5435cfcd04
+	isActive: false
+	fromColumn: con_indice_de_ocupacion.tiposervicio
+	toColumn: Dim_TipoServicio.tiposervicio_codigo
+
+relationship AutoDetected_56a12564-b83b-4e65-8e11-193ece118b65
+	fromColumn: con_indice_de_ocupacion.marca
+	toColumn: Dim_Marca.marca
+
+relationship 753790bf-7a60-8c7c-c54c-bc1245475616
+	fromColumn: con_cumplimientoPreventivos.tercero
+	toColumn: Dim_Cliente.tercero
+
+relationship f61d36b6-0895-3337-760d-7540d4f5b07a
+	fromColumn: con_indice_de_ocupacion.cliente
+	toColumn: Dim_Cliente.tercero
+
+relationship AutoDetected_b5bc96f6-adf7-4c84-b00d-91b39ae067f7
+	fromColumn: con_cumplimientoPreventivos.marca
+	toColumn: Dim_Marca.marca
+
+relationship 53caa653-d2ff-c76c-bcb5-860a8219af80
+	isActive: false
+	fromColumn: con_primer_visita.marca
+	toColumn: Dim_Marca.marca
+
+relationship 61710894-9d2f-49ca-be69-e1f51e3a271f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Fecha.Date
+	toColumn: LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a.Date
+
+relationship 9e7f0ba4-5bc1-193f-dcff-aa44d93c6e67
+	fromColumn: con_indice_de_ocupacion.fecha_OT
+	toColumn: Dim_Fecha.Date
+
+relationship 77c782ab-7dec-646d-5fce-0ef0256660e7
+	fromColumn: con_ocupacion_meta.fecha
+	toColumn: Dim_Fecha.Date
+
+relationship ce458036-8852-a43c-a17b-1f4bcf2cc9f5
+	fromColumn: con_cumplimientoPreventivos.fecha_ff
+	toColumn: Dim_Fecha.Date
+
+relationship b65fe25b-567b-9725-462d-5abedf7fa3f9
+	fromColumn: con_clasificacionOTs.fecha_OT
+	toColumn: Dim_Fecha.Date
+
+relationship AutoDetected_aacc3c94-be2b-491e-ab08-200418d4865b
+	fromColumn: con_clasificacionOTs.marca
+	toColumn: Dim_Marca.marca
+
+relationship 2ec9b67c-c6e3-4547-8968-f6dd9693b254
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_cumplimientoPreventivos.fecha_reporte
+	toColumn: LocalDateTable_b1071eae-c4fb-42c7-9503-18c6dc779e0b.Date
+
+relationship b98732d7-f4a3-5cf9-ad93-d79c4f3f900f
+	fromColumn: con_clasificacionOTs.cliente
+	toColumn: Dim_Cliente.tercero
+
+relationship AutoDetected_664056b9-cd58-43ae-9f8b-932490d87307
+	fromColumn: con_equipos.marca
+	toColumn: Dim_Marca.marca
+
+relationship 2eb00dad-0248-9fb1-da75-d83fb05b9a3f
+	fromColumn: con_equipos.tercero
+	toColumn: Dim_Cliente.tercero
+
+relationship fd4ad32c-cc9c-4c2e-90a5-75350a588941
+	fromColumn: con_equipos.fechaFin
+	toColumn: Dim_Fecha.Date
+
+relationship 8b5b1205-3657-4e9a-913e-a11121a39636
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_equipos.fechaInicio
+	toColumn: LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431.Date
+

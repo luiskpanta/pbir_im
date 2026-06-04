@@ -1,0 +1,23 @@
+table Dim_Cliente
+	lineageTag: 075c038b-09c3-4250-9b74-80b4f014f3dd
+
+	column tercero
+		dataType: string
+		lineageTag: 9a84ef21-1bcf-475f-9796-a9c3391454f2
+		summarizeBy: none
+		sourceColumn: tercero
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Cliente = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select distinct tercero from view_ter_tercero"])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Exception
+
