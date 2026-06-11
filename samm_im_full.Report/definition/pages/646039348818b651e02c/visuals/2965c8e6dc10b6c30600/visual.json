@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "2965c8e6dc10b6c30600",
   "position": {
-    "x": 708.89891077714094,
-    "y": 133.9348245764065,
+    "x": 725.592705167173,
+    "y": 163.40425531914894,
     "z": 13000,
-    "height": 57.6,
-    "width": 116.64,
+    "height": 57.38601823708207,
+    "width": 135.19756838905775,
     "tabOrder": 8000
   },
   "visual": {
@@ -328,5 +328,28 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "502fa21890432506e4ca",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "abierta"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
