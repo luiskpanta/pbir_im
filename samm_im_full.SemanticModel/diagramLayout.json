@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 563.51115040613081,
-        "y": 0
+        "x": 615.76657036860411,
+        "y": 31.070790247957088
       },
       "nodes": [
         {
@@ -45,7 +45,7 @@
             "height": 334.14158049591418,
             "width": 231.48595851382515
           },
-          "zIndex": 7
+          "zIndex": 6
         },
         {
           "location": {
@@ -58,7 +58,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 9
+          "zIndex": 8
         },
         {
           "location": {
@@ -71,7 +71,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 8
+          "zIndex": 7
         },
         {
           "location": {
@@ -123,7 +123,7 @@
             "height": 275.990752990215,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 10
         },
         {
           "location": {
@@ -136,7 +136,20 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 10
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2060.9391703366614,
+            "y": 875.69416695086534
+          },
+          "nodeIndex": "con_estadoEquipos",
+          "nodeLineageTag": "e5264835-42d5-4b6d-860b-88ea37e7fb00",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",

@@ -22,7 +22,7 @@ table con_equipos
 		dataType: int64
 		formatString: 0
 		lineageTag: 2cf1e2c0-992c-426a-9faf-b89b159a24fe
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: id
 
 		annotation SummarizationSetBy = Automatic

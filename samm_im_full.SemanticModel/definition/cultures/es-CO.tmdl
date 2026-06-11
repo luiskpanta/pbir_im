@@ -5254,174 +5254,135 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_estado_equipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_estadoEquipos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "con estado equipo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "con_estadoEquipos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_estado_equipo.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_estadoEquipos",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "con_estado_equipo.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_estadoEquipos",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "con_estado_equipo.estado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_estadoEquipos",
+			          "ConceptualProperty": "Estado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "estado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_estado_equipo.fuera_de_servicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_estadoEquipos",
+			          "ConceptualProperty": "Fuera de Servicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fuera de servicio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "con_equipo_fecha_inicio_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "con_equipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_equipo.fecha_inicio": {
-			          "Target": {
-			            "Entity": "con_equipo.fecha_inicio"
-			          }
-			        },
-			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_equipo.fecha_inicio"
-			            },
-			            "Object": {
-			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fecha_inicios_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "con_cumplimiento_preventivo_fecha_reporte_me_has_con_cumplimiento_preventivo_fecha_reporte_día": {
-			      "Binding": {
-			        "ConceptualEntity": "con_cumplimientoPreventivos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_cumplimiento_preventivo.fecha_reporte.me": {
-			          "Target": {
-			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
-			          }
-			        },
-			        "con_cumplimiento_preventivo.fecha_reporte.día": {
-			          "Target": {
-			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            },
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
-			            },
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me4"
-			        }
-			      ]
-			    },
-			    "con_cumplimiento_preventivo_fecha_reporte_trimestre_has_con_cumplimiento_preventivo_fecha_reporte_me": {
-			      "Binding": {
-			        "ConceptualEntity": "con_cumplimientoPreventivos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_cumplimiento_preventivo.fecha_reporte.trimestre": {
-			          "Target": {
-			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
-			          }
-			        },
-			        "con_cumplimiento_preventivo.fecha_reporte.me": {
-			          "Target": {
-			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
-			            },
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            },
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres4"
-			        }
-			      ]
-			    },
 			    "con_cumplimiento_preventivo_fecha_reporte_año_has_con_cumplimiento_preventivo_fecha_reporte_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "con_cumplimientoPreventivos"
@@ -5682,7 +5643,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días"
 			        },
 			        {
 			          "Attribute": {
@@ -5695,7 +5656,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me"
 			        },
 			        {
 			          "Preposition": {
@@ -5748,7 +5709,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me"
 			        },
 			        {
 			          "Attribute": {
@@ -5761,7 +5722,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -6045,7 +6006,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días2"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -6058,7 +6019,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me2"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -6111,7 +6072,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -6124,7 +6085,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -6408,7 +6369,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días3"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -6421,7 +6382,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me3"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -6474,7 +6435,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me3"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -6487,7 +6448,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres3"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -6771,7 +6732,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días4"
+			          "ID": "me_have_días3"
 			        },
 			        {
 			          "Attribute": {
@@ -6784,7 +6745,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me4"
+			          "ID": "días_have_me3"
 			        },
 			        {
 			          "Preposition": {
@@ -6837,7 +6798,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me4"
+			          "ID": "trimestres_have_me3"
 			        },
 			        {
 			          "Attribute": {
@@ -6850,7 +6811,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres4"
+			          "ID": "me_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -7105,15 +7066,61 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_equipo_has_dim_fecha": {
+			    "con_estado_equipo_has_con_equipo": {
 			      "Binding": {
-			        "ConceptualEntity": "con_equipos"
+			        "ConceptualEntity": "con_estadoEquipos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
+			        "con_estado_equipo": {
+			          "Target": {
+			            "Entity": "con_estado_equipo"
+			          }
+			        },
 			        "con_equipo": {
 			          "Target": {
 			            "Entity": "con_equipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_estado_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_estado_equipos_have_con_equipos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_estado_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_have_con_estado_equipos"
+			        }
+			      ]
+			    },
+			    "con_estado_equipo_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_estadoEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_estado_equipo": {
+			          "Target": {
+			            "Entity": "con_estado_equipo"
 			          }
 			        },
 			        "dim_fecha": {
@@ -7126,7 +7133,7 @@ cultureInfo es-CO
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "con_equipo"
+			              "Role": "con_estado_equipo"
 			            },
 			            "Object": {
 			              "Role": "dim_fecha"
@@ -7134,7 +7141,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "con_equipos_have_dim_fechas"
+			          "ID": "con_estado_equipos_have_dim_fechas"
 			        },
 			        {
 			          "Attribute": {
@@ -7142,12 +7149,12 @@ cultureInfo es-CO
 			              "Role": "dim_fecha"
 			            },
 			            "Object": {
-			              "Role": "con_equipo"
+			              "Role": "con_estado_equipo"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_con_equipos"
+			          "ID": "dim_fechas_have_con_estado_equipos"
 			        }
 			      ]
 			    },
@@ -7740,6 +7747,105 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "con_estado_equipo_has_fuera_de_servicio": {
+			      "Binding": {
+			        "ConceptualEntity": "con_estadoEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_estado_equipo": {
+			          "Target": {
+			            "Entity": "con_estado_equipo"
+			          }
+			        },
+			        "con_estado_equipo.fuera_de_servicio": {
+			          "Target": {
+			            "Entity": "con_estado_equipo.fuera_de_servicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_estado_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_estado_equipo.fuera_de_servicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_estado_equipos_have_fuera_de_servicio"
+			        }
+			      ]
+			    },
+			    "con_estado_equipo_has_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "con_estadoEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_estado_equipo": {
+			          "Target": {
+			            "Entity": "con_estado_equipo"
+			          }
+			        },
+			        "con_estado_equipo.estado": {
+			          "Target": {
+			            "Entity": "con_estado_equipo.estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_estado_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_estado_equipo.estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_estado_equipos_have_estado"
+			        }
+			      ]
+			    },
+			    "con_estado_equipo_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_estadoEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_estado_equipo": {
+			          "Target": {
+			            "Entity": "con_estado_equipo"
+			          }
+			        },
+			        "con_estado_equipo.fecha": {
+			          "Target": {
+			            "Entity": "con_estado_equipo.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_estado_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_estado_equipo.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_estado_equipos_have_fechas"
 			        }
 			      ]
 			    },
@@ -11524,6 +11630,39 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "con_ocupacion_meta_has_con_indice_de_ocupacion_ocupación": {
+			      "Binding": {
+			        "ConceptualEntity": "con_ocupacion_meta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_ocupacion_meta": {
+			          "Target": {
+			            "Entity": "con_ocupacion_meta"
+			          }
+			        },
+			        "con_indice_de_ocupacion.ocupación": {
+			          "Target": {
+			            "Entity": "con_indice_de_ocupacion.ocupación"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_ocupacion_meta"
+			            },
+			            "Object": {
+			              "Role": "con_indice_de_ocupacion.ocupación"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_ocupacion_meta_have_ocupación"
+			        }
+			      ]
+			    },
 			    "con_indice_de_ocupacion_has_ocupación": {
 			      "Binding": {
 			        "ConceptualEntity": "con_indice_de_ocupacion"
@@ -11554,39 +11693,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_indice_de_ocupacions_have_ocupación"
-			        }
-			      ]
-			    },
-			    "dim_fecha_has_con_indice_de_ocupacion_ocupación": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Fecha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_fecha": {
-			          "Target": {
-			            "Entity": "dim_fecha"
-			          }
-			        },
-			        "con_indice_de_ocupacion.ocupación": {
-			          "Target": {
-			            "Entity": "con_indice_de_ocupacion.ocupación"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_fecha"
-			            },
-			            "Object": {
-			              "Role": "con_indice_de_ocupacion.ocupación"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_fechas_have_ocupación"
 			        }
 			      ]
 			    },
@@ -12181,6 +12287,171 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_indice_de_ocupacions_have_fecha_OT"
+			        }
+			      ]
+			    },
+			    "con_cumplimiento_preventivo_fecha_reporte_trimestre_has_con_cumplimiento_preventivo_fecha_reporte_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_cumplimientoPreventivos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_cumplimiento_preventivo.fecha_reporte.trimestre": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			          }
+			        },
+			        "con_cumplimiento_preventivo.fecha_reporte.me": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "con_cumplimiento_preventivo_fecha_reporte_me_has_con_cumplimiento_preventivo_fecha_reporte_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_cumplimientoPreventivos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_cumplimiento_preventivo.fecha_reporte.me": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
+			          }
+			        },
+			        "con_cumplimiento_preventivo.fecha_reporte.día": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me4"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicios_have_jerarquía_de_fechas"
 			        }
 			      ]
 			    },
