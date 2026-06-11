@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "ed9b99f2d5f385627199",
   "position": {
-    "x": 204.48000000000002,
-    "y": 87.84,
+    "x": 204.25531914893617,
+    "y": 87.537993920972653,
     "z": 1000,
-    "height": 626.4,
-    "width": 828,
+    "height": 466.86930091185411,
+    "width": 828.69300911854111,
     "tabOrder": 12000
   },
   "visual": {
@@ -78,7 +78,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "con_equipos"
+                          "Entity": "con_estadoEquipos"
                         }
                       },
                       "Property": "id"
@@ -87,8 +87,27 @@
                   "Function": 2
                 }
               },
-              "queryRef": "Sum(con_equipos.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "Sum(con_estadoEquipos.id)",
+              "nativeQueryRef": "Num Equipos",
+              "displayName": "Num Equipos"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_estadoEquipos"
+                    }
+                  },
+                  "Property": "Fuera de Servicio"
+                }
+              },
+              "queryRef": "con_estadoEquipos.Fuera de Servicio",
+              "nativeQueryRef": "Fuera de Servicio"
             }
           ]
         }
@@ -349,7 +368,7 @@
             "secShowAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -364,6 +383,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
@@ -882,5 +908,92 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6d0400905d977a23824e",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4f28722ab908053dd486",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4ce567e2a14a44b696cd",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_estadoEquipos"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "23e740d48a2590d1934d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_estadoEquipos"
+              }
+            },
+            "Property": "Fuera de Servicio"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

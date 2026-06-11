@@ -1,0 +1,52 @@
+table con_estadoEquipos
+	lineageTag: e5264835-42d5-4b6d-860b-88ea37e7fb00
+
+	measure 'Fuera de Servicio' =
+			
+			CALCULATE(
+			    COUNTROWS(con_estadoEquipos),
+			    con_estadoEquipos[Estado] = "Fuera de Servicio"
+			)
+		formatString: 0
+		lineageTag: 40e729c3-5416-48fe-8e67-cd97d5444a5d
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 06f733a3-04f0-45d5-8362-a9818bd7b9b2
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9fc85191-abba-4a29-83bd-3fca723ac35c
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: abbbf942-91c0-459d-b6d1-e7a947a82a3d
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_estadoEquipos = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="CREATE TABLE #resultado (id INT, Fecha SMALLDATETIME, Estado VARCHAR(20))#(lf)INSERT INTO #resultado#(lf)EXEC dbo.sp_estadoEquipos#(lf)SELECT * FROM #resultado#(lf)DROP TABLE #resultado"]),
+				    #"Vr Operativo" = Table.ReplaceValue(Origen,"O","Operativo",Replacer.ReplaceText,{"Estado"}),
+				    #"Vr Fuera Servicio" = Table.ReplaceValue(#"Vr Operativo","F","Fuera de Servicio",Replacer.ReplaceText,{"Estado"})
+				in
+				    #"Vr Fuera Servicio"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

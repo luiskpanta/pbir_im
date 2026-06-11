@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4cad1f30df9d26dbdb4d",
   "position": {
     "x": 206.45161290322579,
@@ -93,18 +93,23 @@
             },
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_indice_de_ocupacion"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_ocupacion_meta"
+                        }
+                      },
+                      "Property": "total_horas"
                     }
                   },
-                  "Property": "estandarmes"
+                  "Function": 0
                 }
               },
-              "queryRef": "con_indice_de_ocupacion.estandarmes",
-              "nativeQueryRef": "Horas disponibles",
-              "displayName": "Horas disponibles"
+              "queryRef": "Sum(con_ocupacion_meta.total_horas)",
+              "nativeQueryRef": "Horas Disponibles",
+              "displayName": "Horas Disponibles"
             }
           ]
         },
@@ -508,13 +513,6 @@
         },
         {
           "properties": {
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
-                }
-              }
-            },
             "enableBackground": {
               "expr": {
                 "Literal": {
@@ -525,39 +523,13 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+                  "Value": "12D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "con_indice_de_ocupacion.estandarmes"
+            "metadata": "Sum(con_ocupacion_meta.total_horas)"
           }
         }
       ],
@@ -795,8 +767,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
+                      "ColorId": 3,
+                      "Percent": 0
                     }
                   }
                 }
@@ -804,7 +776,7 @@
             }
           },
           "selector": {
-            "metadata": "con_indice_de_ocupacion.estandarmes"
+            "metadata": "Sum(con_ocupacion_meta.total_horas)"
           }
         }
       ],
@@ -1482,5 +1454,130 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7b6a37eca7e1aee3d29e",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4f53e77780636021ca54",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b4430ae201ed6272de07",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_indice_de_ocupacion"
+                  }
+                },
+                "Property": "duracion"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e54f1c42941500bbb815",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_indice_de_ocupacion"
+              }
+            },
+            "Property": "%Ocupación"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "63b74e9eb21a2200c6e0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "Meta%Ocupación"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6cb87c5ac049040aa4dc",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_ocupacion_meta"
+                  }
+                },
+                "Property": "total_horas"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

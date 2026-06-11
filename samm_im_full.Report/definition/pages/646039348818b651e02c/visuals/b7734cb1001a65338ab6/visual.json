@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "b7734cb1001a65338ab6",
   "position": {
-    "x": 940.31033320126664,
-    "y": 222.00062851490253,
+    "x": 995.98784194528878,
+    "y": 226.62613981762919,
     "z": 30000,
-    "height": 61.406120760959467,
-    "width": 171.5136476426799,
+    "height": 61.276595744680854,
+    "width": 171.1854103343465,
     "tabOrder": 25000
   },
   "visual": {
@@ -284,7 +284,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -310,7 +310,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -319,5 +319,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1cd5a6e19a145e040965",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "Recuento de equipo_serial para Inactivo"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

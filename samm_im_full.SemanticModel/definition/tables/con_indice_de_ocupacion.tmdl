@@ -5,7 +5,7 @@ table con_indice_de_ocupacion
 			
 			DIVIDE(
 			    SUM('con_indice_de_ocupacion'[duracion]),
-			    con_indice_de_ocupacion[estandarmes]
+			    SUM(con_ocupacion_meta[total_horas])
 			)
 		lineageTag: 1ac7653f-6114-476c-a100-86c71e17fc03
 

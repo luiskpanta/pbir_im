@@ -96,6 +96,7 @@ relationship 2eb00dad-0248-9fb1-da75-d83fb05b9a3f
 	toColumn: Dim_Cliente.tercero
 
 relationship fd4ad32c-cc9c-4c2e-90a5-75350a588941
+	isActive: false
 	fromColumn: con_equipos.fechaFin
 	toColumn: Dim_Fecha.Date
 
@@ -103,4 +104,12 @@ relationship 8b5b1205-3657-4e9a-913e-a11121a39636
 	joinOnDateBehavior: datePartOnly
 	fromColumn: con_equipos.fechaInicio
 	toColumn: LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431.Date
+
+relationship 2967ec76-935a-9316-6b4c-1f3787810a87
+	fromColumn: con_estadoEquipos.Fecha
+	toColumn: Dim_Fecha.Date
+
+relationship d309ecbc-4a37-f485-f372-9e2f3fbb8826
+	fromColumn: con_estadoEquipos.id
+	toColumn: con_equipos.id
 
