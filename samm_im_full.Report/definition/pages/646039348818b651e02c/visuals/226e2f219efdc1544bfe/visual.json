@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "226e2f219efdc1544bfe",
   "position": {
-    "x": 940.31033320126664,
-    "y": 146.831066893728,
+    "x": 940.54711246200611,
+    "y": 146.86930091185411,
     "z": 28000,
-    "height": 61.406120760959467,
-    "width": 171.5136476426799,
+    "height": 63.221884498480243,
+    "width": 171.1854103343465,
     "tabOrder": 23000
   },
   "visual": {
@@ -20,15 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_equipos"
+                      "Entity": "con_estadoEquipos"
                     }
                   },
-                  "Property": "Recuento de equipo_serial para Inactivo"
+                  "Property": "Fuera de Servicio"
                 }
               },
-              "queryRef": "con_equipos.Recuento de equipo_serial para Inactivo",
-              "nativeQueryRef": "Recuento de equipo_serial para Inactivo",
-              "format": "0"
+              "queryRef": "con_estadoEquipos.Fuera de Servicio",
+              "nativeQueryRef": "Fuera de Servicio"
             }
           ]
         }
@@ -40,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "con_equipos"
+                    "Entity": "con_estadoEquipos"
                   }
                 },
-                "Property": "Recuento de equipo_serial para Inactivo"
+                "Property": "Fuera de Servicio"
               }
             },
             "direction": "Descending"
@@ -215,6 +214,20 @@
                   "Value": "true"
                 }
               }
+            },
+            "showFilterRestatementButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSeeDataLayoutToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -284,7 +297,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -310,7 +323,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -323,18 +336,89 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "88208f80a2bebc839b0b",
+        "name": "cb58ea904a7e20807139",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "con_equipos"
+                "Entity": "con_estadoEquipos"
               }
             },
-            "Property": "Recuento de equipo_serial para Inactivo"
+            "Property": "Fuera de Servicio"
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "72c35f0ad027cd1bcab2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_estadoEquipos"
+              }
+            },
+            "Property": "Fecha"
+          }
+        },
+        "type": "RelativeDate",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_estadoEquipos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Between": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "c"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "LowerBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "DateAdd": {
+                          "Expression": {
+                            "Now": {}
+                          },
+                          "Amount": -1,
+                          "TimeUnit": 2
+                        }
+                      },
+                      "TimeUnit": 2
+                    }
+                  },
+                  "UpperBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "DateAdd": {
+                          "Expression": {
+                            "Now": {}
+                          },
+                          "Amount": -1,
+                          "TimeUnit": 2
+                        }
+                      },
+                      "TimeUnit": 2
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }
