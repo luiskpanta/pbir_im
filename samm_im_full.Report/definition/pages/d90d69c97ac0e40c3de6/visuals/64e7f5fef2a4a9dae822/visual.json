@@ -293,20 +293,6 @@
         },
         "type": "Categorical",
         "isHiddenInViewMode": true
-      },
-      {
-        "name": "38379102c86449baae04",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Fecha"
-              }
-            },
-            "Property": "Año-Mes"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

@@ -113,3 +113,7 @@ relationship d309ecbc-4a37-f485-f372-9e2f3fbb8826
 	fromColumn: con_estadoEquipos.id
 	toColumn: con_equipos.id
 
+relationship c97b6e3c-f92e-1f3e-1fce-669b4d5faacf
+	fromColumn: con_equipos.familia
+	toColumn: met_contratos.Codigo
+

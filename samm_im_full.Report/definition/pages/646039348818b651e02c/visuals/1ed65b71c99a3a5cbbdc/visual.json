@@ -198,7 +198,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -221,7 +221,7 @@
             "contentOrder": {
               "expr": {
                 "Literal": {
-                  "Value": "'callout_referenceLabel_image'"
+                  "Value": "'image_callout_referenceLabel'"
                 }
               }
             }
@@ -250,7 +250,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -307,6 +307,115 @@
           },
           "selector": {
             "id": "default"
+          }
+        }
+      ],
+      "shadowCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "cardImage": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "referenceLabel": [
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_clasificacionOTs.%OTAbiertas",
+            "id": "field-ec7c0444-ff38-6e3c-3727-d4271cd5dda2",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_clasificacionOTs.%OTAbiertas",
+            "id": "field-fcb68c7e-c4ef-402b-dfe8-e8cbbcc2af25",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_clasificacionOTs.%OTAbiertas",
+            "id": "field-030cf663-b817-4715-1502-2cd668349ef2",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_clasificacionOTs.%OTAbiertas",
+            "id": "field-b6dcf3dd-77e7-c457-1d3c-776c6df726c6",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_clasificacionOTs.%OTAbiertas",
+            "id": "field-e518f138-916f-5ece-cf88-81df54492628",
+            "order": 0
           }
         }
       ]
@@ -439,23 +548,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0d629ae1e3b09ed69e04",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "%OTAbiertas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

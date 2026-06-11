@@ -320,23 +320,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "3c147bcc550051500038",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1cd5a6e19a145e040965",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "Recuento de equipo_serial para Inactivo"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "3c147bcc550051500038"
 }
