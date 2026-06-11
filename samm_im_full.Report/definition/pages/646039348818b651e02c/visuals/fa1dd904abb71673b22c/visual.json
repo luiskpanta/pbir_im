@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "fa1dd904abb71673b22c",
   "position": {
-    "x": 708.89891077714094,
-    "y": 240.4948245764065,
+    "x": 872.46200607902745,
+    "y": 156.59574468085108,
     "z": 23000,
-    "height": 158.4,
-    "width": 195.84,
+    "height": 231.48936170212767,
+    "width": 380.30395136778117,
     "tabOrder": 18000
   },
   "visual": {
@@ -443,7 +443,7 @@
             "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1252,7 +1252,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'LeftCenter'"
                 }
               }
             },
@@ -1320,7 +1320,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -1414,7 +1414,18 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "60D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#A0D1FF'"
+                    }
+                  }
                 }
               }
             }
@@ -1517,6 +1528,25 @@
             }
           ]
         }
+      },
+      {
+        "name": "8a9c55ec30c07a49acb5",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "abierta"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

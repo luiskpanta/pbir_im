@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "370973442f8be8caa2bf",
   "position": {
-    "x": 920.87823467337932,
-    "y": 77.4071357608722,
+    "x": 667.23404255319156,
+    "y": 408.51063829787233,
     "z": 2000,
-    "height": 327.56989247311827,
-    "width": 346.83870967741933,
+    "height": 303.46504559270517,
+    "width": 325.83586626139817,
     "tabOrder": 37000
   },
   "visual": {
@@ -170,6 +170,39 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Equipos'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

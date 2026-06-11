@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "9c505616daff84c765d8",
   "position": {
-    "x": 508.73891077714086,
-    "y": 241.9348245764065,
+    "x": 508.69300911854106,
+    "y": 255.80547112462008,
     "z": 36000,
-    "height": 158.4,
-    "width": 192.96,
+    "height": 130.33434650455928,
+    "width": 192.58358662613983,
     "tabOrder": 32000
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -50,7 +50,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "Sum(con_clasificacionOTs.id)",
+              "queryRef": "CountNonNull(con_clasificacionOTs.id)",
               "nativeQueryRef": "Recuento de id"
             }
           ]
@@ -98,41 +98,6 @@
                 }
               }
             },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'preferInside'"
-                }
-              }
-            },
-            "background": {
-              "expr": {
-                "Literal": {
-                  "Value": "'off'"
-                }
-              }
-            },
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Data value, percent of total'"
-                }
-              }
-            },
-            "percentageLabelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "overflow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -151,6 +116,27 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideEnd'"
                 }
               }
             }
@@ -1040,6 +1026,19 @@
             ]
           }
         }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -1185,5 +1184,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5b152619516001b0d8bb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "OTestAbierta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5adddeb30a66956ee7c9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
