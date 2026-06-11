@@ -5181,42 +5181,82 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_indice_de_ocupacion.es_cargo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_indice_de_ocupacion",
+			          "ConceptualProperty": "EsCargo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "es cargo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EsCargo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "es consignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "es shipment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "es payload": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "es load": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "es freight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_año": {
-			      "Binding": {
-			        "ConceptualEntity": "con_equipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
-			          }
-			        },
-			        "con_equipo.fecha_inicio.año": {
-			          "Target": {
-			            "Entity": "con_equipo.fecha_inicio.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "con_equipo.fecha_inicio.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
-			        }
-			      ]
-			    },
 			    "con_equipo_fecha_inicio_has_jerarquía_de_fecha": {
 			      "Binding": {
 			        "ConceptualEntity": "con_equipos"
@@ -5576,7 +5616,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años"
 			        }
 			      ]
 			    },
@@ -5939,7 +5979,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años1"
 			        }
 			      ]
 			    },
@@ -6302,7 +6342,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años3"
+			          "ID": "jerarquía_de_fechas_have_años2"
 			        }
 			      ]
 			    },
@@ -6665,7 +6705,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años4"
+			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },
@@ -7028,7 +7068,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años5"
+			          "ID": "jerarquía_de_fechas_have_años4"
 			        }
 			      ]
 			    },
@@ -7700,6 +7740,39 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "con_indice_de_ocupacion_has_es_cargo": {
+			      "Binding": {
+			        "ConceptualEntity": "con_indice_de_ocupacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_indice_de_ocupacion": {
+			          "Target": {
+			            "Entity": "con_indice_de_ocupacion"
+			          }
+			        },
+			        "con_indice_de_ocupacion.es_cargo": {
+			          "Target": {
+			            "Entity": "con_indice_de_ocupacion.es_cargo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_indice_de_ocupacion"
+			            },
+			            "Object": {
+			              "Role": "con_indice_de_ocupacion.es_cargo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_indice_de_ocupacions_have_es_cargoes"
 			        }
 			      ]
 			    },
@@ -12108,6 +12181,39 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_indice_de_ocupacions_have_fecha_OT"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_año": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.año": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años5"
 			        }
 			      ]
 			    },
