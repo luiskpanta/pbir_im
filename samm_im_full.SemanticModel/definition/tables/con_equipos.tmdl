@@ -169,6 +169,22 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
+	column CodigoFamilia
+		dataType: string
+		lineageTag: 5db1cafc-bc2b-4121-bc18-6f4b99f81473
+		summarizeBy: none
+		sourceColumn: CodigoFamilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo
+		dataType: string
+		lineageTag: e14f4d0d-ea45-4698-a1ab-ea0f1b9c77f9
+		summarizeBy: none
+		sourceColumn: grupo
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_equipos = m
 		mode: import
 		source =
@@ -178,4 +194,6 @@ table con_equipos
 				    Origen
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

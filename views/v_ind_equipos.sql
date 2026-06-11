@@ -14,6 +14,7 @@ AS
         , gen_familia.familia
         , left(gen_familia.familia,2) CodigoFamilia
         , equ_estadoEquipo.estadoEquipo
+        , equ_estadoEquipo.estadoEquipo_codigo grupo
         , case when (equ_equipo.fechaPuestaMarcha_fh is null or equ_equipo.fechaPuestaMarcha_fh=0) 
             then equ_equipo.fechaCreacion 
             else equ_equipo.fechaPuestaMarcha_fh end as fechaInicio

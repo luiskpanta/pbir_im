@@ -14,6 +14,9 @@
     "query": {
       "queryState": {
         "Category": {
+          "projections": []
+        },
+        "Series": {
           "projections": [
             {
               "field": {
@@ -23,12 +26,11 @@
                       "Entity": "con_equipos"
                     }
                   },
-                  "Property": "GrupoServ"
+                  "Property": "grupo"
                 }
               },
-              "queryRef": "con_equipos.GrupoServ",
-              "nativeQueryRef": "GrupoServ",
-              "active": true
+              "queryRef": "con_equipos.grupo",
+              "nativeQueryRef": "grupo"
             }
           ]
         },
@@ -158,20 +160,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "ed47a7c8eace50c90007",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "GrupoServ"
-          }
-        },
-        "type": "Categorical"
       },
       {
         "name": "83976390b1aa81248b85",

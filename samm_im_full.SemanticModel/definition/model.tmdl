@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["con_indice_de_ocupacion","con_primer_visita","con_ocupacion_meta","con_cumplimientoPreventivos","Dim_TipoServicio","Dim_Marca","Dim_Cliente","con_clasificacionOTs","con_equipos","con_estadoEquipos","met_contratos"]
+annotation PBI_QueryOrder = ["con_indice_de_ocupacion","con_primer_visita","con_ocupacion_meta","con_cumplimientoPreventivos","Dim_TipoServicio","Dim_Marca","Dim_Cliente","con_clasificacionOTs","con_equipos","con_estadoEquipos","met_contratos","con_fallasEquipos"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -31,6 +31,10 @@ ref table con_equipos
 ref table LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431
 ref table con_estadoEquipos
 ref table met_contratos
+ref table con_fallasEquipos
+ref table LocalDateTable_7bc5ad49-b4e2-4acf-9599-d8ec30fbdd2c
+ref table LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876
+ref table LocalDateTable_ac37f0e6-0bb3-43fe-af3d-b1640dafc5e2
 
 ref cultureInfo es-CO
 

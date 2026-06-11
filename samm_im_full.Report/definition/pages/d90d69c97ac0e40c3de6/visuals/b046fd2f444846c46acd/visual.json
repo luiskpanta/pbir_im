@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "df788eb45b093afa4e2e",
+  "name": "b046fd2f444846c46acd",
   "position": {
-    "x": 1039.2282958199357,
-    "y": 496.97749196141478,
-    "z": 6000,
-    "height": 175.94855305466237,
-    "width": 240.77170418006429,
-    "tabOrder": 4000
+    "x": 1040.257234726688,
+    "y": 162.57234726688102,
+    "z": 20001,
+    "height": 183.15112540192925,
+    "width": 239.74276527331187,
+    "tabOrder": 20001
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_Cliente"
+                      "Entity": "con_equipos"
                     }
                   },
-                  "Property": "tercero"
+                  "Property": "grupo"
                 }
               },
-              "queryRef": "Dim_Cliente.tercero",
-              "nativeQueryRef": "tercero",
+              "queryRef": "con_equipos.grupo",
+              "nativeQueryRef": "grupo",
               "active": true
             }
           ]
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "con_equipos"
+                          "Entity": "con_estadoEquipos"
                         }
                       },
                       "Property": "id"
                     }
                   },
-                  "Function": 0
+                  "Function": 2
                 }
               },
-              "queryRef": "Sum(con_equipos.id)",
-              "nativeQueryRef": "Suma de id"
+              "queryRef": "CountNonNull(con_estadoEquipos.id)",
+              "nativeQueryRef": "Recuento de id"
             }
           ]
         }
@@ -65,13 +65,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "con_equipos"
+                        "Entity": "con_estadoEquipos"
                       }
                     },
                     "Property": "id"
                   }
                 },
-                "Function": 0
+                "Function": 2
               }
             },
             "direction": "Descending"
@@ -266,7 +266,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -283,6 +283,13 @@
                   "Value": "''"
                 }
               }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -293,7 +300,7 @@
             "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "35L"
+                  "Value": "39L"
                 }
               }
             },
@@ -308,6 +315,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
                 }
               }
             }
@@ -356,6 +370,296 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'02 CORRECTIVO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#345D45'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'01 PREVENTIVO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F6A00D'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'03 INSTALACION'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8CA175'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'05 CAPACITACION'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F6FB5B'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'04 SOPORTE REMOTO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_indice_de_ocupacion"
+                          }
+                        },
+                        "Property": "tiposervicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'06 ENTRENAMIENTO TECNICO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ]
     },
@@ -366,7 +670,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos por cliente'"
+                  "Value": "'Por Tipo Contrato'"
                 }
               }
             },
