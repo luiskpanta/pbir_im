@@ -1,0 +1,47 @@
+table met_contratos
+	lineageTag: 013cd40e-0830-400a-a95c-3c164d8fb3bb
+
+	column Familia
+		dataType: string
+		lineageTag: 8e2017ab-6efb-4423-98be-e5a2e569ba53
+		summarizeBy: none
+		sourceColumn: Familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Meta
+		dataType: int64
+		formatString: 0
+		lineageTag: dafd4743-dc6e-4b4a-95c0-a758c7c6709d
+		summarizeBy: none
+		sourceColumn: Meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Codigo
+		dataType: string
+		lineageTag: 89be701a-4ebb-4c47-bce6-3f535bd14e95
+		summarizeBy: none
+		sourceColumn: Codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition met_contratos = m
+		mode: import
+		source =
+				let
+				  Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45Wcg5SQAHGpqpKOkoGesamSrE60UouqXkliTkQKSOolBFUyh9Fo4kBRNYEIolmrAlUrwlEr2tFSVFifhHIZCOoPiOwhGceXALNJUERCnjsCw1GlTWEyhoqxcYCAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Familia = _t, Meta = _t]),
+				  #"Tipo de columna cambiado" = Table.TransformColumnTypes(Origen, {{"Familia", type text}, {"Meta", Int64.Type}}, "es"),
+				    #"Columna duplicada" = Table.DuplicateColumn(#"Tipo de columna cambiado", "Familia", "Familia - Copia"),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columna duplicada",{{"Familia - Copia", "Codigo"}}),
+				    #"Dividir columna por posición" = Table.SplitColumn(#"Columnas con nombre cambiado", "Codigo", Splitter.SplitTextByPositions({0, 2}, false), {"Codigo.1", "Codigo.2"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Dividir columna por posición",{{"Codigo.1", type text}, {"Codigo.2", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Codigo.2"}),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Columnas quitadas",{{"Codigo.1", "Codigo"}})
+				in
+				  #"Columnas con nombre cambiado1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

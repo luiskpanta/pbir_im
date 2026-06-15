@@ -1,0 +1,98 @@
+table con_fallasEquipos
+	lineageTag: b9eb2b01-56b7-4a84-8571-c1f93b0fcace
+
+	column equipo
+		dataType: string
+		lineageTag: 369a0d78-1d1a-4bdf-87f4-a46a7f12ccb8
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial
+		dataType: string
+		lineageTag: cf09b85d-1b9d-4dbd-9803-0fa65228b26b
+		summarizeBy: none
+		sourceColumn: serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivoservicio
+		dataType: string
+		lineageTag: 593753af-e9fd-4545-bc82-be518644a63e
+		summarizeBy: none
+		sourceColumn: motivoservicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fechafalla
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ac75792b-cefd-4ced-8bec-a7acb7e17db2
+		summarizeBy: none
+		sourceColumn: Fechafalla
+
+		variation Variación
+			isDefault
+			relationship: f83e8f84-c4ca-488f-bd26-2b15361809c2
+			defaultHierarchy: LocalDateTable_7bc5ad49-b4e2-4acf-9599-d8ec30fbdd2c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaParada
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d170f72-58f8-4f8e-a347-538b3cefa7fa
+		summarizeBy: none
+		sourceColumn: FechaParada
+
+		variation Variación
+			isDefault
+			relationship: 418fcfe6-be96-4c7f-b804-921ddddae03d
+			defaultHierarchy: LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaReparacion
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bcdfe078-624c-4f3b-8ffe-63a25ebf70fb
+		summarizeBy: none
+		sourceColumn: FechaReparacion
+
+		variation Variación
+			isDefault
+			relationship: 7bab45e7-1779-4da7-92f1-6e330791297b
+			defaultHierarchy: LocalDateTable_ac37f0e6-0bb3-43fe-af3d-b1640dafc5e2.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiasParada
+		dataType: int64
+		formatString: 0
+		lineageTag: aff5c7e3-dc94-4e19-a9fe-a228747815a7
+		summarizeBy: sum
+		sourceColumn: DiasParada
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: 81bfc619-f909-4925-8fb9-a4ed495c61d9
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_fallasEquipos = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT * FROM v_ind_fallas"])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 615.76657036860411,
+        "x": 1372.7640055006495,
         "y": 26.833864305053851
       },
       "nodes": [
@@ -127,8 +127,8 @@
         },
         {
           "location": {
-            "x": 2070.6993690446193,
-            "y": 465.56470881387503
+            "x": 2063.6378258064474,
+            "y": 380.82618995581026
           },
           "nodeIndex": "con_equipos",
           "nodeLineageTag": "def03de1-1667-48fb-84b5-2a8e198981a9",
@@ -145,6 +145,19 @@
           },
           "nodeIndex": "con_estadoEquipos",
           "nodeLineageTag": "e5264835-42d5-4b6d-860b-88ea37e7fb00",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2426.8530718994575,
+            "y": 391.27230081226162
+          },
+          "nodeIndex": "met_contratos",
+          "nodeLineageTag": "013cd40e-0830-400a-a95c-3c164d8fb3bb",
           "size": {
             "height": 152,
             "width": 234

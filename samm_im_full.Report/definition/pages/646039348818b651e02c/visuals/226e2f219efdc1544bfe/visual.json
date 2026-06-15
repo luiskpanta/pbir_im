@@ -337,20 +337,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cb58ea904a7e20807139",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_estadoEquipos"
-              }
-            },
-            "Property": "Fuera de Servicio"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "72c35f0ad027cd1bcab2",
         "field": {
           "Column": {

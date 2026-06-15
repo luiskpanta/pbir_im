@@ -138,6 +138,53 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
+	column GrupoServ =
+			
+			SWITCH(
+			TRUE(),
+			CONTAINSSTRING(con_equipos[estadoEquipo], "Operativo"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "Inactivo"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "AREA SERVICIO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO BASICO"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO PLUS"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "PERCALL"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "ARRENDAMIENTO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "DEMOSTRACION"), "EVENTO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "PRESTAMO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "MPS"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "PARTNER"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "EQ. DE BAJA"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "INVENTARIO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 1 AÑO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 2 AÑO"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO LIMITADO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "SERV. SIEMENS"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA SERV. SIEMENS"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "COMODATO"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "EVENTO"), "EVENTO"
+			)
+		lineageTag: 88db76f7-d241-46e2-8c22-d604a0e8c94e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodigoFamilia
+		dataType: string
+		lineageTag: 5db1cafc-bc2b-4121-bc18-6f4b99f81473
+		summarizeBy: none
+		sourceColumn: CodigoFamilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo
+		dataType: string
+		lineageTag: e14f4d0d-ea45-4698-a1ab-ea0f1b9c77f9
+		summarizeBy: none
+		sourceColumn: grupo
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_equipos = m
 		mode: import
 		source =
@@ -147,4 +194,6 @@ table con_equipos
 				    Origen
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

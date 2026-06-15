@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "9a793a01046c7c12ec08",
   "position": {
-    "x": 564.81043095419523,
-    "y": 9.450173567013799,
-    "z": 42000,
-    "height": 58,
-    "width": 152.86089238845145,
-    "tabOrder": 41000
+    "x": 860.790273556231,
+    "y": 22.37082066869301,
+    "z": 38000,
+    "height": 45.714285714285715,
+    "width": 164.37689969604864,
+    "tabOrder": 37000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -80,14 +80,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2024 & 2025 & 2026'"
+                                "Value": "null"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "null"
+                                "Value": "'2024 & 2025 & 2026'"
                               }
                             }
                           ]

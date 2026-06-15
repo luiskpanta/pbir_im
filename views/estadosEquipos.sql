@@ -74,9 +74,10 @@ BEGIN
         F.Fecha,
         dbo.estadoEquipo(F.Fecha, @estados, EQ.id) AS Estado
     FROM @Fechas F
-    CROSS JOIN equ_equipo EQ
+    CROSS JOIN view_equ_equipo EQ
     WHERE EQ.active = 1
         AND F.Fecha >= EQ.fechaPuestaMarcha_fh
+		and eq.equ_estadoEquipo_estadoEquipo_codigo !='sin clasificar' 
     ORDER BY EQ.id, F.Fecha
 
 END
