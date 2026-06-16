@@ -13,9 +13,6 @@
     "visualType": "pieChart",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": []
-        },
         "Series": {
           "projections": [
             {
@@ -160,25 +157,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "83976390b1aa81248b85",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

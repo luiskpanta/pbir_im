@@ -4,10 +4,10 @@
   "position": {
     "x": 163.27746741154562,
     "y": 123.94785847299813,
-    "z": 4001,
+    "z": 5000,
     "height": 160.89385474860333,
     "width": 238.36126629422716,
-    "tabOrder": 4001
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -76,42 +76,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1af364482ea122bdbcee",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "GrupoServ"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6bb3349e8dd225c9182b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

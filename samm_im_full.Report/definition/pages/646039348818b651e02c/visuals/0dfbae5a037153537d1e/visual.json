@@ -4,7 +4,7 @@
   "position": {
     "x": 1044.4444444444443,
     "y": 8,
-    "z": 37000,
+    "z": 36000,
     "height": 73.777777777777771,
     "width": 217.77777777777777,
     "tabOrder": 36000
@@ -315,7 +315,7 @@
                                   "Hierarchy": "Jerarquía de fechas"
                                 }
                               },
-                              "Level": "Mes"
+                              "Level": "Año"
                             }
                           }
                         ],

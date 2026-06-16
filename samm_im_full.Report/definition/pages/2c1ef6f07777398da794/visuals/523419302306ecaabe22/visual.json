@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "925604d9928ae9d2c5c3",
+  "name": "523419302306ecaabe22",
   "position": {
-    "x": 95.111111111111114,
+    "x": 344,
     "y": 86.222222222222229,
-    "z": 3000,
+    "z": 6002,
     "height": 111.11111111111111,
-    "width": 236.44444444444446,
-    "tabOrder": 3000
+    "width": 259.55555555555554,
+    "tabOrder": 6002
   },
   "visual": {
     "visualType": "cardVisual",
@@ -25,14 +25,14 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "DiasParada"
                     }
                   },
-                  "Function": 2
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Recuento de idOT"
+              "queryRef": "Sum(con_fallasEquipos.DiasParada)",
+              "nativeQueryRef": "Suma de DiasParada"
             }
           ]
         }
@@ -49,10 +49,10 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "DiasParada"
                   }
                 },
-                "Function": 2
+                "Function": 0
               }
             },
             "direction": "Descending"

@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1372.7640055006495,
-        "y": 26.833864305053851
+        "x": 1255.5423877469932,
+        "y": 0
       },
       "nodes": [
         {
@@ -163,6 +163,19 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2710.8530718994575,
+            "y": 400.47542454634788
+          },
+          "nodeIndex": "con_fallasEquipos",
+          "nodeLineageTag": "b9eb2b01-56b7-4a84-8571-c1f93b0fcace",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
@@ -176,7 +189,7 @@
       "ordinal": 1,
       "scrollPosition": {
         "x": 0,
-        "y": 42.637048097483294
+        "y": 0
       },
       "nodes": [
         {
