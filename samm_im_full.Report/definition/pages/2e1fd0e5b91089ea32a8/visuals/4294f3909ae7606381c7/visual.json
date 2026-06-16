@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "957c154d747656400a4d",
+  "name": "4294f3909ae7606381c7",
   "position": {
-    "x": 5,
-    "y": 417.079856220494,
-    "z": 3000,
-    "height": 60.480000000000004,
-    "width": 195,
-    "tabOrder": 3000
+    "x": 8.3333333333333339,
+    "y": 545,
+    "z": 8002,
+    "height": 61.666666666666671,
+    "width": 258.33333333333337,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "con_equipos"
                     }
                   },
-                  "Property": "zona"
+                  "Property": "marca"
                 }
               },
-              "queryRef": "con_equipos.zona",
-              "nativeQueryRef": "zona",
+              "queryRef": "con_equipos.marca",
+              "nativeQueryRef": "marca",
               "active": true
             }
           ]
@@ -42,13 +42,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
-                }
-              }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -169,7 +162,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Zonas'"
+                  "Value": "'Marca'"
                 }
               }
             },
@@ -203,11 +196,6 @@
           }
         }
       ]
-    },
-    "syncGroup": {
-      "groupName": "zona",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

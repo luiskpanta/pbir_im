@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "0992af32017dd063bcd0",
   "position": {
-    "x": 45.288640595903161,
-    "y": 20.260707635009311,
+    "x": 8.3333333333333339,
+    "y": 0,
     "z": 2000,
-    "height": 91.769087523277463,
-    "width": 504.13407821229049,
+    "height": 93.333333333333343,
+    "width": 563.33333333333337,
     "tabOrder": 2000
   },
   "visual": {
@@ -101,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de Contratos'"
+                  "Value": "'Capture Rate'"
                 }
               }
             },
@@ -120,7 +120,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "32D"
                 }
               }
             },
@@ -147,7 +147,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Índice de contrato por modalidad'"
+                  "Value": "'# Equipos en Contrato / Total Equipos por familia sin garantía'"
                 }
               }
             },

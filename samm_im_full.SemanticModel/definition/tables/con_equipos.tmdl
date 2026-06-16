@@ -18,6 +18,9 @@ table con_equipos
 
 		changedProperty = FormatString
 
+	measure EsBaseCR = CALCULATE(con_equipos[id],con_equipos[grupo]="CONTRATO")
+		lineageTag: 6b9434c8-498b-4924-8fb2-1930c5995760
+
 	column id
 		dataType: int64
 		formatString: 0
@@ -144,23 +147,23 @@ table con_equipos
 			TRUE(),
 			CONTAINSSTRING(con_equipos[estadoEquipo], "Operativo"), "SIN CLASIFICAR",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "Inactivo"), "SIN CLASIFICAR",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "AREA SERVICIO"), "PERCALL",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA"), "GARANTIA",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "AREA SERVICIO"), "SIN CLASIFICAR",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO BASICO"), "CONTRATO",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO PLUS"), "CONTRATO",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "PERCALL"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "ARRENDAMIENTO"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "DEMOSTRACION"), "EVENTO",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "PRESTAMO"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "MPS"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "PARTNER"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "EQ. DE BAJA"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "INVENTARIO"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 1 AÑO"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 2 AÑO"), "CONTRATO",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO LIMITADO"), "PERCALL",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "SERV. SIEMENS"), "CONTRATO",
-			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA SERV. SIEMENS"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "ARRENDAMIENTO"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "DEMOSTRACION"), "ESIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "PRESTAMO"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "MPS"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "PARTNER"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "EQ. DE BAJA"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "INVENTARIO"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 1 AÑO"), "GARANTIA",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GAR. EXT. 2 AÑO"), "GARANTIA",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "CONTRATO LIMITADO"), "CONTRATO",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "SERV. SIEMENS"), "SIN CLASIFICAR",
+			CONTAINSSTRING(con_equipos[estadoEquipo], "GARANTIA SERV. SIEMENS"), "GARANTIA",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "COMODATO"), "CONTRATO",
 			CONTAINSSTRING(con_equipos[estadoEquipo], "EVENTO"), "EVENTO"
 			)
@@ -171,7 +174,7 @@ table con_equipos
 
 	column CodigoFamilia
 		dataType: string
-		lineageTag: 5db1cafc-bc2b-4121-bc18-6f4b99f81473
+		lineageTag: 347a0b79-1897-4dfd-a348-9cddf6e3ffd8
 		summarizeBy: none
 		sourceColumn: CodigoFamilia
 
@@ -179,7 +182,7 @@ table con_equipos
 
 	column grupo
 		dataType: string
-		lineageTag: e14f4d0d-ea45-4698-a1ab-ea0f1b9c77f9
+		lineageTag: 153d5972-db74-41bc-8714-6dfe1380fc70
 		summarizeBy: none
 		sourceColumn: grupo
 
