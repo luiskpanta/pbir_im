@@ -84,6 +84,23 @@ table con_fallasEquipos
 
 		annotation SummarizationSetBy = Automatic
 
+	column idOT
+		dataType: int64
+		formatString: 0
+		lineageTag: abc87c40-31c1-4270-936f-dfe36c744ba3
+		summarizeBy: sum
+		sourceColumn: idOT
+
+		annotation SummarizationSetBy = Automatic
+
+	column subfamilia
+		dataType: string
+		lineageTag: 8a53fe0a-44da-4555-baf3-0819fd64b233
+		summarizeBy: none
+		sourceColumn: subfamilia
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_fallasEquipos = m
 		mode: import
 		source =

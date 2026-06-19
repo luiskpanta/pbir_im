@@ -33,22 +33,7 @@
           ]
         },
         "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equipos"
-                    }
-                  },
-                  "Property": "grupo"
-                }
-              },
-              "queryRef": "con_equipos.grupo",
-              "nativeQueryRef": "grupo"
-            }
-          ]
+          "projections": []
         },
         "Tooltips": {
           "projections": [
@@ -455,35 +440,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "d9498307de440222d2a6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "grupo"
-          }
-        },
-        "type": "Categorical",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
       }
     ]
   }

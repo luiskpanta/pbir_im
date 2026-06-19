@@ -1,0 +1,40 @@
+table con_equiposContrato
+	lineageTag: b471f57d-081b-4494-9844-8aa10ae872b2
+
+	column equipo_serial
+		dataType: string
+		lineageTag: 205f9a13-de29-451f-a8de-6c15243901c2
+		summarizeBy: none
+		sourceColumn: equipo_serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3b1cd98d-1fee-4bea-b116-b038b5d6e233
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_fin_mes
+		dataType: string
+		lineageTag: cef725b6-cf54-450a-8ecc-043f7bc93318
+		summarizeBy: none
+		sourceColumn: estado_fin_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_equiposContrato = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT * FROM v_historicoEstadosEquipos"])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

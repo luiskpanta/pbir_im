@@ -172,22 +172,6 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column CodigoFamilia
-		dataType: string
-		lineageTag: 347a0b79-1897-4dfd-a348-9cddf6e3ffd8
-		summarizeBy: none
-		sourceColumn: CodigoFamilia
-
-		annotation SummarizationSetBy = Automatic
-
-	column grupo
-		dataType: string
-		lineageTag: 153d5972-db74-41bc-8714-6dfe1380fc70
-		summarizeBy: none
-		sourceColumn: grupo
-
-		annotation SummarizationSetBy = Automatic
-
 	partition con_equipos = m
 		mode: import
 		source =

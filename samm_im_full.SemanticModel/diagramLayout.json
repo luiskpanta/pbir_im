@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1604.4462034689166,
-        "y": 26.833864305053851
+        "x": 1656.6380436751667,
+        "y": 69.203123734086248
       },
       "nodes": [
         {
@@ -173,6 +173,19 @@
           "nodeLineageTag": "b9eb2b01-56b7-4a84-8571-c1f93b0fcace",
           "size": {
             "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2422.8680696075203,
+            "y": 94.687484809034856
+          },
+          "nodeIndex": "con_equiposContrato",
+          "nodeLineageTag": "b471f57d-081b-4494-9844-8aa10ae872b2",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

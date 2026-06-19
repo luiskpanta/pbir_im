@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "c436a2c2f39b358548f5",
   "position": {
     "x": 391.39107611548553,
@@ -77,13 +77,6 @@
                           }
                         ],
                         "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'2024 & 2025 & 2026'"
-                              }
-                            }
-                          ],
                           [
                             {
                               "Literal": {

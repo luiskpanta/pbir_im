@@ -5407,45 +5407,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_equipo.codigo_familia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_equipos",
-			          "ConceptualProperty": "CodigoFamilia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "codigo familia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CodigoFamilia": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "con_equipo.grupo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_equipos",
-			          "ConceptualProperty": "grupo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "grupo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "con_equipo.es_base_CR": {
 			      "Definition": {
 			        "Binding": {

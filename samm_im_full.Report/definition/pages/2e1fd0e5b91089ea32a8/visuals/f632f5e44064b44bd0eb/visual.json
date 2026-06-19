@@ -10,10 +10,10 @@
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "treemap",
     "query": {
       "queryState": {
-        "Category": {
+        "Group": {
           "projections": [
             {
               "field": {
@@ -23,16 +23,16 @@
                       "Entity": "con_equipos"
                     }
                   },
-                  "Property": "GrupoServ"
+                  "Property": "familia"
                 }
               },
-              "queryRef": "con_equipos.GrupoServ",
-              "nativeQueryRef": "GrupoServ",
+              "queryRef": "con_equipos.familia",
+              "nativeQueryRef": "familia",
               "active": true
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -246,13 +246,6 @@
                 }
               }
             },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'preferOutside'"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -267,21 +260,7 @@
                 }
               }
             },
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Category, data value, percent of total'"
-                }
-              }
-            },
             "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "percentageLabelPrecision": {
               "expr": {
                 "Literal": {
                   "Value": "0L"
@@ -370,6 +349,7 @@
           }
         },
         "type": "Categorical",
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -385,6 +365,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "fef3e4426a3d0449bc0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3fe4a4132ab5a259069c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_equipos"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

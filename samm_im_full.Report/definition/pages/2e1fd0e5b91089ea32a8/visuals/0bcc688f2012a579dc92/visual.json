@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "4745138ba7ac207cfd98",
+  "name": "0bcc688f2012a579dc92",
   "position": {
-    "x": 516.96,
-    "y": 7.2,
-    "z": 15000,
-    "height": 59,
-    "width": 152.64000000000001,
-    "tabOrder": 15000
+    "x": 541.67115902964963,
+    "y": 21.5633423180593,
+    "z": 8006,
+    "height": 58.652291105121293,
+    "width": 152.66846361185983,
+    "tabOrder": 8006
   },
   "visual": {
     "visualType": "listSlicer",
@@ -81,6 +81,13 @@
                             {
                               "Literal": {
                                 "Value": "null"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2024 & 2025 & 2026'"
                               }
                             }
                           ]
@@ -394,11 +401,6 @@
           }
         }
       ]
-    },
-    "syncGroup": {
-      "groupName": "Recientes",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   },
