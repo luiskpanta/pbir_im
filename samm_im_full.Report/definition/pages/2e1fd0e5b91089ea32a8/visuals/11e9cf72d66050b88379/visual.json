@@ -687,7 +687,28 @@
                     [
                       {
                         "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
                           "Value": "'CONTRATO'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'EVENTO'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'GARANTIA'"
                         }
                       }
                     ],
@@ -701,7 +722,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'EVENTO'"
+                          "Value": "'SIN CLASIFICAR'"
                         }
                       }
                     ]

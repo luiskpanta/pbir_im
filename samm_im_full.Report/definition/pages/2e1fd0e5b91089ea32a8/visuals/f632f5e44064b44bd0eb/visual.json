@@ -13,6 +13,9 @@
     "visualType": "treemap",
     "query": {
       "queryState": {
+        "Details": {
+          "projections": []
+        },
         "Group": {
           "projections": [
             {
