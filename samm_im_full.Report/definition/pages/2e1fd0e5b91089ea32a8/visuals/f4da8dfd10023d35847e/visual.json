@@ -17,20 +17,6 @@
           "projections": [
             {
               "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equipos"
-                    }
-                  },
-                  "Property": "CodigoFamilia"
-                }
-              },
-              "queryRef": "con_equipos.CodigoFamilia",
-              "nativeQueryRef": "CodigoFamilia"
-            },
-            {
-              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -291,20 +277,6 @@
               }
             },
             "Property": "familia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c0afac1d405d83568c1e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "CodigoFamilia"
           }
         },
         "type": "Categorical"
