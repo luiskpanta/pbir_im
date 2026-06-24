@@ -176,9 +176,10 @@ table con_equipos
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select * from v_ind_equipos"])
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select * from v_ind_equipos"]),
+				    #"Duplicados quitados" = Table.Distinct(Origen, {"equipo_serial"})
 				in
-				    Origen
+				    #"Duplicados quitados"
 
 	annotation PBI_ResultType = Table
 
