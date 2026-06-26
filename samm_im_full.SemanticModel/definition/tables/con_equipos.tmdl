@@ -18,8 +18,13 @@ table con_equipos
 
 		changedProperty = FormatString
 
-	measure EsBaseCR = CALCULATE(con_equipos[id],con_equipos[grupo]="CONTRATO")
+	measure EsBaseCR = CALCULATE(con_equipos[id],con_equipos[GrupoServ]="CONTRATO")
 		lineageTag: 6b9434c8-498b-4924-8fb2-1930c5995760
+
+	measure %Capturerate = divide([EsBaseCR],DISTINCTCOUNT(con_equipos[id]))
+		lineageTag: 190037f5-21b5-4fa2-8f70-3ae50127ef99
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column id
 		dataType: int64

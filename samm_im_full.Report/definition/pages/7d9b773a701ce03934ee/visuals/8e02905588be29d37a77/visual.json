@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "a9881d6c8a2b504fc681",
+  "name": "8e02905588be29d37a77",
   "position": {
-    "x": 4,
-    "y": 382.03680722190336,
-    "z": 4000,
-    "height": 59.04,
-    "width": 197,
-    "tabOrder": 6000
+    "x": 264.93506493506493,
+    "y": 650.64935064935059,
+    "z": 11005,
+    "height": 63.636363636363633,
+    "width": 262.33766233766232,
+    "tabOrder": 11005
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "con_equipos"
                     }
                   },
-                  "Property": "zona"
+                  "Property": "marca"
                 }
               },
-              "queryRef": "con_equipos.zona",
-              "nativeQueryRef": "zona",
+              "queryRef": "con_equipos.marca",
+              "nativeQueryRef": "marca",
               "active": true
             }
           ]
@@ -54,7 +54,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             }
@@ -121,6 +121,24 @@
             }
           }
         }
+      ],
+      "items": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -132,8 +150,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }
@@ -142,7 +160,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "0D"
                 }
               }
             }
@@ -162,7 +180,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Zona'"
+                  "Value": "'Marca'"
                 }
               }
             },
@@ -182,26 +200,52 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "49626e0cc0eda065cdd2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "zona"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -13,9 +13,6 @@
     "visualType": "treemap",
     "query": {
       "queryState": {
-        "Details": {
-          "projections": []
-        },
         "Group": {
           "projections": [
             {
@@ -368,39 +365,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "fef3e4426a3d0449bc0b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "familia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3fe4a4132ab5a259069c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

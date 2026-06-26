@@ -4,10 +4,10 @@
   "position": {
     "x": 8.7671232876712324,
     "y": 476.34703196347027,
-    "z": 8007,
+    "z": 12000,
     "height": 194.82496194824961,
     "width": 258.14307458143071,
-    "tabOrder": 8007
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "tableEx",
@@ -201,86 +201,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a9b210759095b5ce3cc7",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6e69c7eb0e6002d62165",
-        "field": {
-          "Arithmetic": {
-            "Left": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "con_equipos"
-                      }
-                    },
-                    "Property": "id"
-                  }
-                },
-                "Function": 2
-              }
-            },
-            "Right": {
-              "ScopedEval": {
-                "Expression": {
-                  "Aggregation": {
-                    "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "con_equipos"
-                          }
-                        },
-                        "Property": "id"
-                      }
-                    },
-                    "Function": 2
-                  }
-                },
-                "Scope": []
-              }
-            },
-            "Operator": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "97527590e68dd59000ce",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "familia"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

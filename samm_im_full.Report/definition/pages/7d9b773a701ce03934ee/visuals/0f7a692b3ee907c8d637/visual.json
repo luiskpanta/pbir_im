@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "109fde3ca7100bdebdbb",
+  "name": "0f7a692b3ee907c8d637",
   "position": {
-    "x": 1075,
-    "y": 181.66666666666669,
-    "z": 7000,
-    "height": 173.33333333333334,
-    "width": 205,
-    "tabOrder": 7000
+    "x": 3.8961038961038961,
+    "y": 268.83116883116884,
+    "z": 3000,
+    "height": 381.81818181818181,
+    "width": 259.74025974025972,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -23,35 +23,30 @@
                       "Entity": "con_equipos"
                     }
                   },
-                  "Property": "marca"
+                  "Property": "familia"
                 }
               },
-              "queryRef": "con_equipos.marca",
-              "nativeQueryRef": "marca",
+              "queryRef": "con_equipos.familia",
+              "nativeQueryRef": "familia",
               "active": true
             }
           ]
         },
-        "Tooltips": {
+        "Series": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "met_contratos"
-                        }
-                      },
-                      "Property": "Meta"
+                    "SourceRef": {
+                      "Entity": "con_equipos"
                     }
                   },
-                  "Function": 5
+                  "Property": "GrupoServ"
                 }
               },
-              "queryRef": "CountNonNull(met_contratos.Meta)",
-              "nativeQueryRef": "Recuento de Meta"
+              "queryRef": "con_equipos.GrupoServ",
+              "nativeQueryRef": "GrupoServ"
             }
           ]
         },
@@ -112,50 +107,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "con_equipos"
-                          }
-                        },
-                        "Property": "GrupoServ"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'CONTRATO'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.5
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -259,96 +212,12 @@
                             "Entity": "con_equipos"
                           }
                         },
-                        "Property": "grupo"
+                        "Property": "GrupoServ"
                       }
                     },
                     "Right": {
                       "Literal": {
                         "Value": "'CONTRATO'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.4
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "con_equipos"
-                          }
-                        },
-                        "Property": "grupo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'EVENTO'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "con_equipos"
-                          }
-                        },
-                        "Property": "grupo"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'PERCALL'"
                       }
                     }
                   }
@@ -361,7 +230,21 @@
       "legend": [
         {
           "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopCenter'"
+                }
+              }
+            },
             "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -375,10 +258,44 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -388,10 +305,30 @@
       "categoryAxis": [
         {
           "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
             "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "40L"
+                  "Value": "33L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cant equipos'"
                 }
               }
             }
@@ -406,7 +343,53 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos por grupo y marca'"
+                  "Value": "'Equipos en contrato x familia'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -419,24 +402,51 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "647a63a8ae631e70811c",
+        "name": "a89c32bd09a53a5ddd93",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "31b91f4ba30eaa5b2e91",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "met_contratos"
+                    "Entity": "con_equipos"
                   }
                 },
-                "Property": "Meta"
+                "Property": "id"
               }
             },
-            "Function": 1
+            "Function": 5
           }
         },
-        "type": "Advanced",
-        "howCreated": "User"
+        "type": "Advanced"
+      },
+      {
+        "name": "3819dbd1759597e6330e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "GrupoServ"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
