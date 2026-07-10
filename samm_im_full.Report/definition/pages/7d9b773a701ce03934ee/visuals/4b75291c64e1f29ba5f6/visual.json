@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4b75291c64e1f29ba5f6",
   "position": {
-    "x": 260.64,
-    "y": 247.68,
+    "x": 1032.48,
+    "y": 479.52000000000004,
     "z": 15000,
-    "height": 472.32,
-    "width": 504,
+    "height": 192.96,
+    "width": 243.36,
     "tabOrder": 13000
   },
   "visual": {
@@ -529,7 +529,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos convertidos de garantia a contrato / Eq. en Garantía'"
+                  "Value": "'Equipos convertidos de Evento o Percall a contrato / Eq. en Evento o Percall'"
                 }
               }
             }
