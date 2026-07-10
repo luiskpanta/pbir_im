@@ -169,19 +169,19 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column CodigoFamilia
-		dataType: string
-		lineageTag: 5db1cafc-bc2b-4121-bc18-6f4b99f81473
-		summarizeBy: none
-		sourceColumn: CodigoFamilia
-
-		annotation SummarizationSetBy = Automatic
-
 	column grupo
 		dataType: string
 		lineageTag: e14f4d0d-ea45-4698-a1ab-ea0f1b9c77f9
 		summarizeBy: none
 		sourceColumn: grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubFamilia
+		dataType: string
+		lineageTag: f57f5f77-35b9-4c50-9bcc-4ad84d5bc6ee
+		summarizeBy: none
+		sourceColumn: SubFamilia
 
 		annotation SummarizationSetBy = Automatic
 

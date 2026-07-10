@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Recuento de idOT"
+              "nativeQueryRef": "Numero Fallas",
+              "displayName": "Numero Fallas"
             }
           ]
         }

@@ -28,11 +28,12 @@
                       "Property": "DiasParada"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
               "queryRef": "Sum(con_fallasEquipos.DiasParada)",
-              "nativeQueryRef": "Suma de DiasParada"
+              "nativeQueryRef": "Promedio Días Parada (MTTR)",
+              "displayName": "Promedio Días Parada (MTTR)"
             }
           ]
         }
@@ -52,7 +53,7 @@
                     "Property": "DiasParada"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"
