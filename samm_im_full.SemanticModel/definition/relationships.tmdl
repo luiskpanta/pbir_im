@@ -113,10 +113,6 @@ relationship d309ecbc-4a37-f485-f372-9e2f3fbb8826
 	fromColumn: con_estadoEquipos.id
 	toColumn: con_equipos.id
 
-relationship c97b6e3c-f92e-1f3e-1fce-669b4d5faacf
-	fromColumn: con_equipos.familia
-	toColumn: met_contratos.Codigo
-
 relationship 418fcfe6-be96-4c7f-b804-921ddddae03d
 	joinOnDateBehavior: datePartOnly
 	fromColumn: con_fallasEquipos.FechaParada
@@ -143,4 +139,15 @@ relationship AutoDetected_0862f954-ae0d-4589-962d-67882ce7853b
 relationship 4cb9b875-c720-6c6d-929e-1b60c103c215
 	fromColumn: con_equiposContrato.mes
 	toColumn: Dim_Fecha.Date
+
+relationship c34f43e5-9fb6-4216-5e20-97dc778e74e2
+	fromColumn: con_equipos.CodFam
+	toColumn: met_contratos.Codigo
+
+relationship 8e0961cc-9698-425f-911e-49a7bb644eeb
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: con_equipos.GrupoServ
+	toColumn: con_equiposContrato.estado_fin_mes
 

@@ -26,6 +26,16 @@ table met_contratos
 
 		annotation SummarizationSetBy = Automatic
 
+	column %Meta = ```
+			divide(met_contratos[Meta],100) 
+			```
+		lineageTag: a9124c8b-cc9b-4533-a15b-47639e2e3d61
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition met_contratos = m
 		mode: import
 		source =

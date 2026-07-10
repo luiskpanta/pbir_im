@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "95e71bfe528ad5dd2a9a",
   "position": {
-    "x": 863.63636363636363,
-    "y": 14.285714285714285,
-    "z": 10000,
-    "height": 74.025974025974023,
-    "width": 118.18181818181817,
-    "tabOrder": 10000
+    "x": 281.73106255350541,
+    "y": 0.094369702930318988,
+    "z": 2000,
+    "height": 81.241135442765469,
+    "width": 95.233948339483391,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -34,64 +34,12 @@
                       "Hierarchy": "Jerarquía de fechas"
                     }
                   },
-                  "Level": "Año"
-                }
-              },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año",
-              "nativeQueryRef": "Date Año",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
-                  "Level": "Trimestre"
-                }
-              },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre",
-              "nativeQueryRef": "Date Trimestre",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
                   "Level": "Mes"
                 }
               },
               "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes",
               "nativeQueryRef": "Date Mes",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -105,51 +53,13 @@
         "levels": [
           {
             "queryRefs": [
-              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                    }
-                  },
-                  "Property": "Año"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
               "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "2025L"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -198,135 +108,77 @@
                     "Condition": {
                       "Not": {
                         "Expression": {
-                          "Or": {
-                            "Left": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "l"
-                                        }
-                                      },
-                                      "Property": "Año"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "null"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2020L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2021L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2022L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2023L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2024L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2027L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2028L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2029L"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2030L"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
-                            },
-                            "Right": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "l"
-                                        }
-                                      },
-                                      "Property": "Año"
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "l"
                                     }
                                   },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "l"
-                                        }
-                                      },
-                                      "Property": "Trimestre"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "2025L"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "'Qtr 1'"
-                                      }
-                                    }
-                                  ]
-                                ]
+                                  "Property": "Mes"
+                                }
                               }
-                            }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'enero'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'febrero'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'julio'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'agosto'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'septiembre'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'octubre'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'noviembre'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'diciembre'"
+                                  }
+                                }
+                              ]
+                            ]
                           }
                         }
                       }
@@ -352,28 +204,7 @@
                                   "Hierarchy": "Jerarquía de fechas"
                                 }
                               },
-                              "Level": "Año"
-                            }
-                          },
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Dim_Fecha"
-                                        }
-                                      },
-                                      "Name": "Variación",
-                                      "Property": "Date"
-                                    }
-                                  },
-                                  "Hierarchy": "Jerarquía de fechas"
-                                }
-                              },
-                              "Level": "Trimestre"
+                              "Level": "Mes"
                             }
                           }
                         ],
@@ -384,7 +215,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "null"
+                                      "Value": "'enero'"
                                     }
                                   }
                                 ]
@@ -395,7 +226,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2020L"
+                                      "Value": "'febrero'"
                                     }
                                   }
                                 ]
@@ -406,7 +237,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2021L"
+                                      "Value": "'julio'"
                                     }
                                   }
                                 ]
@@ -417,7 +248,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2022L"
+                                      "Value": "'agosto'"
                                     }
                                   }
                                 ]
@@ -428,7 +259,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2023L"
+                                      "Value": "'septiembre'"
                                     }
                                   }
                                 ]
@@ -439,7 +270,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2024L"
+                                      "Value": "'octubre'"
                                     }
                                   }
                                 ]
@@ -450,7 +281,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2027L"
+                                      "Value": "'noviembre'"
                                     }
                                   }
                                 ]
@@ -461,49 +292,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2028L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2029L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2030L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2025L"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'Qtr 1'"
+                                      "Value": "'diciembre'"
                                     }
                                   }
                                 ]
@@ -519,19 +308,7 @@
                                       "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
                                     }
                                   },
-                                  "Property": "Año"
-                                }
-                              }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                                    }
-                                  },
-                                  "Property": "Trimestre"
+                                  "Property": "Mes"
                                 }
                               }
                             }
@@ -539,38 +316,28 @@
                         },
                         "valueMap": [
                           {
-                            "0": "(En blanco)"
+                            "0": "enero"
                           },
                           {
-                            "0": "2020"
+                            "0": "febrero"
                           },
                           {
-                            "0": "2021"
+                            "0": "julio"
                           },
                           {
-                            "0": "2022"
+                            "0": "agosto"
                           },
                           {
-                            "0": "2023"
+                            "0": "septiembre"
                           },
                           {
-                            "0": "2024"
+                            "0": "octubre"
                           },
                           {
-                            "0": "2027"
+                            "0": "noviembre"
                           },
                           {
-                            "0": "2028"
-                          },
-                          {
-                            "0": "2029"
-                          },
-                          {
-                            "0": "2030"
-                          },
-                          {
-                            "0": "2025",
-                            "1": "Qtr 1"
+                            "0": "diciembre"
                           }
                         ]
                       }
@@ -828,5 +595,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
 }

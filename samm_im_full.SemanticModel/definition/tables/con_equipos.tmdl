@@ -18,10 +18,13 @@ table con_equipos
 
 		changedProperty = FormatString
 
-	measure EsBaseCR = CALCULATE(con_equipos[id],con_equipos[GrupoServ]="CONTRATO")
-		lineageTag: 6b9434c8-498b-4924-8fb2-1930c5995760
-
-	measure %Capturerate = divide([EsBaseCR],DISTINCTCOUNT(con_equipos[id]))
+	measure %CR = ```
+			
+			DIVIDE(
+			    SUM('con_equipos'[enContrato]), 
+			    SUM('con_equipos'[baseCR])
+			    )
+			```
 		lineageTag: 190037f5-21b5-4fa2-8f70-3ae50127ef99
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -176,6 +179,72 @@ table con_equipos
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
+
+	column SubFamilia
+		dataType: string
+		lineageTag: 569e1391-7897-4fc1-963e-6ce60cf89fb2
+		summarizeBy: none
+		sourceColumn: SubFamilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo
+		dataType: string
+		lineageTag: f897361a-116b-434c-8163-eb2ff215872c
+		summarizeBy: none
+		sourceColumn: grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column enContrato =
+			if(
+			        con_equipos[grupo]="CONTRATO",
+			    1,0)
+		formatString: 0
+		lineageTag: 481177ab-e110-47bb-8008-eee11dad88f0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column baseCR =
+			if(con_equipos[grupo]="CONTRATO",1,
+			    if(con_equipos[grupo]="EVENTO",1,
+			    if(con_equipos[grupo]="PERCALL",1,
+			    0)))
+		formatString: 0
+		lineageTag: 12c2c743-55cf-4f17-8ee4-a702b950afd9
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodFam =
+			
+			SWITCH(
+			con_equipos[familia],
+			 "DENTAL", "De",
+			"DETECTORES", "DR",
+			"DIGITAL OUTPUT", "DO",
+			"DIGITALIZADORES", "CR",
+			"EXTRAORAL", "Ex",
+			"INTRAORAL", "In",
+			"RAYOS X (XP)", "RX",
+			"ULTRASONIDO (US)", "US",
+			"MAMOGRAFIA", "MM",
+			"OTROS", "Ot",
+			"NO APLICA"
+			)
+		lineageTag: 9fd16022-2e11-4c85-b7ea-4390064ca17d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta = related(met_contratos[%Meta])
+		lineageTag: 2853c2e8-68ca-4e73-88ff-014098ad774d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition con_equipos = m
 		mode: import

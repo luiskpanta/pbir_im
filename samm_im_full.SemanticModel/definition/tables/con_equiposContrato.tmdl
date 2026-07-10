@@ -1,6 +1,36 @@
 table con_equiposContrato
 	lineageTag: b471f57d-081b-4494-9844-8aa10ae872b2
 
+	measure CR =
+			
+			DIVIDE(
+				SUM('con_equiposContrato'[enContrato]),
+				SUM('con_equiposContrato'[baseCR])
+			)
+		lineageTag: 401212f3-0730-4fd8-b406-387f65b77d07
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure WC =
+			
+			DIVIDE(
+				SUM('con_equiposContrato'[paso_garantia_a_contrato]),
+				SUM('con_equiposContrato'[enGarantia])
+			)
+		lineageTag: fd3ec759-3037-4250-8dea-fb06aacd41b5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure WB =
+			
+			DIVIDE(
+				SUM('con_equiposContrato'[paso_percall_evento_a_contrato]),
+				SUM('con_equiposContrato'[enEvento_Percall])
+			)
+		lineageTag: 7d49ff8c-4e10-4d5a-a28e-eaf46f85904b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column equipo_serial
 		dataType: string
 		lineageTag: 205f9a13-de29-451f-a8de-6c15243901c2
@@ -11,18 +41,91 @@ table con_equiposContrato
 
 	column mes
 		dataType: dateTime
-		formatString: General Date
+		formatString: d/mm/yyyy
 		lineageTag: 3b1cd98d-1fee-4bea-b116-b038b5d6e233
 		summarizeBy: none
 		sourceColumn: mes
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column estado_fin_mes
 		dataType: string
 		lineageTag: cef725b6-cf54-450a-8ecc-043f7bc93318
 		summarizeBy: none
 		sourceColumn: estado_fin_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column enContrato = IF( con_equiposContrato[estado_fin_mes]="CONTRATO",1,0)
+		formatString: 0
+		lineageTag: 1091b1e3-34d9-44d2-bd8a-ea5b6bb250cd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column baseCR =
+			if(con_equiposContrato[estado_fin_mes]="CONTRATO",1,
+			    if(con_equiposContrato[estado_fin_mes]="EVENTO",1,
+			    if(con_equiposContrato[estado_fin_mes]="PERCALL",1,
+			    0)))
+		formatString: 0
+		lineageTag: a4ce9ace-4689-46aa-9713-2921d9c41a8c
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_mes_anterior
+		dataType: string
+		lineageTag: f0452535-7891-46db-8262-649d8dc64d70
+		summarizeBy: none
+		sourceColumn: estado_mes_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column paso_garantia_a_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: f5df6894-00b6-4537-b9e1-4e3e45e7f400
+		summarizeBy: sum
+		sourceColumn: paso_garantia_a_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column paso_percall_evento_a_contrato
+		dataType: int64
+		formatString: 0
+		lineageTag: dfd0a37a-c2a3-4924-adc1-f413f377c361
+		summarizeBy: sum
+		sourceColumn: paso_percall_evento_a_contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column metaCR2 = related(met_contratos[%Meta])
+		lineageTag: 7eca9871-fd02-4100-98b6-f28a9fbcaacb
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column enGarantia = IF( con_equiposContrato[estado_fin_mes]="GARANTIA",1,0)
+		formatString: 0
+		lineageTag: 864597dc-7b2f-48a5-ac9f-7232ccd00b8e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column enEvento_Percall = ```
+			IF( 
+			    OR(con_equiposContrato[estado_fin_mes]="EVENTO",
+			    con_equiposContrato[estado_fin_mes]="PERCALL"),
+			    1,0)
+			```
+		formatString: 0
+		lineageTag: 3af5bd61-12d9-4a51-b58c-44b7b3e160ac
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

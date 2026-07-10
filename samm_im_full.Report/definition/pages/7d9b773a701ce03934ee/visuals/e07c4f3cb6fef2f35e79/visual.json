@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "e07c4f3cb6fef2f35e79",
+  "position": {
+    "x": 262.8956982209794,
+    "y": 88,
+    "z": 0,
+    "height": 629.00000000000011,
+    "width": 1017.2918596843152,
+    "tabOrder": 14000
+  },
+  "visualGroup": {
+    "displayName": "Eq en contrato",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

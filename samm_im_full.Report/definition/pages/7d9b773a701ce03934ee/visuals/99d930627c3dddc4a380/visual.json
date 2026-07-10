@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "99d930627c3dddc4a380",
   "position": {
-    "x": 8.3333333333333339,
+    "x": 8.9552238805970141,
     "y": 0,
-    "z": 2000,
-    "height": 93.333333333333343,
-    "width": 563.33333333333337,
+    "z": 4000,
+    "height": 94.02985074626865,
+    "width": 461.19402985074623,
     "tabOrder": 2000
   },
   "visual": {
@@ -147,7 +147,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'# Equipos en Contrato / Total Equipos por familia sin garantía'"
+                  "Value": "'Equipos en Contrato / Total Equipos (sin Garantía)'"
                 }
               }
             },
