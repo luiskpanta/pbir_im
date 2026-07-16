@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "e3b9ca7fe03d5a2b9b26",
   "position": {
-    "x": 262.08,
-    "y": 21.6,
+    "x": 1.44,
+    "y": 4.32,
     "z": 1000,
-    "height": 698.4,
-    "width": 764.64,
-    "tabOrder": 15000
+    "height": 715.68000000000006,
+    "width": 1278.72
   },
   "visualGroup": {
     "displayName": "Evolucion CR",

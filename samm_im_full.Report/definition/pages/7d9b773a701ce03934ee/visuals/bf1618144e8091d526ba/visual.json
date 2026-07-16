@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "bf1618144e8091d526ba",
   "position": {
-    "x": 0,
-    "y": 116.78929765886288,
+    "x": 407.67682200274623,
+    "y": 87.308931242460787,
     "z": 0,
-    "height": 581.61070234113708,
-    "width": 764.64,
-    "tabOrder": 3000
+    "height": 351.07744270205063,
+    "width": 867.39749362286432
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -130,6 +129,26 @@
               "queryRef": "Sum(con_equiposContrato.enGarantia)",
               "nativeQueryRef": "en Garantia",
               "displayName": "en Garantia"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "enSinClasificar"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.enSinClasificar)",
+              "nativeQueryRef": "Sin Clasificar",
+              "displayName": "Sin Clasificar"
             }
           ]
         },
@@ -701,7 +720,7 @@
             "borderTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "35D"
+                  "Value": "26D"
                 }
               }
             },
@@ -714,6 +733,13 @@
                       "Percent": -0.5
                     }
                   }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
                 }
               }
             }
@@ -764,7 +790,7 @@
             "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -772,6 +798,18 @@
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
                 }
               }
             }
@@ -797,7 +835,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "80D"
+                  "Value": "53D"
                 }
               }
             }
@@ -822,6 +860,32 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.enSinClasificar)"
           }
         }
       ],
@@ -1144,7 +1208,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 2,
                       "Percent": -0.5
                     }
                   }
@@ -1155,6 +1219,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -1194,6 +1265,25 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.enGarantia)"
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.enSinClasificar)"
           }
         }
       ],
@@ -1617,7 +1707,73 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EVOLUCIÓN Capture Rate _ Estado equipos por Año, Mes'"
+                  "Value": "'CAPTURE RATE _Evolución'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Estado equipos por Año, Mes'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "30dce3d14f2ab889917d",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 262.08426964955083,
+    "y": 85.12,
     "z": 3000,
     "height": 629.00000000000011,
     "width": 776,
@@ -1073,7 +1073,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos en contrato y CR por familia'"
+                  "Value": "'CAPTURE RATE'"
                 }
               }
             },
@@ -1089,8 +1089,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.4
+                      "ColorId": 2,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -1099,7 +1099,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
                 }
               }
             },
@@ -1147,6 +1147,52 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Equipos en Contrato / Total Equipos (sin Garantía) - % por familia'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

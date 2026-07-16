@@ -6840,6 +6840,121 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_equipos_contrato.en_sin_clasificar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equiposContrato",
+			          "ConceptualProperty": "enSinClasificar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "en sin clasificar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "enSinClasificar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato.meta_WB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos",
+			          "ConceptualProperty": "MetaWB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta WB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MetaWB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato.meta_WC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos",
+			          "ConceptualProperty": "MetaWC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta WC": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MetaWC": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_equipos_contrato.met_WC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equiposContrato",
+			          "ConceptualProperty": "MetWC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "met WC": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MetWC": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_equipos_contrato.met_WB": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equiposContrato",
+			          "ConceptualProperty": "MetWB"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "met WB": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MetWB": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -10678,6 +10793,171 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "con_equipos_contrato_has_met_WB": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equiposContrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipos_contrato": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato"
+			          }
+			        },
+			        "con_equipos_contrato.met_WB": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato.met_WB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipos_contrato"
+			            },
+			            "Object": {
+			              "Role": "con_equipos_contrato.met_WB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_contratos_have_met_WB"
+			        }
+			      ]
+			    },
+			    "con_equipos_contrato_has_met_WC": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equiposContrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipos_contrato": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato"
+			          }
+			        },
+			        "con_equipos_contrato.met_WC": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato.met_WC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipos_contrato"
+			            },
+			            "Object": {
+			              "Role": "con_equipos_contrato.met_WC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_contratos_have_met_WCs"
+			        }
+			      ]
+			    },
+			    "met_contrato_has_meta_WC": {
+			      "Binding": {
+			        "ConceptualEntity": "met_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "met_contrato": {
+			          "Target": {
+			            "Entity": "met_contrato"
+			          }
+			        },
+			        "met_contrato.meta_WC": {
+			          "Target": {
+			            "Entity": "met_contrato.meta_WC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "met_contrato"
+			            },
+			            "Object": {
+			              "Role": "met_contrato.meta_WC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "met_contratos_have_meta_WCs"
+			        }
+			      ]
+			    },
+			    "met_contrato_has_meta_WB": {
+			      "Binding": {
+			        "ConceptualEntity": "met_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "met_contrato": {
+			          "Target": {
+			            "Entity": "met_contrato"
+			          }
+			        },
+			        "met_contrato.meta_WB": {
+			          "Target": {
+			            "Entity": "met_contrato.meta_WB"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "met_contrato"
+			            },
+			            "Object": {
+			              "Role": "met_contrato.meta_WB"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "met_contratos_have_meta_WB"
+			        }
+			      ]
+			    },
+			    "con_equipos_contrato_has_en_sin_clasificar": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equiposContrato"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipos_contrato": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato"
+			          }
+			        },
+			        "con_equipos_contrato.en_sin_clasificar": {
+			          "Target": {
+			            "Entity": "con_equipos_contrato.en_sin_clasificar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipos_contrato"
+			            },
+			            "Object": {
+			              "Role": "con_equipos_contrato.en_sin_clasificar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_contratos_have_en_sin_clasificars"
 			        }
 			      ]
 			    },

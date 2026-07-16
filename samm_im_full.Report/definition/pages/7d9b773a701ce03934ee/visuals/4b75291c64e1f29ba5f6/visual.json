@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4b75291c64e1f29ba5f6",
   "position": {
-    "x": 1032.48,
-    "y": 479.52000000000004,
-    "z": 15000,
-    "height": 192.96,
-    "width": 243.36,
-    "tabOrder": 13000
+    "x": 260.2463665281158,
+    "y": 438.68321410871408,
+    "z": 500,
+    "height": 276.6145818722473,
+    "width": 533.43825189209747
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -427,6 +426,32 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -443,7 +468,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'WIND BACK'"
+                  "Value": "'WIN BACK'"
                 }
               }
             },
@@ -535,8 +560,22 @@
             }
           }
         }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
 }

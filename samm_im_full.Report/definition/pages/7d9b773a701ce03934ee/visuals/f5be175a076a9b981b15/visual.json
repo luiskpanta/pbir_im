@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "f5be175a076a9b981b15",
   "position": {
-    "x": 1032.48,
-    "y": 249.12,
-    "z": 14000,
-    "height": 228.96,
-    "width": 243.36,
-    "tabOrder": 12000
+    "x": 792.51649726550954,
+    "y": 439.42234016887812,
+    "z": 750,
+    "height": 276.25765983112183,
+    "width": 482.85127145006118
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -203,6 +202,27 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
                 }
               }
             }
@@ -530,6 +550,32 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomCenter'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -638,8 +684,22 @@
             }
           }
         }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
 }

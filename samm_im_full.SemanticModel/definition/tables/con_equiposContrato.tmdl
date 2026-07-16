@@ -129,6 +129,29 @@ table con_equiposContrato
 
 		annotation SummarizationSetBy = Automatic
 
+	column enSinClasificar = IF( con_equiposContrato[estado_fin_mes]="SIN CLASIFICAR",1,0)
+		formatString: 0
+		lineageTag: b7dbb61a-10b3-452e-b4ca-2c95151b17a0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetWC = related(met_contratos[MetaWC])
+		lineageTag: 79da0dfb-3416-4cd2-a2f0-6231fbf471f1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MetWB = related(met_contratos[MetaWB])
+		lineageTag: 8d3bbe1e-f6e8-44f9-943f-fbd34a4a6211
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition con_equiposContrato = m
 		mode: import
 		source =

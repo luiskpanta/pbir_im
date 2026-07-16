@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "51a2aac4c633c2f96cd1",
+  "name": "2c177906f2b6426e9b6b",
   "position": {
-    "x": 936.62857142857149,
+    "x": 918.75004014651154,
     "y": 0,
     "z": 4000,
-    "height": 79.2,
-    "width": 338.40000000000003,
-    "tabOrder": 8000
+    "height": 79.136308805790108,
+    "width": 359.96995985348866
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -20,14 +19,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_equipos"
+                      "Entity": "con_equiposContrato"
                     }
                   },
-                  "Property": "grupo"
+                  "Property": "estado_fin_mes"
                 }
               },
-              "queryRef": "con_equipos.grupo",
-              "nativeQueryRef": "grupo"
+              "queryRef": "con_equiposContrato.estado_fin_mes",
+              "nativeQueryRef": "estado_fin_mes"
             }
           ]
         }
@@ -58,8 +57,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                      "ColorId": 2,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -77,7 +76,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 2,
                       "Percent": -0.5
                     }
                   }
@@ -125,7 +124,7 @@
                 "From": [
                   {
                     "Name": "c",
-                    "Entity": "con_equipos",
+                    "Entity": "con_equiposContrato",
                     "Type": 0
                   }
                 ],
@@ -143,18 +142,11 @@
                                       "Source": "c"
                                     }
                                   },
-                                  "Property": "grupo"
+                                  "Property": "estado_fin_mes"
                                 }
                               }
                             ],
                             "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'GARANTIA'"
-                                  }
-                                }
-                              ],
                               [
                                 {
                                   "Literal": {
@@ -226,7 +218,7 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e07c4f3cb6fef2f35e79",
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
   "filterConfig": {
     "filters": [
       {
@@ -266,6 +258,79 @@
                               }
                             },
                             "Property": "grupo"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "08f2f3f6936c9c5f101e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equiposContrato"
+              }
+            },
+            "Property": "estado_fin_mes"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_equiposContrato",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "estado_fin_mes"
                           }
                         }
                       ],

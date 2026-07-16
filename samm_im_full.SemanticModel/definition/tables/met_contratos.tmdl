@@ -36,6 +36,22 @@ table met_contratos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column MetaWB = 0.002
+		lineageTag: 8d104036-9469-4b43-a2f5-4b7e25d932bb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MetaWC = 0.005
+		lineageTag: 65f62dc4-e21c-4279-abf4-c53975734e46
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition met_contratos = m
 		mode: import
 		source =

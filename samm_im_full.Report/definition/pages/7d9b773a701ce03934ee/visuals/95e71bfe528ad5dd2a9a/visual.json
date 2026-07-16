@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "95e71bfe528ad5dd2a9a",
   "position": {
-    "x": 281.73106255350541,
-    "y": 0.094369702930318988,
+    "x": 543.81251666609046,
+    "y": 18.799239530270142,
     "z": 2000,
-    "height": 81.241135442765469,
-    "width": 95.233948339483391,
-    "tabOrder": 2000
+    "height": 81.175802804693276,
+    "width": 95.608435298006057
   },
   "visual": {
     "visualType": "slicer",
@@ -72,13 +71,6 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -106,81 +98,35 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Not": {
-                        "Expression": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "l"
-                                    }
-                                  },
-                                  "Property": "Mes"
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "l"
                                 }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'enero'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'febrero'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'julio'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'agosto'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'septiembre'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'octubre'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'noviembre'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'diciembre'"
-                                  }
-                                }
-                              ]
-                            ]
+                              },
+                              "Property": "Mes"
+                            }
                           }
-                        }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'julio'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'junio'"
+                              }
+                            }
+                          ]
+                        ]
                       }
                     },
                     "Annotations": {
@@ -215,28 +161,6 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'enero'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'febrero'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
                                       "Value": "'julio'"
                                     }
                                   }
@@ -248,51 +172,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'agosto'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'septiembre'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'octubre'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'noviembre'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'diciembre'"
+                                      "Value": "'junio'"
                                     }
                                   }
                                 ]
@@ -316,28 +196,10 @@
                         },
                         "valueMap": [
                           {
-                            "0": "enero"
-                          },
-                          {
-                            "0": "febrero"
-                          },
-                          {
                             "0": "julio"
                           },
                           {
-                            "0": "agosto"
-                          },
-                          {
-                            "0": "septiembre"
-                          },
-                          {
-                            "0": "octubre"
-                          },
-                          {
-                            "0": "noviembre"
-                          },
-                          {
-                            "0": "diciembre"
+                            "0": "junio"
                           }
                         ]
                       }

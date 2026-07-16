@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a55e424dfe4aee40eb32",
   "position": {
-    "x": 1032.48,
-    "y": 89.28,
-    "z": 13000,
-    "height": 158.4,
-    "width": 247.68,
-    "tabOrder": 11000
+    "x": 0,
+    "y": 94.503141133896264,
+    "z": 3500,
+    "height": 343.8832328106152,
+    "width": 407.67682200274623
   },
   "visual": {
     "visualType": "cardVisual",
@@ -53,18 +52,44 @@
             },
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equiposContrato"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "enContrato"
                     }
                   },
-                  "Property": "WB"
+                  "Function": 0
                 }
               },
-              "queryRef": "con_equiposContrato.WB",
-              "nativeQueryRef": "WB",
-              "format": "0.0%;-0.0%;0.0%"
+              "queryRef": "Sum(con_equiposContrato.enContrato)",
+              "nativeQueryRef": "Eq. en Contrato",
+              "displayName": "Eq. en Contrato"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "baseCR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.baseCR)",
+              "nativeQueryRef": "Base CR",
+              "displayName": "Base CR",
+              "format": "G"
             },
             {
               "field": {
@@ -80,6 +105,143 @@
               "queryRef": "con_equiposContrato.WC",
               "nativeQueryRef": "WC",
               "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "MetWC"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.MetWC)",
+              "nativeQueryRef": "Promedio de MetWC",
+              "displayName": "Meta WC",
+              "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "paso_garantia_a_contrato"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.paso_garantia_a_contrato)",
+              "nativeQueryRef": "vienen de GAR",
+              "displayName": "vienen de GAR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "enGarantia"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.enGarantia)",
+              "nativeQueryRef": "en Garantia",
+              "displayName": "en Garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_equiposContrato"
+                    }
+                  },
+                  "Property": "WB"
+                }
+              },
+              "queryRef": "con_equiposContrato.WB",
+              "nativeQueryRef": "WB",
+              "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "MetWB"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.MetWB)",
+              "nativeQueryRef": "Promedio de MetWB1",
+              "displayName": "Meta WB",
+              "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "paso_percall_evento_a_contrato"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.paso_percall_evento_a_contrato)",
+              "nativeQueryRef": "vienen de EV_PC",
+              "displayName": "vienen de EV_PC"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "enEvento_Percall"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.enEvento_Percall)",
+              "nativeQueryRef": " en Evento_Percall",
+              "displayName": " en Evento_Percall"
             }
           ]
         }
@@ -124,14 +286,14 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "4L"
                 }
               }
             },
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "4L"
                 }
               }
             },
@@ -347,9 +509,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                    "Literal": {
+                      "Value": "'#3E7758'"
                     }
                   }
                 }
@@ -396,6 +557,153 @@
           },
           "selector": {
             "metadata": "con_equiposContrato.WB"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.MetWB)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.MetWC)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.enContrato)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.enGarantia)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.enEvento_Percall)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.paso_garantia_a_contrato)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.paso_percall_evento_a_contrato)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.baseCR)"
           }
         }
       ],
@@ -536,7 +844,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#337D6E'"
+                      "Value": "'#81BA9B'"
                     }
                   }
                 }
@@ -597,6 +905,43 @@
           },
           "selector": {
             "metadata": "con_equiposContrato.WB"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E8B5A0'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.MetWC)"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_equiposContrato.MetWB)"
           }
         }
       ],
@@ -1180,6 +1525,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tarjeta WbWcCr'"
+                }
+              }
             }
           }
         }
@@ -1219,5 +1571,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
 }
