@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "925604d9928ae9d2c5c3",
+  "name": "c801cfe45a0333a0ad41",
   "position": {
-    "x": 219.16398713826365,
-    "y": 137.87781350482314,
-    "z": 3000,
-    "height": 268.5530546623794,
-    "width": 304.5659163987138,
-    "tabOrder": 3000
+    "x": 1035.5555555555557,
+    "y": 86.222222222222229,
+    "z": 6004,
+    "height": 111.11111111111111,
+    "width": 236.44444444444446,
+    "tabOrder": 6004
   },
   "visual": {
     "visualType": "cardVisual",
@@ -25,15 +25,14 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "serial"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Numero Fallas",
-              "displayName": "Numero Fallas"
+              "queryRef": "Count(con_fallasEquipos.serial)",
+              "nativeQueryRef": "Recuento de serial"
             }
           ]
         }
@@ -50,7 +49,7 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "serial"
                   }
                 },
                 "Function": 2

@@ -32,11 +32,6 @@ table con_fallasEquipos
 		summarizeBy: none
 		sourceColumn: Fechafalla
 
-		variation Variación
-			isDefault
-			relationship: f83e8f84-c4ca-488f-bd26-2b15361809c2
-			defaultHierarchy: LocalDateTable_7bc5ad49-b4e2-4acf-9599-d8ec30fbdd2c.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 	column FechaParada

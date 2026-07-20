@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "925604d9928ae9d2c5c3",
+  "name": "59920da5900c06c5a690",
   "position": {
-    "x": 219.16398713826365,
-    "y": 137.87781350482314,
-    "z": 3000,
-    "height": 268.5530546623794,
-    "width": 304.5659163987138,
-    "tabOrder": 3000
+    "x": 418.66666666666669,
+    "y": 211.55555555555554,
+    "z": 6001,
+    "height": 260.44444444444446,
+    "width": 352.88888888888891,
+    "tabOrder": 6001
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Data": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "marca"
+                }
+              },
+              "queryRef": "con_fallasEquipos.marca",
+              "nativeQueryRef": "marca",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
           "projections": [
             {
               "field": {
@@ -25,15 +44,14 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "serial"
                     }
                   },
-                  "Function": 2
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Numero Fallas",
-              "displayName": "Numero Fallas"
+              "queryRef": "CountNonNull(con_fallasEquipos.serial)",
+              "nativeQueryRef": "serial"
             }
           ]
         }
@@ -50,10 +68,10 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "serial"
                   }
                 },
-                "Function": 2
+                "Function": 5
               }
             },
             "direction": "Descending"

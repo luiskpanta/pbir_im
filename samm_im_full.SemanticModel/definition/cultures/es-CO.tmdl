@@ -4691,6 +4691,9 @@ cultureInfo es-CO
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "familia": {
@@ -6955,6 +6958,703 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_equipo.grupo_serv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equipos",
+			          "ConceptualProperty": "GrupoServ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo serv": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GrupoServ": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_equipo.grupo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equipos",
+			          "ConceptualProperty": "grupo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_equipo.sub_familia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_equipos",
+			          "ConceptualProperty": "SubFamilia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sub familia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SubFamilia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "met contrato": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "met_contratos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato.familia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos",
+			          "ConceptualProperty": "Familia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "familia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato.meta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos",
+			          "ConceptualProperty": "Meta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "met_contrato.codigo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "met_contratos",
+			          "ConceptualProperty": "Codigo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "codigo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "con fallas equipo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "con falla equipo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "con_fallasEquipos": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.equipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "equipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.serial": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "serial"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "serial": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "series": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "serialization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "run": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "soap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "program": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.motivoservicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "motivoservicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "motivoservicio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fechafalla": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "Fechafalla"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fechafalla": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "con_fallas_equipo.fecha_parada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "FechaParada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha parada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaParada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaParada",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_parada.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaParada",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha parada año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_parada.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaParada",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha parada trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_parada.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaParada",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha parada me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_parada.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaParada",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha parada día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_reparacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "FechaReparacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha reparacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FechaReparacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaReparacion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_reparacion.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaReparacion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha reparacion año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_reparacion.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaReparacion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha reparacion trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_reparacion.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaReparacion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha reparacion me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.fecha_reparacion.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "VariationSource": "FechaReparacion",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fecha reparacion día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.dias_parada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "DiasParada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias parada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiasParada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.id_OT": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "idOT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id OT": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "idOT": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "OT": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "identification ot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity ot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier ot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential ot": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.subfamilia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "subfamilia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "subfamilia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -8245,6 +8945,930 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_año": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.año": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_reparacions_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_me_has_con_fallas_equipo_fecha_parada_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.me"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.día": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.día"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me6"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_trimestre_has_con_fallas_equipo_fecha_parada_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.trimestre": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.trimestre"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres6"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_año_has_con_fallas_equipo_fecha_parada_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.año": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.año"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.trimestre": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.año"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años6"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_jerarquía_de_fecha_has_con_fallas_equipo_fecha_parada_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.día": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_jerarquía_de_fecha_has_con_fallas_equipo_fecha_parada_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_jerarquía_de_fecha_has_con_fallas_equipo_fecha_parada_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.trimestre": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_jerarquía_de_fecha_has_con_fallas_equipo_fecha_parada_año": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.año": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_parada_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_parada": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_parada"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_paradas_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_me_has_con_equipo_fecha_inicio_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.me": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.me"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.día": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.día"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me5"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_trimestre_has_con_equipo_fecha_inicio_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.trimestre"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.me": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres5"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_año_has_con_equipo_fecha_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.año": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.año"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.año"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años5"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.día": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.me": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.trimestre": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_jerarquía_de_fecha_has_con_equipo_fecha_inicio_año": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.año": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años2"
+			        }
+			      ]
+			    },
+			    "con_equipo_fecha_inicio_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo.fecha_inicio": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio"
+			          }
+			        },
+			        "con_equipo.fecha_inicio.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo.fecha_inicio"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.fecha_inicio.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fecha_inicios_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "con_cumplimiento_preventivo_fecha_reporte_me_has_con_cumplimiento_preventivo_fecha_reporte_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_cumplimientoPreventivos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_cumplimiento_preventivo.fecha_reporte.me": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
+			          }
+			        },
+			        "con_cumplimiento_preventivo.fecha_reporte.día": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me4"
+			        }
+			      ]
+			    },
+			    "con_cumplimiento_preventivo_fecha_reporte_trimestre_has_con_cumplimiento_preventivo_fecha_reporte_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_cumplimientoPreventivos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_cumplimiento_preventivo.fecha_reporte.trimestre": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			          }
+			        },
+			        "con_cumplimiento_preventivo.fecha_reporte.me": {
+			          "Target": {
+			            "Entity": "con_cumplimiento_preventivo.fecha_reporte.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_cumplimiento_preventivo.fecha_reporte.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres4"
+			        }
+			      ]
+			    },
 			    "con_cumplimiento_preventivo_fecha_reporte_año_has_con_cumplimiento_preventivo_fecha_reporte_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "con_cumplimientoPreventivos"
@@ -8406,7 +10030,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres3"
+			          "ID": "jerarquía_de_fechas_have_trimestres32"
 			        }
 			      ]
 			    },
@@ -8439,7 +10063,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años4"
+			          "ID": "jerarquía_de_fechas_have_años43"
 			        }
 			      ]
 			    },
@@ -8505,7 +10129,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días4"
+			          "ID": "me_have_días43"
 			        },
 			        {
 			          "Attribute": {
@@ -8518,7 +10142,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me4"
+			          "ID": "días_have_me43"
 			        },
 			        {
 			          "Preposition": {
@@ -8571,7 +10195,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me4"
+			          "ID": "trimestres_have_me43"
 			        },
 			        {
 			          "Attribute": {
@@ -8584,7 +10208,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres4"
+			          "ID": "me_have_trimestres43"
 			        },
 			        {
 			          "Preposition": {
@@ -10017,6 +11641,98 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_equipos_have_con_equipos_contratos"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_dim_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "dim_marca": {
+			          "Target": {
+			            "Entity": "dim_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_dim_marcas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_marca"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_marcas_have_con_fallas_equipos"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_dim_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_dim_fechas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_con_fallas_equipos"
 			        }
 			      ]
 			    },
@@ -12050,6 +13766,501 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "con_fallas_equipo_has_subfamilia": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.subfamilia": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.subfamilia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.subfamilia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_subfamilias"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_id_OT": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.id_OT": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.id_OT"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.id_OT"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_id_OT"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_dias_parada": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.dias_parada": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.dias_parada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.dias_parada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_dias_paradas"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_fecha_reparacion": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_fecha_reparacions"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_fecha_parada": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_parada": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_parada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_parada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_fecha_paradas"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_fechafalla": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.fechafalla": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fechafalla"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fechafalla"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_fechafallas"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_motivoservicio": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.motivoservicio": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.motivoservicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.motivoservicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_motivoservicios"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_serial": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.serial": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.serial"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.serial"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_serials"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_equipo": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.equipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.equipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_equipos"
+			        }
+			      ]
+			    },
+			    "met_contrato_has_codigo": {
+			      "Binding": {
+			        "ConceptualEntity": "met_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "met_contrato": {
+			          "Target": {
+			            "Entity": "met_contrato"
+			          }
+			        },
+			        "met_contrato.codigo": {
+			          "Target": {
+			            "Entity": "met_contrato.codigo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "met_contrato"
+			            },
+			            "Object": {
+			              "Role": "met_contrato.codigo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "met_contratos_have_codigos"
+			        }
+			      ]
+			    },
+			    "met_contrato_has_meta": {
+			      "Binding": {
+			        "ConceptualEntity": "met_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "met_contrato": {
+			          "Target": {
+			            "Entity": "met_contrato"
+			          }
+			        },
+			        "met_contrato.meta": {
+			          "Target": {
+			            "Entity": "met_contrato.meta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "met_contrato"
+			            },
+			            "Object": {
+			              "Role": "met_contrato.meta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "met_contratos_have_meta"
+			        }
+			      ]
+			    },
+			    "met_contrato_has_familia": {
+			      "Binding": {
+			        "ConceptualEntity": "met_contratos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "met_contrato": {
+			          "Target": {
+			            "Entity": "met_contrato"
+			          }
+			        },
+			        "met_contrato.familia": {
+			          "Target": {
+			            "Entity": "met_contrato.familia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "met_contrato"
+			            },
+			            "Object": {
+			              "Role": "met_contrato.familia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "met_contratos_have_familias"
+			        }
+			      ]
+			    },
+			    "con_equipo_has_sub_familia": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo": {
+			          "Target": {
+			            "Entity": "con_equipo"
+			          }
+			        },
+			        "con_equipo.sub_familia": {
+			          "Target": {
+			            "Entity": "con_equipo.sub_familia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.sub_familia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_have_sub_familias"
+			        }
+			      ]
+			    },
+			    "con_equipo_has_grupo": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo": {
+			          "Target": {
+			            "Entity": "con_equipo"
+			          }
+			        },
+			        "con_equipo.grupo": {
+			          "Target": {
+			            "Entity": "con_equipo.grupo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_have_grupos"
+			        }
+			      ]
+			    },
+			    "con_equipo_has_grupo_serv": {
+			      "Binding": {
+			        "ConceptualEntity": "con_equipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_equipo": {
+			          "Target": {
+			            "Entity": "con_equipo"
+			          }
+			        },
+			        "con_equipo.grupo_serv": {
+			          "Target": {
+			            "Entity": "con_equipo.grupo_serv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_equipo.grupo_serv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_equipos_have_grupo_servs"
+			        }
+			      ]
+			    },
 			    "con_estado_equipo_has_fuera_de_servicio": {
 			      "Binding": {
 			        "ConceptualEntity": "con_estadoEquipos"
@@ -12509,39 +14720,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_equipos_have_estado_equipos"
-			        }
-			      ]
-			    },
-			    "con_equipo_has_familia": {
-			      "Binding": {
-			        "ConceptualEntity": "con_equipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_equipo": {
-			          "Target": {
-			            "Entity": "con_equipo"
-			          }
-			        },
-			        "con_equipo.familia": {
-			          "Target": {
-			            "Entity": "con_equipo.familia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_equipo"
-			            },
-			            "Object": {
-			              "Role": "con_equipo.familia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "con_equipos_have_familias"
 			        }
 			      ]
 			    },
@@ -16591,18 +18769,24 @@ cultureInfo es-CO
 			      ]
 			    },
 			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_trimestre": {
+			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_trimestre": {
 			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
 			        "ConceptualEntity": "con_fallasEquipos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
 			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
 			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
 			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
 			          }
 			        },
 			        "con_fallas_equipo.fecha_reparacion.trimestre": {
+			        "con_fallas_equipo.fecha_reparacion.trimestre": {
 			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
 			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
 			          }
 			        }
@@ -16612,8 +18796,10 @@ cultureInfo es-CO
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
 			            },
 			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
 			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
 			            }
 			          },
@@ -16645,8 +18831,10 @@ cultureInfo es-CO
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
 			            },
 			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
 			              "Role": "con_fallas_equipo.fecha_reparacion.me"
 			            }
 			          },
@@ -16689,6 +18877,7 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "con_fallas_equipo_fecha_reparacion_año_has_con_fallas_equipo_fecha_reparacion_trimestre": {
 			    "con_fallas_equipo_fecha_reparacion_año_has_con_fallas_equipo_fecha_reparacion_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "con_fallasEquipos"

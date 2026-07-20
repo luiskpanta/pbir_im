@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "925604d9928ae9d2c5c3",
+  "name": "523419302306ecaabe22",
   "position": {
-    "x": 219.16398713826365,
-    "y": 137.87781350482314,
-    "z": 3000,
-    "height": 268.5530546623794,
-    "width": 304.5659163987138,
-    "tabOrder": 3000
+    "x": 344,
+    "y": 86.222222222222229,
+    "z": 6002,
+    "height": 111.11111111111111,
+    "width": 259.55555555555554,
+    "tabOrder": 6002
   },
   "visual": {
     "visualType": "cardVisual",
@@ -25,15 +25,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "DiasParada"
                     }
                   },
-                  "Function": 2
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Numero Fallas",
-              "displayName": "Numero Fallas"
+              "queryRef": "Sum(con_fallasEquipos.DiasParada)",
+              "nativeQueryRef": "Promedio Días Parada (MTTR)",
+              "displayName": "Promedio Días Parada (MTTR)"
             }
           ]
         }
@@ -50,10 +50,10 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "DiasParada"
                   }
                 },
-                "Function": 2
+                "Function": 1
               }
             },
             "direction": "Descending"

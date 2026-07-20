@@ -101,101 +101,63 @@
         "sort": [
           {
             "field": {
-              "Arithmetic": {
-                "Left": {
-                  "Aggregation": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
                     "Expression": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "con_equipos"
-                          }
-                        },
-                        "Property": "id"
+                      "SourceRef": {
+                        "Entity": "con_equipos"
                       }
                     },
-                    "Function": 2
+                    "Property": "id"
                   }
                 },
-                "Right": {
-                  "ScopedEval": {
-                    "Expression": {
-                      "Aggregation": {
-                        "Expression": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "con_equipos"
-                              }
-                            },
-                            "Property": "id"
-                          }
-                        },
-                        "Function": 2
-                      }
-                    },
-                    "Scope": []
-                  }
-                },
-                "Operator": 3
+                "Function": 2
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
-    "objects": {
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "86D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Divide(Count(con_equipos.id), ScopedEval(Count(con_equipos.id), []))"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "69D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(con_equipos.id)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "91D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.GrupoServ"
-          }
-        }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {}
-        }
-      ]
-    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1af364482ea122bdbcee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "GrupoServ"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bb3349e8dd225c9182b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_equipos"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

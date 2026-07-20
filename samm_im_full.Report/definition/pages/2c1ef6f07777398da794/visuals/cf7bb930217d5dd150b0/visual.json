@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "925604d9928ae9d2c5c3",
+  "name": "cf7bb930217d5dd150b0",
   "position": {
-    "x": 219.16398713826365,
-    "y": 137.87781350482314,
-    "z": 3000,
-    "height": 268.5530546623794,
-    "width": 304.5659163987138,
-    "tabOrder": 3000
+    "x": 95.111111111111114,
+    "y": 211.55555555555554,
+    "z": 6000,
+    "height": 260.44444444444446,
+    "width": 304,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "cardVisual",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Data": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "serial"
+                }
+              },
+              "queryRef": "con_fallasEquipos.serial",
+              "nativeQueryRef": "serial",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
           "projections": [
             {
               "field": {
@@ -25,15 +44,14 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "DiasParada"
                     }
                   },
-                  "Function": 2
+                  "Function": 0
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Numero Fallas",
-              "displayName": "Numero Fallas"
+              "queryRef": "Sum(con_fallasEquipos.DiasParada)",
+              "nativeQueryRef": "Suma de DiasParada"
             }
           ]
         }
@@ -50,10 +68,10 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "DiasParada"
                   }
                 },
-                "Function": 2
+                "Function": 0
               }
             },
             "direction": "Descending"
