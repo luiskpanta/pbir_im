@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a52f72b00b4c6e285393",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 100.23492560689115,
+    "y": 30.070477682067345,
     "z": 1000,
-    "height": 83.344051446945329,
-    "width": 1267.6527331189709,
+    "height": 498.167580266249,
+    "width": 978.29287392325762,
     "tabOrder": 1000
   },
   "visual": {
@@ -25,7 +25,7 @@
             "showTooltipPages": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -33,6 +33,40 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "showPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "page_dashboard"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
                 }
               }
             }

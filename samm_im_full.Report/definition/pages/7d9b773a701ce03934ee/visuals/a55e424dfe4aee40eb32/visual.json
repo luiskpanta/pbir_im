@@ -6,7 +6,8 @@
     "y": 94.503141133896264,
     "z": 3500,
     "height": 343.8832328106152,
-    "width": 407.67682200274623
+    "width": 407.67682200274623,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -27,27 +28,6 @@
               },
               "queryRef": "con_equiposContrato.CR",
               "nativeQueryRef": "CR",
-              "format": "0.0%;-0.0%;0.0%"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
-                      "Property": "metaCR2"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_equiposContrato.metaCR2)",
-              "nativeQueryRef": "Promedio de metaCR2",
-              "displayName": "Meta CR",
               "format": "0.0%;-0.0%;0.0%"
             },
             {
@@ -116,27 +96,6 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
-                      "Property": "MetWC"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_equiposContrato.MetWC)",
-              "nativeQueryRef": "Promedio de MetWC",
-              "displayName": "Meta WC",
-              "format": "0.0%;-0.0%;0.0%"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
                       "Property": "paso_garantia_a_contrato"
                     }
                   },
@@ -180,27 +139,6 @@
               },
               "queryRef": "con_equiposContrato.WB",
               "nativeQueryRef": "WB",
-              "format": "0.0%;-0.0%;0.0%"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
-                      "Property": "MetWB"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_equiposContrato.MetWB)",
-              "nativeQueryRef": "Promedio de MetWB1",
-              "displayName": "Meta WB",
               "format": "0.0%;-0.0%;0.0%"
             },
             {

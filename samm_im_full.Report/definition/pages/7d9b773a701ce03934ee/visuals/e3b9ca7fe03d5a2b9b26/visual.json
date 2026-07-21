@@ -6,7 +6,8 @@
     "y": 4.32,
     "z": 1000,
     "height": 715.68000000000006,
-    "width": 1278.72
+    "width": 1278.72,
+    "tabOrder": 9000
   },
   "visualGroup": {
     "displayName": "Evolucion CR",

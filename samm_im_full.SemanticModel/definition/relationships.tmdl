@@ -135,3 +135,13 @@ relationship 0a637333-2c64-7c78-6381-eb78552e526d
 	fromColumn: con_fallasEquipos.Fechafalla
 	toColumn: Dim_Fecha.Date
 
+relationship 15fedbb2-3cfd-4130-97e7-90fa52460678
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_equiposContrato.mes
+	toColumn: LocalDateTable_e7d47143-17b3-47f5-a73d-77490b4e1a1d.Date
+
+relationship 35d83622-772e-4b1f-a20a-ad56137b2fb2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: refreshDate.UltimoBackup
+	toColumn: LocalDateTable_0b226db5-2b14-4873-9b3e-65ba3f7ca5fe.Date
+

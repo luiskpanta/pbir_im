@@ -6,7 +6,8 @@
     "y": 87.308931242460787,
     "z": 0,
     "height": 351.07744270205063,
-    "width": 867.39749362286432
+    "width": 867.39749362286432,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -168,27 +169,6 @@
               "queryRef": "con_equiposContrato.CR",
               "nativeQueryRef": "CR",
               "format": "0.0%;-0.0%;0.0%"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
-                      "Property": "metaCR2"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_equiposContrato.metaCR2)",
-              "nativeQueryRef": "Meta _CR",
-              "displayName": "Meta _CR",
-              "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
         }
