@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "56a9f191ebeb39947b0c",
   "position": {
-    "x": 163.27746741154562,
-    "y": 123.94785847299813,
-    "z": 4001,
-    "height": 160.89385474860333,
-    "width": 238.36126629422716,
-    "tabOrder": 4001
+    "x": 8.3333333333333339,
+    "y": 93.333333333333343,
+    "z": 4000,
+    "height": 135,
+    "width": 258.33333333333337,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -42,11 +42,57 @@
                       "Property": "id"
                     }
                   },
-                  "Function": 2
+                  "Function": 5
                 }
               },
-              "queryRef": "Count(con_equipos.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "CountNonNull(con_equipos.id)",
+              "nativeQueryRef": "Cant",
+              "displayName": "Cant"
+            },
+            {
+              "field": {
+                "Arithmetic": {
+                  "Left": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equipos"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "Right": {
+                    "ScopedEval": {
+                      "Expression": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "con_equipos"
+                                }
+                              },
+                              "Property": "id"
+                            }
+                          },
+                          "Function": 2
+                        }
+                      },
+                      "Scope": []
+                    }
+                  },
+                  "Operator": 3
+                }
+              },
+              "queryRef": "Divide(Count(con_equipos.id), ScopedEval(Count(con_equipos.id), []))",
+              "nativeQueryRef": "% total",
+              "displayName": "% total"
             }
           ]
         }
@@ -76,42 +122,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1af364482ea122bdbcee",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "GrupoServ"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6bb3349e8dd225c9182b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

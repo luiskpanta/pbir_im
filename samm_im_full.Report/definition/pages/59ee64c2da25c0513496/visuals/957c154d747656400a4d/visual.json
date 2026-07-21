@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "957c154d747656400a4d",
   "position": {
     "x": 5,
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_indice_de_ocupacion"
+                      "Entity": "con_equipos"
                     }
                   },
                   "Property": "zona"
                 }
               },
-              "queryRef": "con_indice_de_ocupacion.zona",
+              "queryRef": "con_equipos.zona",
               "nativeQueryRef": "zona",
               "active": true
             }
@@ -42,6 +42,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -196,6 +203,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "zona",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

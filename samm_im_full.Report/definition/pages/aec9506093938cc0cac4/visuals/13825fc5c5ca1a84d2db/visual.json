@@ -65,7 +65,7 @@
               },
               "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre",
               "nativeQueryRef": "Date Trimestre",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -97,6 +97,61 @@
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "2026L"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -260,7 +315,7 @@
                                   "Hierarchy": "Jerarquía de fechas"
                                 }
                               },
-                              "Level": "Mes"
+                              "Level": "Año"
                             }
                           }
                         ],
@@ -337,6 +392,17 @@
                                 "0": [
                                   {
                                     "Literal": {
+                                      "Value": "2025L"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
                                       "Value": "2027L"
                                     }
                                   }
@@ -371,17 +437,6 @@
                                   {
                                     "Literal": {
                                       "Value": "2030L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2025L"
                                     }
                                   }
                                 ]
@@ -423,6 +478,9 @@
                             "0": "2024"
                           },
                           {
+                            "0": "2025"
+                          },
+                          {
                             "0": "2027"
                           },
                           {
@@ -433,9 +491,6 @@
                           },
                           {
                             "0": "2030"
-                          },
-                          {
-                            "0": "2025"
                           }
                         ]
                       }

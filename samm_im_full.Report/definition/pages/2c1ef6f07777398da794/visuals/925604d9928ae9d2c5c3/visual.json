@@ -4,16 +4,16 @@
   "position": {
     "x": 219.16398713826365,
     "y": 137.87781350482314,
-    "z": 1002,
+    "z": 3000,
     "height": 268.5530546623794,
     "width": 304.5659163987138,
-    "tabOrder": 1002
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Y": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -25,14 +25,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "serial"
+                      "Property": "idOT"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(con_fallasEquipos.serial)",
-              "nativeQueryRef": "Recuento de serial"
+              "queryRef": "Sum(con_fallasEquipos.idOT)",
+              "nativeQueryRef": "Numero Fallas",
+              "displayName": "Numero Fallas"
             }
           ]
         }
@@ -49,7 +50,7 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "serial"
+                    "Property": "idOT"
                   }
                 },
                 "Function": 2

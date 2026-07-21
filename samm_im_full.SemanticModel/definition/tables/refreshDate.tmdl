@@ -1,0 +1,35 @@
+table refreshDate
+	lineageTag: 32bbf301-38d6-413b-93df-bed2fed29bce
+
+	measure 'Última actualización' =
+			
+			MAX(refreshDate[UltimoBackup])
+		formatString: General Date
+		lineageTag: 028e722e-36c8-4060-b7a5-aabcad5a4a95
+
+	column UltimoBackup
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6ad982b4-8d25-466c-9435-ac41e794dae5
+		summarizeBy: none
+		sourceColumn: UltimoBackup
+
+		variation Variación
+			isDefault
+			relationship: 35d83622-772e-4b1f-a20a-ad56137b2fb2
+			defaultHierarchy: LocalDateTable_0b226db5-2b14-4873-9b3e-65ba3f7ca5fe.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition refreshDate = m
+		mode: import
+		source =
+				let
+				  Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT MAX(backup_finish_date) AS UltimoBackup FROM msdb.dbo.backupset WHERE database_name = 'sw_impulmedicos';"])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
