@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "samm_im_full.Report"
+        "path": "samm_im_test.Report"
       }
     }
   ],

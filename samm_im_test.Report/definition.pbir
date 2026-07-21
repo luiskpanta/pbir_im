@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byPath": {
-      "path": "../samm_im_full.SemanticModel"
+      "path": "../samm_im_test.SemanticModel"
     }
   }
 }
