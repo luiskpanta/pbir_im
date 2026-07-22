@@ -116,13 +116,6 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'julio'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
                                 "Value": "'junio'"
                               }
                             }
@@ -162,17 +155,6 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'julio'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
                                       "Value": "'junio'"
                                     }
                                   }
@@ -196,9 +178,6 @@
                           ]
                         },
                         "valueMap": [
-                          {
-                            "0": "julio"
-                          },
                           {
                             "0": "junio"
                           }

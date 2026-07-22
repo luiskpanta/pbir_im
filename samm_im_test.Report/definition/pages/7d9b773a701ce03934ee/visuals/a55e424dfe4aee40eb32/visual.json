@@ -40,6 +40,26 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
+                      "Property": "metaCR2"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "CountNonNull(con_equiposContrato.metaCR2)",
+              "nativeQueryRef": "Meta CR",
+              "displayName": "Meta CR"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
                       "Property": "enContrato"
                     }
                   },
@@ -96,6 +116,26 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
+                      "Property": "MetWC"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "CountNonNull(con_equiposContrato.MetWC)",
+              "nativeQueryRef": "Meta WC",
+              "displayName": "Meta WC"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
                       "Property": "paso_garantia_a_contrato"
                     }
                   },
@@ -140,6 +180,26 @@
               "queryRef": "con_equiposContrato.WB",
               "nativeQueryRef": "WB",
               "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "MetWB"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "CountNonNull(con_equiposContrato.MetWB)",
+              "nativeQueryRef": "Meta WB",
+              "displayName": "Meta WB"
             },
             {
               "field": {

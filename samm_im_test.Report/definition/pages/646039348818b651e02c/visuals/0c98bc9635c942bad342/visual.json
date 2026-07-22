@@ -4,10 +4,10 @@
   "position": {
     "x": 1065.9807073954983,
     "y": 623.53697749196135,
-    "z": 54001,
+    "z": 54000,
     "height": 57.620578778135048,
     "width": 214.0192926045016,
-    "tabOrder": 52001
+    "tabOrder": 53000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -30,9 +30,6 @@
               "nativeQueryRef": "Última actualización"
             }
           ]
-        },
-        "Rows": {
-          "projections": []
         }
       },
       "sortDefinition": {

@@ -147,6 +147,11 @@ table con_equipos
 		summarizeBy: none
 		sourceColumn: fechaFin
 
+		variation Variación
+			isDefault
+			relationship: 97451d26-89d7-4b43-b1d8-1fb0150f39ef
+			defaultHierarchy: LocalDateTable_f36f0f11-2d06-488f-9431-9188b2a8fd54.'Jerarquía de fechas'
+
 		annotation SummarizationSetBy = Automatic
 
 	column GrupoServ =

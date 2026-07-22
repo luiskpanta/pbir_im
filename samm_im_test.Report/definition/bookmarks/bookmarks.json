@@ -2,10 +2,20 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
   "items": [
     {
-      "name": "d73f9ed660061be0c473"
+      "name": "69999a17bbbb27719bde",
+      "displayName": "Contratos",
+      "children": [
+        "244d7dc8d3be35d3c51f",
+        "d73f9ed660061be0c473"
+      ]
     },
     {
-      "name": "244d7dc8d3be35d3c51f"
+      "name": "4b2b7844dedade344961",
+      "displayName": "PM Cumplimiento",
+      "children": [
+        "c252672e900c0e900d89",
+        "49cdae71c48ae0abaa36"
+      ]
     }
   ]
 }
