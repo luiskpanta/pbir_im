@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f5827d8d0cc79403419c",
   "position": {
     "x": 1040.5631307431893,
@@ -900,7 +900,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos en contrato x marca'"
+                  "Value": "'Equp Cnt x marca'"
                 }
               }
             },

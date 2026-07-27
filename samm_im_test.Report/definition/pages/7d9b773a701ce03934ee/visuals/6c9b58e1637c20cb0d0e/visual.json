@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "6c9b58e1637c20cb0d0e",
   "position": {
     "x": 0,
     "y": 499.68,
-    "z": 6000,
+    "z": 7000,
     "height": 56.160000000000004,
     "width": 205.92000000000002,
     "tabOrder": 3000
@@ -43,7 +43,7 @@
               },
               "queryRef": "con_equipos.SubFamilia",
               "nativeQueryRef": "SubFamilia",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -82,7 +82,50 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'DETECTORES'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'DIGITAL OUTPUT'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "''"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'DENTAL'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

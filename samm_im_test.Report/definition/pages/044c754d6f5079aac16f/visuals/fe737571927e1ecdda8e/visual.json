@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "fe737571927e1ecdda8e",
   "position": {
     "x": 1038.24,
@@ -13,25 +13,6 @@
     "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_primer_visita"
-                    }
-                  },
-                  "Property": "zona"
-                }
-              },
-              "queryRef": "con_primer_visita.zona",
-              "nativeQueryRef": "zona",
-              "active": true
-            }
-          ]
-        },
         "Y": {
           "projections": [
             {

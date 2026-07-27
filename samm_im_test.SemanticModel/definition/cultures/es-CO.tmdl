@@ -5732,51 +5732,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_indice_de_ocupacion.abierta": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_indice_de_ocupacion",
-			          "ConceptualProperty": "abierta"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "abierta": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "con_indice_de_ocupacion.estado_OT": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_indice_de_ocupacion",
-			          "ConceptualProperty": "estadoOT"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "estado OT": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "estadoOT": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "OT": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "con_fallas_equipo.fecha_parada": {
 			      "Definition": {
 			        "Binding": {
@@ -7105,7 +7060,7 @@ cultureInfo es-CO
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "con_equiposContrato",
-			          "ConceptualProperty": "codFam"
+			          "ConceptualProperty": "CodFam"
 			        }
 			      },
 			      "State": "Generated",

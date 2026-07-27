@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "51a2aac4c633c2f96cd1",
   "position": {
     "x": 936.53600395078115,
     "y": 0,
-    "z": 4000,
+    "z": 6000,
     "height": 79.2,
     "width": 338.40000000000003,
     "tabOrder": 8000
@@ -154,13 +154,6 @@
                                     "Value": "'GARANTIA'"
                                   }
                                 }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'SIN CLASIFICAR'"
-                                  }
-                                }
                               ]
                             ]
                           }
@@ -183,6 +176,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segment CRhoy'"
                 }
               }
             }

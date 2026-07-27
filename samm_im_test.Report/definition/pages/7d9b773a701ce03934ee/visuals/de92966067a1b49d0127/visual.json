@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a55e424dfe4aee40eb32",
+  "name": "de92966067a1b49d0127",
   "position": {
-    "x": 0,
+    "x": 1032.48,
     "y": 89.28,
-    "z": 7000,
-    "height": 142.56,
-    "width": 204.48000000000002,
-    "tabOrder": 5000
+    "z": 6000,
+    "height": 72,
+    "width": 247.68,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,26 @@
                       "Entity": "con_equiposContrato"
                     }
                   },
-                  "Property": "CR"
+                  "Property": "WC"
                 }
               },
-              "queryRef": "con_equiposContrato.CR",
-              "nativeQueryRef": "CR",
+              "queryRef": "con_equiposContrato.WC",
+              "nativeQueryRef": "WC",
+              "format": "0.0%;-0.0%;0.0%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_equiposContrato"
+                    }
+                  },
+                  "Property": "WB"
+                }
+              },
+              "queryRef": "con_equiposContrato.WB",
+              "nativeQueryRef": "WB",
               "format": "0.0%;-0.0%;0.0%"
             },
             {
@@ -40,15 +55,15 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
-                      "Property": "metaCR2"
+                      "Property": "MetWC"
                     }
                   },
                   "Function": 1
                 }
               },
-              "queryRef": "CountNonNull(con_equiposContrato.metaCR2)",
-              "nativeQueryRef": "Meta CR",
-              "displayName": "Meta CR"
+              "queryRef": "CountNonNull(con_equiposContrato.MetWC)",
+              "nativeQueryRef": "Meta WC",
+              "displayName": "Meta WC"
             },
             {
               "field": {
@@ -60,35 +75,15 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
-                      "Property": "enContrato"
+                      "Property": "MetWB"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(con_equiposContrato.enContrato)",
-              "nativeQueryRef": "Eq. en Contrato",
-              "displayName": "Eq. en Contrato"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
-                      "Property": "baseCR"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(con_equiposContrato.baseCR)",
-              "nativeQueryRef": "Base CR",
-              "displayName": "Base CR"
+              "queryRef": "CountNonNull(con_equiposContrato.MetWB)",
+              "nativeQueryRef": "Meta WB",
+              "displayName": "Meta WB"
             }
           ]
         }
@@ -103,7 +98,7 @@
                     "Entity": "con_equiposContrato"
                   }
                 },
-                "Property": "CR"
+                "Property": "WC"
               }
             },
             "direction": "Descending"
@@ -337,25 +332,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.CR"
-          }
-        },
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "Literal": {
                       "Value": "'#3E7758'"
                     }
@@ -366,6 +342,44 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.metaCR2)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equiposContrato.WC"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equiposContrato.WB"
           }
         },
         {
@@ -404,53 +418,6 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.MetWC)"
-          }
-        },
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "19D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.enContrato)"
-          }
-        },
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "18D"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.baseCR)"
           }
         }
       ],
@@ -571,25 +538,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.CR"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "Literal": {
                       "Value": "'#81BA9B'"
                     }
@@ -600,6 +548,58 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.metaCR2)"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "38D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equiposContrato.WC"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "35D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equiposContrato.WB"
           }
         },
         {
@@ -637,51 +637,6 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.MetWB)"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.2
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.enContrato)"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(con_equiposContrato.metaCR2)"
           }
         }
       ],
@@ -844,17 +799,10 @@
                   }
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "13D"
-                }
-              }
             }
           },
           "selector": {
-            "metadata": "con_equiposContrato.CR"
+            "metadata": "Sum(con_equiposContrato.metaCR2)"
           }
         },
         {
@@ -880,36 +828,15 @@
             }
           },
           "selector": {
-            "metadata": "Sum(con_equiposContrato.metaCR2)"
+            "metadata": "con_equiposContrato.WB"
           }
         },
         {
           "properties": {
-            "show": {
+            "matchValueAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Base CR'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.baseCR)"
-          }
-        },
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
+                  "Value": "false"
                 }
               }
             },
@@ -919,15 +846,29 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
+                      "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Sum(con_equiposContrato.enContrato)"
+            "metadata": "con_equiposContrato.WC"
           }
         }
       ],
@@ -1036,42 +977,21 @@
             }
           },
           "selector": {
-            "metadata": "con_equiposContrato.CR"
+            "metadata": "con_equiposContrato.WB"
           }
         },
         {
           "properties": {
-            "leftMargin": {
+            "paddingUniform": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "topMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "bottomMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            },
-            "rightMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
+                  "Value": "2L"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "CountNonNull(con_equiposContrato.metaCR2)"
+            "metadata": "con_equiposContrato.WC"
           }
         }
       ],
@@ -1210,7 +1130,21 @@
             }
           },
           "selector": {
-            "metadata": "con_equiposContrato.CR"
+            "metadata": "con_equiposContrato.WB"
+          }
+        },
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equiposContrato.WC"
           }
         }
       ]
@@ -1229,7 +1163,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tarjeta CRev'"
+                  "Value": "'Tarjeta WbWc'"
                 }
               }
             }

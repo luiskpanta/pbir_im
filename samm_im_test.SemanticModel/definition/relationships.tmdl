@@ -150,6 +150,6 @@ relationship db4a8536-1918-8014-4ff5-ba1d96ce3433
 
 relationship ce39c9f8-20a5-0849-7316-39b5edf45941
 	isActive: false
-	fromColumn: con_equiposContrato.codFam
+	fromColumn: con_equiposContrato.CodFam
 	toColumn: met_contratos.Codigo
 

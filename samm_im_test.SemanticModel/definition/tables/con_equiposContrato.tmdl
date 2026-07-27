@@ -152,9 +152,40 @@ table con_equiposContrato
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column codFam = related(con_equipos[codFam])
+	column CodFam =
+			
+			SWITCH(
+			con_equiposContrato[familia],
+			 "DENTAL", "De",
+			"DETECTORES", "DR",
+			"DIGITAL OUTPUT", "DO",
+			"DIGITALIZADORES", "CR",
+			"EXTRAORAL", "Ex",
+			"INTRAORAL", "In",
+			"RAYOS X (XP)", "RX",
+			"ULTRASONIDO (US)", "US",
+			"MAMOGRAFIA", "MM",
+			"OTROS", "Ot",
+			"NO APLICA"
+			)
 		lineageTag: 302dd803-6200-4e4f-8d71-8179f4541652
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_familia
+		dataType: string
+		lineageTag: 5080c945-fda0-4095-8a45-2648e6d5a50d
+		summarizeBy: none
+		sourceColumn: cod_familia
 
 		annotation SummarizationSetBy = Automatic
 
