@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "de92966067a1b49d0127",
   "position": {
-    "x": 1032.48,
-    "y": 89.28,
+    "x": 1032.2029372496661,
+    "y": 88.865153538050734,
     "z": 6000,
-    "height": 72,
-    "width": 247.68,
-    "tabOrder": 8002
+    "height": 61,
+    "width": 247.79706275033377,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -32,21 +32,6 @@
             },
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equiposContrato"
-                    }
-                  },
-                  "Property": "WB"
-                }
-              },
-              "queryRef": "con_equiposContrato.WB",
-              "nativeQueryRef": "WB",
-              "format": "0.0%;-0.0%;0.0%"
-            },
-            {
-              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -64,26 +49,6 @@
               "queryRef": "CountNonNull(con_equiposContrato.MetWC)",
               "nativeQueryRef": "Meta WC",
               "displayName": "Meta WC"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equiposContrato"
-                        }
-                      },
-                      "Property": "MetWB"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "CountNonNull(con_equiposContrato.MetWB)",
-              "nativeQueryRef": "Meta WB",
-              "displayName": "Meta WB"
             }
           ]
         }
@@ -128,7 +93,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "1L"
                 }
               }
             },
@@ -142,7 +107,7 @@
             "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "4L"
+                  "Value": "1L"
                 }
               }
             },
@@ -157,6 +122,27 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "customizePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "columnPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
                 }
               }
             }
@@ -370,25 +356,6 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.WB"
-          }
-        },
-        {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
                       "ColorId": 6,
                       "Percent": -0.25
                     }
@@ -574,32 +541,6 @@
           },
           "selector": {
             "metadata": "con_equiposContrato.WC"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": 0.2
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "35D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.WB"
           }
         },
         {
@@ -820,32 +761,6 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.WB"
-          }
-        },
-        {
-          "properties": {
-            "matchValueAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
@@ -974,18 +889,32 @@
                   "Value": "2L"
                 }
               }
-            }
-          },
-          "selector": {
-            "metadata": "con_equiposContrato.WB"
-          }
-        },
-        {
-          "properties": {
-            "paddingUniform": {
+            },
+            "topMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "1L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "rightMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
                 }
               }
             }
@@ -1130,20 +1059,6 @@
             }
           },
           "selector": {
-            "metadata": "con_equiposContrato.WB"
-          }
-        },
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            }
-          },
-          "selector": {
             "metadata": "con_equiposContrato.WC"
           }
         }
@@ -1197,6 +1112,53 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

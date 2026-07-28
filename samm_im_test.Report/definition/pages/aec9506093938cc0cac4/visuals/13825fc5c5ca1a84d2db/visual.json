@@ -125,6 +125,13 @@
                               [
                                 {
                                   "Literal": {
+                                    "Value": "'agosto'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
                                     "Value": "'septiembre'"
                                   }
                                 }
@@ -153,7 +160,7 @@
                               [
                                 {
                                   "Literal": {
-                                    "Value": "'agosto'"
+                                    "Value": "'julio'"
                                   }
                                 }
                               ]
@@ -189,6 +196,17 @@
                         ],
                         "decomposedIdentities": {
                           "values": [
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'agosto'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
                             [
                               {
                                 "0": [
@@ -238,7 +256,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'agosto'"
+                                      "Value": "'julio'"
                                     }
                                   }
                                 ]
@@ -262,6 +280,9 @@
                         },
                         "valueMap": [
                           {
+                            "0": "agosto"
+                          },
+                          {
                             "0": "septiembre"
                           },
                           {
@@ -274,7 +295,7 @@
                             "0": "diciembre"
                           },
                           {
-                            "0": "agosto"
+                            "0": "julio"
                           }
                         ]
                       }

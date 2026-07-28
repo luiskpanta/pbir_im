@@ -116,7 +116,21 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'marzo'"
+                                "Value": "'mayo'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'junio'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'julio'"
                               }
                             }
                           ],
@@ -162,7 +176,29 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'marzo'"
+                                      "Value": "'mayo'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'junio'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'julio'"
                                     }
                                   }
                                 ]
@@ -197,7 +233,13 @@
                         },
                         "valueMap": [
                           {
-                            "0": "marzo"
+                            "0": "mayo"
+                          },
+                          {
+                            "0": "junio"
+                          },
+                          {
+                            "0": "julio"
                           },
                           {
                             "0": "abril"

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f5827d8d0cc79403419c",
   "position": {
-    "x": 1040.5631307431893,
-    "y": 259.59237625932252,
+    "x": 1040.776711376486,
+    "y": 260.18657346540948,
     "z": 0,
-    "height": 179.10022779043283,
-    "width": 238.57142857142858,
-    "tabOrder": 4000
+    "height": 179.51018148975217,
+    "width": 238.38633759731425,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "barChart",
@@ -481,6 +481,48 @@
                     "Right": {
                       "Literal": {
                         "Value": "'GARANTIA'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
                       }
                     }
                   }

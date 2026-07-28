@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "30dce3d14f2ab889917d",
   "position": {
-    "x": 206.05824568912482,
-    "y": 80.81280000000001,
+    "x": 204.8827637740396,
+    "y": 79.606275211630631,
     "z": 3000,
-    "height": 633.6,
-    "width": 832.32,
+    "height": 473.37783711615486,
+    "width": 833.96528704939908,
     "tabOrder": 0
   },
   "visual": {
@@ -107,8 +107,7 @@
                 }
               },
               "queryRef": "Sum(con_equipos.meta)",
-              "nativeQueryRef": "meta familia",
-              "displayName": "meta familia",
+              "nativeQueryRef": "Promedio de meta",
               "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
@@ -541,50 +540,6 @@
         },
         {
           "properties": {
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#448581'"
-                    }
-                  }
-                }
-              }
-            },
-            "backgroundTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equipos.meta)"
-          }
-        },
-        {
-          "properties": {
             "bold": {
               "expr": {
                 "Literal": {
@@ -1010,24 +965,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#448581'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equipos.meta)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
                       "Percent": -0.6
@@ -1056,6 +993,48 @@
                     "Right": {
                       "Literal": {
                         "Value": "'GARANTIA'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
                       }
                     }
                   }
