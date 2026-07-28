@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "74c96e2475617bb9506d",
   "position": {
     "x": 815.04000000000008,
-    "y": 10.08,
+    "y": 7,
     "z": 20000,
-    "height": 93.600000000000009,
+    "height": 76,
     "width": 218.88,
     "tabOrder": 20000
   },
@@ -69,6 +69,20 @@
                           }
                         ],
                         "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'APLICACIONISTA'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'COORD. ADMINISTRATIVA'"
+                              }
+                            }
+                          ],
                           [
                             {
                               "Literal": {

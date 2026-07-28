@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "632325bbbc23e6175b79",
   "position": {
     "x": 5.0526315789473681,
@@ -101,14 +101,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'preferInside'"
+                  "Value": "'outside'"
                 }
               }
             },
             "background": {
               "expr": {
                 "Literal": {
-                  "Value": "'off'"
+                  "Value": "'on'"
                 }
               }
             },

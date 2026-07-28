@@ -13,6 +13,25 @@
     "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_primer_visita"
+                    }
+                  },
+                  "Property": "zona"
+                }
+              },
+              "queryRef": "con_primer_visita.zona",
+              "nativeQueryRef": "zona",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
