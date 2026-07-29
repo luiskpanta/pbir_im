@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "bf1618144e8091d526ba",
   "position": {
-    "x": 205.07343124165553,
-    "y": 88.865153538050734,
+    "x": 204.48000000000002,
+    "y": 89.28,
     "z": 0,
-    "height": 468.25100133511353,
-    "width": 827.12950600801059,
+    "height": 493.92,
+    "width": 828,
     "tabOrder": 6000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -150,7 +150,11 @@
               "queryRef": "Sum(con_equiposContrato.enSinClasificar)",
               "nativeQueryRef": "Sin Clasificar",
               "displayName": "Sin Clasificar"
-            },
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -1309,6 +1313,27 @@
                       "Percent": 0.6
                     }
                   }
+                }
+              }
+            },
+            "alignZeros": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "secStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "secEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

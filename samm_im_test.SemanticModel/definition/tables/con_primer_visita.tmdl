@@ -127,6 +127,14 @@ table con_primer_visita
 
 		annotation SummarizationSetBy = Automatic
 
+	column MetaFTR = 0.7
+		lineageTag: 348e0632-a339-4de3-9e2d-8bcf13d83bb4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition con_primer_visita = m
 		mode: import
 		source =

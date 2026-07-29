@@ -7597,6 +7597,35 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_primer_visita.meta_FTR": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_primer_visita",
+			          "ConceptualProperty": "MetaFTR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "meta FTR": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MetaFTR": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "FTR": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -11844,6 +11873,39 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "con_primer_visita_has_meta_FTR": {
+			      "Binding": {
+			        "ConceptualEntity": "con_primer_visita"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_primer_visita": {
+			          "Target": {
+			            "Entity": "con_primer_visita"
+			          }
+			        },
+			        "con_primer_visita.meta_FTR": {
+			          "Target": {
+			            "Entity": "con_primer_visita.meta_FTR"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_primer_visita"
+			            },
+			            "Object": {
+			              "Role": "con_primer_visita.meta_FTR"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_primer_visitas_have_meta_FTRs"
 			        }
 			      ]
 			    },

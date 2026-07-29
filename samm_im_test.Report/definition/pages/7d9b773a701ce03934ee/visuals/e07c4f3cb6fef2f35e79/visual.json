@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Eq en contrato",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

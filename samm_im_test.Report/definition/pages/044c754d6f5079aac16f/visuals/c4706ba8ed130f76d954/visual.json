@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c4706ba8ed130f76d954",
   "position": {
-    "x": 204.48000000000002,
+    "x": 203.04000000000002,
     "y": 93.600000000000009,
     "z": 2000,
     "height": 622.08,
-    "width": 829,
+    "width": 829.44,
     "tabOrder": 2000
   },
   "visual": {
@@ -130,6 +130,27 @@
               "queryRef": "con_primer_visita.Cumple_Visita",
               "nativeQueryRef": "% Rep. 1a Visita",
               "displayName": "% Rep. 1a Visita"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_primer_visita"
+                        }
+                      },
+                      "Property": "MetaFTR"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(con_primer_visita.MetaFTR)",
+              "nativeQueryRef": "Meta FTR_70%",
+              "displayName": "Meta FTR_70%",
+              "format": "0 %;-0 %;0 %"
             }
           ]
         }
@@ -414,6 +435,20 @@
           "selector": {
             "metadata": "CountNonNull(con_primer_visita.num_OTT)"
           }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_primer_visita.MetaFTR)"
+          }
         }
       ],
       "valueAxis": [
@@ -647,6 +682,25 @@
           "selector": {
             "metadata": "con_primer_visita.Cumple_Visita"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_primer_visita.MetaFTR)"
+          }
         }
       ],
       "seriesLabels": [
@@ -655,7 +709,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -674,6 +728,58 @@
           "selector": {
             "metadata": "con_primer_visita.Cumple_Visita"
           }
+        },
+        {
+          "properties": {
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "seriesColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "84D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_primer_visita.MetaFTR)"
+          }
         }
       ],
       "lineStyles": [
@@ -686,6 +792,34 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dashed'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "strokeAutoScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_primer_visita.MetaFTR)"
           }
         }
       ]

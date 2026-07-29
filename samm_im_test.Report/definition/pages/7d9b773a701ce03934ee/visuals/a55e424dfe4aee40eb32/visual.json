@@ -5,7 +5,7 @@
     "x": 0,
     "y": 89.28,
     "z": 7000,
-    "height": 142.56,
+    "height": 139.68,
     "width": 204.48000000000002,
     "tabOrder": 5000
   },
@@ -113,7 +113,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "2L"
                 }
               }
             },
@@ -324,6 +324,27 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "21D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
             }
           },
           "selector": {
@@ -384,6 +405,20 @@
           },
           "selector": {
             "metadata": "Sum(con_equiposContrato.MetWC)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "21D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(con_equiposContrato.equipo_serial)"
           }
         }
       ],
