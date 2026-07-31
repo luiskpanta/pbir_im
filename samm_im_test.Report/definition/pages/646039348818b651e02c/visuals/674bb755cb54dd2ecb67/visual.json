@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "ff471420e42bec3c82cc",
+  "name": "674bb755cb54dd2ecb67",
   "position": {
-    "x": 267.62725137039939,
-    "y": 452.05951448707907,
-    "z": 31000,
-    "height": 36.084573218480813,
-    "width": 190.44635865309317,
-    "tabOrder": 28000
+    "x": 1037.3333333333333,
+    "y": 662.22222222222217,
+    "z": 55000,
+    "height": 17.777777777777779,
+    "width": 48.888888888888886,
+    "tabOrder": 55000
   },
   "visual": {
     "visualType": "textbox",
@@ -91,6 +91,13 @@
                   "Value": "1D"
                 }
               }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
@@ -156,7 +163,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Correct vs Remoto'"
+                  "Value": "'v 0.5.0'"
                 }
               }
             },
@@ -189,21 +196,35 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "'left'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "9D"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "underline": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
                 }
               }
             }
@@ -282,7 +303,7 @@
             "keepLayerOrder": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
