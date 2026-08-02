@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "30dce3d14f2ab889917d",
   "position": {
-    "x": 262.08426964955083,
-    "y": 85.12,
+    "x": 204.92918771695597,
+    "y": 77.158237650200277,
     "z": 3000,
-    "height": 629.00000000000011,
-    "width": 776,
+    "height": 505.44,
+    "width": 833.76,
     "tabOrder": 0
   },
   "visual": {
@@ -107,8 +107,7 @@
                 }
               },
               "queryRef": "Sum(con_equipos.meta)",
-              "nativeQueryRef": "meta familia",
-              "displayName": "meta familia",
+              "nativeQueryRef": "Promedio de meta",
               "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
@@ -541,50 +540,6 @@
         },
         {
           "properties": {
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#448581'"
-                    }
-                  }
-                }
-              }
-            },
-            "backgroundTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equipos.meta)"
-          }
-        },
-        {
-          "properties": {
             "bold": {
               "expr": {
                 "Literal": {
@@ -1010,24 +965,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#448581'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equipos.meta)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
                       "Percent": -0.6
@@ -1056,6 +993,48 @@
                     "Right": {
                       "Literal": {
                         "Value": "'GARANTIA'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
                       }
                     }
                   }

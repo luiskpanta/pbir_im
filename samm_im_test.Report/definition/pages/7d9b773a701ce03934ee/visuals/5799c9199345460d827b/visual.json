@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5799c9199345460d827b",
   "position": {
-    "x": 1040.8047007624375,
-    "y": 85.262584856917059,
+    "x": 1040.9255983172382,
+    "y": 85.457747713530082,
     "z": 2000,
-    "height": 170.50341685649204,
-    "width": 238.57142857142858,
-    "tabOrder": 2000
+    "height": 170.89369277824406,
+    "width": 238.38633759731425,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -488,6 +488,48 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "legend": [
@@ -900,7 +942,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos en contrato x zona'"
+                  "Value": "'Equp Cnt x zona'"
                 }
               }
             },

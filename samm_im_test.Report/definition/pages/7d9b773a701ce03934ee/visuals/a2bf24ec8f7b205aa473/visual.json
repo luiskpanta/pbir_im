@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a2bf24ec8f7b205aa473",
   "position": {
-    "x": 0.61714285714287342,
-    "y": 85.691428571428588,
-    "z": 3500,
-    "height": 158.57142857142858,
-    "width": 258.57142857142861,
-    "tabOrder": 5000
+    "x": 0,
+    "y": 78.598237650200275,
+    "z": 5000,
+    "height": 146.88,
+    "width": 207.36,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -186,7 +186,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "26D"
+                  "Value": "21D"
                 }
               }
             }
@@ -227,9 +227,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                    "Literal": {
+                      "Value": "'#448581'"
                     }
                   }
                 }
@@ -322,7 +321,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -358,9 +357,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                    "Literal": {
+                      "Value": "'#448581'"
                     }
                   }
                 }
@@ -369,7 +367,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -586,6 +584,13 @@
                   }
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
             }
           },
           "selector": {
@@ -744,6 +749,21 @@
           },
           "selector": {
             "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Tarjeta CRhoy'"
+                }
+              }
+            }
           }
         }
       ]

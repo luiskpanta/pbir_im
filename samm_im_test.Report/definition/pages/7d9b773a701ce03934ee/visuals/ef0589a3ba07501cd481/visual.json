@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "ef0589a3ba07501cd481",
   "position": {
-    "x": 0,
-    "y": 243.5328,
-    "z": 3250,
-    "height": 200.16,
-    "width": 259.2,
-    "tabOrder": 3000
+    "x": 0.44918771695594123,
+    "y": 224.03823765020024,
+    "z": 4000,
+    "height": 220.32000000000002,
+    "width": 204.48000000000002,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pieChart",
@@ -498,6 +498,48 @@
                     "Right": {
                       "Literal": {
                         "Value": "'GARANTIA'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
                       }
                     }
                   }

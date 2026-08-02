@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "57104c04b6ea295163eb",
   "position": {
-    "x": 1040.6556982209795,
-    "y": 441.55820769440226,
+    "x": 1040.776711376486,
+    "y": 442.56891785899768,
     "z": 1000,
-    "height": 229.248291571754,
-    "width": 238.57142857142858,
-    "tabOrder": 1000
+    "height": 229.77303230688278,
+    "width": 238.38633759731425,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -488,6 +488,48 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equipos"
+                          }
+                        },
+                        "Property": "grupo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'CONTRATO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "legend": [
@@ -900,7 +942,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos en contrato x cliente'"
+                  "Value": "'Equp Cnt x cliente'"
                 }
               }
             },

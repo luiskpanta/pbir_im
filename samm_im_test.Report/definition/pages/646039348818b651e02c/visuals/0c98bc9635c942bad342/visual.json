@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0c98bc9635c942bad342",
   "position": {
-    "x": 1065.9807073954983,
-    "y": 623.53697749196135,
-    "z": 54001,
-    "height": 57.620578778135048,
-    "width": 214.0192926045016,
-    "tabOrder": 52001
+    "x": 1078.2222222222222,
+    "y": 623.11111111111109,
+    "z": 54000,
+    "height": 57.777777777777779,
+    "width": 201.77777777777777,
+    "tabOrder": 54000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -30,9 +30,6 @@
               "nativeQueryRef": "Última actualización"
             }
           ]
-        },
-        "Rows": {
-          "projections": []
         }
       },
       "sortDefinition": {
@@ -155,6 +152,54 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "showFixedSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fixedWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "210L"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "paddingIndividual": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

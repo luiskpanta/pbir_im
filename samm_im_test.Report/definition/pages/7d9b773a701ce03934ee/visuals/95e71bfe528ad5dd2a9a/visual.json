@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "95e71bfe528ad5dd2a9a",
   "position": {
-    "x": 543.81251666609046,
-    "y": 18.799239530270142,
-    "z": 2000,
+    "x": 544.25034044494578,
+    "y": 21.061086919828377,
+    "z": 4000,
     "height": 81.175802804693276,
     "width": 95.608435298006057,
     "tabOrder": 4000
@@ -116,14 +116,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'julio'"
+                                "Value": "'febrero'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'junio'"
+                                "Value": "'enero'"
                               }
                             }
                           ]
@@ -162,7 +162,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'julio'"
+                                      "Value": "'febrero'"
                                     }
                                   }
                                 ]
@@ -173,7 +173,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'junio'"
+                                      "Value": "'enero'"
                                     }
                                   }
                                 ]
@@ -197,10 +197,10 @@
                         },
                         "valueMap": [
                           {
-                            "0": "julio"
+                            "0": "febrero"
                           },
                           {
-                            "0": "junio"
+                            "0": "enero"
                           }
                         ]
                       }

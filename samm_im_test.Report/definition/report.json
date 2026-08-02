@@ -69,11 +69,6 @@
           "type": "Image"
         },
         {
-          "name": "6v_fondo_IM_mia5129233818789992.svg",
-          "path": "6v_fondo_IM_mia5129233818789992.svg",
-          "type": "Image"
-        },
-        {
           "name": "6v_fondo_IM_mia6185270169455243.svg",
           "path": "6v_fondo_IM_mia6185270169455243.svg",
           "type": "Image"
@@ -123,7 +118,6 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",

@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4cad1f30df9d26dbdb4d",
   "position": {
-    "x": 206.45161290322579,
-    "y": 88.086021505376351,
+    "x": 205.92000000000002,
+    "y": 87.84,
     "z": 1000,
-    "height": 623.483870967742,
-    "width": 827.18279569892468,
+    "height": 623.52,
+    "width": 828,
     "tabOrder": 11000
   },
   "visual": {
@@ -93,21 +93,16 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_ocupacion_meta"
-                        }
-                      },
-                      "Property": "total_horas"
+                    "SourceRef": {
+                      "Entity": "con_indice_de_ocupacion"
                     }
                   },
-                  "Function": 0
+                  "Property": "estandarmes"
                 }
               },
-              "queryRef": "Sum(con_ocupacion_meta.total_horas)",
+              "queryRef": "con_indice_de_ocupacion.estandarmes",
               "nativeQueryRef": "Horas Disponibles",
               "displayName": "Horas Disponibles"
             }
@@ -163,7 +158,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "11D"
                 }
               }
             },
@@ -192,6 +187,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'InsideEnd'"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -417,9 +438,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
+                    "Literal": {
+                      "Value": "'#5AF2CF'"
                     }
                   }
                 }
@@ -470,11 +490,18 @@
             "backgroundTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "26D"
+                  "Value": "0D"
                 }
               }
             },
             "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -509,27 +536,6 @@
           },
           "selector": {
             "metadata": "Sum(con_clasificacionOTs.Meta%Ocupación)"
-          }
-        },
-        {
-          "properties": {
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_ocupacion_meta.total_horas)"
           }
         }
       ],
@@ -751,7 +757,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "78D"
+                  "Value": "80D"
                 }
               }
             },
@@ -767,8 +773,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
-                      "Percent": 0
+                      "ColorId": 2,
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -776,7 +782,7 @@
             }
           },
           "selector": {
-            "metadata": "Sum(con_ocupacion_meta.total_horas)"
+            "metadata": "con_indice_de_ocupacion.estandarmes"
           }
         }
       ],
