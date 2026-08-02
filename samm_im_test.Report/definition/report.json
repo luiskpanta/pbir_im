@@ -9,6 +9,10 @@
         "page": "1.3.99"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "IM_Fallas_Maquinas_Theme",
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -48,6 +52,11 @@
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
+        {
+          "name": "IM_Fallas_Maquinas_Theme",
+          "path": "IM_Fallas_Maquinas_Theme.json",
+          "type": "CustomTheme"
+        },
         {
           "name": "6v_fondo_IM_mia021396973348606352.svg",
           "path": "6v_fondo_IM_mia021396973348606352.svg",
