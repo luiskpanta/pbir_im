@@ -112,11 +112,6 @@ relationship c97b6e3c-f92e-1f3e-1fce-669b4d5faacf
 	fromColumn: con_equipos.familia
 	toColumn: met_contratos.Codigo
 
-relationship 418fcfe6-be96-4c7f-b804-921ddddae03d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: con_fallasEquipos.FechaParada
-	toColumn: LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876.Date
-
 relationship 7bab45e7-1779-4da7-92f1-6e330791297b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: con_fallasEquipos.FechaReparacion
@@ -152,4 +147,9 @@ relationship ce39c9f8-20a5-0849-7316-39b5edf45941
 	isActive: false
 	fromColumn: con_equiposContrato.CodFam
 	toColumn: met_contratos.Codigo
+
+relationship c93d6f80-6b85-46f7-d8b3-41bcf99513ce
+	isActive: false
+	fromColumn: con_fallasEquipos.FechaParada
+	toColumn: Dim_Fecha.Date
 

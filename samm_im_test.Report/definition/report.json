@@ -59,7 +59,7 @@
       "items": [
         {
           "name": "IM_Fallas_Maquinas_Theme",
-          "path": "IM_Fallas_Maquinas_Theme.json",
+          "path": "IM_Fallas_Maquinas_Theme",
           "type": "CustomTheme"
         },
         {

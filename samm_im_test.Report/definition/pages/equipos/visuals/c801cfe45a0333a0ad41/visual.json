@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c801cfe45a0333a0ad41",
   "position": {
-    "x": 1035.5555555555557,
-    "y": 86.222222222222229,
+    "x": 1077.2990353697749,
+    "y": 84.372990353697745,
     "z": 10000,
-    "height": 111.11111111111111,
-    "width": 236.44444444444446,
+    "height": 98.7781350482315,
+    "width": 183.15112540192925,
     "tabOrder": 10000
   },
   "visual": {
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Count(con_fallasEquipos.serial)",
-              "nativeQueryRef": "Recuento de serial"
+              "nativeQueryRef": "No. Equipos",
+              "displayName": "No. Equipos"
             }
           ]
         }

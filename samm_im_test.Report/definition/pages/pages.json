@@ -3,7 +3,6 @@
   "pageOrder": [
     "page_ocupacion",
     "page_dashboard",
-    "page_equipos",
     "a271b167f7e2551c4f35",
     "8e27da55b38602c11cc4",
     "aec9506093938cc0cac4",
@@ -14,7 +13,8 @@
     "59ee64c2da25c0513496",
     "044c754d6f5079aac16f",
     "d90d69c97ac0e40c3de6",
+    "2c1ef6f07777398da794",
     "7d9b773a701ce03934ee"
   ],
-  "activePageName": "page_dashboard"
+  "activePageName": "2c1ef6f07777398da794"
 }

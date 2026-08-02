@@ -1,6 +1,67 @@
 table con_fallasEquipos
 	lineageTag: b9eb2b01-56b7-4a84-8571-c1f93b0fcace
 
+	measure 'MTBF (dias)' =
+			
+			VAR TablaEquipos =
+			    ADDCOLUMNS(
+			        VALUES('con_fallasEquipos'[equipo]),
+			        "@PrimeraFalla", CALCULATE(MIN('con_fallasEquipos'[Fechafalla])),
+			        "@UltimaFalla", CALCULATE(MAX('con_fallasEquipos'[Fechafalla])),
+			        "@NumFallas", CALCULATE(DISTINCTCOUNT('con_fallasEquipos'[idOT]))
+			    )
+			VAR TablaValida = FILTER(TablaEquipos, [@NumFallas] > 1)
+			RETURN
+			    AVERAGEX(
+			        TablaValida,
+			        DIVIDE([@UltimaFalla] - [@PrimeraFalla], [@NumFallas] - 1)
+			    )
+		formatString: 0.0" días"
+		lineageTag: 77bb24e0-0dcd-4729-8ac1-01f02f205264
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MTTR Sin Partes (dias)' =
+			
+			AVERAGEX(
+			    FILTER(
+			        'con_fallasEquipos',
+			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
+			        NOT ISBLANK('con_fallasEquipos'[FechaParada])
+			    ),
+			    DATEDIFF('con_fallasEquipos'[FechaParada], 'con_fallasEquipos'[FechaReparacion], DAY)
+			)
+		formatString: 0.0" días"
+		lineageTag: c040e1ae-eb39-4a29-a5fe-dcde4c8599de
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ETTR (dias)' =
+			
+			AVERAGEX(
+			    FILTER(
+			        'con_fallasEquipos',
+			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
+			        NOT ISBLANK('con_fallasEquipos'[Fechafalla])
+			    ),
+			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], DAY)
+			)
+		formatString: 0.0" días"
+		lineageTag: 4e288335-5aee-4f5c-9761-9ec4062dfc07
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'UPTIME %' =
+			
+			DIVIDE(
+			    [MTBF (dias)],
+			    [MTBF (dias)] + [ETTR (dias)]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 2db00436-1756-448f-b881-b219410ddb01
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column equipo
 		dataType: string
 		lineageTag: 369a0d78-1d1a-4bdf-87f4-a46a7f12ccb8
@@ -40,11 +101,6 @@ table con_fallasEquipos
 		lineageTag: 3d170f72-58f8-4f8e-a347-538b3cefa7fa
 		summarizeBy: none
 		sourceColumn: FechaParada
-
-		variation Variación
-			isDefault
-			relationship: 418fcfe6-be96-4c7f-b804-921ddddae03d
-			defaultHierarchy: LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876.'Jerarquía de fechas'
 
 		annotation SummarizationSetBy = Automatic
 
