@@ -118,6 +118,21 @@
               "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Día",
               "nativeQueryRef": "Date Día",
               "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "FechaParada"
+                }
+              },
+              "queryRef": "con_fallasEquipos.FechaParada",
+              "nativeQueryRef": "FechaParada",
+              "active": false
             }
           ]
         }

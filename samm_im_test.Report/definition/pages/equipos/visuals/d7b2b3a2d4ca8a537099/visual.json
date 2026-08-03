@@ -55,19 +55,67 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "motivoservicio"
+                      "Property": "idOT"
                     }
                   },
-                  "Function": 5
+                  "Function": 0
                 }
               },
-              "queryRef": "CountNonNull(con_fallasEquipos.motivoservicio)",
-              "nativeQueryRef": "Recuento de motivoservicio"
+              "queryRef": "Sum(con_fallasEquipos.idOT)",
+              "nativeQueryRef": "Suma de idOT"
             }
           ]
         }
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "08e66210217850077795",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b637635eaeebdd731965",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_fallasEquipos"
+                  }
+                },
+                "Property": "idOT"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -398,5 +398,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "627ecb49028b2cdda405",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
