@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "de92966067a1b49d0127",
   "position": {
-    "x": 1032.2029372496661,
-    "y": 88.865153538050734,
+    "x": 912.96,
+    "y": 89.28,
     "z": 6000,
-    "height": 61,
-    "width": 247.79706275033377,
+    "height": 70.56,
+    "width": 367.2,
     "tabOrder": 8000
   },
   "visual": {
@@ -49,6 +49,26 @@
               "queryRef": "CountNonNull(con_equiposContrato.MetWC)",
               "nativeQueryRef": "Meta WC",
               "displayName": "Meta WC"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "paso_garantia_a_contrato"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.paso_garantia_a_contrato)",
+              "nativeQueryRef": "de Gar. a Cntr",
+              "displayName": "de Gar. a Cntr"
             }
           ]
         }
@@ -100,7 +120,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             },
