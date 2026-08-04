@@ -4,10 +4,10 @@
   "position": {
     "x": 696.59163987138265,
     "y": 94.662379421221857,
-    "z": 60300,
+    "z": 11000,
     "height": 88.488745980707392,
     "width": 206.81672025723472,
-    "tabOrder": 60300
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "card",
@@ -398,23 +398,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "627ecb49028b2cdda405",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "UPTIME %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

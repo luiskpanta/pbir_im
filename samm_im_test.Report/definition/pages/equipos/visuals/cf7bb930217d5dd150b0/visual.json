@@ -4,10 +4,10 @@
   "position": {
     "x": 64.823151125401921,
     "y": 202.70096463022506,
-    "z": 6000,
+    "z": 4000,
     "height": 260.44444444444446,
     "width": 304,
-    "tabOrder": 6000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "donutChart",
@@ -23,11 +23,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "subfamilia"
+                  "Property": "familia"
                 }
               },
-              "queryRef": "con_fallasEquipos.subfamilia",
-              "nativeQueryRef": "subfamilia",
+              "queryRef": "con_fallasEquipos.familia",
+              "nativeQueryRef": "familia",
               "active": true
             }
           ]

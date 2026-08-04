@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d7b2b3a2d4ca8a537099",
   "position": {
-    "x": 749.06752411575565,
-    "y": 202.70096463022506,
-    "z": 9000,
+    "x": 763.71385083713847,
+    "y": 202.61796042617959,
+    "z": 6000,
     "height": 260.32154340836013,
     "width": 512.41157556270093,
-    "tabOrder": 9000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -58,11 +58,11 @@
                       "Property": "idOT"
                     }
                   },
-                  "Function": 0
+                  "Function": 2
                 }
               },
               "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Suma de idOT"
+              "nativeQueryRef": "Recuento de idOT"
             }
           ]
         }
@@ -73,7 +73,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "08e66210217850077795",
+        "name": "ff37007541db965050e9",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -98,7 +98,7 @@
         "type": "Categorical"
       },
       {
-        "name": "b637635eaeebdd731965",
+        "name": "8d2d446f1b0ec89ba2d5",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -111,7 +111,7 @@
                 "Property": "idOT"
               }
             },
-            "Function": 0
+            "Function": 2
           }
         },
         "type": "Advanced"

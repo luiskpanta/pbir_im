@@ -1,20 +1,34 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "feeccc091ecad7e115ec",
+  "name": "1fde37c770cc847c7dc1",
   "position": {
-    "x": 65.266362252663626,
+    "x": 689.68036529680364,
     "y": 478.29528158295278,
-    "z": 12000,
+    "z": 14001,
     "height": 194.82496194824961,
     "width": 590.31963470319636,
-    "tabOrder": 12000
+    "tabOrder": 14001
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "idOT"
+                }
+              },
+              "queryRef": "Sum(con_fallasEquipos.idOT)",
+              "nativeQueryRef": "idOT"
+            },
             {
               "field": {
                 "Column": {
@@ -27,13 +41,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.equipo",
-              "nativeQueryRef": "equipo",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
+              "nativeQueryRef": "equipo"
+            },
             {
               "field": {
                 "Measure": {
@@ -83,126 +92,6 @@
         ],
         "isDefaultSort": true
       }
-    },
-    "objects": {
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#16305C'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTBF (dias)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E8871E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.ETTR (dias)"
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'TopCenter'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -318,7 +207,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "20591c4e1d7d2b4b9016",
+        "name": "8ee090d95587010d0745",
         "field": {
           "Column": {
             "Expression": {
@@ -332,7 +221,7 @@
         "type": "Categorical"
       },
       {
-        "name": "e5b5e8c07a0b70db940c",
+        "name": "708a49403e790057ca56",
         "field": {
           "Measure": {
             "Expression": {
@@ -346,7 +235,7 @@
         "type": "Advanced"
       },
       {
-        "name": "5c8b6fc290148c56a009",
+        "name": "2e9e3cb81b68700ba027",
         "field": {
           "Measure": {
             "Expression": {
@@ -355,6 +244,20 @@
               }
             },
             "Property": "ETTR (dias)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f45cc6cb3bc2abc9bc52",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "idOT"
           }
         },
         "type": "Advanced"
