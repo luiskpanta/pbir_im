@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "b898fc6559cbb22698da",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "aba913d59986178538c0",
   "position": {
-    "x": 0,
-    "y": 89.777777777777771,
-    "z": 5000,
-    "height": 215.11111111111111,
-    "width": 197.33333333333334,
-    "tabOrder": 5000
+    "x": 481.21765601217652,
+    "y": 10.715372907153728,
+    "z": 13000,
+    "height": 74.033485540334851,
+    "width": 219.17808219178082,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -60,38 +60,12 @@
                       "Hierarchy": "Jerarquía de fechas"
                     }
                   },
-                  "Level": "Trimestre"
-                }
-              },
-              "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Trimestre",
-              "nativeQueryRef": "FechaParada Trimestre",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_fallasEquipos"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "FechaParada"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
                   "Level": "Mes"
                 }
               },
               "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Mes",
               "nativeQueryRef": "FechaParada Mes",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -113,29 +87,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876"
+                      "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42"
                     }
                   },
                   "Property": "Año"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Trimestre"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876"
-                    }
-                  },
-                  "Property": "Trimestre"
                 }
               }
             ],
@@ -149,42 +104,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "2026L"
-                  }
-                }
-              ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Qtr 1'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Qtr 2'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -217,7 +137,7 @@
                 "From": [
                   {
                     "Name": "l",
-                    "Entity": "LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876",
+                    "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42",
                     "Type": 0
                   }
                 ],
@@ -293,7 +213,7 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876"
+                                      "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42"
                                     }
                                   },
                                   "Property": "Año"
@@ -336,7 +256,7 @@
             "singleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -429,7 +349,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mes'"
+                  "Value": "'Año'"
                 }
               }
             },
@@ -561,6 +481,65 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Año",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "47415b0068d85398d896",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "con_fallasEquipos"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "FechaParada"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "78591c0e668a0034e815",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "con_fallasEquipos"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "FechaParada"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

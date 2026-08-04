@@ -12,6 +12,11 @@
     },
     "customTheme": {
       "name": "IM_Fallas_Maquinas_Theme",
+      "reportVersionAtImport": {
+        "visual": "1.8.99",
+        "report": "2.0.99",
+        "page": "1.3.99"
+      },
       "type": "RegisteredResources"
     }
   },
@@ -54,7 +59,7 @@
       "items": [
         {
           "name": "IM_Fallas_Maquinas_Theme",
-          "path": "IM_Fallas_Maquinas_Theme.json",
+          "path": "IM_Fallas_Maquinas_Theme",
           "type": "CustomTheme"
         },
         {

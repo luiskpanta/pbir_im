@@ -112,11 +112,6 @@ relationship c97b6e3c-f92e-1f3e-1fce-669b4d5faacf
 	fromColumn: con_equipos.familia
 	toColumn: met_contratos.Codigo
 
-relationship 418fcfe6-be96-4c7f-b804-921ddddae03d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: con_fallasEquipos.FechaParada
-	toColumn: LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876.Date
-
 relationship 7bab45e7-1779-4da7-92f1-6e330791297b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: con_fallasEquipos.FechaReparacion
@@ -125,10 +120,6 @@ relationship 7bab45e7-1779-4da7-92f1-6e330791297b
 relationship AutoDetected_ab53cf29-0f0f-41e1-96aa-0f682e0ac72e
 	fromColumn: con_fallasEquipos.marca
 	toColumn: Dim_Marca.marca
-
-relationship 0a637333-2c64-7c78-6381-eb78552e526d
-	fromColumn: con_fallasEquipos.Fechafalla
-	toColumn: Dim_Fecha.Date
 
 relationship 35d83622-772e-4b1f-a20a-ad56137b2fb2
 	joinOnDateBehavior: datePartOnly
@@ -152,4 +143,13 @@ relationship ce39c9f8-20a5-0849-7316-39b5edf45941
 	isActive: false
 	fromColumn: con_equiposContrato.CodFam
 	toColumn: met_contratos.Codigo
+
+relationship 5640ce27-5a4e-41f7-85ef-5473f89b0667
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_fallasEquipos.FechaParada
+	toColumn: LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42.Date
+
+relationship e9eb2c1c-e4ed-4a35-d8c6-e8ca0ad61d6f
+	fromColumn: con_fallasEquipos.Fechafalla
+	toColumn: Dim_Fecha.Date
 

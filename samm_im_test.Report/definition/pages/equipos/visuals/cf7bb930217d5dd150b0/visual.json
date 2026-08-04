@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cf7bb930217d5dd150b0",
   "position": {
-    "x": 95.111111111111114,
-    "y": 211.55555555555554,
-    "z": 6000,
+    "x": 64.823151125401921,
+    "y": 202.70096463022506,
+    "z": 4000,
     "height": 260.44444444444446,
     "width": 304,
-    "tabOrder": 6000
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "serial"
+                  "Property": "familia"
                 }
               },
-              "queryRef": "con_fallasEquipos.serial",
-              "nativeQueryRef": "serial",
+              "queryRef": "con_fallasEquipos.familia",
+              "nativeQueryRef": "familia",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "DiasParada"
+                      "Property": "serial"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.DiasParada)",
-              "nativeQueryRef": "Suma de DiasParada"
+              "queryRef": "CountNonNull(con_fallasEquipos.serial)",
+              "nativeQueryRef": "serial"
             }
           ]
         }
@@ -68,10 +68,10 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "DiasParada"
+                    "Property": "serial"
                   }
                 },
-                "Function": 0
+                "Function": 5
               }
             },
             "direction": "Descending"
