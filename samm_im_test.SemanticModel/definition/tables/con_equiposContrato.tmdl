@@ -153,6 +153,14 @@ table con_equiposContrato
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column familia
+		dataType: string
+		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
 	column CodFam =
 			
 			SWITCH(
@@ -171,14 +179,6 @@ table con_equiposContrato
 			)
 		lineageTag: 302dd803-6200-4e4f-8d71-8179f4541652
 		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column familia
-		dataType: string
-		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
-		summarizeBy: none
-		sourceColumn: familia
 
 		annotation SummarizationSetBy = Automatic
 
