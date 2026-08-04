@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "51a2aac4c633c2f96cd1",
   "position": {
-    "x": 936.8302919946326,
+    "x": 936.57874687313722,
     "y": 0,
     "z": 6000,
     "height": 79.381285827419973,
@@ -118,60 +118,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "con_equipos",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Not": {
-                        "Expression": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "c"
-                                    }
-                                  },
-                                  "Property": "grupo"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'GARANTIA'"
-                                  }
-                                }
-                              ],
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'SIN CLASIFICAR'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4948578dcd00a2d7a8d9",
   "position": {
-    "x": 1032.48,
-    "y": 360,
+    "x": 912.57676902536707,
+    "y": 367.42323097463282,
     "z": 6500,
-    "height": 64,
-    "width": 247.68,
+    "height": 63.23097463284379,
+    "width": 367.42323097463282,
     "tabOrder": 10000
   },
   "visual": {
@@ -49,6 +49,26 @@
               "queryRef": "CountNonNull(con_equiposContrato.MetWB)",
               "nativeQueryRef": "Meta WB",
               "displayName": "Meta WB"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "paso_percall_evento_a_contrato"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_equiposContrato.paso_percall_evento_a_contrato)",
+              "nativeQueryRef": "de Pc o Ev a Cntr",
+              "displayName": "de Pc o Ev a Cntr"
             }
           ]
         }
@@ -100,7 +120,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             },

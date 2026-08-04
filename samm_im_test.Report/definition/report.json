@@ -40,7 +40,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -65,11 +65,6 @@
         {
           "name": "6v_fondo_IM_mia021396973348606352.svg",
           "path": "6v_fondo_IM_mia021396973348606352.svg",
-          "type": "Image"
-        },
-        {
-          "name": "6v_fondo_IM_mia15995108147459214.svg",
-          "path": "6v_fondo_IM_mia15995108147459214.svg",
           "type": "Image"
         },
         {
@@ -132,6 +127,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",

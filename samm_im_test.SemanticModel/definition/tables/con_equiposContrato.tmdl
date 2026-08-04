@@ -1,12 +1,13 @@
 table con_equiposContrato
 	lineageTag: b471f57d-081b-4494-9844-8aa10ae872b2
 
-	measure CR =
+	measure CR = ```
 			
-			DIVIDE(
+			    DIVIDE(
 				SUM('con_equiposContrato'[enContrato]),
 				SUM('con_equiposContrato'[baseCR])
 			)
+			```
 		lineageTag: 401212f3-0730-4fd8-b406-387f65b77d07
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -152,14 +153,6 @@ table con_equiposContrato
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column familia
-		dataType: string
-		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
-		summarizeBy: none
-		sourceColumn: familia
-
-		annotation SummarizationSetBy = Automatic
-
 	column CodFam =
 			
 			SWITCH(
@@ -178,6 +171,14 @@ table con_equiposContrato
 			)
 		lineageTag: 302dd803-6200-4e4f-8d71-8179f4541652
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
+		summarizeBy: none
+		sourceColumn: familia
 
 		annotation SummarizationSetBy = Automatic
 

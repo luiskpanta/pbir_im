@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9c5878e2a082c5437566",
   "position": {
-    "x": 203.04000000000002,
-    "y": 583.2,
-    "z": 2500,
-    "height": 133.92000000000002,
-    "width": 838.08,
-    "tabOrder": 10000
+    "x": 203.36448598130841,
+    "y": 582.7503337783711,
+    "z": 8250,
+    "height": 135.00667556742323,
+    "width": 709.21228304405872,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "treemap",
@@ -352,6 +352,47 @@
               "solid": {
                 "color": {
                   "expr": {
+                    "Literal": {
+                      "Value": "'#42EC7A'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equiposContrato"
+                          }
+                        },
+                        "Property": "familia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'DIGITAL OUTPUT'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
                     "ThemeDataColor": {
                       "ColorId": 8,
                       "Percent": 0.4
@@ -379,7 +420,49 @@
                     },
                     "Right": {
                       "Literal": {
-                        "Value": "'DIGITAL OUTPUT'"
+                        "Value": "'EXTRAORAL'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_equiposContrato"
+                          }
+                        },
+                        "Property": "familia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'RAYOS X (XP)'"
                       }
                     }
                   }
@@ -560,6 +643,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
   "filterConfig": {
     "filters": [
       {

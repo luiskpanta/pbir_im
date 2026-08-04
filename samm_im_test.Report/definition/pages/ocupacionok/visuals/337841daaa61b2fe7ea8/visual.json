@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "337841daaa61b2fe7ea8",
   "position": {
-    "x": 203.04000000000002,
-    "y": 80.64,
-    "z": 17000,
-    "height": 633.6,
-    "width": 833.76,
-    "tabOrder": 12000
+    "x": 206.16246498599438,
+    "y": 87.843137254901947,
+    "z": 15000,
+    "height": 632.829131652661,
+    "width": 826.44257703081223,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "columnChart",
@@ -523,7 +523,7 @@
             "showTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -645,7 +645,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#56AD88'"
+                      "Value": "'#10949E'"
                     }
                   }
                 }
@@ -654,7 +654,7 @@
             "backgroundTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "22D"
                 }
               }
             }
@@ -694,14 +694,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% Ocupación por Mes'"
+                  "Value": "'Evolución Horas por Tipo de Servicio'"
                 }
               }
             },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -718,7 +718,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -727,7 +727,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "15D"
                 }
               }
             },

@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "bf1618144e8091d526ba",
   "position": {
-    "x": 204.48000000000002,
-    "y": 89.28,
+    "x": 205.07343124165553,
+    "y": 88.865153538050734,
     "z": 0,
-    "height": 493.92,
-    "width": 828,
+    "height": 493.88518024032038,
+    "width": 707.50333778371157,
     "tabOrder": 6000
   },
   "visual": {
-    "visualType": "lineClusteredColumnComboChart",
+    "visualType": "lineStackedColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -101,15 +101,15 @@
                           "Entity": "con_equiposContrato"
                         }
                       },
-                      "Property": "baseCR"
+                      "Property": "enEvento_Percall"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(con_equiposContrato.baseCR)",
-              "nativeQueryRef": "base CR (C-E-P)",
-              "displayName": "base CR (C-E-P)"
+              "queryRef": "Sum(con_equiposContrato.enEvento_Percall)",
+              "nativeQueryRef": "en Evento_Percall",
+              "displayName": "en Evento_Percall"
             },
             {
               "field": {
@@ -683,58 +683,6 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
-                }
-              }
-            },
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "borderTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "26D"
-                }
-              }
-            },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "fillTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.baseCR)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
                       "ColorId": 3,
                       "Percent": 0.2
                     }
@@ -908,7 +856,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "12D"
                 }
               }
             }
@@ -1183,39 +1131,6 @@
         },
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_equiposContrato.baseCR)"
-          }
-        },
-        {
-          "properties": {
             "labelPosition": {
               "expr": {
                 "Literal": {
@@ -1367,27 +1282,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "clusteredGapSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "clusteredGapOverlaps": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "clusteredGapOverlapReverse": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }

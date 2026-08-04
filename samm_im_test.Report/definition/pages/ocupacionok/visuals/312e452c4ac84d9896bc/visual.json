@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "312e452c4ac84d9896bc",
   "position": {
-    "x": 5.76,
-    "y": 171.36,
-    "z": 19000,
-    "height": 203.04000000000002,
-    "width": 195.84,
-    "tabOrder": 19000
+    "x": 2.88,
+    "y": 168.48000000000002,
+    "z": 17000,
+    "height": 204.48000000000002,
+    "width": 197.28,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -113,7 +113,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "26D"
                 }
               }
             }
@@ -145,7 +145,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "20D"
                 }
               }
             },
@@ -184,7 +184,7 @@
             "labelContentLayout": {
               "expr": {
                 "Literal": {
-                  "Value": "'SingleLine'"
+                  "Value": "'MultiLine'"
                 }
               }
             },
@@ -199,6 +199,27 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -722,21 +743,21 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "50D"
+                  "Value": "119D"
                 }
               }
             },
             "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "24L"
+                  "Value": "21L"
                 }
               }
             },
@@ -757,7 +778,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "17D"
                 }
               }
             },
@@ -779,7 +800,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% Ocupación por Mes'"
+                  "Value": "'% Ocupación'"
                 }
               }
             },

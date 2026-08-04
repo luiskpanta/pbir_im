@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c6ada0f6e2a9b2dd63c3",
   "position": {
-    "x": 203.04000000000002,
-    "y": 92.16,
-    "z": 5000,
-    "height": 623.52,
-    "width": 832,
+    "x": 199.39698492462313,
+    "y": 93.266331658291463,
+    "z": 16000,
+    "height": 623.91959798994981,
+    "width": 832.96482412060311,
     "tabOrder": 5000
   },
   "visual": {
@@ -1387,7 +1387,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTs abiertas por tipo de servicio por mes'"
+                  "Value": "'% Servicio Remoto por mes'"
                 }
               }
             },
@@ -1401,7 +1401,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "15D"
                 }
               }
             },
@@ -1411,7 +1411,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": 0
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -1427,7 +1427,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -1493,6 +1493,26 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total OT''s Remotas / Total de OT''s Correctivas'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -1552,6 +1572,122 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "212754e060a5c3307c79",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cfe51c2b4a08b8d81326",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6d66c9809d3049a30501",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "tipoServicio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eb79ae60b6b1dc22a94b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4cb304e1b9b1bb02472c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "%EsRemoto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9aef627000e401604571",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "Meta%Remoto"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
