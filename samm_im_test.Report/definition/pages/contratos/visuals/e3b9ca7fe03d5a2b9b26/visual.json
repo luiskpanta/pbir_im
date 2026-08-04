@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "e3b9ca7fe03d5a2b9b26",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 1000,
+    "height": 672.8,
+    "width": 1280.16,
+    "tabOrder": 8000
+  },
+  "visualGroup": {
+    "displayName": "Evolucion CR",
+    "groupMode": "ScaleMode"
+  }
+}

@@ -32,12 +32,12 @@ ref table LocalDateTable_2fe7cd95-49d6-4564-9eef-087531692431
 ref table con_estadoEquipos
 ref table met_contratos
 ref table con_fallasEquipos
-ref table LocalDateTable_3589df12-48da-4f5f-8f58-abbcb7395876
 ref table LocalDateTable_ac37f0e6-0bb3-43fe-af3d-b1640dafc5e2
 ref table con_equiposContrato
-ref table LocalDateTable_e7d47143-17b3-47f5-a73d-77490b4e1a1d
 ref table refreshDate
 ref table LocalDateTable_0b226db5-2b14-4873-9b3e-65ba3f7ca5fe
+ref table LocalDateTable_f36f0f11-2d06-488f-9431-9188b2a8fd54
+ref table LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42
 
 ref cultureInfo es-CO
 

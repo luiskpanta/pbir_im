@@ -46,11 +46,6 @@ table con_equiposContrato
 		summarizeBy: none
 		sourceColumn: mes
 
-		variation Variación
-			isDefault
-			relationship: 15fedbb2-3cfd-4130-97e7-90fa52460678
-			defaultHierarchy: LocalDateTable_e7d47143-17b3-47f5-a73d-77490b4e1a1d.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
@@ -109,7 +104,7 @@ table con_equiposContrato
 
 	column metaCR2 = related(met_contratos[%Meta])
 		lineageTag: 7eca9871-fd02-4100-98b6-f28a9fbcaacb
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
@@ -143,7 +138,7 @@ table con_equiposContrato
 
 	column MetWC = related(met_contratos[MetaWC])
 		lineageTag: 79da0dfb-3416-4cd2-a2f0-6231fbf471f1
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
@@ -151,11 +146,48 @@ table con_equiposContrato
 
 	column MetWB = related(met_contratos[MetaWB])
 		lineageTag: 8d3bbe1e-f6e8-44f9-943f-fbd34a4a6211
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column familia
+		dataType: string
+		lineageTag: 80cb4c19-478f-414e-a3d8-244afd7accf0
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodFam =
+			
+			SWITCH(
+			con_equiposContrato[familia],
+			 "DENTAL", "De",
+			"DETECTORES", "DR",
+			"DIGITAL OUTPUT", "DO",
+			"DIGITALIZADORES", "CR",
+			"EXTRAORAL", "Ex",
+			"INTRAORAL", "In",
+			"RAYOS X (XP)", "RX",
+			"ULTRASONIDO (US)", "US",
+			"MAMOGRAFIA", "MM",
+			"OTROS", "Ot",
+			"NO APLICA"
+			)
+		lineageTag: 302dd803-6200-4e4f-8d71-8179f4541652
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column cod_familia
+		dataType: string
+		lineageTag: 5080c945-fda0-4095-8a45-2648e6d5a50d
+		summarizeBy: none
+		sourceColumn: cod_familia
+
+		annotation SummarizationSetBy = Automatic
 
 	partition con_equiposContrato = m
 		mode: import
