@@ -314,51 +314,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "20591c4e1d7d2b4b9016",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "equipo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e5b5e8c07a0b70db940c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTBF (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5c8b6fc290148c56a009",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "ETTR (dias)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -69,53 +69,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ff37007541db965050e9",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8d2d446f1b0ec89ba2d5",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_fallasEquipos"
-                  }
-                },
-                "Property": "idOT"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

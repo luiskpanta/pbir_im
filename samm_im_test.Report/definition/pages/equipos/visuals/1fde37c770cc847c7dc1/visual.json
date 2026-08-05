@@ -4,10 +4,10 @@
   "position": {
     "x": 689.68036529680364,
     "y": 478.29528158295278,
-    "z": 14001,
+    "z": 15000,
     "height": 194.82496194824961,
     "width": 590.31963470319636,
-    "tabOrder": 14001
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "tableEx",
@@ -203,65 +203,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8ee090d95587010d0745",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "equipo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "708a49403e790057ca56",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTBF (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2e9e3cb81b68700ba027",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "ETTR (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f45cc6cb3bc2abc9bc52",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "idOT"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

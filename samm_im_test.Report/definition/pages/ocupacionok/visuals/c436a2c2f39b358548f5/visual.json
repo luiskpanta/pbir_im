@@ -4,10 +4,10 @@
   "position": {
     "x": 391.39107611548553,
     "y": 21.837270341207347,
-    "z": 16000,
+    "z": 18000,
     "height": 58,
     "width": 152.86089238845145,
-    "tabOrder": 15000
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -80,14 +80,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "null"
+                                "Value": "'2024 & 2025 & 2026'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'2024 & 2025 & 2026'"
+                                "Value": "null"
                               }
                             }
                           ]

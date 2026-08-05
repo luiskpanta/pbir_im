@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "221708d40be5c953d11e",
   "position": {
-    "x": 3.9272727272727277,
+    "x": 2,
     "y": 324.65454545454548,
     "z": 17000,
     "height": 134.83636363636364,
-    "width": 196.36363636363637,
+    "width": 198,
     "tabOrder": 17000
   },
   "visual": {
@@ -1180,18 +1180,58 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "eead12a6586c15429c68",
+        "name": "ff9e54778cc2a1ce717b",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
                 "Entity": "con_clasificacionOTs"
               }
             },
-            "Property": "%OTCerradas"
+            "Property": "tipoServicio"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_clasificacionOTs",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'04 SOPORTE REMOTO'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

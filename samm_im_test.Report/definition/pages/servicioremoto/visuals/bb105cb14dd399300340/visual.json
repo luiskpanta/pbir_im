@@ -4,10 +4,10 @@
   "position": {
     "x": 833.80508687987913,
     "y": 320,
-    "z": 1000,
+    "z": 2000,
     "height": 162.72,
     "width": 237.6,
-    "tabOrder": 17007
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -1598,7 +1598,7 @@
         "howCreated": "User"
       },
       {
-        "name": "a6e33432b1ee16c1cd92",
+        "name": "b060145653e355db5260",
         "field": {
           "Column": {
             "Expression": {
@@ -1606,43 +1606,50 @@
                 "Entity": "con_clasificacionOTs"
               }
             },
-            "Property": "marca"
+            "Property": "tipoServicio"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "c3e1303db78d2b420804",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_clasificacionOTs",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'04 SOPORTE REMOTO'"
+                        }
+                      }
+                    ]
+                  ]
+                }
               }
-            },
-            "Property": "OTestAbierta"
-          }
+            }
+          ]
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "291de50fa6076959308a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "User"
       }
     ]
   }

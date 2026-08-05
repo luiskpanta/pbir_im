@@ -4,10 +4,10 @@
   "position": {
     "x": 833.80508687987913,
     "y": 116.36363636363637,
-    "z": 2000,
+    "z": 3000,
     "height": 203.63636363636365,
     "width": 238.85167464114835,
-    "tabOrder": 17006
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -1598,7 +1598,7 @@
         "howCreated": "User"
       },
       {
-        "name": "90f229907c04241c284c",
+        "name": "ad0acf599eb15babb253",
         "field": {
           "Column": {
             "Expression": {
@@ -1606,43 +1606,50 @@
                 "Entity": "con_clasificacionOTs"
               }
             },
-            "Property": "zona"
+            "Property": "tipoServicio"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "a51105bec8beab0e64de",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_clasificacionOTs",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'04 SOPORTE REMOTO'"
+                        }
+                      }
+                    ]
+                  ]
+                }
               }
-            },
-            "Property": "OTestAbierta"
-          }
+            }
+          ]
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "ec633552c789bc4228ba",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "User"
       }
     ]
   }

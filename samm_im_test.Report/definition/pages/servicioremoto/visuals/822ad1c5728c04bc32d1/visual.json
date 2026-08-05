@@ -4,10 +4,10 @@
   "position": {
     "x": 833.80508687987913,
     "y": 0,
-    "z": 3000,
+    "z": 4000,
     "height": 116.36363636363637,
     "width": 238.85167464114835,
-    "tabOrder": 17005
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -1466,60 +1466,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "862953032827b10d7695",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "0402Correctivo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "con_clasificacionOTs",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "0402Correctivo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "1L"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "bb074a30ad068a1c1050",
         "field": {
           "Column": {
@@ -1592,7 +1538,7 @@
         }
       },
       {
-        "name": "4f30277f60b78624ed01",
+        "name": "2fa745ba1b12b948284e",
         "field": {
           "Column": {
             "Expression": {
@@ -1600,29 +1546,50 @@
                 "Entity": "con_clasificacionOTs"
               }
             },
-            "Property": "OTestAbierta"
+            "Property": "tipoServicio"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "291784204143be95c0eb",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_clasificacionOTs",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'04 SOPORTE REMOTO'"
+                        }
+                      }
+                    ]
+                  ]
+                }
               }
-            },
-            "Function": 5
-          }
+            }
+          ]
         },
-        "type": "Advanced"
+        "howCreated": "User"
       }
     ]
   }

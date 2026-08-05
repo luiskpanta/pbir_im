@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e6483bcbc3eaab420baa",
   "position": {
-    "x": 3.9875389408099688,
-    "y": 158.17237798546211,
+    "x": 1.44,
+    "y": 158.4,
     "z": 7000,
-    "height": 166.14745586708204,
-    "width": 196.71858774662513,
+    "height": 165.6,
+    "width": 198.72,
     "tabOrder": 8000
   },
   "visual": {
@@ -590,7 +590,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 8,
-                      "Percent": 0.4
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -768,42 +768,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "81a3bc530404b3d33369",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5a44b1c8a8576060a7eb",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "0402Correctivo"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

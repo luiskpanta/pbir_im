@@ -7,11 +7,10 @@
     "z": 20000,
     "height": 717.47368421052624,
     "width": 1072.8098715688743,
-    "tabOrder": 17006
+    "tabOrder": 20000
   },
   "visualGroup": {
     "displayName": "Ge Efect Remoto",
     "groupMode": "ScaleMode"
-  },
-  "isHidden": true
+  }
 }

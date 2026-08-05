@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 90.94736842105263,
-    "z": 4000,
+    "z": 5000,
     "height": 626.52631578947364,
     "width": 832,
-    "tabOrder": 17002
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -587,7 +587,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "'TopCenter'"
                 }
               }
             },
@@ -1783,6 +1783,59 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Casos resueltos con atención de servicio remoto'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -1843,122 +1896,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "523cb617b30ae3049587",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "797bea91dd1565e07c5c",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6c5b503b6a22e2d0b881",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "OTestAbierta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d49efe794a4d0be622a2",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "89be1af654091a02b492",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "%OTCerradas"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "26c0687036d9855a6801",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "Meta%CierreRemoto"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

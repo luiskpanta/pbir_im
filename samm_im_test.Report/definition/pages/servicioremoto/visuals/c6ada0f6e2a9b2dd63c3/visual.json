@@ -451,7 +451,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "'TopCenter'"
                 }
               }
             },
@@ -788,7 +788,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 8,
-                      "Percent": 0.4
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -1572,123 +1572,8 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "212754e060a5c3307c79",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cfe51c2b4a08b8d81326",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6d66c9809d3049a30501",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eb79ae60b6b1dc22a94b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4cb304e1b9b1bb02472c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "%EsRemoto"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9aef627000e401604571",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "Meta%Remoto"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
       }
     ]
-  }
+  },
+  "isHidden": true
 }
