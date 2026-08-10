@@ -4,7 +4,7 @@
   "name": "524069c721d9d888b98b",
   "options": {
     "targetVisualNames": [
-      "c6ada0f6e2a9b2dd63c3"
+      "822ad1c5728c04bc32d1"
     ],
     "suppressData": true
   },
@@ -149,7 +149,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7c96d2109c18ee530866",
+                  "name": "69f04551bd68197c0a44",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -243,7 +243,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "98c6ed842607a0de933b",
+                  "name": "6af2e58967b379e16c37",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -258,7 +258,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6aee7f801cdddd08805c",
+                  "name": "96ac24d69e053d329b07",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -273,7 +273,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e82d324702e80cb6d061",
+                  "name": "3d19fe86cd15245d0412",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -339,11 +339,117 @@
               "objects": {}
             }
           },
+          "0a3730805e8b002c8ab0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "0f58d877017e90831e62": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "221708d40be5c953d11e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ff9e54778cc2a1ce717b",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "0551dfa922c346735b03",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "%OTCerradas"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "%OTCerradas"
+                    }
+                  }
+                }
+              ]
+            }
+          },
           "33f80dd3f49c8fd7ecaf": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "8d49658e9306009ab71a",
+                  "name": "1a9ccba063051a02d853",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -374,6 +480,88 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "l",
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "l"
+                                            }
+                                          },
+                                          "Property": "Mes"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'enero'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'febrero'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'marzo'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'abril'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'mayo'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'junio'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -381,13 +569,6 @@
                           "expr": {
                             "Literal": {
                               "Value": "'Dropdown'"
-                            }
-                          }
-                        },
-                        "isInvertedSelectionMode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
                             }
                           }
                         }
@@ -433,7 +614,159 @@
                     }
                   }
                 ]
-              }
+              },
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'enero'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "enero"
+                },
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'febrero'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "febrero"
+                },
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'marzo'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "marzo"
+                },
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'abril'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "abril"
+                },
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'mayo'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "mayo"
+                },
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
+                              }
+                            },
+                            "Property": "Mes"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'junio'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "junio"
+                }
+              ]
             }
           },
           "82e80736c29e538b6514": {
@@ -494,7 +827,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "c83e885b258eb166c680",
+                  "name": "be9af915e70348d0a120",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -509,7 +842,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d6d5ccb5a4536d9a2cea",
+                  "name": "f7b9cd3008e7e304ab93",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -524,7 +857,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7f6a146de47639495b82",
+                  "name": "1f81a4e72ebd2e75b138",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -584,11 +917,1217 @@
               }
             }
           },
+          "2887e6a078d8b7ed1133": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b194029d7c660b175c2a",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "bd06f60381c1d64b45a1",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bf883e259a0346679920",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9dbdbe6d8da890ac66c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cc258f3f63987124159c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0fbbc80daa3bc013b570",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "%OTCerradas"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dbe9eba46438972e05a5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "Meta%CierreRemoto"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "54fb6306ec3e10bc0ed0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "862953032827b10d7695",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "0402Correctivo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "ad0acf599eb15babb253",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "ac3e8fa6218642305e44",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "zona"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "11e1b8c4a5882e7621bb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3e66255357409ceb43a6",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "zona"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "74cb95902369613e211c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bb074a30ad068a1c1050",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "estadoOT"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Cerrada'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "estadoOT"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "2fa745ba1b12b948284e",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7f9e0d68ce15cce27313",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "13ac83abb088604752a0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "kpi",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "822ad1c5728c04bc32d1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "bb074a30ad068a1c1050",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "estadoOT"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "'Cerrada'"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "estadoOT"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2fa745ba1b12b948284e",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "f0a359c2d271071d1e87",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a986a4108dab2bcc29d4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "estadoOT"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "bb105cb14dd399300340": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "862953032827b10d7695",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "0402Correctivo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b060145653e355db5260",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "164336df871cd4855489",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "marca"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "57a4837fd3d03b0510c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "82362e9a7400012e1127",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "marca"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "d5d9eff99e9068c8eb3c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "862953032827b10d7695",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "0402Correctivo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b0a4e7d45d90c6da0ae4",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "tipoServicio"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'04 SOPORTE REMOTO'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "d70f5cef03dde13c1c70",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "cliente"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "959d802fd7944c95717c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "OTestAbierta"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "584298948ed7a5b3a579",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "cliente"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "93103e051e9a2e219b7a": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "8beaf6b7b4ba6b0ccb05",
+                  "name": "2f3f6b14e3a35bcecd03",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -663,7 +2202,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9c4647bf0890043b1106",
+                  "name": "da2cc21dce0461ed6205",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -778,7 +2317,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4169b51772c990965962",
+                  "name": "8d11d207597c2244ad0e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1063,7 +2602,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "255882404d03707399c5",
+                  "name": "4808696c0e91582b0089",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -1089,7 +2628,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f42b6640a5eae1058aca",
+                  "name": "52c1ba97a48d0e00019d",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1115,7 +2654,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f3d45c894013d0a1ee0d",
+                  "name": "e465a93abae885930a63",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1130,7 +2669,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4614b335da7300055c88",
+                  "name": "3dd401dc0365c365103e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1150,7 +2689,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1408582a160d66d130a9",
+                  "name": "667c8d2055a01c71c4c3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1165,7 +2704,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9fa7d8d38e13c0d21db0",
+                  "name": "dea392fa28463d705aae",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1295,7 +2834,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "2c2c3573eac21e1565a9",
+                  "name": "b6500dace23d1ea2c240",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1310,7 +2849,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ce164e35ec5582bb0b14",
+                  "name": "53318dfa30e76a35de9e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1325,7 +2864,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ae21aed920e4b569ed99",
+                  "name": "cc9bfd9a5e364bb85b0e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1407,7 +2946,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c5e8b250435433778401",
+                  "name": "e9f3dded909825a31484",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1434,6 +2973,13 @@
                           "expr": {
                             "Literal": {
                               "Value": "'Dropdown'"
+                            }
+                          }
+                        },
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
                             }
                           }
                         }
@@ -1475,7 +3021,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7e6be7276a4a7c36bd73",
+                  "name": "e9c7d56039335c97c60a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1490,7 +3036,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "321725ab2025072ee878",
+                  "name": "83e049a038e707899696",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1554,7 +3100,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c3473cb2a850641028b0",
+                  "name": "7ad0056671c42975132c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1618,51 +3164,11 @@
               }
             }
           },
-          "221708d40be5c953d11e": {
+          "931392b2e019b521ed08": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "27927ae2eb05ba92e052",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "%OTCerradas"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "gauge",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "%OTCerradas"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "2887e6a078d8b7ed1133": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b194029d7c660b175c2a",
+                  "name": "b3e319814a870ceba696",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1685,7 +3191,7 @@
                                       "Source": "c"
                                     }
                                   },
-                                  "Property": "tipoServicio"
+                                  "Property": "0402Correctivo"
                                 }
                               }
                             ],
@@ -1693,7 +3199,7 @@
                               [
                                 {
                                   "Literal": {
-                                    "Value": "'04 SOPORTE REMOTO'"
+                                    "Value": "1L"
                                   }
                                 }
                               ]
@@ -1710,39 +3216,48 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "tipoServicio"
+                      "Property": "0402Correctivo"
                     }
                   },
                   "howCreated": 1
                 },
                 {
-                  "name": "70757c723008a3d0914b",
-                  "type": "Advanced",
+                  "name": "c225f2280e0e8e957658",
+                  "type": "Categorical",
                   "expression": {
-                    "HierarchyLevel": {
+                    "Column": {
                       "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Dim_Fecha"
-                                }
-                              },
-                              "Name": "Variación",
-                              "Property": "Date"
-                            }
-                          },
-                          "Hierarchy": "Jerarquía de fechas"
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Level": "Año"
+                      "Property": "tipoServicio"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "ac34443aeb2b07ce9549",
+                  "name": "e8e686f26b0cb3c49ce4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "ResponseTime"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "75fb8c5d0de2b0131a75",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -1768,71 +3283,27 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ff565168b70d23801e09",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "OTestAbierta"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "e05f625ebe081031b411",
+                  "name": "a012a606596127dae8a9",
                   "type": "Advanced",
                   "expression": {
-                    "Aggregation": {
+                    "HierarchyLevel": {
                       "Expression": {
-                        "Column": {
+                        "Hierarchy": {
                           "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_clasificacionOTs"
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
                             }
                           },
-                          "Property": "id"
+                          "Hierarchy": "Jerarquía de fechas"
                         }
                       },
-                      "Function": 5
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f4196097c07d7591b630",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "%OTCerradas"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "dff6363f5976734abc48",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_clasificacionOTs"
-                            }
-                          },
-                          "Property": "Meta%CierreRemoto"
-                        }
-                      },
-                      "Function": 1
+                      "Level": "Año"
                     }
                   },
                   "howCreated": 0
@@ -1840,7 +3311,7 @@
               ]
             },
             "singleVisual": {
-              "visualType": "lineStackedColumnComboChart",
+              "visualType": "lineChart",
               "objects": {},
               "activeProjections": {
                 "Category": [
@@ -1890,19 +3361,183 @@
               }
             }
           },
-          "0f58d877017e90831e62": {
+          "8b4282d0ee3d91161b2a": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b3e319814a870ceba696",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "0402Correctivo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "841506136a2cdadc5e1a",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb273c5fde026ced406b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d2087eadc76b1e26a3a9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "ResponseTime"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  }
+                ]
+              }
             }
           },
-          "0a3730805e8b002c8ab0": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "822ad1c5728c04bc32d1": {
+          "b2e93e20de0a0b751074": {
             "filters": {
               "byExpr": [
                 {
@@ -1960,7 +3595,81 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "bb074a30ad068a1c1050",
+                  "name": "f3ae9ec13ac102e8282d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "zona"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "71d2fbd6e2762a13dcd9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "81c5edb021690d1a68c5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "ResponseTime"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "zona"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "38e8eb054e7e0cde7c69": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "862953032827b10d7695",
                   "type": "Categorical",
                   "filter": {
                     "Version": 2,
@@ -1974,32 +3683,28 @@
                     "Where": [
                       {
                         "Condition": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "c"
-                                        }
-                                      },
-                                      "Property": "estadoOT"
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
                                     }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'Cerrada'"
-                                      }
-                                    }
-                                  ]
-                                ]
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
                               }
-                            }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
                           }
                         }
                       }
@@ -2012,13 +3717,13 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "estadoOT"
+                      "Property": "0402Correctivo"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
-                  "name": "ea4dfa67912bd0ac205e",
+                  "name": "c26ab6c26e5aeee5cce0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2027,13 +3732,13 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "OTestAbierta"
+                      "Property": "tipoServicio"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "a65c1ed40e5a5763ab51",
+                  "name": "6d1139d9829a7b088bea",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -2044,10 +3749,25 @@
                               "Entity": "con_clasificacionOTs"
                             }
                           },
-                          "Property": "id"
+                          "Property": "ResponseTime"
                         }
                       },
-                      "Function": 5
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "939c70f25baeeba45224",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "marca"
                     }
                   },
                   "howCreated": 0
@@ -2055,28 +3775,8 @@
               ]
             },
             "singleVisual": {
-              "visualType": "clusteredBarChart",
+              "visualType": "barChart",
               "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_clasificacionOTs"
-                            }
-                          },
-                          "Property": "id"
-                        }
-                      },
-                      "Function": 5
-                    }
-                  }
-                }
-              ],
               "activeProjections": {
                 "Category": [
                   {
@@ -2086,16 +3786,156 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "estadoOT"
+                      "Property": "marca"
                     }
                   }
                 ]
               }
             }
+          },
+          "2e712a651bda0757e195": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "862953032827b10d7695",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_clasificacionOTs",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "0402Correctivo"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "0402Correctivo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b5f3b65a18998784c260",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "tipoServicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "36600d93a0b9e201cb30",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_clasificacionOTs"
+                            }
+                          },
+                          "Property": "ResponseTime"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d73ac0f6500800702e96",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "cliente"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_clasificacionOTs"
+                        }
+                      },
+                      "Property": "cliente"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "cd39fc56dcde45ec1db6": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
           }
         },
         "visualContainerGroups": {
           "91949afb056e394e7c38": {
+            "isHidden": true
+          },
+          "5ceada9919c7a24d1055": {
+            "isHidden": false
+          },
+          "decdd35158093a75ae51": {
             "isHidden": true
           }
         }

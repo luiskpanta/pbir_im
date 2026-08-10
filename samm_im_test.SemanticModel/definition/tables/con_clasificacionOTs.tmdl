@@ -330,6 +330,39 @@ table con_clasificacionOTs
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column num_SOL
+		dataType: string
+		lineageTag: 51480736-c97c-4c4a-9cce-5d4ea1660880
+		summarizeBy: none
+		sourceColumn: num_SOL
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_atencion
+		dataType: string
+		lineageTag: 08daef17-e56b-4908-ba8e-dce0cffd624a
+		summarizeBy: none
+		sourceColumn: fecha_atencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_solucion
+		dataType: string
+		lineageTag: 15b605bf-ad98-4e2c-9dde-a68cf9c25f0b
+		summarizeBy: none
+		sourceColumn: fecha_solucion
+
+		annotation SummarizationSetBy = Automatic
+
+	column ResponseTime =
+			max(0,
+			DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY))
+		formatString: 0
+		lineageTag: a939c59e-947d-4849-9e82-2e56ef404347
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_clasificacionOTs = m
 		mode: import
 		source =

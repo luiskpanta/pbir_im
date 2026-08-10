@@ -127,6 +127,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true,
     "queryLimitOption": "None",
     "customMemoryLimit": "1048576",

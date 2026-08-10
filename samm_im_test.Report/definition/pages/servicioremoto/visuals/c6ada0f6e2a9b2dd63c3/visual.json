@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "c6ada0f6e2a9b2dd63c3",
   "position": {
-    "x": 199.39698492462313,
-    "y": 93.266331658291463,
-    "z": 16000,
-    "height": 623.91959798994981,
-    "width": 832.96482412060311,
+    "x": 0,
+    "y": 87.295488,
+    "z": 3000,
+    "height": 563.04,
+    "width": 832.32,
     "tabOrder": 5000
   },
   "visual": {
@@ -1517,6 +1517,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "5ceada9919c7a24d1055",
   "filterConfig": {
     "filters": [
       {
@@ -1572,6 +1573,122 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "4808696c0e91582b0089",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "52c1ba97a48d0e00019d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e465a93abae885930a63",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "tipoServicio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3dd401dc0365c365103e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "667c8d2055a01c71c4c3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "%EsRemoto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dea392fa28463d705aae",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "Meta%Remoto"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
       }
     ]
   },

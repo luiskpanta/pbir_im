@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "c6cc23e70787deb0a318",
+  "name": "b2e93e20de0a0b751074",
   "position": {
-    "x": 836.50835200000006,
+    "x": 836.15210958904106,
     "y": 0,
-    "z": 2000,
+    "z": 1000,
     "height": 202,
     "width": 236,
-    "tabOrder": 13000
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "barChart",
@@ -62,39 +62,19 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "id"
+                      "Property": "ResponseTime"
                     }
                   },
-                  "Function": 5
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(con_clasificacionOTs.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "Sum(con_clasificacionOTs.ResponseTime)",
+              "nativeQueryRef": "Promedio de ResponseTime"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "con_clasificacionOTs"
-                      }
-                    },
-                    "Property": "id"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -140,7 +120,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -163,8 +143,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                      "ColorId": 3,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -263,6 +243,120 @@
                     "Right": {
                       "Literal": {
                         "Value": "'02 CORRECTIVO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'02 CORRECTIVO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "tipoServicio"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'04 SOPORTE REMOTO'"
                       }
                     }
                   }
@@ -627,6 +721,32 @@
                   }
                 }
               }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -665,6 +785,32 @@
                     "ThemeDataColor": {
                       "ColorId": 8,
                       "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -813,7 +959,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -913,7 +1059,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTs Correctivas por Zona'"
+                  "Value": "'Tiempo respuesta por Zona'"
                 }
               }
             },
@@ -1076,7 +1222,7 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5ceada9919c7a24d1055",
+  "parentGroupName": "decdd35158093a75ae51",
   "filterConfig": {
     "filters": [
       {
@@ -1132,6 +1278,53 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "f3ae9ec13ac102e8282d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "zona"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "71d2fbd6e2762a13dcd9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "tipoServicio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "81c5edb021690d1a68c5",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "ResponseTime"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
