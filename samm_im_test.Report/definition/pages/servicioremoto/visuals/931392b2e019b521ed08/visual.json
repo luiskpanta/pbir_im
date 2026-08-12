@@ -6,8 +6,8 @@
     "y": 77.76,
     "z": 0,
     "height": 563.04,
-    "width": 832.32,
-    "tabOrder": 20000
+    "width": 834,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineChart",
@@ -1022,7 +1022,7 @@
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "8D"
                 }
               }
             },
@@ -1155,89 +1155,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c225f2280e0e8e957658",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e8e686f26b0cb3c49ce4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "ResponseTime"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "75fb8c5d0de2b0131a75",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a012a606596127dae8a9",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Dim_Fecha"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   },

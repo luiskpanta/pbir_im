@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "9c5878e2a082c5437566",
   "position": {
-    "x": 203.36448598130841,
-    "y": 582.7503337783711,
-    "z": 8250,
-    "height": 135.00667556742323,
-    "width": 709.21228304405872,
+    "x": 0,
+    "y": 479.52000000000004,
+    "z": 2500,
+    "height": 240.48000000000002,
+    "width": 205.92000000000002,
     "tabOrder": 11000
   },
   "visual": {
@@ -51,7 +51,8 @@
                 }
               },
               "queryRef": "CountNonNull(con_equiposContrato.equipo_serial)",
-              "nativeQueryRef": "Recuento de equipo_serial"
+              "nativeQueryRef": "Recuento de equipo_serial",
+              "format": "0"
             }
           ]
         }
@@ -514,7 +515,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cantidad equipos por Familia'"
+                  "Value": "'Cant. equipos por Familia'"
                 }
               }
             },
@@ -528,7 +529,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "11D"
                 }
               }
             },
@@ -643,7 +644,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
   "filterConfig": {
     "filters": [
       {

@@ -144,13 +144,6 @@
                                 "Value": "'julio'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'agosto'"
-                              }
-                            }
                           ]
                         ]
                       }
@@ -258,17 +251,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'agosto'"
-                                    }
-                                  }
-                                ]
-                              }
                             ]
                           ],
                           "columns": [
@@ -307,9 +289,6 @@
                           },
                           {
                             "0": "julio"
-                          },
-                          {
-                            "0": "agosto"
                           }
                         ]
                       }
@@ -413,6 +392,24 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selectionIcon": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
                 }
               }
             }

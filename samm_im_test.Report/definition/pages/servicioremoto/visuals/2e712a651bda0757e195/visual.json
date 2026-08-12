@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 255.70776255707764,
     "width": 236.7123287671233,
-    "tabOrder": 22002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "barChart",
@@ -96,6 +96,13 @@
                 }
               }
             },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "labelPosition": {
               "expr": {
                 "Literal": {
@@ -111,13 +118,6 @@
               }
             },
             "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -253,6 +253,13 @@
         },
         {
           "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
             "showSeries": {
               "expr": {
                 "Literal": {
@@ -271,13 +278,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
                 }
               }
             }
@@ -311,6 +311,13 @@
         },
         {
           "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
             "showSeries": {
               "expr": {
                 "Literal": {
@@ -327,13 +334,6 @@
                       "Percent": -0.5
                     }
                   }
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
                 }
               }
             }
@@ -376,13 +376,6 @@
                 }
               }
             },
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -420,6 +413,13 @@
                       "Percent": 0.4
                     }
                   }
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -725,7 +725,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "75D"
                 }
               }
             },
@@ -793,7 +793,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "40D"
                 }
               }
             },
@@ -882,13 +882,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "innerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "12L"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -896,17 +889,24 @@
                 }
               }
             },
-            "fontSize": {
+            "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "20D"
                 }
               }
             },
-            "showAxisTitle": {
+            "maxMarginFactor": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "30L"
+                }
+              }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "12L"
                 }
               }
             },
@@ -917,10 +917,10 @@
                 }
               }
             },
-            "maxMarginFactor": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30L"
+                  "Value": "8D"
                 }
               }
             },
@@ -936,10 +936,10 @@
                 }
               }
             },
-            "preferredCategoryWidth": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "false"
                 }
               }
             },
@@ -960,6 +960,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             },
@@ -986,13 +993,6 @@
               "expr": {
                 "Literal": {
                   "Value": "32D"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
                 }
               }
             }
@@ -1027,13 +1027,6 @@
       "valueAxis": [
         {
           "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -1042,6 +1035,13 @@
               }
             },
             "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -1278,53 +1278,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "b5f3b65a18998784c260",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "36600d93a0b9e201cb30",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "ResponseTime"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d73ac0f6500800702e96",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "cliente"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

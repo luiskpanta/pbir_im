@@ -6,7 +6,8 @@
     "y": 14.4,
     "z": 16000,
     "height": 666.30136986301375,
-    "width": 1072.8644383561643
+    "width": 1072.8644383561643,
+    "tabOrder": 17000
   },
   "visualGroup": {
     "displayName": "Response time",

@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "6743f90a296f22e1c77d",
   "position": {
-    "x": 806.4,
+    "x": 800.64,
     "y": 10.08,
     "z": 15000,
     "height": 72,
@@ -144,13 +144,6 @@
                                 "Value": "'julio'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'agosto'"
-                              }
-                            }
                           ]
                         ]
                       }
@@ -258,17 +251,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'agosto'"
-                                    }
-                                  }
-                                ]
-                              }
                             ]
                           ],
                           "columns": [
@@ -307,9 +289,6 @@
                           },
                           {
                             "0": "julio"
-                          },
-                          {
-                            "0": "agosto"
                           }
                         ]
                       }

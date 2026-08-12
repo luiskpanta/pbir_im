@@ -7,7 +7,7 @@
     "z": 11000,
     "height": 76.320000000000007,
     "width": 119.52000000000001,
-    "tabOrder": 15000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -144,13 +144,6 @@
                                 "Value": "'julio'"
                               }
                             }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'agosto'"
-                              }
-                            }
                           ]
                         ]
                       }
@@ -258,17 +251,6 @@
                                   }
                                 ]
                               }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'agosto'"
-                                    }
-                                  }
-                                ]
-                              }
                             ]
                           ],
                           "columns": [
@@ -307,9 +289,6 @@
                           },
                           {
                             "0": "julio"
-                          },
-                          {
-                            "0": "agosto"
                           }
                         ]
                       }
@@ -413,6 +392,24 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selectionIcon": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": -0.5
+                    }
+                  }
                 }
               }
             }

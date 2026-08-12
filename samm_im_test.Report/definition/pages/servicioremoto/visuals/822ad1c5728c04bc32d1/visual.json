@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "822ad1c5728c04bc32d1",
   "position": {
-    "x": 832.83589091482338,
+    "x": 837,
     "y": 0,
     "z": 4000,
     "height": 113.48492243407074,
-    "width": 238.37130696532731
+    "width": 238.37130696532731,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -166,6 +167,18 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": -0.25
+                    }
+                  }
                 }
               }
             }
@@ -1112,9 +1125,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.6
+                    "Literal": {
+                      "Value": "'#F4DED5'"
                     }
                   }
                 }
@@ -1132,8 +1144,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0
+                      "ColorId": 4,
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -1385,14 +1397,14 @@
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "5D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "4D"
                 }
               }
             }

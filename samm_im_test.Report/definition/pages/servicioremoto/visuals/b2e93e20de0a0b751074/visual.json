@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 202,
     "width": 236,
-    "tabOrder": 22000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -725,7 +725,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "75D"
                 }
               }
             },
@@ -793,7 +793,7 @@
             "fillTransparency": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "40D"
                 }
               }
             },
@@ -1278,53 +1278,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "f3ae9ec13ac102e8282d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "zona"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "71d2fbd6e2762a13dcd9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "81c5edb021690d1a68c5",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "ResponseTime"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

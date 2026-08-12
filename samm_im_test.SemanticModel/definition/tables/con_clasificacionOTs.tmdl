@@ -34,6 +34,15 @@ table con_clasificacionOTs
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure %EfectREM =
+			DIVIDE(
+			    SUM(con_clasificacionOTs[si_Efectiva]),
+			    SUM(con_clasificacionOTs[04Remoto])
+			)
+		lineageTag: d3094e6e-a1f8-409c-a909-daa33c91d516
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column cliente
 		dataType: string
 		lineageTag: c6cb0ac1-be23-4faf-8fc6-6f7e33776982
@@ -355,10 +364,42 @@ table con_clasificacionOTs
 		annotation SummarizationSetBy = Automatic
 
 	column ResponseTime =
-			max(0,
-			DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY))
+			if(
+			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY)<0,
+			    blank(),
+			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY)
+			)
 		formatString: 0
 		lineageTag: a939c59e-947d-4849-9e82-2e56ef404347
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOL_Uniqe = calculate(COUNT(con_clasificacionOTs[id]),ALLEXCEPT(con_clasificacionOTs,con_clasificacionOTs[num_SOL]))
+		formatString: 0
+		lineageTag: 8edb5338-d6e5-46ed-9192-a235e40e164d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Efectiva =
+			if(con_clasificacionOTs[abierta]=1,"pendiente cierre",
+			    if(con_clasificacionOTs[SOL_Uniqe]=1,"Efectiva",
+			"No efectiva"))
+		lineageTag: 2dca7e53-8ec8-418e-bd07-dabd43fe01cf
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column si_Efectiva =
+			if(
+			    and(
+			        con_clasificacionOTs[abierta]=0,
+			        con_clasificacionOTs[SOL_Uniqe]=1
+			        ),
+			    1,0)
+		formatString: 0
+		lineageTag: 821bfcb9-27c9-401b-9b98-1fe8591c90d2
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic

@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "91949afb056e394e7c38",
   "position": {
-    "x": 201.64383561643837,
-    "y": 10.95890410958904,
+    "x": 202,
+    "y": 3,
     "z": 15000,
-    "height": 648.8306875731688,
-    "width": 1071.2071978801507
+    "height": 656,
+    "width": 1076.04,
+    "tabOrder": 20000
   },
   "visualGroup": {
     "displayName": "Ge Efect Remoto",

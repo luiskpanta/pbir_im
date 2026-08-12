@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d5d9eff99e9068c8eb3c",
   "position": {
-    "x": 833.65734659410771,
-    "y": 462.55582660911989,
+    "x": 837,
+    "y": 463,
     "z": 1000,
-    "height": 186.27486096404888,
-    "width": 236.99608788668118
+    "height": 193,
+    "width": 237.6,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "barChart",
@@ -31,44 +32,22 @@
             }
           ]
         },
-        "Series": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "con_clasificacionOTs"
                     }
                   },
-                  "Property": "OTestAbierta"
+                  "Property": "%EfectREM"
                 }
               },
-              "queryRef": "con_clasificacionOTs.OTestAbierta",
-              "nativeQueryRef": "OTestAbierta"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "id"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "Sum(con_clasificacionOTs.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "con_clasificacionOTs.%EfectREM",
+              "nativeQueryRef": "%EfectREM",
+              "format": "0 %;-0 %;0 %"
             }
           ]
         }
@@ -77,18 +56,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "con_clasificacionOTs"
-                      }
-                    },
-                    "Property": "id"
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
                   }
                 },
-                "Function": 5
+                "Property": "%EfectREM"
               }
             },
             "direction": "Descending"
@@ -132,7 +106,7 @@
             "enableBackground": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -155,6 +129,13 @@
                 }
               }
             },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -166,6 +147,32 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -583,17 +590,25 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#0BA84D'"
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.25
                     }
                   }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
                 }
               }
             },
             "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -602,8 +617,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                      "ColorId": 8,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -1222,7 +1237,7 @@
             "innerPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "15L"
                 }
               }
             },
@@ -1357,6 +1372,13 @@
                 }
               }
             },
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "showAxisTitle": {
               "expr": {
                 "Literal": {
@@ -1380,6 +1402,46 @@
             }
           }
         }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showOnValueAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -1389,7 +1451,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTs Remotas por Cliente'"
+                  "Value": "'%Efectividad Remota por Cliente'"
                 }
               }
             },
@@ -1422,7 +1484,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -1470,7 +1532,7 @@
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "8D"
                 }
               }
             }
@@ -1530,6 +1592,79 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showActionsInTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showChartSpecificTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

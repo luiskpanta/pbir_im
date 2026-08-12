@@ -154,6 +154,13 @@
                                     "Value": "'SIN CLASIFICAR'"
                                   }
                                 }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'GARANTIA'"
+                                  }
+                                }
                               ]
                             ]
                           }

@@ -3,10 +3,11 @@
   "name": "2887e6a078d8b7ed1133",
   "position": {
     "x": 0,
-    "y": 80.64,
+    "y": 88.598904109589043,
     "z": 5000,
     "height": 565.92000000000007,
-    "width": 830.88
+    "width": 834,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -78,11 +79,11 @@
                       "Entity": "con_clasificacionOTs"
                     }
                   },
-                  "Property": "OTestAbierta"
+                  "Property": "Efectiva"
                 }
               },
-              "queryRef": "con_clasificacionOTs.OTestAbierta",
-              "nativeQueryRef": "OTestAbierta"
+              "queryRef": "con_clasificacionOTs.Efectiva",
+              "nativeQueryRef": "Efectiva"
             }
           ]
         },
@@ -119,12 +120,12 @@
                       "Entity": "con_clasificacionOTs"
                     }
                   },
-                  "Property": "%OTCerradas"
+                  "Property": "%EfectREM"
                 }
               },
-              "queryRef": "con_clasificacionOTs.%OTCerradas",
-              "nativeQueryRef": "%OTCerradas",
-              "format": "0.0%;-0.0%;0.0%"
+              "queryRef": "con_clasificacionOTs.%EfectREM",
+              "nativeQueryRef": "%EfectREM",
+              "format": "0.00 %;-0.00 %;0.00 %"
             },
             {
               "field": {
@@ -443,37 +444,6 @@
         },
         {
           "properties": {
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_clasificacionOTs.%OTCerradas"
-          }
-        },
-        {
-          "properties": {
             "showSeries": {
               "expr": {
                 "Literal": {
@@ -577,6 +547,149 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "Efectiva"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No efectiva'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "Efectiva"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'pendiente cierre'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.25
+                    }
+                  }
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "28D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_clasificacionOTs.%EfectREM"
           }
         }
       ],
@@ -1091,25 +1204,6 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_clasificacionOTs.%OTCerradas"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
                       "Percent": 0.4
                     }
                   }
@@ -1223,6 +1317,195 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "Efectiva"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Efectiva'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "borderSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "Efectiva"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No efectiva'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F4DED5'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "con_clasificacionOTs"
+                          }
+                        },
+                        "Property": "Efectiva"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'pendiente cierre'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_clasificacionOTs.%EfectREM"
+          }
         }
       ],
       "layout": [
@@ -1238,7 +1521,7 @@
             "seriesOrderReversed": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -1344,7 +1627,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -1358,7 +1648,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 8,
-                      "Percent": -0.25
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -1617,20 +1907,6 @@
         },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_clasificacionOTs.%OTCerradas"
-          }
-        },
-        {
-          "properties": {
             "enableBackground": {
               "expr": {
                 "Literal": {
@@ -1729,7 +2005,7 @@
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "6D"
                 }
               }
             },

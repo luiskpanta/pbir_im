@@ -5,9 +5,9 @@
     "x": 1.44,
     "y": 338.40000000000003,
     "z": 16562,
-    "height": 181.44,
+    "height": 180,
     "width": 198.72,
-    "tabOrder": 17000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "gauge",
@@ -23,11 +23,11 @@
                       "Entity": "con_clasificacionOTs"
                     }
                   },
-                  "Property": "%OTCerradas"
+                  "Property": "%EfectREM"
                 }
               },
-              "queryRef": "con_clasificacionOTs.%OTCerradas",
-              "nativeQueryRef": "%OTCerradas",
+              "queryRef": "con_clasificacionOTs.%EfectREM",
+              "nativeQueryRef": "%EfectREM",
               "format": "0 %;-0 %;0 %"
             }
           ]
@@ -43,7 +43,7 @@
                     "Entity": "con_clasificacionOTs"
                   }
                 },
-                "Property": "%OTCerradas"
+                "Property": "%EfectREM"
               }
             },
             "direction": "Descending"
@@ -319,25 +319,6 @@
               }
             ]
           }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_clasificacionOTs.%OTCerradas"
-          }
         }
       ],
       "dataPoint": [
@@ -347,9 +328,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.2
+                    "Literal": {
+                      "Value": "'#BFAD61'"
                     }
                   }
                 }
@@ -792,25 +772,6 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 1,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_clasificacionOTs.%OTCerradas"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
                       "Percent": 0.4
                     }
                   }
@@ -954,7 +915,19 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
                 }
               }
             }
@@ -974,7 +947,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -983,10 +956,17 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 8,
                       "Percent": -0.5
                     }
                   }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -1025,7 +1005,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.5
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -1034,7 +1014,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -1075,14 +1055,14 @@
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "10D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "10D"
                 }
               }
             }
@@ -1103,6 +1083,18 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }

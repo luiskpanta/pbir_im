@@ -5,12 +5,13 @@
     "x": 0,
     "y": 0,
     "z": 1000,
-    "height": 717.75700934579436,
+    "height": 663.84,
     "width": 1280.16,
-    "tabOrder": 8000
+    "tabOrder": 10000
   },
   "visualGroup": {
     "displayName": "Evolucion CR",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }
