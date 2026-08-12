@@ -4,10 +4,10 @@
   "position": {
     "x": 846.88372093023258,
     "y": 7.441860465116279,
-    "z": 20000,
+    "z": 18000,
     "height": 72.930232558139537,
     "width": 194.97674418604652,
-    "tabOrder": 20000
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -72,14 +72,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'COORD. ADMINISTRATIVA'"
+                                "Value": "'INGENIERO DE SERVICIO'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'INGENIERO DE SERVICIO'"
+                                "Value": "'APLICACIONISTA'"
                               }
                             }
                           ]

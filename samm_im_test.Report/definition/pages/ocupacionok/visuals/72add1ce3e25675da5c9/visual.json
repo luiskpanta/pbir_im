@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 73.910761154855635,
     "width": 105.8267716535433,
-    "tabOrder": 13000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -17,58 +17,24 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_fallasEquipos"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "FechaParada"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "Dim_Fecha"
                     }
                   },
-                  "Level": "Año"
+                  "Property": "Año"
                 }
               },
-              "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Año",
-              "nativeQueryRef": "FechaParada Año",
+              "queryRef": "Dim_Fecha.Año",
+              "nativeQueryRef": "Año",
               "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_fallasEquipos"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "FechaParada"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
-                  "Level": "Mes"
-                }
-              },
-              "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "FechaParada Mes",
-              "active": false
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -100,8 +66,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42",
+                    "Name": "d",
+                    "Entity": "Dim_Fecha",
                     "Type": 0
                   }
                 ],
@@ -114,7 +80,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "l"
+                                  "Source": "d"
                                 }
                               },
                               "Property": "Año"
@@ -129,67 +95,6 @@
                               }
                             }
                           ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "con_fallasEquipos"
-                                        }
-                                      },
-                                      "Name": "Variación",
-                                      "Property": "FechaParada"
-                                    }
-                                  },
-                                  "Hierarchy": "Jerarquía de fechas"
-                                }
-                              },
-                              "Level": "Año"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2026L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42"
-                                    }
-                                  },
-                                  "Property": "Año"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "2026"
-                          }
                         ]
                       }
                     }
