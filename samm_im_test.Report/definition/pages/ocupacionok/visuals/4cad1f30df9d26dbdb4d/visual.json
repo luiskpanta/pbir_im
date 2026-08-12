@@ -93,18 +93,23 @@
             },
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_indice_de_ocupacion"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_ocupacion_meta"
+                        }
+                      },
+                      "Property": "total_horas"
                     }
                   },
-                  "Property": "estandarmes"
+                  "Function": 0
                 }
               },
-              "queryRef": "con_indice_de_ocupacion.estandarmes",
-              "nativeQueryRef": "Horas Disponibles",
-              "displayName": "Horas Disponibles"
+              "queryRef": "Sum(con_ocupacion_meta.total_horas)",
+              "nativeQueryRef": "Horas disponibles",
+              "displayName": "Horas disponibles"
             }
           ]
         },
@@ -537,6 +542,25 @@
           "selector": {
             "metadata": "Sum(con_clasificacionOTs.Meta%Ocupación)"
           }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_ocupacion_meta.total_horas)"
+          }
         }
       ],
       "valueAxis": [
@@ -750,39 +774,6 @@
           },
           "selector": {
             "metadata": "Sum(con_clasificacionOTs.Meta%Ocupación)"
-          }
-        },
-        {
-          "properties": {
-            "fillTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "80D"
-                }
-              }
-            },
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_indice_de_ocupacion.estandarmes"
           }
         }
       ],

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "74c96e2475617bb9506d",
   "position": {
-    "x": 846.88372093023258,
-    "y": 7.441860465116279,
+    "x": 748.80000000000007,
+    "y": 7.2,
     "z": 18000,
-    "height": 72.930232558139537,
-    "width": 194.97674418604652,
+    "height": 43.2,
+    "width": 293.76,
     "tabOrder": 17000
   },
   "visual": {
@@ -72,14 +72,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'INGENIERO DE SERVICIO'"
+                                "Value": "'APLICACIONISTA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'APLICACIONISTA'"
+                                "Value": "'INGENIERO DE SERVICIO'"
                               }
                             }
                           ]
@@ -99,7 +99,7 @@
             "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -126,7 +126,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             },
@@ -141,6 +141,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table'"
                 }
               }
             }

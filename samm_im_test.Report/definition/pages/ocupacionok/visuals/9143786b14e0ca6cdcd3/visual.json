@@ -10,10 +10,10 @@
     "tabOrder": 19000
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -506,28 +506,7 @@
       ],
       "layout": [
         {
-          "properties": {
-            "tilingMethod": {
-              "expr": {
-                "Literal": {
-                  "Value": "'binary'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -619,7 +598,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "35D"
+                  "Value": "0D"
                 }
               }
             }

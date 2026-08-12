@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Ge Efect Remoto",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }
