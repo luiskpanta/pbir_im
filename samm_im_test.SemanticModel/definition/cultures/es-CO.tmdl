@@ -7979,55 +7979,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo.num_OTT": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_fallasEquipos",
-			          "ConceptualProperty": "numOTT"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "num OTT": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "numOTT": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "number ott": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo.familia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_fallasEquipos",
-			          "ConceptualProperty": "familia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "familia": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "con_fallas_equipo.min_fecha": {
 			      "Definition": {
 			        "Binding": {
