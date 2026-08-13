@@ -19,7 +19,7 @@
     },
     {
       "name": "b21eeeb2bb5e09ae8dae",
-      "displayName": "Ind OC_Hrs",
+      "displayName": "Horas",
       "children": [
         "a74fd781004a7665a020",
         "ad8b0bfa81639bb2bac0"
@@ -32,6 +32,14 @@
         "524069c721d9d888b98b",
         "dc4ae991ee5eb0a65300",
         "7d5e5afa5c034743c8c7"
+      ]
+    },
+    {
+      "name": "15a9d041209097e97092",
+      "displayName": "OTs",
+      "children": [
+        "0da52070ea0bd2ed5d32",
+        "6c6f3902c199a06d4b75"
       ]
     }
   ]

@@ -3,17 +3,17 @@
   "name": "9c5878e2a082c5437566",
   "position": {
     "x": 0,
-    "y": 479.52000000000004,
+    "y": 480,
     "z": 2500,
     "height": 240.48000000000002,
     "width": 205.92000000000002,
     "tabOrder": 11000
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "funnel",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -297,29 +297,25 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#448581'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
                     }
                   }
+                }
+              }
+            },
+            "showAllDataPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
           }
         },
         {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#41A871'"
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -348,19 +344,7 @@
           }
         },
         {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#42EC7A'"
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -395,8 +379,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0.4
+                      "ColorId": 0,
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -437,8 +421,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": 0.4
+                      "ColorId": 0,
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -675,6 +659,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "237a398000a0adda0470",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equiposContrato"
+              }
+            },
+            "Property": "familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f005e65279dd09500863",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_equiposContrato"
+                  }
+                },
+                "Property": "equipo_serial"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

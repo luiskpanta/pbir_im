@@ -5031,29 +5031,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_clasificacion_O_ts.OT_cerrada": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_clasificacionOTs",
-			          "ConceptualProperty": "OTCerrada"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "OT cerrada": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "OTCerrada": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "con_clasificacion_O_ts.metaCierreRemoto": {
 			      "Definition": {
 			        "Binding": {
@@ -12371,72 +12348,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_fallas_equipos_have_min_fecha"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_has_familia": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo"
-			          }
-			        },
-			        "con_fallas_equipo.familia": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.familia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.familia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "con_fallas_equipos_have_familias"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_has_num_OTT": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo"
-			          }
-			        },
-			        "con_fallas_equipo.num_OTT": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.num_OTT"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.num_OTT"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "con_fallas_equipos_have_num_OTT"
 			        }
 			      ]
 			    },

@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5355b6e060a11b50bfe7",
   "position": {
-    "x": 4.32,
-    "y": 658.08,
+    "x": 1,
+    "y": 659.52,
     "z": 12000,
     "height": 56.160000000000004,
     "width": 194.4,
@@ -204,5 +204,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "21f8a63213d1719e08ed",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_primer_visita"
+              }
+            },
+            "Property": "tiposervicio"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

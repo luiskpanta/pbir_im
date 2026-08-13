@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Response time",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

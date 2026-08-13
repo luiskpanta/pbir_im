@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a1d98c2e732c75e88a04",
   "position": {
-    "x": 635.04000000000008,
-    "y": 12.96,
+    "x": 527.15789473684208,
+    "y": 8.4210526315789469,
     "z": 13000,
-    "height": 53.28,
-    "width": 152.64000000000001,
-    "tabOrder": 13000
+    "height": 53.89473684210526,
+    "width": 133.05263157894737,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -80,14 +80,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2024 & 2025 & 2026'"
+                                "Value": "null"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "null"
+                                "Value": "'2024 & 2025 & 2026'"
                               }
                             }
                           ]

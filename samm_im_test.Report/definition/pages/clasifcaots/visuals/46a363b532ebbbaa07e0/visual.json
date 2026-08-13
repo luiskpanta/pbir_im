@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "46a363b532ebbbaa07e0",
   "position": {
-    "x": 5.0526315789473681,
-    "y": 65.6842105263158,
+    "x": 125.28,
+    "y": 123.84,
     "z": 13000,
-    "height": 134.73684210526315,
-    "width": 122.94736842105263,
+    "height": 53.28,
+    "width": 67.68,
     "tabOrder": 13000
   },
   "visual": {
@@ -59,7 +59,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "21D"
                 }
               }
             },
@@ -114,6 +114,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "19D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
                 }
               }
             }
@@ -176,6 +202,20 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_clasificacionOTs.%OTAbiertas"
+          }
         }
       ],
       "label": [
@@ -232,6 +272,20 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_clasificacionOTs.%OTAbiertas"
+          }
         }
       ],
       "divider": [
@@ -247,6 +301,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_clasificacionOTs.%OTAbiertas"
           }
         }
       ],
@@ -288,7 +356,7 @@
             "paddingUniform": {
               "expr": {
                 "Literal": {
-                  "Value": "3L"
+                  "Value": "1L"
                 }
               }
             },
@@ -343,8 +411,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.6
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -373,7 +441,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -394,7 +462,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "8D"
                 }
               }
             },
@@ -410,8 +478,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.25
+                      "ColorId": 1,
+                      "Percent": 0.2
                     }
                   }
                 }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "dcf03454eb794039b66a",
   "position": {
-    "x": 251.6094986807388,
-    "y": 468,
+    "x": 197.28,
+    "y": 423.36,
     "z": 15000,
-    "height": 247,
-    "width": 781.84696569920845,
+    "height": 237.6,
+    "width": 836.64,
     "tabOrder": 15000
   },
   "visual": {
@@ -1468,7 +1468,7 @@
             "enableBackground": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -1494,7 +1494,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "18D"
                 }
               }
             }
@@ -1506,9 +1506,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#6E6E75'"
                     }
                   }
                 }
@@ -1731,6 +1730,39 @@
             }
           ]
         }
+      },
+      {
+        "name": "65bbae767668605dd892",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "Tecnico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6789be59607cb72587e4",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "abierta"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -3,15 +3,74 @@
   "displayName": "Ev Hrs x tipo",
   "name": "a74fd781004a7665a020",
   "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "337841daaa61b2fe7ea8"
-    ],
+    "targetVisualNames": [],
     "suppressData": true
   },
   "explorationState": {
     "version": "1.3",
     "activeSection": "a271b167f7e2551c4f35",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "399d659c4c35e1163add",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "c",
+                "Entity": "con_clasificacionOTs",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "c"
+                                }
+                              },
+                              "Property": "estadoOT"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Cancelada'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "con_clasificacionOTs"
+                }
+              },
+              "Property": "estadoOT"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
     "sections": {
       "a271b167f7e2551c4f35": {
         "visualContainers": {
@@ -19,7 +78,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "26eadb72bc4d1c629c21",
+                  "name": "1057b44d1917d0377b0e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -34,7 +93,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e8b2d8c0bc9abec35936",
+                  "name": "086236f1686c7bd0bea1",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -94,11 +153,157 @@
               }
             }
           },
+          "06ce9ea304b6a86ca1b0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a4d375009075279b5330",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c3f1f1583751e68147a7",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5542d3601c0b604ab4bd",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "tiposervicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "db7b6e52c8d79b908c04",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_indice_de_ocupacion"
+                            }
+                          },
+                          "Property": "duracion"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
           "14ca8cb119cf3784ceba": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "404e28f11ae0e5083bce",
+                  "name": "a74b17cd194207e4b5be",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -113,7 +318,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e4cbaf7e26295d8c0b60",
+                  "name": "6dd86d3c307ac14dcb68",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -183,7 +388,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3493f38e07605467e607",
+                  "name": "449c6400119a33a2969c",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -203,16 +408,21 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "35504ef624597ec6331d",
+                  "name": "b33f2140265d1021757b",
                   "type": "Advanced",
                   "expression": {
-                    "Measure": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_indice_de_ocupacion"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_ocupacion_meta"
+                            }
+                          },
+                          "Property": "total_horas"
                         }
                       },
-                      "Property": "estandarmes"
+                      "Function": 0
                     }
                   },
                   "howCreated": 0
@@ -248,7 +458,68 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0314925a972c52399013",
+                  "name": "bf5de1036c6c73632508",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "tiposervicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4386ecf8e5ce8c210ca3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_indice_de_ocupacion"
+                            }
+                          },
+                          "Property": "duracion"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "eddbcdeb088e23b8d2e0",
+                  "type": "Advanced",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "544b83e74923b0590345",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -269,41 +540,6 @@
                         }
                       },
                       "Level": "Mes"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "987cd44274e648d118b7",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_indice_de_ocupacion"
-                        }
-                      },
-                      "Property": "tiposervicio"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "567ab080a6900d2ec292",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_indice_de_ocupacion"
-                            }
-                          },
-                          "Property": "duracion"
-                        }
-                      },
-                      "Function": 0
                     }
                   },
                   "howCreated": 0
@@ -333,6 +569,27 @@
                           "Hierarchy": "Jerarquía de fechas"
                         }
                       },
+                      "Level": "Año"
+                    }
+                  },
+                  {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
                       "Level": "Mes"
                     }
                   }
@@ -340,11 +597,17 @@
               }
             }
           },
+          "3fb978eec599d866043e": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
           "4cad1f30df9d26dbdb4d": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "421f8cd600b6091ed669",
+                  "name": "c14d9359e09881a5c4b4",
                   "type": "Advanced",
                   "expression": {
                     "HierarchyLevel": {
@@ -370,7 +633,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c215c4939e847e4ad6de",
+                  "name": "4d660a4c22d0521861da",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -396,7 +659,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "08077775c31904dc021c",
+                  "name": "9814055c700586d1458b",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -416,22 +679,27 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "25094f457820ad350ed8",
+                  "name": "32935aeaad304205002e",
                   "type": "Advanced",
                   "expression": {
-                    "Measure": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_indice_de_ocupacion"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_ocupacion_meta"
+                            }
+                          },
+                          "Property": "total_horas"
                         }
                       },
-                      "Property": "estandarmes"
+                      "Function": 0
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "d8ea08a36d5b0084a6d2",
+                  "name": "f3f5f9dcc47bad010a99",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -446,7 +714,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c45104784dbb38d17479",
+                  "name": "8c45c43be3421d5223dd",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -515,6 +783,9 @@
                     }
                   }
                 ]
+              },
+              "display": {
+                "mode": "hidden"
               }
             }
           },
@@ -528,7 +799,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "84094c16ec196539c8d7",
+                  "name": "2ba39f7ea860722b213a",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -581,7 +852,7 @@
                                       [
                                         {
                                           "Literal": {
-                                            "Value": "2026L"
+                                            "Value": "2025L"
                                           }
                                         }
                                       ]
@@ -643,7 +914,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6afdaa98cb133c732381",
+                  "name": "ff9ec70580c754b7764a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -703,13 +974,6 @@
                                       [
                                         {
                                           "Literal": {
-                                            "Value": "'COORD. ADMINISTRATIVA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
                                             "Value": "'APLICACIONISTA'"
                                           }
                                         }
@@ -745,7 +1009,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "53506b83150e501a4beb",
+                  "name": "46d29512732a5e1a50b7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -809,11 +1073,90 @@
               }
             }
           },
+          "9143786b14e0ca6cdcd3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "97e37154910591a3ed23",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "tiposervicio"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0699950116e30db11c51",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_indice_de_ocupacion"
+                            }
+                          },
+                          "Property": "duracion"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_indice_de_ocupacion"
+                            }
+                          },
+                          "Property": "duracion"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "tiposervicio"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "94a33bf2bc7a2d216bf3": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "618421badb26d369c71a",
+                  "name": "107511902ba7ab6a4c76",
                   "type": "Categorical",
                   "expression": {
                     "HierarchyLevel": {
@@ -844,85 +1187,6 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "l",
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Not": {
-                                    "Expression": {
-                                      "In": {
-                                        "Expressions": [
-                                          {
-                                            "Column": {
-                                              "Expression": {
-                                                "SourceRef": {
-                                                  "Source": "l"
-                                                }
-                                              },
-                                              "Property": "Mes"
-                                            }
-                                          }
-                                        ],
-                                        "Values": [
-                                          [
-                                            {
-                                              "Literal": {
-                                                "Value": "'septiembre'"
-                                              }
-                                            }
-                                          ],
-                                          [
-                                            {
-                                              "Literal": {
-                                                "Value": "'octubre'"
-                                              }
-                                            }
-                                          ],
-                                          [
-                                            {
-                                              "Literal": {
-                                                "Value": "'noviembre'"
-                                              }
-                                            }
-                                          ],
-                                          [
-                                            {
-                                              "Literal": {
-                                                "Value": "'diciembre'"
-                                              }
-                                            }
-                                          ],
-                                          [
-                                            {
-                                              "Literal": {
-                                                "Value": "'agosto'"
-                                              }
-                                            }
-                                          ]
-                                        ]
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
                   "data": [
                     {
                       "properties": {
@@ -982,141 +1246,14 @@
                     }
                   }
                 ]
-              },
-              "cachedFilterDisplayItems": [
-                {
-                  "id": {
-                    "scopeId": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                              }
-                            },
-                            "Property": "Mes"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'septiembre'"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "displayName": "septiembre"
-                },
-                {
-                  "id": {
-                    "scopeId": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                              }
-                            },
-                            "Property": "Mes"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'octubre'"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "displayName": "octubre"
-                },
-                {
-                  "id": {
-                    "scopeId": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                              }
-                            },
-                            "Property": "Mes"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'noviembre'"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "displayName": "noviembre"
-                },
-                {
-                  "id": {
-                    "scopeId": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                              }
-                            },
-                            "Property": "Mes"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'diciembre'"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "displayName": "diciembre"
-                },
-                {
-                  "id": {
-                    "scopeId": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "LocalDateTable_e1c167dd-0def-4d75-bded-91ef6817f98a"
-                              }
-                            },
-                            "Property": "Mes"
-                          }
-                        },
-                        "Right": {
-                          "Literal": {
-                            "Value": "'agosto'"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "displayName": "agosto"
-                }
-              ]
+              }
             }
           },
           "95b0a42577edc4490c77": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "2304f2c69b80d7b22438",
+                  "name": "dfb4369216a725204465",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1184,7 +1321,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "68fcde4ee249bbb00ade",
+                  "name": "4ae0df637d109b0798d8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1258,7 +1395,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ae1ccec089702c007903",
+                  "name": "3603fe0324990d8b000e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1273,7 +1410,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bdd18080a3388284b094",
+                  "name": "4865c2788d48876aa963",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1337,7 +1474,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4114ae3e0e11c60a1d10",
+                  "name": "b36034112da990612e6c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1540,7 +1677,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "40b52bde7c1b3ebbda64",
+                  "name": "241b3ee83d20cba94d24",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1567,6 +1704,13 @@
                           "expr": {
                             "Literal": {
                               "Value": "'Dropdown'"
+                            }
+                          }
+                        },
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
                             }
                           }
                         }
@@ -1608,7 +1752,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ed96020b0230eb206d61",
+                  "name": "4cb6b52ca3d8246374d0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1672,11 +1816,37 @@
               }
             }
           },
-          "9143786b14e0ca6cdcd3": {
+          "0ed4c1432ce05cd39400": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "17e49d5465d0c958de8c",
+                  "name": "9782159911981e24d1a0",
+                  "type": "Categorical",
+                  "expression": {
+                    "HierarchyLevel": {
+                      "Expression": {
+                        "Hierarchy": {
+                          "Expression": {
+                            "PropertyVariationSource": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Dim_Fecha"
+                                }
+                              },
+                              "Name": "Variación",
+                              "Property": "Date"
+                            }
+                          },
+                          "Hierarchy": "Jerarquía de fechas"
+                        }
+                      },
+                      "Level": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "681a432080be4c72e75a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1691,7 +1861,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "dbf7eb7104eebc0189e8",
+                  "name": "44ff0722ba5ad54101c8",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1713,162 +1883,25 @@
               ]
             },
             "singleVisual": {
-              "visualType": "treemap",
+              "visualType": "pivotTable",
               "objects": {},
               "orderBy": [
                 {
                   "Direction": 2,
                   "Expression": {
-                    "Aggregation": {
+                    "Column": {
                       "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_indice_de_ocupacion"
-                            }
-                          },
-                          "Property": "duracion"
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
                         }
                       },
-                      "Function": 0
+                      "Property": "tiposervicio"
                     }
                   }
                 }
               ],
               "activeProjections": {
-                "Group": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_indice_de_ocupacion"
-                        }
-                      },
-                      "Property": "tiposervicio"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "06ce9ea304b6a86ca1b0": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "137ca1e24d0605b8319d",
-                  "type": "Advanced",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Dim_Fecha"
-                                }
-                              },
-                              "Name": "Variación",
-                              "Property": "Date"
-                            }
-                          },
-                          "Hierarchy": "Jerarquía de fechas"
-                        }
-                      },
-                      "Level": "Año"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cfd05ea40d5323058261",
-                  "type": "Categorical",
-                  "expression": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Dim_Fecha"
-                                }
-                              },
-                              "Name": "Variación",
-                              "Property": "Date"
-                            }
-                          },
-                          "Hierarchy": "Jerarquía de fechas"
-                        }
-                      },
-                      "Level": "Mes"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b5406ea5a04909603844",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_indice_de_ocupacion"
-                        }
-                      },
-                      "Property": "tiposervicio"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "6728e1444db4669c0836",
-                  "type": "Advanced",
-                  "expression": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_indice_de_ocupacion"
-                            }
-                          },
-                          "Property": "duracion"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {},
-              "activeProjections": {
-                "Category": [
-                  {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Dim_Fecha"
-                                }
-                              },
-                              "Name": "Variación",
-                              "Property": "Date"
-                            }
-                          },
-                          "Hierarchy": "Jerarquía de fechas"
-                        }
-                      },
-                      "Level": "Año"
-                    }
-                  },
+                "Columns": [
                   {
                     "HierarchyLevel": {
                       "Expression": {
@@ -1890,10 +1923,19 @@
                       "Level": "Mes"
                     }
                   }
+                ],
+                "Rows": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_indice_de_ocupacion"
+                        }
+                      },
+                      "Property": "tiposervicio"
+                    }
+                  }
                 ]
-              },
-              "display": {
-                "mode": "hidden"
               }
             }
           }

@@ -311,12 +311,6 @@ table con_clasificacionOTs
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column OTCerrada = IF( or(con_clasificacionOTs[estadoOT]="programada",con_clasificacionOTs[estadoOT]="Cancelada"),"Abierta","Cerrada")
-		lineageTag: 1614ee6e-d334-477c-8b60-faaac06e2e26
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	column Meta%CierreRemoto = 0.5
 		lineageTag: 7f421531-4fc0-426e-a192-ccb874964d69
 		summarizeBy: sum

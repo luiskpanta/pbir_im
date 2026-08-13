@@ -1018,5 +1018,56 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e07c4f3cb6fef2f35e79"
+  "parentGroupName": "e07c4f3cb6fef2f35e79",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b294d6b2777c22725bdd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "marca"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e76d4f045c06b7593c31",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "grupo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6c216e87049e3ad07c53",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_equipos"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

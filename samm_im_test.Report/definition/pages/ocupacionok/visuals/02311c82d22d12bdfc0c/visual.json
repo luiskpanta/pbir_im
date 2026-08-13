@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "02311c82d22d12bdfc0c",
   "position": {
-    "x": 1039.1397849462367,
-    "y": 313.80645161290323,
+    "x": 1039.0078917700112,
+    "y": 316.03156708004508,
     "z": 9000,
-    "height": 160,
-    "width": 240.86021505376345,
+    "height": 159,
+    "width": 240.99210822998873,
     "tabOrder": 6000
   },
   "visual": {
@@ -310,6 +310,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "innerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "15L"
+                }
+              }
             }
           }
         }
@@ -429,6 +436,19 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

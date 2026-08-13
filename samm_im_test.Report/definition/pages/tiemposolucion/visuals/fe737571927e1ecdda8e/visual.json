@@ -136,6 +136,24 @@
           "selector": {
             "metadata": "Sum(con_primer_visita.cumple_meta)"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#094780'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(con_primer_visita.num_OTT)"
+          }
         }
       ],
       "layout": [

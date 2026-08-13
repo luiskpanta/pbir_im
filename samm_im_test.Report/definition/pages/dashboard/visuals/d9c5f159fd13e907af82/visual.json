@@ -4,10 +4,10 @@
   "position": {
     "x": 498.46153846153851,
     "y": 80.3076923076923,
-    "z": 3000,
+    "z": 4000,
     "height": 326.76923076923077,
     "width": 768,
-    "tabOrder": 32000
+    "tabOrder": 31000
   },
   "visual": {
     "visualType": "shape",
@@ -54,7 +54,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 2,
-                      "Percent": 0.6
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -63,7 +63,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "39D"
+                  "Value": "24D"
                 }
               }
             }

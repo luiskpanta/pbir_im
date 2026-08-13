@@ -1,8 +1,8 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e0f7ccd17531bd8e8a28",
   "position": {
-    "x": 4.32,
+    "x": 1,
     "y": 450.72,
     "z": 0,
     "height": 64.8,
@@ -177,5 +177,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "65d8f530293d58e6200a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_primer_visita"
+              }
+            },
+            "Property": "marca"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

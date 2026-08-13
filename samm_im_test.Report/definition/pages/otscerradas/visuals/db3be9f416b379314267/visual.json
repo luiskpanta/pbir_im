@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "db3be9f416b379314267",
   "position": {
-    "x": 8.1841432225063944,
-    "y": 594.16879795396414,
-    "z": 6000,
-    "height": 60.480000000000004,
-    "width": 194,
+    "x": 833,
+    "y": 662,
+    "z": 8000,
+    "height": 55,
+    "width": 208,
     "tabOrder": 6000
   },
   "visual": {
@@ -137,7 +137,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -178,10 +178,22 @@
                   "Value": "1D"
                 }
               }
+            },
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "cliente",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

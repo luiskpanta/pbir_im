@@ -25,7 +25,7 @@
             "selectedBookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'a74fd781004a7665a020'"
+                  "Value": "'ad8b0bfa81639bb2bac0'"
                 }
               }
             },
@@ -115,6 +115,17 @@
           "selector": {
             "id": "selected"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ],
       "layout": [
@@ -123,7 +134,14 @@
             "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "1L"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

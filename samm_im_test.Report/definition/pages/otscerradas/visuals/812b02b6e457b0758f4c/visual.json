@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "812b02b6e457b0758f4c",
   "position": {
-    "x": 0,
-    "y": 654.73145780051152,
-    "z": 0,
-    "height": 60.480000000000004,
-    "width": 194,
+    "x": 198.73684210526315,
+    "y": 662,
+    "z": 2000,
+    "height": 55,
+    "width": 208,
     "tabOrder": 0
   },
   "visual": {
@@ -169,7 +169,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -185,10 +185,22 @@
                   "Value": "1D"
                 }
               }
+            },
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Tecnico",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }
