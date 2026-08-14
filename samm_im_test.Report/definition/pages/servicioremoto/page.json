@@ -1,66 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "11bc30ebee47ced0b10e",
-  "displayName": "1.5 Servicios Correctivos",
+  "displayName": "OTs Correctivas_Remotas",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
   "filterConfig": {
     "filters": [
-      {
-        "name": "ad9303bd3ca4eee62cb8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_indice_de_ocupacion"
-              }
-            },
-            "Property": "EsCorrectivo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "con_indice_de_ocupacion",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "EsCorrectivo"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "1L"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
       {
         "name": "37e66edc6d706939e913",
         "field": {

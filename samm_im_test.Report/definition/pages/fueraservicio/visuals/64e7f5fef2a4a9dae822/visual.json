@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "64e7f5fef2a4a9dae822",
   "position": {
     "x": 204.25531914893617,
@@ -70,10 +70,10 @@
                     "Entity": "con_equipos"
                   }
                 },
-                "Property": "equipo_serial"
+                "Property": "tercero"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

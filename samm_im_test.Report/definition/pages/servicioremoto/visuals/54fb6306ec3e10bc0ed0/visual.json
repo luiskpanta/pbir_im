@@ -1814,34 +1814,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "9f388e42bb81851281b6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "zona"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6ab037b0ab59338c3792",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "%EfectREM"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

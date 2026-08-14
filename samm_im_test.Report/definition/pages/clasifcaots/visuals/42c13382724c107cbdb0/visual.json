@@ -4,10 +4,10 @@
   "position": {
     "x": 1.6842105263157894,
     "y": 662,
-    "z": 19005,
+    "z": 20000,
     "height": 55,
     "width": 195,
-    "tabOrder": 19005
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "slicer",
@@ -198,23 +198,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f3e54a8e080268e42abc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "tipoServicio"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

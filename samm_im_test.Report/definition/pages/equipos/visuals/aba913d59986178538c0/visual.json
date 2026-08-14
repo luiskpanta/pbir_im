@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "aba913d59986178538c0",
   "position": {
-    "x": 481.21765601217652,
-    "y": 10.715372907153728,
-    "z": 13000,
-    "height": 74.033485540334851,
-    "width": 219.17808219178082,
-    "tabOrder": 13000
+    "x": 511.20000000000005,
+    "y": 10.08,
+    "z": 11000,
+    "height": 60.480000000000004,
+    "width": 286.56,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -487,5 +487,114 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cc32d4eb662ae96904e4",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "con_fallasEquipos"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "FechaParada"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "con_fallasEquipos",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "And": {
+                  "Left": {
+                    "Comparison": {
+                      "ComparisonKind": 3,
+                      "Left": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "PropertyVariationSource": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Name": "Variación",
+                                  "Property": "FechaParada"
+                                }
+                              },
+                              "Hierarchy": "Jerarquía de fechas"
+                            }
+                          },
+                          "Level": "Año"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "2029L"
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 1,
+                      "Left": {
+                        "HierarchyLevel": {
+                          "Expression": {
+                            "Hierarchy": {
+                              "Expression": {
+                                "PropertyVariationSource": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Name": "Variación",
+                                  "Property": "FechaParada"
+                                }
+                              },
+                              "Hierarchy": "Jerarquía de fechas"
+                            }
+                          },
+                          "Level": "Año"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "2023L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

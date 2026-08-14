@@ -4,10 +4,10 @@
   "position": {
     "x": 1039.68,
     "y": 464.499943686144,
-    "z": 11000,
+    "z": 7000,
     "height": 205.92000000000002,
     "width": 234.72,
-    "tabOrder": 11000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pieChart",
@@ -1517,25 +1517,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "0521b84406ce843dbb18",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "abierta"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

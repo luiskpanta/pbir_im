@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "d7b2b3a2d4ca8a537099",
   "position": {
-    "x": 763.71385083713847,
-    "y": 202.61796042617959,
-    "z": 6000,
-    "height": 260.32154340836013,
-    "width": 512.41157556270093,
-    "tabOrder": 6000
+    "x": 659.44517833553493,
+    "y": 180.92470277410831,
+    "z": 5000,
+    "height": 262.08718626155877,
+    "width": 400.73976221928666,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -67,6 +67,54 @@
           ]
         }
       }
+    },
+    "objects": {
+      "lineStyles": [
+        {
+          "properties": {
+            "strokeColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cantidad de OTs por Mes'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

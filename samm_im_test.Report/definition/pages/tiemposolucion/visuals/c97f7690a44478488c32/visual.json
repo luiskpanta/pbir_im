@@ -4,10 +4,10 @@
   "position": {
     "x": 1.5274463007159904,
     "y": 91.646778042959426,
-    "z": 16001,
+    "z": 16000,
     "height": 64.1527446300716,
     "width": 194,
-    "tabOrder": 16001
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "card",
@@ -346,28 +346,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "866d2bfaebb0b3990a95",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_primer_visita"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

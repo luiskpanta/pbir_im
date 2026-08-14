@@ -4,10 +4,10 @@
   "position": {
     "x": 197.28,
     "y": 423.36,
-    "z": 15000,
+    "z": 11000,
     "height": 237.6,
     "width": 836.64,
-    "tabOrder": 15000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "columnChart",
@@ -1730,39 +1730,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "65bbae767668605dd892",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "Tecnico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6789be59607cb72587e4",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "abierta"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -1056,39 +1056,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "8b560d9800857c231c0b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_cumplimientoPreventivos"
-              }
-            },
-            "Property": "estado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "027f9e3495bed3903516",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_cumplimientoPreventivos"
-                  }
-                },
-                "Property": "estado"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

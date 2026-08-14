@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cdce2148e70d82416980",
   "position": {
-    "x": 128.16,
-    "y": 92.16,
-    "z": 9000,
-    "height": 48.96,
-    "width": 72,
+    "x": 752.74642100223241,
+    "y": 29.810771470160116,
+    "z": 4000,
+    "height": 50.305676855895193,
+    "width": 80.1164483260553,
     "tabOrder": 9000
   },
   "visual": {
@@ -79,6 +79,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Meta % Remoto'"
+                }
+              }
             }
           }
         }
@@ -105,5 +112,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "5ceada9919c7a24d1055"
 }

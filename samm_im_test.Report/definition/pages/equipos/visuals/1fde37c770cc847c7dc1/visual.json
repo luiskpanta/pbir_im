@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "1fde37c770cc847c7dc1",
   "position": {
-    "x": 689.68036529680364,
-    "y": 478.29528158295278,
-    "z": 15000,
-    "height": 194.82496194824961,
-    "width": 590.31963470319636,
-    "tabOrder": 15000
+    "x": 573.12,
+    "y": 448,
+    "z": 13000,
+    "height": 208,
+    "width": 486.72,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "tableEx",
@@ -78,20 +78,70 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
                     "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "MTBF (dias)"
+                "Property": "equipo"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "257.83999146424634D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.equipo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.44000071202566D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTBF (dias)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "77.87999775000176D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.ETTR (dias)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [

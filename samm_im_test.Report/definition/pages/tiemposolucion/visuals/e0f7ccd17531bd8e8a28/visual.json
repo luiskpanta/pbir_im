@@ -177,23 +177,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "65d8f530293d58e6200a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_primer_visita"
-              }
-            },
-            "Property": "marca"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

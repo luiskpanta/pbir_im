@@ -3,10 +3,10 @@
   "name": "c6ada0f6e2a9b2dd63c3",
   "position": {
     "x": 0,
-    "y": 87.295488,
-    "z": 3000,
-    "height": 563.04,
-    "width": 832.32,
+    "y": 85.705967976710326,
+    "z": 0,
+    "height": 576,
+    "width": 832.83842794759823,
     "tabOrder": 5000
   },
   "visual": {
@@ -451,7 +451,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
+                  "Value": "'TopRight'"
                 }
               }
             },
@@ -1575,6 +1575,5 @@
         "howCreated": "User"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

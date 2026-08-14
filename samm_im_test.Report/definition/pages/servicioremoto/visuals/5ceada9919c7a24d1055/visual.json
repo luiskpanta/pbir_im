@@ -2,16 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5ceada9919c7a24d1055",
   "position": {
-    "x": 203.04000000000002,
-    "y": 6.3045120000000008,
-    "z": 16500,
+    "x": 202,
+    "y": 0,
+    "z": 14000,
     "height": 663.73684210526324,
-    "width": 1074.1399309473684,
-    "tabOrder": 19000
+    "width": 1073.3552545933394,
+    "tabOrder": 12000
   },
   "visualGroup": {
     "displayName": "Gr % Remoto",
     "groupMode": "ScaleMode"
-  },
-  "isHidden": true
+  }
 }

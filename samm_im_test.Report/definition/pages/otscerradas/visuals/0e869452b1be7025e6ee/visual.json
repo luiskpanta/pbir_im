@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0e869452b1be7025e6ee",
   "position": {
-    "x": 1.6842105263157894,
-    "y": 215.57894736842104,
-    "z": 21000,
-    "height": 195.36842105263159,
-    "width": 192,
+    "x": 1.44,
+    "y": 208.8,
+    "z": 22000,
+    "height": 201.6,
+    "width": 195.84,
     "tabOrder": 19000
   },
   "visual": {
@@ -87,7 +87,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
+                  "Value": "'Top'"
                 }
               }
             },
@@ -101,7 +101,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             }
@@ -318,42 +318,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "55d6eff39b4080db20ce",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2ec63f00236702a59ba1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "OTestAbierta"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

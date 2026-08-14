@@ -1601,39 +1601,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "d4cee6ba5322d257036b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_clasificacionOTs"
-              }
-            },
-            "Property": "OTestAbierta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ab1bf9382809e65b407b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

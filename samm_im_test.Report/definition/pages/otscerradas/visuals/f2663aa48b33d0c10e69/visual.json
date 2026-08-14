@@ -4,9 +4,9 @@
   "position": {
     "x": 1.44,
     "y": 92.16,
-    "z": 22000,
-    "height": 63.36,
-    "width": 192.96,
+    "z": 23000,
+    "height": 53,
+    "width": 194.4,
     "tabOrder": 20000
   },
   "visual": {
@@ -94,7 +94,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "26D"
+                  "Value": "25D"
                 }
               }
             },
@@ -334,28 +334,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "00ec6cc581cc1023085c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_clasificacionOTs"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

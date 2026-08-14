@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "59920da5900c06c5a690",
   "position": {
-    "x": 384.82315112540192,
-    "y": 202.70096463022506,
-    "z": 5000,
-    "height": 260.44444444444446,
-    "width": 352.88888888888891,
-    "tabOrder": 5000
+    "x": 371.99471598414794,
+    "y": 180,
+    "z": 4000,
+    "height": 262.08718626155877,
+    "width": 282.37780713342141,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -51,7 +51,8 @@
                 }
               },
               "queryRef": "CountNonNull(con_fallasEquipos.serial)",
-              "nativeQueryRef": "serial"
+              "nativeQueryRef": "Equipos",
+              "displayName": "Equipos"
             }
           ]
         }
@@ -79,6 +80,54 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Equipos con falla por marca'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

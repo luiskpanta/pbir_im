@@ -5358,6 +5358,16 @@ cultureInfo es-CO
 			          "fuera de servicio": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Eq. Fuera de Servicio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7992,6 +8002,16 @@ cultureInfo es-CO
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "Desde:": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -8031,6 +8051,16 @@ cultureInfo es-CO
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Hasta:": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -14592,39 +14622,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_clasificacion_O_tses_have_metaCierreRemotos"
-			        }
-			      ]
-			    },
-			    "con_clasificacion_O_ts_has_OT_cerrada": {
-			      "Binding": {
-			        "ConceptualEntity": "con_clasificacionOTs"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_clasificacion_O_ts": {
-			          "Target": {
-			            "Entity": "con_clasificacion_O_ts"
-			          }
-			        },
-			        "con_clasificacion_O_ts.OT_cerrada": {
-			          "Target": {
-			            "Entity": "con_clasificacion_O_ts.OT_cerrada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_clasificacion_O_ts"
-			            },
-			            "Object": {
-			              "Role": "con_clasificacion_O_ts.OT_cerrada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "con_clasificacion_O_tses_have_OT_cerradas"
 			        }
 			      ]
 			    },

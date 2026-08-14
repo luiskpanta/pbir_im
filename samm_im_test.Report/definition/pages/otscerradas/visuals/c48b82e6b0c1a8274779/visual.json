@@ -3,10 +3,11 @@
   "name": "c48b82e6b0c1a8274779",
   "position": {
     "x": 0,
-    "y": 413.28000000000003,
-    "z": 25001,
-    "height": 44.64,
-    "width": 198.72
+    "y": 410.40000000000003,
+    "z": 27000,
+    "height": 47.52,
+    "width": 198.72,
+    "tabOrder": 28000
   },
   "visual": {
     "visualType": "bookmarkNavigator",
