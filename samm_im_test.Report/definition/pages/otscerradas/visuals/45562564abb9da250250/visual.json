@@ -3,9 +3,9 @@
   "name": "45562564abb9da250250",
   "position": {
     "x": 197.28,
-    "y": 482.40000000000003,
+    "y": 479.52000000000004,
     "z": 15000,
-    "height": 171.36,
+    "height": 174.24,
     "width": 836.64,
     "tabOrder": 25000
   },
@@ -1684,6 +1684,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "isHidden": true
+  }
 }

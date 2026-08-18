@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "feeccc091ecad7e115ec",
+  "name": "eef088d580de230755f9",
   "position": {
     "x": 11.52,
-    "y": 448.80251904,
-    "z": 10000,
-    "height": 208,
-    "width": 552.96,
-    "tabOrder": 10000
+    "y": 427.68,
+    "z": 18000,
+    "height": 233,
+    "width": 550.08,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -23,11 +23,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "equipo"
+                  "Property": "subfamilia"
                 }
               },
-              "queryRef": "con_fallasEquipos.equipo",
-              "nativeQueryRef": "equipo",
+              "queryRef": "con_fallasEquipos.subfamilia",
+              "nativeQueryRef": "subfamilia",
               "active": true
             }
           ]
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF (dias)"
+              "nativeQueryRef": "MTBF (dias)",
+              "format": "0"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (dias)"
+              "nativeQueryRef": "ETTR (dias)",
+              "format": "0"
             }
           ]
         }
@@ -85,6 +87,40 @@
       }
     },
     "objects": {
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "dataPoint": [
         {
           "properties": {
@@ -93,7 +129,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#16305C'"
+                      "Value": "'#08BF9D'"
                     }
                   }
                 }
@@ -111,7 +147,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E8871E'"
+                      "Value": "'#118A73'"
                     }
                   }
                 }
@@ -123,53 +159,20 @@
           }
         }
       ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "valueAxis": [
         {
           "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "show": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "position": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'TopCenter'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
+                  "Value": "'Días'"
                 }
               }
             }
@@ -185,21 +188,25 @@
                   "Value": "true"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
+            }
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#08BF9D'"
+                    }
+                  }
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTBF (dias)"
           }
         }
       ]
@@ -218,7 +225,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'MTBF vs ETTR por equipo (días)'"
+                  "Value": "'MTBF vs ETTR por subfamilia (días)'"
                 }
               }
             },
@@ -306,6 +313,59 @@
               "expr": {
                 "Literal": {
                   "Value": "10L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

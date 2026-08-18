@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "1fde37c770cc847c7dc1",
+  "name": "dd4a28982dc1b30db59d",
   "position": {
-    "x": 573.12,
-    "y": 448,
-    "z": 13000,
-    "height": 208,
-    "width": 486.72,
-    "tabOrder": 13000
+    "x": 564.48,
+    "y": 427.68,
+    "z": 17000,
+    "height": 244.8,
+    "width": 704.16000000000008,
+    "tabOrder": 17000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -23,11 +23,12 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "idOT"
+                  "Property": "subfamilia"
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "idOT"
+              "queryRef": "con_fallasEquipos.subfamilia",
+              "nativeQueryRef": "subfamilia",
+              "active": true
             },
             {
               "field": {
@@ -41,8 +42,28 @@
                 }
               },
               "queryRef": "con_fallasEquipos.equipo",
-              "nativeQueryRef": "equipo"
+              "nativeQueryRef": "equipo",
+              "active": true
             },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "idOT"
+                }
+              },
+              "queryRef": "con_fallasEquipos.idOT",
+              "nativeQueryRef": "idOT",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -55,7 +76,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF (dias)"
+              "nativeQueryRef": "MTBF (dias)",
+              "format": "0.0"
             },
             {
               "field": {
@@ -69,7 +91,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (dias)"
+              "nativeQueryRef": "ETTR (dias)",
+              "format": "0.0"
             }
           ]
         }
@@ -84,14 +107,82 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
+                "Property": "subfamilia"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_fallasEquipos"
+                  }
+                },
                 "Property": "equipo"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "con_fallasEquipos.subfamilia"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "subfamilia"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "con_fallasEquipos.equipo"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "con_fallasEquipos.idOT"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'RX SALAS FIJAS'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "columnWidth": [
         {
@@ -113,7 +204,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "80.44000071202566D"
+                  "Value": "78D"
                 }
               }
             }
@@ -157,7 +248,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'MTBF vs ETTR por equipo (días)'"
+                  "Value": "'MTBF vs ETTR por Subfamilia y equipo (días)'"
                 }
               }
             },

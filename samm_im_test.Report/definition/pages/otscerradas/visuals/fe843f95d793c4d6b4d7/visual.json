@@ -3,9 +3,9 @@
   "name": "fe843f95d793c4d6b4d7",
   "position": {
     "x": 198.72,
-    "y": 92.16,
+    "y": 89.28,
     "z": 14000,
-    "height": 385.92,
+    "height": 388.8,
     "width": 836.64,
     "tabOrder": 24000
   },
@@ -152,7 +152,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             },
@@ -186,6 +186,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -285,7 +292,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "10D"
                 }
               }
             }
@@ -1788,6 +1795,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "isHidden": true
+  }
 }

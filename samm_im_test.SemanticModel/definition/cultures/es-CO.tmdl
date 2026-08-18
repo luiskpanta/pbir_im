@@ -5358,16 +5358,6 @@ cultureInfo es-CO
 			          "fuera de servicio": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Eq. Fuera de Servicio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },

@@ -173,18 +173,6 @@
               }
             }
           }
-        },
-        {
-          "properties": {
-            "backgroundShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {}
         }
       ],
       "overFlow": [
