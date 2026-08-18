@@ -5,8 +5,8 @@
     "x": 564.48,
     "y": 427.68,
     "z": 17000,
-    "height": 244.8,
-    "width": 704.16000000000008,
+    "height": 234.72,
+    "width": 702.72,
     "tabOrder": 17000
   },
   "visual": {
@@ -23,42 +23,12 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "subfamilia"
-                }
-              },
-              "queryRef": "con_fallasEquipos.subfamilia",
-              "nativeQueryRef": "subfamilia",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
                   "Property": "equipo"
                 }
               },
               "queryRef": "con_fallasEquipos.equipo",
               "nativeQueryRef": "equipo",
               "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "idOT"
-                }
-              },
-              "queryRef": "con_fallasEquipos.idOT",
-              "nativeQueryRef": "idOT",
-              "active": false
             }
           ]
         },
@@ -107,19 +77,6 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "subfamilia"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_fallasEquipos"
-                  }
-                },
                 "Property": "equipo"
               }
             },
@@ -136,7 +93,7 @@
         "levels": [
           {
             "queryRefs": [
-              "con_fallasEquipos.subfamilia"
+              "con_fallasEquipos.equipo"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -147,24 +104,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "subfamilia"
+                  "Property": "equipo"
                 }
               }
             ],
             "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "con_fallasEquipos.equipo"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "con_fallasEquipos.idOT"
-            ],
-            "isCollapsed": true
           }
         ],
         "root": {
@@ -173,7 +117,17 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'RX SALAS FIJAS'"
+                    "Value": "'[11066][MOBILETT ELARA MAX][MM][SIEMENS][BOGOTA, D.C.]'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'[0011660][DRX-1 SYSTEM][DR][CARESTREAM HEALTHCARE][BOGOTA]'"
                   }
                 }
               ],
@@ -185,20 +139,6 @@
     ],
     "objects": {
       "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "257.83999146424634D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.equipo"
-          }
-        },
         {
           "properties": {
             "value": {
@@ -248,7 +188,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'MTBF vs ETTR por Subfamilia y equipo (días)'"
+                  "Value": "'MTBF vs ETTR por equipo (días)'"
                 }
               }
             },

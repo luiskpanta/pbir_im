@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "5f80742bbcb06e8699b6",
   "position": {
-    "x": 13.527080581241743,
-    "y": 76.089828269484812,
+    "x": 12.96,
+    "y": 76.320000000000007,
     "z": 12000,
-    "height": 96.380449141347427,
-    "width": 299.28665785997356,
+    "height": 96.48,
+    "width": 420.48,
     "tabOrder": 12000
   },
   "visual": {
@@ -48,6 +48,20 @@
               },
               "queryRef": "con_estadoEquipos.Fuera de Servicio",
               "nativeQueryRef": "Fuera de Servicio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "UPTIME %"
+                }
+              },
+              "queryRef": "con_fallasEquipos.UPTIME %",
+              "nativeQueryRef": "UPTIME %"
             }
           ]
         }

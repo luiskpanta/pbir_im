@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "b0fe2e14410f933b13ed",
   "position": {
-    "x": 639.36,
-    "y": 205.92000000000002,
+    "x": 799.2,
+    "y": 80.64,
     "z": 18001,
     "height": 96.48,
-    "width": 612,
+    "width": 468,
     "tabOrder": 18001
   },
   "visual": {
@@ -59,20 +59,6 @@
               "queryRef": "con_fallasEquipos.MTBF (dias)",
               "nativeQueryRef": "MTBF (dias)",
               "format": "0.0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "UPTIME %"
-                }
-              },
-              "queryRef": "con_fallasEquipos.UPTIME %",
-              "nativeQueryRef": "UPTIME %"
             }
           ]
         }
@@ -332,7 +318,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tiempos'"
+                  "Value": "'Tiempos (días)'"
                 }
               }
             },

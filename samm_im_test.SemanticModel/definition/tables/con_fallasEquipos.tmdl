@@ -167,6 +167,31 @@ table con_fallasEquipos
 
 		annotation SummarizationSetBy = Automatic
 
+	column numOTT
+		dataType: int64
+		formatString: 0
+		lineageTag: dcbbdbac-4b3c-4cbe-8beb-c08b4478ea6a
+		summarizeBy: sum
+		sourceColumn: numOTT
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 6022f8a3-0ec0-4471-a5cd-4d4c2bea7b47
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 9f83988f-638b-4e09-94fa-758879ae4e18
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_fallasEquipos = m
 		mode: import
 		source =

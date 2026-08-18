@@ -23,11 +23,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "subfamilia"
+                  "Property": "familia"
                 }
               },
-              "queryRef": "con_fallasEquipos.subfamilia",
-              "nativeQueryRef": "subfamilia",
+              "queryRef": "con_fallasEquipos.familia",
+              "nativeQueryRef": "familia",
               "active": true
             }
           ]
@@ -173,6 +173,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Días'"
+                }
+              }
+            },
+            "roundRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

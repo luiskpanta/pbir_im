@@ -70,10 +70,10 @@
                     "Entity": "con_equipos"
                   }
                 },
-                "Property": "tercero"
+                "Property": "equipo_serial"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

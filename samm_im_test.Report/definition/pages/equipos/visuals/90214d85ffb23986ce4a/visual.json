@@ -23,17 +23,68 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
+                  "Property": "familia"
+                }
+              },
+              "queryRef": "con_fallasEquipos.familia",
+              "nativeQueryRef": "familia",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
                   "Property": "subfamilia"
                 }
               },
               "queryRef": "con_fallasEquipos.subfamilia",
               "nativeQueryRef": "subfamilia",
-              "active": true
+              "active": false
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "con_fallasEquipos.familia"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "familia"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "con_fallasEquipos.subfamilia"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -167,7 +218,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Subfamilia'"
+                  "Value": "'Familia'"
                 }
               }
             },

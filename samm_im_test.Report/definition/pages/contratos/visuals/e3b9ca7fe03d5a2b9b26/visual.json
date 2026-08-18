@@ -12,5 +12,6 @@
   "visualGroup": {
     "displayName": "Evolucion CR",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }
