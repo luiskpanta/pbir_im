@@ -4,7 +4,7 @@ table con_estadoEquipos
 	measure 'Fuera de Servicio' =
 			
 			CALCULATE(
-			    COUNTROWS(con_estadoEquipos),
+			    DISTINCTCOUNT(con_estadoEquipos[id]),
 			    con_estadoEquipos[Estado] = "Fuera de Servicio"
 			)
 		formatString: 0

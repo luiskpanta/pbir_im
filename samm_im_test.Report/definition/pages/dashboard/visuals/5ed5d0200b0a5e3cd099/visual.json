@@ -20,15 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_equipos"
+                      "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "Recuento de equipo_serial para Inactivo"
+                  "Property": "MTTR Sin Partes (dias)"
                 }
               },
-              "queryRef": "con_equipos.Recuento de equipo_serial para Inactivo",
-              "nativeQueryRef": "Recuento de equipo_serial para Inactivo",
-              "format": "0"
+              "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
+              "nativeQueryRef": "MTTR Sin Partes (dias)"
             }
           ]
         }
@@ -40,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "con_equipos"
+                    "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "Recuento de equipo_serial para Inactivo"
+                "Property": "MTTR Sin Partes (dias)"
               }
             },
             "direction": "Descending"
@@ -85,7 +84,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "32D"
+                  "Value": "28D"
                 }
               }
             },
@@ -199,7 +198,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }
@@ -285,6 +284,32 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
                 }
               }
             }

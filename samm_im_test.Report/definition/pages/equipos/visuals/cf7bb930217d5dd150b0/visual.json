@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "cf7bb930217d5dd150b0",
   "position": {
-    "x": 12.96,
-    "y": 180,
+    "x": 13.333333333333334,
+    "y": 180.44444444444446,
     "z": 3000,
-    "height": 244.8,
-    "width": 299.52000000000004,
+    "height": 244.44444444444446,
+    "width": 328,
     "tabOrder": 3000
   },
   "visual": {
@@ -107,7 +107,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos con fallla por subfamilia'"
+                  "Value": "'Equipos con falla por subfamilia'"
                 }
               }
             }

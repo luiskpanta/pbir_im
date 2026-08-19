@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "2eb4bc9dc67b9ac9c27e",
   "position": {
-    "x": 466.56,
-    "y": 76.320000000000007,
+    "x": 464.88888888888891,
+    "y": 75.555555555555557,
     "z": 16000,
     "height": 96.48,
     "width": 299.52000000000004,
@@ -52,8 +52,8 @@
                 }
               },
               "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Cant. Fallas (OTs)",
-              "displayName": "Cant. Fallas (OTs)"
+              "nativeQueryRef": "Cantidad Fallas",
+              "displayName": "Cantidad Fallas"
             }
           ]
         }

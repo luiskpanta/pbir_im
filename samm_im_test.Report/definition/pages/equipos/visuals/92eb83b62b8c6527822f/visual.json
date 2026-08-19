@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "92eb83b62b8c6527822f",
   "position": {
-    "x": 1039.68,
-    "y": 180,
+    "x": 607.11111111111109,
+    "y": 180.44444444444446,
     "z": 15000,
-    "height": 244,
-    "width": 230.4,
+    "height": 244.44444444444446,
+    "width": 223.11111111111111,
     "tabOrder": 15000
   },
   "visual": {
@@ -169,7 +169,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cant. de OTs por Equipo'"
+                  "Value": "'Equipos Por Fallos'"
                 }
               }
             }

@@ -549,5 +549,56 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d56428a21a1bc67452e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_equipos"
+                  }
+                },
+                "Property": "id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d89e15e25e74d659b3e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_estadoEquipos"
+              }
+            },
+            "Property": "Fuera de Servicio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5b8a2a9cf5d698d5f74a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

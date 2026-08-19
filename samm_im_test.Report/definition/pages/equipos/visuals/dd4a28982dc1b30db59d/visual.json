@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "dd4a28982dc1b30db59d",
   "position": {
-    "x": 565.92000000000007,
-    "y": 427.68,
+    "x": 711.11111111111109,
+    "y": 432,
     "z": 17000,
-    "height": 234.72,
-    "width": 702.72,
+    "height": 225.77777777777777,
+    "width": 556.44444444444446,
     "tabOrder": 17000
   },
   "visual": {
@@ -15,6 +15,21 @@
       "queryState": {
         "Rows": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "cliente"
+                }
+              },
+              "queryRef": "con_fallasEquipos.cliente",
+              "nativeQueryRef": "cliente",
+              "active": true
+            },
             {
               "field": {
                 "Column": {
@@ -77,6 +92,19 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
+                "Property": "cliente"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_fallasEquipos"
+                  }
+                },
                 "Property": "equipo"
               }
             },
@@ -91,6 +119,25 @@
           "Rows"
         ],
         "levels": [
+          {
+            "queryRefs": [
+              "con_fallasEquipos.cliente"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "cliente"
+                }
+              }
+            ],
+            "isPinned": true
+          },
           {
             "queryRefs": [
               "con_fallasEquipos.equipo"
@@ -117,7 +164,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'[11066][MOBILETT ELARA MAX][MM][SIEMENS][BOGOTA, D.C.]'"
+                    "Value": "'IDIME S.A.'"
                   }
                 }
               ],
@@ -127,11 +174,22 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'[0011660][DRX-1 SYSTEM][DR][CARESTREAM HEALTHCARE][BOGOTA]'"
+                    "Value": "'ADENTAL S.A.S.'"
                   }
                 }
               ],
-              "isToggled": true
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'[1WA2225S01006R][TRIOS 3 WIRED COLOR][CS DENTAL][3SHAPE][BARRANQUILLA]'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
             }
           ]
         }
@@ -144,7 +202,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "78D"
+                  "Value": "43.333333333333336D"
                 }
               }
             }
@@ -158,13 +216,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "77.87999775000176D"
+                  "Value": "46.71894906086319D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "con_fallasEquipos.ETTR (dias)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "432.20237970198616D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.cliente"
           }
         }
       ],

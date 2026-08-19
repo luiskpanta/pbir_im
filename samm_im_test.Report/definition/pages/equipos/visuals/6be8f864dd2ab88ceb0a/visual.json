@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "aba913d59986178538c0",
+  "name": "6be8f864dd2ab88ceb0a",
   "position": {
-    "x": 439.11111111111109,
+    "x": 625.77777777777783,
     "y": 9.7777777777777786,
-    "z": 10000,
+    "z": 18003,
     "height": 60.444444444444443,
     "width": 187.55555555555554,
-    "tabOrder": 10000
+    "tabOrder": 18003
   },
   "visual": {
     "visualType": "slicer",
@@ -34,38 +34,12 @@
                       "Hierarchy": "Jerarquía de fechas"
                     }
                   },
-                  "Level": "Año"
-                }
-              },
-              "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Año",
-              "nativeQueryRef": "FechaParada Año",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "con_fallasEquipos"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "FechaParada"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
                   "Level": "Mes"
                 }
               },
               "queryRef": "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Mes",
               "nativeQueryRef": "FechaParada Mes",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -77,25 +51,6 @@
           "Values"
         ],
         "levels": [
-          {
-            "queryRefs": [
-              "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Año"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42"
-                    }
-                  },
-                  "Property": "Año"
-                }
-              }
-            ],
-            "isPinned": true
-          },
           {
             "queryRefs": [
               "con_fallasEquipos.FechaParada.Variación.Jerarquía de fechas.Mes"
@@ -129,108 +84,6 @@
                 "Literal": {
                   "Value": "0D"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Año"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2026L"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "con_fallasEquipos"
-                                        }
-                                      },
-                                      "Name": "Variación",
-                                      "Property": "FechaParada"
-                                    }
-                                  },
-                                  "Hierarchy": "Jerarquía de fechas"
-                                }
-                              },
-                              "Level": "Año"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2026L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42"
-                                    }
-                                  },
-                                  "Property": "Año"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "2026"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
               }
             }
           }
@@ -349,7 +202,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Año'"
+                  "Value": "'Mes'"
                 }
               }
             },
@@ -481,11 +334,6 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "Año",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
@@ -593,7 +441,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }
