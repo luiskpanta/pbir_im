@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "b0fe2e14410f933b13ed",
   "position": {
-    "x": 799.2,
-    "y": 80.64,
+    "x": 802.08,
+    "y": 76.320000000000007,
     "z": 18001,
     "height": 96.48,
     "width": 468,
@@ -23,11 +23,28 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
+                  "Property": "MTBF (dias)"
+                }
+              },
+              "queryRef": "con_fallasEquipos.MTBF (dias)",
+              "nativeQueryRef": "MTBF",
+              "displayName": "MTBF",
+              "format": "0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
                   "Property": "MTTR Sin Partes (dias)"
                 }
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
-              "nativeQueryRef": "MTTR Sin Partes (dias)",
+              "nativeQueryRef": "MTTR Sin Partes",
+              "displayName": "MTTR Sin Partes",
               "format": "0.0"
             },
             {
@@ -42,22 +59,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (dias)",
-              "format": "0.0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "MTBF (dias)"
-                }
-              },
-              "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF (dias)",
+              "nativeQueryRef": "ETTR",
+              "displayName": "ETTR",
               "format": "0.0"
             }
           ]
@@ -73,7 +76,7 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "MTTR Sin Partes (dias)"
+                "Property": "MTBF (dias)"
               }
             },
             "direction": "Descending"
@@ -134,6 +137,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -250,6 +260,327 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTBF (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "5D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#efb5b9'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTBF (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "15D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#f0e199'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTBF (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "999999D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#96FA96'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_fallasEquipos.MTBF (dias)"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTTR Sin Partes (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#96FA96'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTTR Sin Partes (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "3D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#f0e199'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "MTTR Sin Partes (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "999999D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#efb5b9'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "ETTR (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "2D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#96FA96'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "ETTR (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "5D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#f0e199'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "ETTR (dias)"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "999999D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#efb5b9'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_fallasEquipos.ETTR (dias)"
           }
         }
       ],

@@ -32,8 +32,8 @@
                 }
               },
               "queryRef": "CountNonNull(con_equipos.id)",
-              "nativeQueryRef": "Base Total Equipos",
-              "displayName": "Base Total Equipos"
+              "nativeQueryRef": "Total Equipos",
+              "displayName": "Total Equipos"
             },
             {
               "field": {
@@ -193,6 +193,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -326,6 +333,113 @@
           },
           "selector": {
             "metadata": "con_estadoEquipos.Fuera de Servicio"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "UPTIME %"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0.7D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#efb5b9'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "UPTIME %"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0.9D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#f0e199'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "con_fallasEquipos"
+                                    }
+                                  },
+                                  "Property": "UPTIME %"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "999999D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#96FA96'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "con_fallasEquipos.UPTIME %"
           }
         }
       ],
