@@ -21,7 +21,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'6v fondo IM mia.svg'"
+                    "Value": "'6v fondo IM mia.png'"
                   }
                 }
               },
@@ -30,7 +30,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "6v_fondo_IM_mia6370310928819733.svg"
+                    "ItemName": "6v_fondo_IM_mia.png"
                   }
                 }
               },
