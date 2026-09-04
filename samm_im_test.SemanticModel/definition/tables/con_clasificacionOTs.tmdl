@@ -398,15 +398,6 @@ table con_clasificacionOTs
 
 		annotation SummarizationSetBy = Automatic
 
-	column numReportes
-		dataType: int64
-		formatString: 0
-		lineageTag: c63ea79a-1327-41da-8956-decc69f31174
-		summarizeBy: sum
-		sourceColumn: numReportes
-
-		annotation SummarizationSetBy = Automatic
-
 	partition con_clasificacionOTs = m
 		mode: import
 		source =

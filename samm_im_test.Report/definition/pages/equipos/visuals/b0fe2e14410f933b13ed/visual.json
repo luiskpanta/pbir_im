@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b0fe2e14410f933b13ed",
   "position": {
     "x": 802.08,
@@ -599,6 +599,38 @@
             "id": "default"
           }
         }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTBF (dias)"
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTBF (dias)"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -649,7 +681,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tiempos (días)'"
+                  "Value": "'Tiempos'"
                 }
               }
             },

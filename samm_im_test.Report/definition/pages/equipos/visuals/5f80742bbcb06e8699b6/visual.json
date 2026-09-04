@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5f80742bbcb06e8699b6",
   "position": {
-    "x": 12.96,
-    "y": 76.320000000000007,
+    "x": 13.333333333333334,
+    "y": 76.444444444444443,
     "z": 12000,
-    "height": 96.48,
-    "width": 420.48,
+    "height": 96,
+    "width": 463.11111111111109,
     "tabOrder": 12000
   },
   "visual": {
@@ -17,23 +17,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equipos"
-                        }
-                      },
-                      "Property": "id"
+                    "SourceRef": {
+                      "Entity": "con_equipos"
                     }
                   },
-                  "Function": 5
+                  "Property": "Total Equipos"
                 }
               },
-              "queryRef": "CountNonNull(con_equipos.id)",
+              "queryRef": "con_equipos.Total Equipos",
               "nativeQueryRef": "Total Equipos",
-              "displayName": "Total Equipos"
+              "format": "G"
             },
             {
               "field": {
@@ -70,18 +65,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "con_equipos"
-                      }
-                    },
-                    "Property": "id"
+                  "SourceRef": {
+                    "Entity": "con_equipos"
                   }
                 },
-                "Function": 5
+                "Property": "Total Equipos"
               }
             },
             "direction": "Descending"
@@ -126,58 +116,9 @@
           "selector": {
             "id": "default"
           }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(con_equipos.id)"
-          }
         }
       ],
       "label": [
-        {
-          "properties": {
-            "textWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "matchValueAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(con_equipos.id)"
-          }
-        },
         {
           "properties": {
             "fontSize": {
@@ -546,31 +487,25 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "8d56428a21a1bc67452e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_equipos"
-                  }
-                },
-                "Property": "id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "d89e15e25e74d659b3e0",
         "field": {
@@ -595,6 +530,20 @@
               }
             },
             "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2ce8d2fb3cb383e9b439",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "Total Equipos"
           }
         },
         "type": "Advanced"

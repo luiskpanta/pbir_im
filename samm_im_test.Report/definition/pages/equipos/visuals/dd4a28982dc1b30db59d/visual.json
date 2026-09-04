@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "dd4a28982dc1b30db59d",
   "position": {
     "x": 711.11111111111109,
@@ -190,6 +190,26 @@
                   "isToggled": true
                 }
               ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'IMPULMEDICOS S.A.S.'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'UNIVERSIDAD ANTONIO NARIÑO'"
+                  }
+                }
+              ],
+              "isToggled": true
             }
           ]
         }
