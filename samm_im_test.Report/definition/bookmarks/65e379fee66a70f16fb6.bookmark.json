@@ -6,7 +6,8 @@
     "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
       "3de1a6f53e7afe74c874",
-      "2137aa696e48fafc6648"
+      "2137aa696e48fafc6648",
+      "b7f3c9a1e2d4056789ab"
     ],
     "suppressData": true
   },
@@ -1881,6 +1882,15 @@
             }
           },
           "2137aa696e48fafc6648": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "b7f3c9a1e2d4056789ab": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
