@@ -163,7 +163,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'v 1.0.5'"
+                  "Value": "'v 1.0.6'"
                 }
               }
             },

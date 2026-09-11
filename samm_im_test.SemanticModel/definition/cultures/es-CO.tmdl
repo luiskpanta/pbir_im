@@ -4534,6 +4534,16 @@ cultureInfo es-CO
 			          "tercero": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Cliente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
