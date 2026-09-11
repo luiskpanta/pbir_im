@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3de1a6f53e7afe74c874",
   "position": {
-    "x": 13.333333333333334,
-    "y": 181.33333333333334,
+    "x": 12.823315118397087,
+    "y": 181.85792349726776,
     "z": 18004,
-    "height": 248,
-    "width": 816.88888888888891,
+    "height": 243.64298724954463,
+    "width": 586.375227686703,
     "tabOrder": 0
   },
   "visual": {
@@ -20,57 +20,42 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_equipos"
+                      "Entity": "con_efds"
                     }
                   },
-                  "Property": "equipo_serial"
+                  "Property": "serial"
                 }
               },
-              "queryRef": "con_equipos.equipo_serial",
-              "nativeQueryRef": "equipo_serial"
+              "queryRef": "con_efds.serial",
+              "nativeQueryRef": "serial"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_equipos"
+                      "Entity": "con_efds"
+                    }
+                  },
+                  "Property": "cliente"
+                }
+              },
+              "queryRef": "con_efds.cliente",
+              "nativeQueryRef": "cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_efds"
                     }
                   },
                   "Property": "marca"
                 }
               },
-              "queryRef": "con_equipos.marca",
+              "queryRef": "con_efds.marca",
               "nativeQueryRef": "marca"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equipos"
-                    }
-                  },
-                  "Property": "modelo"
-                }
-              },
-              "queryRef": "con_equipos.modelo",
-              "nativeQueryRef": "modelo"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equipos"
-                    }
-                  },
-                  "Property": "tercero"
-                }
-              },
-              "queryRef": "con_equipos.tercero",
-              "nativeQueryRef": "Cliente",
-              "displayName": "Cliente"
             }
           ]
         }
@@ -80,64 +65,6 @@
       "columnHeaders": [
         {
           "properties": {}
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "110D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.marca"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "160D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.modelo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "384.8888888888889D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.tercero"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "130D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.equipo_serial"
-          }
         }
       ],
       "values": [
@@ -150,6 +77,35 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "313.0765044274866D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_efds.cliente"
           }
         }
       ]
@@ -214,8 +170,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -237,7 +194,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -268,97 +225,47 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ad876c1a650960b95b6f",
+        "name": "2eb980fd07e909b1d70c",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "con_equipos"
+                "Entity": "con_efds"
               }
             },
-            "Property": "equipo_serial"
+            "Property": "cliente"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "1cb1051027f8fa671858",
+        "name": "3cd983306329ec0cd587",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "con_equipos"
+                "Entity": "con_efds"
+              }
+            },
+            "Property": "serial"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f87a4de59b45033387eb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_efds"
               }
             },
             "Property": "marca"
           }
         },
         "type": "Categorical"
-      },
-      {
-        "name": "dd77745ddb464fe76e69",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "tercero"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "16e93ad7741701d082ae",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_estadoEquipos"
-              }
-            },
-            "Property": "Fuera de Servicio"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "con_estadoEquipos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 0,
-                  "Left": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "c"
-                        }
-                      },
-                      "Property": "Fuera de Servicio"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "1L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
       }
     ]
-  },
-  "isHidden": true
+  }
 }

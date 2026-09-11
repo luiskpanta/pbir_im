@@ -1,0 +1,66 @@
+table con_efds
+	lineageTag: 1e1c1715-f217-4720-8a44-0f86bab1f3c8
+
+	measure EFDS = DISTINCTCOUNT(con_efds[id])
+		formatString: 0
+		lineageTag: 92070aab-6e40-4c30-ad40-2a2a460a9b83
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3830665f-363e-4c77-b10b-47dc4ff1cac8
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 005b9523-81e0-4ed5-9c9c-d55f88068c9a
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: 594be31a-20df-4969-852f-38a4a42f00fb
+			defaultHierarchy: LocalDateTable_5b98faf7-c663-4c97-80a3-665241da5ea0.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column serial
+		dataType: string
+		lineageTag: c393d354-9cb8-45f7-95d1-4fad671373ce
+		summarizeBy: none
+		sourceColumn: serial
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		lineageTag: 81d555cc-04ae-4dab-9072-d693d67319b5
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column marca
+		dataType: string
+		lineageTag: ee76333f-ed76-4c89-b49d-b1e9eaf7f453
+		summarizeBy: none
+		sourceColumn: marca
+
+		annotation SummarizationSetBy = Automatic
+
+	partition con_efds = m
+		mode: import
+		source =
+				let
+				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT * FROM v_efds"])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

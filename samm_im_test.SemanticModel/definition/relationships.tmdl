@@ -153,3 +153,12 @@ relationship e9eb2c1c-e4ed-4a35-d8c6-e8ca0ad61d6f
 	fromColumn: con_fallasEquipos.Fechafalla
 	toColumn: Dim_Fecha.Date
 
+relationship 594be31a-20df-4969-852f-38a4a42f00fb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_efds.fecha
+	toColumn: LocalDateTable_5b98faf7-c663-4c97-80a3-665241da5ea0.Date
+
+relationship AutoDetected_b1e0f2c7-41e0-4b23-834e-d190023e26ad
+	fromColumn: con_efds.marca
+	toColumn: Dim_Marca.marca
+

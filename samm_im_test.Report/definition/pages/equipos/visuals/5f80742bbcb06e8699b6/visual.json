@@ -35,14 +35,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "con_estadoEquipos"
+                      "Entity": "con_efds"
                     }
                   },
-                  "Property": "Fuera de Servicio"
+                  "Property": "EFDS"
                 }
               },
-              "queryRef": "con_estadoEquipos.Fuera de Servicio",
-              "nativeQueryRef": "Fuera de Servicio"
+              "queryRef": "con_efds.EFDS",
+              "nativeQueryRef": "Fuera de Servicio",
+              "displayName": "Fuera de Servicio"
             },
             {
               "field": {
@@ -263,25 +264,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_estadoEquipos.Fuera de Servicio"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "Conditional": {
                       "Cases": [
                         {
@@ -381,6 +363,25 @@
               }
             ],
             "metadata": "con_fallasEquipos.UPTIME %"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_efds.EFDS"
           }
         }
       ],
@@ -507,21 +508,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d89e15e25e74d659b3e0",
+        "name": "2ce8d2fb3cb383e9b439",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "con_estadoEquipos"
+                "Entity": "con_equipos"
               }
             },
-            "Property": "Fuera de Servicio"
+            "Property": "Total Equipos"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "5b8a2a9cf5d698d5f74a",
+        "name": "3393eea36a889cacdccc",
         "field": {
           "Measure": {
             "Expression": {
@@ -535,15 +536,15 @@
         "type": "Advanced"
       },
       {
-        "name": "2ce8d2fb3cb383e9b439",
+        "name": "cbe8e317858c15581800",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "con_equipos"
+                "Entity": "con_efds"
               }
             },
-            "Property": "Total Equipos"
+            "Property": "EFDS"
           }
         },
         "type": "Advanced"
