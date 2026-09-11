@@ -4534,16 +4534,6 @@ cultureInfo es-CO
 			          "tercero": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Cliente": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -8499,9 +8489,565 @@ cultureInfo es-CO
 			          }
 			        }
 			      ]
+			    },
+			    "con_efd.solicitud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_efds",
+			          "ConceptualProperty": "solicitud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "solicitud": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_efd.modelo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_efds",
+			          "ConceptualProperty": "modelo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modelo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "con_efd.dias_fd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_efds",
+			          "ConceptualProperty": "dias_fds"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias fd": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dias_fds": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "fd": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "refresh_date_ultimo_backup_año_has_refresh_date_ultimo_backup_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup.año": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.año"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.trimestre": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.año"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.trimestre"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años9"
+			        }
+			      ]
+			    },
+			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_día": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.día": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_me": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.me": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.trimestre": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_año": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.año": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "refresh_date_ultimo_backup_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "refreshDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "refresh_date.ultimo_backup": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup"
+			          }
+			        },
+			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "refresh_date.ultimo_backup"
+			            },
+			            "Object": {
+			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ultimo_backups_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_me_has_con_fallas_equipo_fecha_reparacion_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.día": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.día"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me8"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_trimestre_has_con_fallas_equipo_fecha_reparacion_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.trimestre": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres8"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_año_has_con_fallas_equipo_fecha_reparacion_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.año": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.año"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.trimestre": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.año"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años8"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_día": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.día": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_me": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			          }
+			        },
+			        "con_fallas_equipo.fecha_reparacion.me": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.fecha_reparacion.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
 			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "con_fallasEquipos"
@@ -8531,7 +9077,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -8564,7 +9110,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
+			          "ID": "jerarquía_de_fechas_have_años1"
 			        }
 			      ]
 			    },
@@ -8630,7 +9176,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -8643,7 +9189,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -8696,7 +9242,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -8709,7 +9255,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -8762,7 +9308,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
+			          "ID": "años_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -8775,7 +9321,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
+			          "ID": "trimestres_have_años2"
 			        },
 			        {
 			          "Preposition": {
@@ -8828,7 +9374,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
+			          "ID": "jerarquía_de_fechas_have_días2"
 			        }
 			      ]
 			    },
@@ -8861,7 +9407,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
+			          "ID": "jerarquía_de_fechas_have_me2"
 			        }
 			      ]
 			    },
@@ -8894,7 +9440,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -8927,7 +9473,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años2"
 			        }
 			      ]
 			    },
@@ -8993,7 +9539,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -9006,7 +9552,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -9059,7 +9605,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -9072,7 +9618,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -9125,7 +9671,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
+			          "ID": "años_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -9138,7 +9684,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
+			          "ID": "trimestres_have_años3"
 			        },
 			        {
 			          "Preposition": {
@@ -9191,7 +9737,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
+			          "ID": "jerarquía_de_fechas_have_días3"
 			        }
 			      ]
 			    },
@@ -9224,7 +9770,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
+			          "ID": "jerarquía_de_fechas_have_me3"
 			        }
 			      ]
 			    },
@@ -9257,7 +9803,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			          "ID": "jerarquía_de_fechas_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -9290,7 +9836,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },
@@ -9356,7 +9902,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días2"
+			          "ID": "me_have_días3"
 			        },
 			        {
 			          "Attribute": {
@@ -9369,7 +9915,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me2"
+			          "ID": "días_have_me3"
 			        },
 			        {
 			          "Preposition": {
@@ -9422,7 +9968,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
+			          "ID": "trimestres_have_me3"
 			        },
 			        {
 			          "Attribute": {
@@ -9435,7 +9981,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
+			          "ID": "me_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -9488,7 +10034,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres2"
+			          "ID": "años_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -9501,7 +10047,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años2"
+			          "ID": "trimestres_have_años4"
 			        },
 			        {
 			          "Preposition": {
@@ -9554,7 +10100,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días2"
+			          "ID": "jerarquía_de_fechas_have_días4"
 			        }
 			      ]
 			    },
@@ -9587,7 +10133,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me2"
+			          "ID": "jerarquía_de_fechas_have_me4"
 			        }
 			      ]
 			    },
@@ -9620,7 +10166,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres3"
+			          "ID": "jerarquía_de_fechas_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -9653,7 +10199,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años3"
+			          "ID": "jerarquía_de_fechas_have_años4"
 			        }
 			      ]
 			    },
@@ -9719,7 +10265,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días3"
+			          "ID": "me_have_días4"
 			        },
 			        {
 			          "Attribute": {
@@ -9732,7 +10278,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me3"
+			          "ID": "días_have_me4"
 			        },
 			        {
 			          "Preposition": {
@@ -9785,7 +10331,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me3"
+			          "ID": "trimestres_have_me4"
 			        },
 			        {
 			          "Attribute": {
@@ -9798,7 +10344,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres3"
+			          "ID": "me_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -9851,7 +10397,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres3"
+			          "ID": "años_have_trimestres5"
 			        },
 			        {
 			          "Attribute": {
@@ -9864,7 +10410,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años3"
+			          "ID": "trimestres_have_años5"
 			        },
 			        {
 			          "Preposition": {
@@ -9917,7 +10463,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días3"
+			          "ID": "jerarquía_de_fechas_have_días5"
 			        }
 			      ]
 			    },
@@ -9950,7 +10496,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me3"
+			          "ID": "jerarquía_de_fechas_have_me5"
 			        }
 			      ]
 			    },
@@ -9983,7 +10529,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres4"
+			          "ID": "jerarquía_de_fechas_have_trimestres5"
 			        }
 			      ]
 			    },
@@ -10016,7 +10562,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años4"
+			          "ID": "jerarquía_de_fechas_have_años5"
 			        }
 			      ]
 			    },
@@ -10082,7 +10628,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días4"
+			          "ID": "me_have_días5"
 			        },
 			        {
 			          "Attribute": {
@@ -10095,7 +10641,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me4"
+			          "ID": "días_have_me5"
 			        },
 			        {
 			          "Preposition": {
@@ -10148,7 +10694,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me4"
+			          "ID": "trimestres_have_me5"
 			        },
 			        {
 			          "Attribute": {
@@ -10161,7 +10707,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres4"
+			          "ID": "me_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -10214,7 +10760,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres4"
+			          "ID": "años_have_trimestres6"
 			        },
 			        {
 			          "Attribute": {
@@ -10227,7 +10773,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años4"
+			          "ID": "trimestres_have_años6"
 			        },
 			        {
 			          "Preposition": {
@@ -10280,7 +10826,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días4"
+			          "ID": "jerarquía_de_fechas_have_días6"
 			        }
 			      ]
 			    },
@@ -10313,7 +10859,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me4"
+			          "ID": "jerarquía_de_fechas_have_me6"
 			        }
 			      ]
 			    },
@@ -10346,7 +10892,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres5"
+			          "ID": "jerarquía_de_fechas_have_trimestres6"
 			        }
 			      ]
 			    },
@@ -10379,7 +10925,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años5"
+			          "ID": "jerarquía_de_fechas_have_años6"
 			        }
 			      ]
 			    },
@@ -10445,7 +10991,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días5"
+			          "ID": "me_have_días6"
 			        },
 			        {
 			          "Attribute": {
@@ -10458,7 +11004,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me5"
+			          "ID": "días_have_me6"
 			        },
 			        {
 			          "Preposition": {
@@ -10511,7 +11057,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me5"
+			          "ID": "trimestres_have_me6"
 			        },
 			        {
 			          "Attribute": {
@@ -10524,7 +11070,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres5"
+			          "ID": "me_have_trimestres6"
 			        },
 			        {
 			          "Preposition": {
@@ -10577,7 +11123,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres5"
+			          "ID": "años_have_trimestres7"
 			        },
 			        {
 			          "Attribute": {
@@ -10590,7 +11136,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años5"
+			          "ID": "trimestres_have_años7"
 			        },
 			        {
 			          "Preposition": {
@@ -10643,7 +11189,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días5"
+			          "ID": "jerarquía_de_fechas_have_días7"
 			        }
 			      ]
 			    },
@@ -10676,7 +11222,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me5"
+			          "ID": "jerarquía_de_fechas_have_me7"
 			        }
 			      ]
 			    },
@@ -10709,7 +11255,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres6"
+			          "ID": "jerarquía_de_fechas_have_trimestres7"
 			        }
 			      ]
 			    },
@@ -10742,7 +11288,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años6"
+			          "ID": "jerarquía_de_fechas_have_años7"
 			        }
 			      ]
 			    },
@@ -10808,7 +11354,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días6"
+			          "ID": "me_have_días7"
 			        },
 			        {
 			          "Attribute": {
@@ -10821,7 +11367,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me6"
+			          "ID": "días_have_me7"
 			        },
 			        {
 			          "Preposition": {
@@ -10874,7 +11420,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me6"
+			          "ID": "trimestres_have_me7"
 			        },
 			        {
 			          "Attribute": {
@@ -10887,7 +11433,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres6"
+			          "ID": "me_have_trimestres7"
 			        },
 			        {
 			          "Preposition": {
@@ -10940,7 +11486,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres6"
+			          "ID": "años_have_trimestres8"
 			        },
 			        {
 			          "Attribute": {
@@ -10953,7 +11499,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años6"
+			          "ID": "trimestres_have_años8"
 			        },
 			        {
 			          "Preposition": {
@@ -11006,7 +11552,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días6"
+			          "ID": "jerarquía_de_fechas_have_días8"
 			        }
 			      ]
 			    },
@@ -11039,7 +11585,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me6"
+			          "ID": "jerarquía_de_fechas_have_me8"
 			        }
 			      ]
 			    },
@@ -11072,7 +11618,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres7"
+			          "ID": "jerarquía_de_fechas_have_trimestres8"
 			        }
 			      ]
 			    },
@@ -11105,7 +11651,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años7"
+			          "ID": "jerarquía_de_fechas_have_años8"
 			        }
 			      ]
 			    },
@@ -11171,7 +11717,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días7"
+			          "ID": "me_have_días8"
 			        },
 			        {
 			          "Attribute": {
@@ -11184,7 +11730,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me7"
+			          "ID": "días_have_me8"
 			        },
 			        {
 			          "Preposition": {
@@ -11237,7 +11783,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me7"
+			          "ID": "trimestres_have_me8"
 			        },
 			        {
 			          "Attribute": {
@@ -11250,7 +11796,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres7"
+			          "ID": "me_have_trimestres8"
 			        },
 			        {
 			          "Preposition": {
@@ -11303,7 +11849,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres7"
+			          "ID": "años_have_trimestres9"
 			        },
 			        {
 			          "Attribute": {
@@ -11316,7 +11862,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años7"
+			          "ID": "trimestres_have_años9"
 			        },
 			        {
 			          "Preposition": {
@@ -11369,7 +11915,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días7"
+			          "ID": "jerarquía_de_fechas_have_días9"
 			        }
 			      ]
 			    },
@@ -11402,7 +11948,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me7"
+			          "ID": "jerarquía_de_fechas_have_me9"
 			        }
 			      ]
 			    },
@@ -11435,7 +11981,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres8"
+			          "ID": "jerarquía_de_fechas_have_trimestres9"
 			        }
 			      ]
 			    },
@@ -11468,7 +12014,7 @@ cultureInfo es-CO
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años8"
+			          "ID": "jerarquía_de_fechas_have_años9"
 			        }
 			      ]
 			    },
@@ -12462,6 +13008,105 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "con_efd_has_dias_fd": {
+			      "Binding": {
+			        "ConceptualEntity": "con_efds"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_efd": {
+			          "Target": {
+			            "Entity": "con_efd"
+			          }
+			        },
+			        "con_efd.dias_fd": {
+			          "Target": {
+			            "Entity": "con_efd.dias_fd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_efd"
+			            },
+			            "Object": {
+			              "Role": "con_efd.dias_fd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_efds_have_dias_fd"
+			        }
+			      ]
+			    },
+			    "con_efd_has_modelo": {
+			      "Binding": {
+			        "ConceptualEntity": "con_efds"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_efd": {
+			          "Target": {
+			            "Entity": "con_efd"
+			          }
+			        },
+			        "con_efd.modelo": {
+			          "Target": {
+			            "Entity": "con_efd.modelo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_efd"
+			            },
+			            "Object": {
+			              "Role": "con_efd.modelo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_efds_have_modelos"
+			        }
+			      ]
+			    },
+			    "con_efd_has_solicitud": {
+			      "Binding": {
+			        "ConceptualEntity": "con_efds"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_efd": {
+			          "Target": {
+			            "Entity": "con_efd"
+			          }
+			        },
+			        "con_efd.solicitud": {
+			          "Target": {
+			            "Entity": "con_efd.solicitud"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_efd"
+			            },
+			            "Object": {
+			              "Role": "con_efd.solicitud"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_efds_have_solicituds"
 			        }
 			      ]
 			    },
@@ -19292,501 +19937,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_indice_de_ocupacions_have_fecha_OT"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_me": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
-			          }
-			        },
-			        "con_fallas_equipo.fecha_reparacion.me": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me8"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_fecha_reparacion_jerarquía_de_fecha_has_con_fallas_equipo_fecha_reparacion_día": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
-			          }
-			        },
-			        "con_fallas_equipo.fecha_reparacion.día": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días8"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_fecha_reparacion_año_has_con_fallas_equipo_fecha_reparacion_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo.fecha_reparacion.año": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.año"
-			          }
-			        },
-			        "con_fallas_equipo.fecha_reparacion.trimestre": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.año"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres8"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años8"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años8"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_fecha_reparacion_trimestre_has_con_fallas_equipo_fecha_reparacion_me": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo.fecha_reparacion.trimestre": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.trimestre"
-			          }
-			        },
-			        "con_fallas_equipo.fecha_reparacion.me": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me8"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres8"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres8"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_fecha_reparacion_me_has_con_fallas_equipo_fecha_reparacion_día": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo.fecha_reparacion.me": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.me"
-			          }
-			        },
-			        "con_fallas_equipo.fecha_reparacion.día": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.fecha_reparacion.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días8"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.día"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me8"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "con_fallas_equipo.fecha_reparacion.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me8"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ultimo_backups_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_año": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.año": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años9"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.trimestre": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres9"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_me": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.me": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me9"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_jerarquía_de_fecha_has_refresh_date_ultimo_backup_día": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.día": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días9"
-			        }
-			      ]
-			    },
-			    "refresh_date_ultimo_backup_año_has_refresh_date_ultimo_backup_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "refreshDate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "refresh_date.ultimo_backup.año": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.año"
-			          }
-			        },
-			        "refresh_date.ultimo_backup.trimestre": {
-			          "Target": {
-			            "Entity": "refresh_date.ultimo_backup.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.año"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres9"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.trimestre"
-			            },
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años9"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "refresh_date.ultimo_backup.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "refresh_date.ultimo_backup.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años9"
 			        }
 			      ]
 			    },

@@ -6,7 +6,7 @@
     "y": 181.85792349726776,
     "z": 18004,
     "height": 243.64298724954463,
-    "width": 586.375227686703,
+    "width": 817.19489981785068,
     "tabOrder": 0
   },
   "visual": {
@@ -37,6 +37,20 @@
                       "Entity": "con_efds"
                     }
                   },
+                  "Property": "modelo"
+                }
+              },
+              "queryRef": "con_efds.modelo",
+              "nativeQueryRef": "modelo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_efds"
+                    }
+                  },
                   "Property": "cliente"
                 }
               },
@@ -51,14 +65,56 @@
                       "Entity": "con_efds"
                     }
                   },
-                  "Property": "marca"
+                  "Property": "solicitud"
                 }
               },
-              "queryRef": "con_efds.marca",
-              "nativeQueryRef": "marca"
+              "queryRef": "con_efds.solicitud",
+              "nativeQueryRef": "solicitud"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_efds"
+                        }
+                      },
+                      "Property": "dias_fds"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(con_efds.dias_fds)",
+              "nativeQueryRef": "Días",
+              "displayName": "Días"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "con_efds"
+                      }
+                    },
+                    "Property": "dias_fds"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -99,13 +155,73 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "313.0765044274866D"
+                  "Value": "416.8074100088103D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "con_efds.cliente"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "175.1580184822267D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_efds.modelo"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(con_efds.dias_fds)"
           }
         }
       ]
@@ -253,7 +369,7 @@
         "type": "Categorical"
       },
       {
-        "name": "f87a4de59b45033387eb",
+        "name": "05803688ebe24520e090",
         "field": {
           "Column": {
             "Expression": {
@@ -261,10 +377,43 @@
                 "Entity": "con_efds"
               }
             },
-            "Property": "marca"
+            "Property": "solicitud"
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "45bffdf49c6cdb802330",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_efds"
+              }
+            },
+            "Property": "modelo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3c9855e021966ac8c18d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_efds"
+                  }
+                },
+                "Property": "dias_fds"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

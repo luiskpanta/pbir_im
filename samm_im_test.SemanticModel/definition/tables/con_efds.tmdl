@@ -52,6 +52,31 @@ table con_efds
 
 		annotation SummarizationSetBy = Automatic
 
+	column solicitud
+		dataType: string
+		lineageTag: df09fcbb-b56a-46d1-9d41-0cf7648c103a
+		summarizeBy: none
+		sourceColumn: solicitud
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo
+		dataType: string
+		lineageTag: 0bfcaa42-b540-4a06-a0db-a3e1ef168643
+		summarizeBy: none
+		sourceColumn: modelo
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_fds
+		dataType: int64
+		formatString: 0
+		lineageTag: ba27113b-0d7c-4317-bc7e-9a7f2d3afb96
+		summarizeBy: sum
+		sourceColumn: dias_fds
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_efds = m
 		mode: import
 		source =
