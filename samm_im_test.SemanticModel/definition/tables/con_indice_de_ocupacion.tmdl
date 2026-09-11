@@ -299,23 +299,6 @@ table con_indice_de_ocupacion
 
 		annotation SummarizationSetBy = Automatic
 
-	column estadoOT
-		dataType: string
-		lineageTag: e576977a-4d02-4234-b5a0-74ebdf25ed88
-		summarizeBy: none
-		sourceColumn: estadoOT
-
-		annotation SummarizationSetBy = Automatic
-
-	column abierta
-		dataType: int64
-		formatString: 0
-		lineageTag: 25fbb4eb-583e-4f87-b757-5ea7731ed7af
-		summarizeBy: sum
-		sourceColumn: abierta
-
-		annotation SummarizationSetBy = Automatic
-
 	partition con_indice_de_ocupacion = m
 		mode: import
 		source =

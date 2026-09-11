@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3de1a6f53e7afe74c874",
   "position": {
-    "x": 13.333333333333334,
-    "y": 180.44444444444446,
+    "x": 13.752877973906369,
+    "y": 181.7344589409056,
     "z": 18004,
     "height": 248,
     "width": 585.77777777777783,
-    "tabOrder": 18004
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -108,6 +108,19 @@
           },
           "selector": {
             "metadata": "con_equipos.equipo_serial"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -317,5 +330,6 @@
         "howCreated": "User"
       }
     ]
-  }
+  },
+  "isHidden": true
 }
