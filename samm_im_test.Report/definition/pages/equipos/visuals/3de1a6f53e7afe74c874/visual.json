@@ -6,7 +6,7 @@
     "y": 181.7344589409056,
     "z": 18004,
     "height": 248,
-    "width": 585.77777777777783,
+    "width": 660,
     "tabOrder": 0
   },
   "visual": {
@@ -51,11 +51,26 @@
                       "Entity": "con_equipos"
                     }
                   },
+                  "Property": "modelo"
+                }
+              },
+              "queryRef": "con_equipos.modelo",
+              "nativeQueryRef": "modelo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_equipos"
+                    }
+                  },
                   "Property": "tercero"
                 }
               },
               "queryRef": "con_equipos.tercero",
-              "nativeQueryRef": "tercero"
+              "nativeQueryRef": "Cliente",
+              "displayName": "Cliente"
             }
           ]
         }
@@ -73,7 +88,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "93.22222222222223D"
+                  "Value": "110D"
                 }
               }
             }
@@ -87,7 +102,21 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "339.1994371545791D"
+                  "Value": "160D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equipos.modelo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "240D"
                 }
               }
             }
@@ -101,7 +130,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "122.66666666666667D"
+                  "Value": "130D"
                 }
               }
             }

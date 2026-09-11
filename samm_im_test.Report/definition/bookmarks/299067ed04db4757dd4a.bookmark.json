@@ -3,7 +3,9 @@
   "displayName": "Ocultar EFS",
   "name": "299067ed04db4757dd4a",
   "options": {
+    "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
+      "3de1a6f53e7afe74c874",
       "2137aa696e48fafc6648"
     ]
   },
