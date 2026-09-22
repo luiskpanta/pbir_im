@@ -4,7 +4,7 @@
   "position": {
     "x": 12.823315118397087,
     "y": 181.85792349726776,
-    "z": 18004,
+    "z": 18000,
     "height": 243.64298724954463,
     "width": 817.19489981785068,
     "tabOrder": 0
@@ -93,28 +93,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "con_efds"
-                      }
-                    },
-                    "Property": "dias_fds"
-                  }
-                },
-                "Function": 0
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -338,83 +316,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2eb980fd07e909b1d70c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_efds"
-              }
-            },
-            "Property": "cliente"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3cd983306329ec0cd587",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_efds"
-              }
-            },
-            "Property": "serial"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "05803688ebe24520e090",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_efds"
-              }
-            },
-            "Property": "solicitud"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "45bffdf49c6cdb802330",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_efds"
-              }
-            },
-            "Property": "modelo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3c9855e021966ac8c18d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_efds"
-                  }
-                },
-                "Property": "dias_fds"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "isHidden": true
 }

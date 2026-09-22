@@ -4,7 +4,7 @@
   "position": {
     "x": 13.333333333333334,
     "y": 76.444444444444443,
-    "z": 12000,
+    "z": 8000,
     "height": 96,
     "width": 463.11111111111109,
     "tabOrder": 9000
@@ -504,51 +504,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2ce8d2fb3cb383e9b439",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_equipos"
-              }
-            },
-            "Property": "Total Equipos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3393eea36a889cacdccc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "UPTIME %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cbe8e317858c15581800",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_efds"
-              }
-            },
-            "Property": "EFDS"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
