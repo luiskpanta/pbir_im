@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "dd4a28982dc1b30db59d",
   "position": {
-    "x": 711.11111111111109,
-    "y": 432,
+    "x": 607.22371967654988,
+    "y": 432.12938005390833,
     "z": 13000,
-    "height": 225.77777777777777,
-    "width": 556.44444444444446,
+    "height": 225.98382749326146,
+    "width": 660.70080862533689,
     "tabOrder": 14000
   },
   "visual": {
@@ -78,6 +78,21 @@
               "queryRef": "con_fallasEquipos.ETTR (dias)",
               "nativeQueryRef": "ETTR (dias)",
               "format": "0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "MTTR Sin Partes (dias)"
+                }
+              },
+              "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
+              "nativeQueryRef": "MTTR (hrs)",
+              "displayName": "MTTR (hrs)"
             }
           ]
         }
@@ -250,7 +265,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "432.20237970198616D"
+                  "Value": "402.02679382189405D"
                 }
               }
             }

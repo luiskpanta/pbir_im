@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "d7b2b3a2d4ca8a537099",
   "position": {
-    "x": 13.333333333333334,
-    "y": 429.33333333333331,
+    "x": 12.938005390835579,
+    "y": 432.12938005390833,
     "z": 5000,
-    "height": 231.11111111111111,
-    "width": 690.66666666666663,
+    "height": 225.98382749326146,
+    "width": 585.66037735849056,
     "tabOrder": 6000
   },
   "visual": {
@@ -55,14 +55,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "numDoc"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "Recuento de idOT"
+              "queryRef": "Sum(con_fallasEquipos.numDoc)",
+              "nativeQueryRef": "Cantidad Fallos",
+              "displayName": "Cantidad Fallos"
             }
           ]
         }
@@ -108,7 +109,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cantidad de OTs por Mes'"
+                  "Value": "'Cantidad de Fallos por Mes'"
                 }
               }
             }

@@ -42,12 +42,12 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "MTBF (dias)"
+                  "Property": "MTTR Sin Partes (dias)"
                 }
               },
-              "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF (dias)",
-              "format": "0"
+              "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
+              "nativeQueryRef": "MTTR Sin Partes (horas)",
+              "displayName": "MTTR Sin Partes (horas)"
             },
             {
               "field": {
@@ -61,7 +61,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (dias)",
+              "nativeQueryRef": "ETTR (horas)",
+              "displayName": "ETTR (horas)",
               "format": "0"
             }
           ]
@@ -77,7 +78,7 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "MTBF (dias)"
+                "Property": "MTTR Sin Partes (dias)"
               }
             },
             "direction": "Descending"
@@ -122,24 +123,6 @@
         }
       ],
       "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#16305C'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTBF (dias)"
-          }
-        },
         {
           "properties": {
             "fill": {
@@ -203,24 +186,6 @@
                 }
               }
             }
-          }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#16305C'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTBF (dias)"
           }
         }
       ]
