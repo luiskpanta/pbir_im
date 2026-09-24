@@ -206,6 +206,33 @@ table con_fallasEquipos
 		lineageTag: c3e38446-302d-4209-92a1-92ce1f4ed8e0
 		summarizeBy: none
 
+	column idPadre
+		dataType: int64
+		formatString: 0
+		lineageTag: 1dfa5c8a-ca20-45b7-b09c-9c96bd1abbd4
+		summarizeBy: sum
+		sourceColumn: idPadre
+
+		annotation SummarizationSetBy = Automatic
+
+	column numDoc
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a3466d0-0531-45c0-bc25-fd4e67d49783
+		summarizeBy: sum
+		sourceColumn: numDoc
+
+		annotation SummarizationSetBy = Automatic
+
+	column numSOL
+		dataType: int64
+		formatString: 0
+		lineageTag: 92e5c786-e111-420c-a8e8-26959f830dea
+		summarizeBy: sum
+		sourceColumn: numSOL
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_fallasEquipos = m
 		mode: import
 		source =

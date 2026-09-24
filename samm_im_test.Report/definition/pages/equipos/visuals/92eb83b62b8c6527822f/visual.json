@@ -44,15 +44,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "numDoc"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Count(con_fallasEquipos.idOT)",
-              "nativeQueryRef": "OTs",
-              "displayName": "OTs"
+              "queryRef": "Sum(con_fallasEquipos.numDoc)",
+              "nativeQueryRef": "Recuento de numDoc",
+              "displayName": "Fallos"
             }
           ]
         }
@@ -69,7 +69,7 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "idOT"
+                    "Property": "numDoc"
                   }
                 },
                 "Function": 2

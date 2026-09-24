@@ -15,3 +15,4 @@ table _PreselectedSlicer
 		source = DATATABLE("DirtyEquiposFecha", BOOLEAN, {{TRUE()}, {FALSE()}})
 
 	annotation PBI_Id = 86c1526628974d3f91b1a27fef363ff6
+

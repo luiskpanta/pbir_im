@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF",
-              "displayName": "MTBF",
+              "nativeQueryRef": "MTBF (Días)",
+              "displayName": "MTBF (Días)",
               "format": "0.0"
             },
             {

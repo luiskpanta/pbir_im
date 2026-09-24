@@ -45,13 +45,13 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "idOT"
+                      "Property": "numDoc"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.idOT)",
+              "queryRef": "Sum(con_fallasEquipos.numDoc)",
               "nativeQueryRef": "Cantidad Fallas",
               "displayName": "Cantidad Fallas"
             }
@@ -132,39 +132,6 @@
           "selector": {
             "metadata": "Count(con_fallasEquipos.serial)"
           }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_fallasEquipos.idOT)"
-          }
         }
       ],
       "label": [
@@ -180,20 +147,6 @@
           },
           "selector": {
             "metadata": "Count(con_fallasEquipos.serial)"
-          }
-        },
-        {
-          "properties": {
-            "matchValueAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_fallasEquipos.idOT)"
           }
         },
         {
