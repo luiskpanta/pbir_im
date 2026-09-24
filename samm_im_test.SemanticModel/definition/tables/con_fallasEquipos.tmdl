@@ -70,6 +70,15 @@ table con_fallasEquipos
 		formatString: General Date
 		lineageTag: 4e8131c8-0747-486e-a51a-d01f98ff1398
 
+	measure 'Preseleccion Periodo Parada' =
+			
+			VAR Periodo = SELECTEDVALUE('con_fallasEquipos'[Periodo Parada])
+			VAR Inicio = FORMAT(EDATE(TODAY(), -11), "YYYY-MM")
+			VAR Fin = FORMAT(TODAY(), "YYYY-MM")
+			RETURN
+			    Periodo >= Inicio && Periodo <= Fin
+		lineageTag: 29990bc0-3925-40e2-9592-4030c4927e9c
+
 	column equipo
 		dataType: string
 		lineageTag: 369a0d78-1d1a-4bdf-87f4-a46a7f12ccb8
@@ -191,6 +200,11 @@ table con_fallasEquipos
 		sourceColumn: familia
 
 		annotation SummarizationSetBy = Automatic
+
+	column 'Periodo Parada' = FORMAT('con_fallasEquipos'[FechaParada], "YYYY-MM")
+		dataType: string
+		lineageTag: c3e38446-302d-4209-92a1-92ce1f4ed8e0
+		summarizeBy: none
 
 	partition con_fallasEquipos = m
 		mode: import

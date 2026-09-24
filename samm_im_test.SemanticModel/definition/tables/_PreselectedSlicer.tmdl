@@ -1,0 +1,17 @@
+table _PreselectedSlicer
+	lineageTag: 1f9b0820-14da-4a54-bdda-97117cc55609
+
+	column DirtyEquiposFecha
+		dataType: boolean
+		lineageTag: cae3d76c-8af0-4283-a80f-34957348d676
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DirtyEquiposFecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _PreselectedSlicer = calculated
+		mode: import
+		source = DATATABLE("DirtyEquiposFecha", BOOLEAN, {{TRUE()}, {FALSE()}})
+
+	annotation PBI_Id = 86c1526628974d3f91b1a27fef363ff6
