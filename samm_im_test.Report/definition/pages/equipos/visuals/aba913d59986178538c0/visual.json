@@ -4,7 +4,7 @@
   "position": {
     "x": 439.11111111111109,
     "y": 9.7777777777777786,
-    "z": 6000,
+    "z": 21000,
     "height": 60.444444444444443,
     "width": 187.55555555555554,
     "tabOrder": 7000
@@ -121,6 +121,13 @@
                 }
               }
             },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -130,6 +137,19 @@
                       "Percent": -0.2
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
                 }
               }
             }
@@ -157,7 +177,18 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "100D"
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
                 }
               }
             }
