@@ -286,7 +286,7 @@
                               },
                               "Right": {
                                 "Literal": {
-                                  "Value": "5D"
+                                  "Value": "90D"
                                 }
                               }
                             }
@@ -294,33 +294,6 @@
                           "Value": {
                             "Literal": {
                               "Value": "'#D64550'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "MTBF (dias)"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "15D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#E8871E'"
                             }
                           }
                         },
