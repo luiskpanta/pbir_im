@@ -7,7 +7,7 @@ table con_fallasEquipos
 			VAR Inicio = FechaCorte - 365
 			VAR NumFallas =
 			    CALCULATE(
-			        DISTINCTCOUNT('con_fallasEquipos'[idOT]),
+			        DISTINCTCOUNT('con_fallasEquipos'[numDoc]),
 			        REMOVEFILTERS('Dim_Fecha'),
 			        REMOVEFILTERS('con_fallasEquipos'[FechaParada]),
 			        REMOVEFILTERS('LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42'),

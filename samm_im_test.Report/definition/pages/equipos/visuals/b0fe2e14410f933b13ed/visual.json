@@ -722,5 +722,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "75775a2681540252140c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTBF (dias)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "977055dc443061b10ca3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTTR Sin Partes (dias)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "34e5a35f880c30127001",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "ETTR (dias)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
