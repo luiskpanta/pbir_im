@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["con_indice_de_ocupacion","con_primer_visita","con_ocupacion_meta","con_cumplimientoPreventivos","Dim_TipoServicio","Dim_Marca","Dim_Cliente","con_clasificacionOTs","con_equipos","con_estadoEquipos","met_contratos","con_fallasEquipos","con_equiposContrato","refreshDate","con_efds","_PreselectedSlicer"]
+annotation PBI_QueryOrder = ["con_indice_de_ocupacion","con_primer_visita","con_ocupacion_meta","con_cumplimientoPreventivos","Dim_TipoServicio","Dim_Marca","Dim_Cliente","con_clasificacionOTs","con_equipos","con_estadoEquipos","met_contratos","con_fallasEquipos","con_equiposContrato","refreshDate","con_efds"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
