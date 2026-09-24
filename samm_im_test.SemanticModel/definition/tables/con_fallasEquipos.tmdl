@@ -3,19 +3,19 @@ table con_fallasEquipos
 
 	measure 'MTBF (dias)' =
 			
-			VAR TablaEquipos =
-			    ADDCOLUMNS(
-			        VALUES('con_fallasEquipos'[equipo]),
-			        "@PrimeraFalla", CALCULATE(MIN('con_fallasEquipos'[Fechafalla])),
-			        "@UltimaFalla", CALCULATE(MAX('con_fallasEquipos'[Fechafalla])),
-			        "@NumFallas", CALCULATE(DISTINCTCOUNT('con_fallasEquipos'[idOT]))
+			VAR FechaCorte = TODAY()
+			VAR Inicio = FechaCorte - 365
+			VAR NumFallas =
+			    CALCULATE(
+			        DISTINCTCOUNT('con_fallasEquipos'[idOT]),
+			        REMOVEFILTERS('Dim_Fecha'),
+			        REMOVEFILTERS('con_fallasEquipos'[FechaParada]),
+			        REMOVEFILTERS('LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42'),
+			        'con_fallasEquipos'[Fechafalla] >= Inicio,
+			        'con_fallasEquipos'[Fechafalla] <= FechaCorte
 			    )
-			VAR TablaValida = FILTER(TablaEquipos, [@NumFallas] > 1)
 			RETURN
-			    AVERAGEX(
-			        TablaValida,
-			        DIVIDE([@UltimaFalla] - [@PrimeraFalla], [@NumFallas] - 1)
-			    )
+			    DIVIDE(360, NumFallas + 1)
 		formatString: 0.0" días"
 		lineageTag: 77bb24e0-0dcd-4729-8ac1-01f02f205264
 
