@@ -53,11 +53,17 @@ table con_fallasEquipos
 	measure 'UPTIME %' =
 			
 			DIVIDE(
-			    [MTBF (dias)],
-			    [MTBF (dias)] + [ETTR (dias)]
+			    360 - [Dias Fuera de Servicio],
+			    360
 			)
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 2db00436-1756-448f-b881-b219410ddb01
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dias Fuera de Servicio' = SUM('con_fallasEquipos'[HorasParada]) / 24
+		formatString: 0.0
+		lineageTag: 6d6f4882-21d8-467f-81f6-6aead399aa32
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
