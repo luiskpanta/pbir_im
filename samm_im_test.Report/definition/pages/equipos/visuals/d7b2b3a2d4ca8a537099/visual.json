@@ -17,28 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "Dim_Fecha"
                     }
                   },
-                  "Level": "Mes"
+                  "Property": "Año-Mes"
                 }
               },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "Date Mes",
+              "queryRef": "Dim_Fecha.Año-Mes",
+              "nativeQueryRef": "Año-Mes",
               "active": true
             }
           ]
