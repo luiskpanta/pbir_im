@@ -4,10 +4,10 @@
   "position": {
     "x": 661.56334231805931,
     "y": 14.663072776280323,
-    "z": 20001,
+    "z": 20000,
     "height": 409.70350404312666,
     "width": 176.81940700808624,
-    "tabOrder": 20001
+    "tabOrder": 20000
   },
   "visual": {
     "visualType": "PreselectedSlicer9302176388541",
@@ -117,7 +117,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -131,7 +131,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "10D"
                 }
               }
             },
@@ -140,8 +140,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
+                      "ColorId": 1,
+                      "Percent": 0.2
                     }
                   }
                 }
@@ -403,7 +403,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -545,5 +545,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b18149d8521807349c1d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "Periodo Parada"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6dccd7120dc2914a57c9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "Preseleccion Periodo Parada"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2783b8ee030e0190c69a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_PreselectedSlicer"
+              }
+            },
+            "Property": "DirtyEquiposFecha"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

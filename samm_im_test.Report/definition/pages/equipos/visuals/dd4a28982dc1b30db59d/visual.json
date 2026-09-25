@@ -7,7 +7,7 @@
     "z": 12000,
     "height": 248.40970350404311,
     "width": 600.32345013477084,
-    "tabOrder": 14000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -43,7 +43,7 @@
               },
               "queryRef": "con_fallasEquipos.equipo",
               "nativeQueryRef": "equipo",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -72,29 +72,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "ETTR (dias)"
+                  "Property": "UPTIME %"
                 }
               },
-              "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (hrs)",
-              "displayName": "ETTR (hrs)",
-              "format": "0.0"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "MTTR Sin Partes (hrs)"
-                }
-              },
-              "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
-              "nativeQueryRef": "MTTR (hrs)",
-              "displayName": "MTTR (hrs)",
-              "format": "0.0"
+              "queryRef": "con_fallasEquipos.UPTIME %",
+              "nativeQueryRef": "UPTIME %"
             }
           ]
         }
@@ -110,19 +92,6 @@
                   }
                 },
                 "Property": "cliente"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_fallasEquipos"
-                  }
-                },
-                "Property": "equipo"
               }
             },
             "direction": "Ascending"
@@ -181,16 +150,6 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'IDIME S.A.'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
                     "Value": "'ADENTAL S.A.S.'"
                   }
                 }
@@ -207,26 +166,6 @@
                   "isToggled": true
                 }
               ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'IMPULMEDICOS S.A.S.'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'UNIVERSIDAD ANTONIO NARIÑO'"
-                  }
-                }
-              ],
-              "isToggled": true
             }
           ]
         }
@@ -239,35 +178,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "52.52365919625697D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTBF (dias)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "50.85948181204881D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.ETTR (dias)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "402.02679382189405D"
+                  "Value": "420.6022439727737D"
                 }
               }
             }
@@ -275,41 +186,11 @@
           "selector": {
             "metadata": "con_fallasEquipos.cliente"
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "71.91318327974277D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
-          }
         }
       ],
       "columnHeaders": [
         {
           "properties": {}
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
-          }
         }
       ]
     },
@@ -423,5 +304,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2587232203ce0ab03b52",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "cliente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "45d62a4005328c745b9a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "equipo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cfa6cb9c6d71c57da123",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "44deb280b330bdecaeee",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTBF (dias)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

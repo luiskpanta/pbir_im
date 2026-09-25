@@ -35,7 +35,7 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'ETTR (dias)' =
+	measure 'ETTR (horas)' =
 			
 			AVERAGEX(
 			    FILTER(
@@ -43,27 +43,22 @@ table con_fallasEquipos
 			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
 			        NOT ISBLANK('con_fallasEquipos'[Fechafalla])
 			    ),
-			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], DAY)
+			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], HOUR)
 			)
 		formatString: 0.0" días"
 		lineageTag: 4e288335-5aee-4f5c-9761-9ec4062dfc07
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'UPTIME %' =
+	measure 'UPTIME %' = ```
 			
-			DIVIDE(
-			    360 - [Dias Fuera de Servicio],
-			    360
-			)
+						AVERAGEX(
+						    'con_fallasEquipos',
+						    DIVIDE(360 - ('con_fallasEquipos'[Dias Fuera de Servicio] ), 360)
+						)
+			```
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 2db00436-1756-448f-b881-b219410ddb01
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Dias Fuera de Servicio' = SUM('con_fallasEquipos'[HorasParada]) / 24
-		formatString: 0.0
-		lineageTag: 6d6f4882-21d8-467f-81f6-6aead399aa32
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -83,6 +78,12 @@ table con_fallasEquipos
 			RETURN
 			    Periodo >= Inicio && Periodo <= Fin
 		lineageTag: 29990bc0-3925-40e2-9592-4030c4927e9c
+
+	measure 'Dias Fuera de Servicio' = SUM('con_fallasEquipos'[HorasParada]) / 24
+		formatString: 0.0
+		lineageTag: 6d6f4882-21d8-467f-81f6-6aead399aa32
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column equipo
 		dataType: string

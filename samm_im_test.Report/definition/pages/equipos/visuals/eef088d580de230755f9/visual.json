@@ -7,7 +7,7 @@
     "z": 13000,
     "height": 248.40970350404311,
     "width": 421.77897574123989,
-    "tabOrder": 15000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -56,7 +56,7 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "ETTR (dias)"
+                  "Property": "ETTR (horas)"
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
@@ -372,5 +372,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ca0697413e9689480ac9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9f402da0e064b9186e79",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTTR Sin Partes (hrs)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8819ba22355e8820c83d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "ETTR (horas)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

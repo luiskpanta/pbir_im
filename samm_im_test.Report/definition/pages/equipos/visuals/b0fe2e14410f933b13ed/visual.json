@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 96.720257234726688,
     "width": 608.1028938906752,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -39,7 +39,7 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "ETTR (dias)"
+                  "Property": "ETTR (horas)"
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
@@ -462,7 +462,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "ETTR (dias)"
+                                  "Property": "ETTR (horas)"
                                 }
                               },
                               "Right": {
@@ -489,7 +489,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "ETTR (dias)"
+                                  "Property": "ETTR (horas)"
                                 }
                               },
                               "Right": {
@@ -516,7 +516,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "ETTR (dias)"
+                                  "Property": "ETTR (horas)"
                                 }
                               },
                               "Right": {
@@ -689,5 +689,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a3bc186ed7d25584b999",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTBF (dias)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "467e1594e07a86ac5e6a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "ETTR (horas)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9502bc774dac6dc74ec2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "MTTR Sin Partes (hrs)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "468677fc5745145d9626",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
