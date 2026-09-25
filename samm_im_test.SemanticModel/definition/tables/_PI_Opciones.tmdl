@@ -25,3 +25,4 @@ table _PI_Opciones
 		source = DATATABLE("Opcion", STRING, "Valor", INTEGER, {{"Todos", 0}, {"Todos", 1}, {"Post Instalación", 1}})
 
 	annotation PBI_Id = 5c8a832eeb414cf8b0a69102f79e09f3
+

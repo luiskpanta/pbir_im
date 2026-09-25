@@ -16,3 +16,4 @@ table Dim_PostInstalacion
 		source = DATATABLE("Valor", INTEGER, {{0}, {1}})
 
 	annotation PBI_Id = 31a975df55ea40e6be1396639f748be2
+
