@@ -1,0 +1,27 @@
+table _PI_Opciones
+	lineageTag: d1a61f1d-a67a-4d92-bf88-31ef06d0b134
+
+	column Opcion
+		dataType: string
+		lineageTag: 2ffafeaa-4cbf-4795-9417-0284eb15daea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Opcion]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Valor
+		dataType: int64
+		isHidden
+		lineageTag: 77a28219-d521-4025-ad14-abeaf227843f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Valor]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _PI_Opciones = calculated
+		mode: import
+		source = DATATABLE("Opcion", STRING, "Valor", INTEGER, {{"Todos", 0}, {"Todos", 1}, {"Post Instalación", 1}})
+
+	annotation PBI_Id = 5c8a832eeb414cf8b0a69102f79e09f3

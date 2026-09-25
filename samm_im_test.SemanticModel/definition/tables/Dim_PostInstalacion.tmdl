@@ -1,0 +1,18 @@
+table Dim_PostInstalacion
+	isHidden
+	lineageTag: 74470dd1-75be-4d95-b1ac-4a6bb75e1116
+
+	column Valor
+		dataType: int64
+		lineageTag: f19fd8fb-6235-4eb2-baa0-363a1e3a48f0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Valor]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_PostInstalacion = calculated
+		mode: import
+		source = DATATABLE("Valor", INTEGER, {{0}, {1}})
+
+	annotation PBI_Id = 31a975df55ea40e6be1396639f748be2

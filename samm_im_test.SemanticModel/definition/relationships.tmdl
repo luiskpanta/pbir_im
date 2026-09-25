@@ -162,3 +162,12 @@ relationship AutoDetected_b1e0f2c7-41e0-4b23-834e-d190023e26ad
 	fromColumn: con_efds.marca
 	toColumn: Dim_Marca.marca
 
+relationship 35d68a05-e539-4e5b-ba3f-cfbb578cb957
+	fromColumn: con_fallasEquipos.fallaPostInstalacion
+	toColumn: Dim_PostInstalacion.Valor
+
+relationship 17535a34-1f12-43a0-a26c-3a16e4361f1b
+	crossFilteringBehavior: bothDirections
+	fromColumn: _PI_Opciones.Valor
+	toColumn: Dim_PostInstalacion.Valor
+
