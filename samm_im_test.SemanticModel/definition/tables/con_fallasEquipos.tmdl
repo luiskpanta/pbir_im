@@ -249,6 +249,24 @@ table con_fallasEquipos
 
 		annotation SummarizationSetBy = Automatic
 
+	column DiasFueraServicio
+		dataType: int64
+		formatString: 0
+		lineageTag: abbaa8fa-92ee-4fb2-9865-71f2d59646b9
+		summarizeBy: sum
+		sourceColumn: DiasFueraServicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column fallaPostInstalacion
+		dataType: int64
+		formatString: 0
+		lineageTag: 45d9ceea-efba-4beb-9ba7-55ea7dd81422
+		summarizeBy: sum
+		sourceColumn: fallaPostInstalacion
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_fallasEquipos = m
 		mode: import
 		source =
