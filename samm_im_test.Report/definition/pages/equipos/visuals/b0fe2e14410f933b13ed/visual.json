@@ -353,7 +353,7 @@
                         {
                           "Condition": {
                             "Comparison": {
-                              "ComparisonKind": 3,
+                              "ComparisonKind": 4,
                               "Left": {
                                 "Measure": {
                                   "Expression": {
@@ -366,7 +366,7 @@
                               },
                               "Right": {
                                 "Literal": {
-                                  "Value": "1D"
+                                  "Value": "24D"
                                 }
                               }
                             }
@@ -374,33 +374,6 @@
                           "Value": {
                             "Literal": {
                               "Value": "'#2E8B57'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "MTTR Sin Partes (dias)"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "3D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#E8871E'"
                             }
                           }
                         },

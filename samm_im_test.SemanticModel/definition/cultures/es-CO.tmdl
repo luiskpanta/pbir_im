@@ -5997,29 +5997,6 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo.dias_parada": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "con_fallasEquipos",
-			          "ConceptualProperty": "DiasParada"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dias parada": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DiasParada": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "con_fallas_equipo.marca": {
 			      "Definition": {
 			        "Binding": {

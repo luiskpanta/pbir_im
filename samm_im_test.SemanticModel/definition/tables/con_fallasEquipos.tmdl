@@ -26,10 +26,9 @@ table con_fallasEquipos
 			AVERAGEX(
 			    FILTER(
 			        'con_fallasEquipos',
-			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
-			        NOT ISBLANK('con_fallasEquipos'[FechaParada])
+			        'con_fallasEquipos'[tieneRequisicion] = 0
 			    ),
-			    DATEDIFF('con_fallasEquipos'[FechaParada], 'con_fallasEquipos'[FechaReparacion], DAY)
+			    'con_fallasEquipos'[HorasParada]
 			)
 		formatString: 0.0" días"
 		lineageTag: c040e1ae-eb39-4a29-a5fe-dcde4c8599de
@@ -142,15 +141,6 @@ table con_fallasEquipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column DiasParada
-		dataType: int64
-		formatString: 0
-		lineageTag: aff5c7e3-dc94-4e19-a9fe-a228747815a7
-		summarizeBy: sum
-		sourceColumn: DiasParada
-
-		annotation SummarizationSetBy = Automatic
-
 	column marca
 		dataType: string
 		lineageTag: 81bfc619-f909-4925-8fb9-a4ed495c61d9
@@ -230,6 +220,25 @@ table con_fallasEquipos
 		lineageTag: 92e5c786-e111-420c-a8e8-26959f830dea
 		summarizeBy: sum
 		sourceColumn: numSOL
+
+		annotation SummarizationSetBy = Automatic
+
+	column HorasParada
+		dataType: double
+		lineageTag: 95eb07b7-539a-48f4-92e4-600b3a97ee85
+		summarizeBy: sum
+		sourceColumn: HorasParada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column tieneRequisicion
+		dataType: int64
+		formatString: 0
+		lineageTag: 6fbbaaf8-ba71-45b7-b6e3-cb57c91d441c
+		summarizeBy: sum
+		sourceColumn: tieneRequisicion
 
 		annotation SummarizationSetBy = Automatic
 
