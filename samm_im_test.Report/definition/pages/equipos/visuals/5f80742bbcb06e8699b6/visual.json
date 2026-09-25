@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5f80742bbcb06e8699b6",
   "position": {
-    "x": 13.333333333333334,
-    "y": 76.444444444444443,
-    "z": 8000,
-    "height": 96,
-    "width": 463.11111111111109,
+    "x": 13.37620578778135,
+    "y": 76.141479099678449,
+    "z": 7000,
+    "height": 96.720257234726688,
+    "width": 328.23151125401927,
     "tabOrder": 9000
   },
   "visual": {
@@ -44,20 +44,6 @@
               "queryRef": "con_efds.EFDS",
               "nativeQueryRef": "Fuera de Servicio",
               "displayName": "Fuera de Servicio"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "UPTIME %"
-                }
-              },
-              "queryRef": "con_fallasEquipos.UPTIME %",
-              "nativeQueryRef": "UPTIME %"
             }
           ]
         }
@@ -256,113 +242,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "fillColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "UPTIME %"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0.7D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#D64550'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "UPTIME %"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0.9D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#E8871E'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "UPTIME %"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "999999D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#2E8B57'"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "con_fallasEquipos.UPTIME %"
           }
         },
         {

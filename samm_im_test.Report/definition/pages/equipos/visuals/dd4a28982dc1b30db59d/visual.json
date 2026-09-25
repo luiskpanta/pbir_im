@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "dd4a28982dc1b30db59d",
   "position": {
-    "x": 607.22371967654988,
-    "y": 432.12938005390833,
-    "z": 13000,
-    "height": 225.98382749326146,
-    "width": 660.70080862533689,
+    "x": 667.60107816711593,
+    "y": 414.01617250673854,
+    "z": 12000,
+    "height": 248.40970350404311,
+    "width": 600.32345013477084,
     "tabOrder": 14000
   },
   "visual": {
@@ -76,7 +76,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (dias)",
+              "nativeQueryRef": "ETTR (hrs)",
+              "displayName": "ETTR (hrs)",
               "format": "0.0"
             },
             {
@@ -87,7 +88,7 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "MTTR Sin Partes (dias)"
+                  "Property": "MTTR Sin Partes (hrs)"
                 }
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
@@ -237,7 +238,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "43.333333333333336D"
+                  "Value": "52.52365919625697D"
                 }
               }
             }
@@ -251,7 +252,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "46.71894906086319D"
+                  "Value": "50.85948181204881D"
                 }
               }
             }
@@ -273,11 +274,41 @@
           "selector": {
             "metadata": "con_fallasEquipos.cliente"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "71.91318327974277D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
         }
       ],
       "columnHeaders": [
         {
           "properties": {}
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
         }
       ]
     },
@@ -288,7 +319,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

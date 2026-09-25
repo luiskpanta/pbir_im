@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5ed5d0200b0a5e3cd099",
   "position": {
     "x": 0,
@@ -23,7 +23,7 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "MTTR Sin Partes (dias)"
+                  "Property": "MTTR Sin Partes (hrs)"
                 }
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
@@ -42,7 +42,7 @@
                     "Entity": "con_fallasEquipos"
                   }
                 },
-                "Property": "MTTR Sin Partes (dias)"
+                "Property": "MTTR Sin Partes (hrs)"
               }
             },
             "direction": "Descending"

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "aba913d59986178538c0",
+  "name": "7c65aac9905195ba6ba7",
   "position": {
-    "x": 439.02964959568732,
-    "y": 9.4878706199460918,
-    "z": 21000,
-    "height": 414.87870619946091,
-    "width": 188.03234501347708,
-    "tabOrder": 7000
+    "x": 661.56334231805931,
+    "y": 14.663072776280323,
+    "z": 20001,
+    "height": 409.70350404312666,
+    "width": 176.81940700808624,
+    "tabOrder": 20001
   },
   "visual": {
     "visualType": "PreselectedSlicer9302176388541",
@@ -117,7 +117,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -247,6 +247,42 @@
                           [
                             {
                               "Literal": {
+                                "Value": "'2025-12'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2026-01'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2026-02'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
                                 "Value": "'2026-03'"
                               }
                             },
@@ -315,6 +351,18 @@
                                 "Value": "false"
                               }
                             }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'2026-09'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "false"
+                              }
+                            }
                           ]
                         ]
                       }
@@ -326,6 +374,26 @@
             }
           }
         }
+      ],
+      "mobile": [
+        {
+          "properties": {
+            "title": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enLarge": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -333,6 +401,48 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Periodo'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -386,14 +496,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "3D"
                 }
               }
             },
@@ -401,6 +511,32 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

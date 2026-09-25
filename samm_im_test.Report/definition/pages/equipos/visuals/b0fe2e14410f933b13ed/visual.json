@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b0fe2e14410f933b13ed",
   "position": {
-    "x": 802.08,
-    "y": 76.320000000000007,
-    "z": 15000,
-    "height": 96.48,
-    "width": 468,
+    "x": 661.60771704180058,
+    "y": 76.141479099678449,
+    "z": 14000,
+    "height": 96.720257234726688,
+    "width": 608.1028938906752,
     "tabOrder": 16000
   },
   "visual": {
@@ -39,7 +39,23 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "MTTR Sin Partes (dias)"
+                  "Property": "ETTR (dias)"
+                }
+              },
+              "queryRef": "con_fallasEquipos.ETTR (dias)",
+              "nativeQueryRef": "ETTR (Días)",
+              "displayName": "ETTR (Días)",
+              "format": "0.0"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_fallasEquipos"
+                    }
+                  },
+                  "Property": "MTTR Sin Partes (hrs)"
                 }
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
@@ -55,13 +71,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "ETTR (dias)"
+                  "Property": "UPTIME %"
                 }
               },
-              "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR",
-              "displayName": "ETTR",
-              "format": "0.0"
+              "queryRef": "con_fallasEquipos.UPTIME %",
+              "nativeQueryRef": "UPTIME %"
             }
           ]
         }
@@ -183,6 +197,13 @@
               "expr": {
                 "Literal": {
                   "Value": "5L"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Table'"
                 }
               }
             }
@@ -361,7 +382,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "MTTR Sin Partes (dias)"
+                                  "Property": "MTTR Sin Partes (hrs)"
                                 }
                               },
                               "Right": {
@@ -388,7 +409,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "MTTR Sin Partes (dias)"
+                                  "Property": "MTTR Sin Partes (hrs)"
                                 }
                               },
                               "Right": {
@@ -668,51 +689,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "75775a2681540252140c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTBF (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "977055dc443061b10ca3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTTR Sin Partes (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "34e5a35f880c30127001",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "ETTR (dias)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

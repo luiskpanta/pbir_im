@@ -7613,17 +7613,17 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo.MTTR_sin_partes_dias": {
+			    "con_fallas_equipo.MTTR_sin_partes_hrs": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "con_fallasEquipos",
-			          "ConceptualProperty": "MTTR Sin Partes (dias)"
+			          "ConceptualProperty": "MTTR Sin Partes (hrs)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "MTTR sin partes (dias)": {
+			          "MTTR sin partes (hrs)": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7683,6 +7683,26 @@ cultureInfo es-CO
 			          "ETTR": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "ETTR (Días)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "ETTR (hrs)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -8786,6 +8806,59 @@ cultureInfo es-CO
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.horas_parada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "HorasParada"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "horas parada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hora parada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "HorasParada": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.tiene_requisicion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "tieneRequisicion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tiene requisicion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tieneRequisicion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -13415,6 +13488,72 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "con_fallas_equipo_has_tiene_requisicion": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.tiene_requisicion": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.tiene_requisicion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.tiene_requisicion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_tiene_requisicions"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_horas_parada": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.horas_parada": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.horas_parada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.horas_parada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_horas_paradas"
+			        }
+			      ]
+			    },
 			    "con_fallas_equipo_has_num_SOL": {
 			      "Binding": {
 			        "ConceptualEntity": "con_fallasEquipos"
@@ -14418,7 +14557,7 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo_has_MTTR_sin_partes_dias": {
+			    "con_fallas_equipo_has_MTTR_sin_partes_hrs": {
 			      "Binding": {
 			        "ConceptualEntity": "con_fallasEquipos"
 			      },
@@ -14429,9 +14568,9 @@ cultureInfo es-CO
 			            "Entity": "con_fallas_equipo"
 			          }
 			        },
-			        "con_fallas_equipo.MTTR_sin_partes_dias": {
+			        "con_fallas_equipo.MTTR_sin_partes_hrs": {
 			          "Target": {
-			            "Entity": "con_fallas_equipo.MTTR_sin_partes_dias"
+			            "Entity": "con_fallas_equipo.MTTR_sin_partes_hrs"
 			          }
 			        }
 			      },
@@ -14442,12 +14581,12 @@ cultureInfo es-CO
 			              "Role": "con_fallas_equipo"
 			            },
 			            "Object": {
-			              "Role": "con_fallas_equipo.MTTR_sin_partes_dias"
+			              "Role": "con_fallas_equipo.MTTR_sin_partes_hrs"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "con_fallas_equipos_have_MTTR_sin_partes_dias"
+			          "ID": "con_fallas_equipos_have_MTTR_sin_partes_hrs"
 			        }
 			      ]
 			    },
@@ -15636,39 +15775,6 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_fallas_equipos_have_id_OT"
-			        }
-			      ]
-			    },
-			    "con_fallas_equipo_has_dias_parada": {
-			      "Binding": {
-			        "ConceptualEntity": "con_fallasEquipos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "con_fallas_equipo": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo"
-			          }
-			        },
-			        "con_fallas_equipo.dias_parada": {
-			          "Target": {
-			            "Entity": "con_fallas_equipo.dias_parada"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "con_fallas_equipo"
-			            },
-			            "Object": {
-			              "Role": "con_fallas_equipo.dias_parada"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "con_fallas_equipos_have_dias_paradas"
 			        }
 			      ]
 			    },

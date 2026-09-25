@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "59920da5900c06c5a690",
   "position": {
-    "x": 352.88888888888891,
-    "y": 180.44444444444446,
+    "x": 240.64690026954176,
+    "y": 176.81940700808624,
     "z": 4000,
-    "height": 244.8,
-    "width": 246.24,
+    "height": 229.43396226415092,
+    "width": 256.17250673854448,
     "tabOrder": 5000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
         "Category": {
@@ -51,7 +51,7 @@
                 }
               },
               "queryRef": "CountNonNull(con_fallasEquipos.serial)",
-              "nativeQueryRef": "Equipos",
+              "nativeQueryRef": "Recuento de serial1",
               "displayName": "Equipos"
             }
           ]
@@ -96,6 +96,13 @@
                   }
                 }
               }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -107,6 +114,39 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Both'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "innerRadiusRatio": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -121,7 +161,40 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos con falla por marca'"
+                  "Value": "'Fallos por Marca'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showValuesInBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

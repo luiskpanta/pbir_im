@@ -21,7 +21,7 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'MTTR Sin Partes (dias)' =
+	measure 'MTTR Sin Partes (hrs)' =
 			
 			AVERAGEX(
 			    FILTER(
