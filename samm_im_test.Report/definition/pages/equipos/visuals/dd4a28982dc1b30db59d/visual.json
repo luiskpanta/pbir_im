@@ -93,7 +93,8 @@
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
               "nativeQueryRef": "MTTR (hrs)",
-              "displayName": "MTTR (hrs)"
+              "displayName": "MTTR (hrs)",
+              "format": "0.0"
             }
           ]
         }
