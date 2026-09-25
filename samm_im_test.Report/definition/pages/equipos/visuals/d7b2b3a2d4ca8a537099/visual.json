@@ -23,11 +23,11 @@
                       "Entity": "Dim_Fecha"
                     }
                   },
-                  "Property": "Año-Mes"
+                  "Property": "Mes-Año"
                 }
               },
-              "queryRef": "Dim_Fecha.Año-Mes",
-              "nativeQueryRef": "Año-Mes",
+              "queryRef": "Dim_Fecha.Mes-Año",
+              "nativeQueryRef": "Mes-Año",
               "active": true
             }
           ]

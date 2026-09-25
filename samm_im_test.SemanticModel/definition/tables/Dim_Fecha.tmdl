@@ -51,6 +51,14 @@ table Dim_Fecha
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Mes-Año' = FORMAT('Dim_Fecha'[Date], "MMM-yy")
+		dataType: string
+		lineageTag: 33d3e7c5-aa4b-405a-a987-d1e3e1a2365a
+		summarizeBy: none
+		sortByColumn: 'Año-Mes'
+
+		annotation SummarizationSetBy = Automatic
+
 	column Recientes =
 			SWITCH(
 				TRUE,
