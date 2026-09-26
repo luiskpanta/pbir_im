@@ -7602,7 +7602,7 @@ cultureInfo es-CO
 			          }
 			        },
 			        {
-			          "MTBF (Días)": {
+			          "MTBF (> 90 Días)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7634,7 +7634,7 @@ cultureInfo es-CO
 			          }
 			        },
 			        {
-			          "MTTR Sin P (hrs)": {
+			          "MTTR SP (< 8 hrs)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7645,17 +7645,17 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo.ETTR_dias": {
+			    "con_fallas_equipo.ETTR_días": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "con_fallasEquipos",
-			          "ConceptualProperty": "ETTR (horas)"
+			          "ConceptualProperty": "ETTR (días)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ETTR (dias)": {
+			          "ETTR (días)": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7666,7 +7666,7 @@ cultureInfo es-CO
 			          }
 			        },
 			        {
-			          "ETTR (Días)": {
+			          "ETTR (< 5 Días)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7709,6 +7709,16 @@ cultureInfo es-CO
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "UPTIME (> 95%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -8835,6 +8845,389 @@ cultureInfo es-CO
 			        {
 			          "dias fuera de servicio": {
 			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_fecha.mesaño": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Fecha",
+			          "ConceptualProperty": "Mes-Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes-año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me-año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes año": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "me año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.dias_fuera_servicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "DiasFueraServicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias fuera servicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiasFueraServicio": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo.falla_post_instalacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "con_fallasEquipos",
+			          "ConceptualProperty": "fallaPostInstalacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "falla post instalacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fallaPostInstalacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_post_instalacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PostInstalacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "dim post instalacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_PostInstalacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_post_instalacion.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_PostInstalacion",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "PI_opcione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PI_Opciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PI opcione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_PI_Opciones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "PI_opcione.opcion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PI_Opciones",
+			          "ConceptualProperty": "Opcion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "opcion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "PI_opcione.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_PI_Opciones",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
 			          }
 			        }
 			      ]
@@ -12504,6 +12897,24 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
+			    "PI_opcione_has_dim_post_instalacion": {
+			      "Binding": {
+			        "ConceptualEntity": "_PI_Opciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PI_opcione": {
+			          "Target": {
+			            "Entity": "PI_opcione"
+			          }
+			        },
+			        "dim_post_instalacion": {
+			          "Target": {
+			            "Entity": "dim_post_instalacion"
+			          }
+			        }
+			      }
+			    },
 			    "con_efd_has_dim_marca": {
 			      "Binding": {
 			        "ConceptualEntity": "con_efds"
@@ -12641,6 +13052,24 @@ cultureInfo es-CO
 			          "ID": "dim_fechas_have_con_equipos_contratos"
 			        }
 			      ]
+			    },
+			    "con_fallas_equipo_has_dim_post_instalacion": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "dim_post_instalacion": {
+			          "Target": {
+			            "Entity": "dim_post_instalacion"
+			          }
+			        }
+			      }
 			    },
 			    "con_fallas_equipo_has_dim_fecha": {
 			      "Binding": {
@@ -13461,6 +13890,138 @@ cultureInfo es-CO
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "con_primer_visitas_have_con_indice_de_ocupacions"
+			        }
+			      ]
+			    },
+			    "PI_opcione_has_opcion": {
+			      "Binding": {
+			        "ConceptualEntity": "_PI_Opciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "PI_opcione": {
+			          "Target": {
+			            "Entity": "PI_opcione"
+			          }
+			        },
+			        "PI_opcione.opcion": {
+			          "Target": {
+			            "Entity": "PI_opcione.opcion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "PI_opcione"
+			            },
+			            "Object": {
+			              "Role": "PI_opcione.opcion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "PI_opciones_have_opcions"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_falla_post_instalacion": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.falla_post_instalacion": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.falla_post_instalacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.falla_post_instalacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_falla_post_instalacions"
+			        }
+			      ]
+			    },
+			    "con_fallas_equipo_has_dias_fuera_servicio": {
+			      "Binding": {
+			        "ConceptualEntity": "con_fallasEquipos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "con_fallas_equipo": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo"
+			          }
+			        },
+			        "con_fallas_equipo.dias_fuera_servicio": {
+			          "Target": {
+			            "Entity": "con_fallas_equipo.dias_fuera_servicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "con_fallas_equipo"
+			            },
+			            "Object": {
+			              "Role": "con_fallas_equipo.dias_fuera_servicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "con_fallas_equipos_have_dias_fuera_servicios"
+			        }
+			      ]
+			    },
+			    "dim_fecha_has_mesaño": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_fecha": {
+			          "Target": {
+			            "Entity": "dim_fecha"
+			          }
+			        },
+			        "dim_fecha.mesaño": {
+			          "Target": {
+			            "Entity": "dim_fecha.mesaño"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_fecha"
+			            },
+			            "Object": {
+			              "Role": "dim_fecha.mesaño"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_fechas_have_mesaños"
 			        }
 			      ]
 			    },
@@ -14533,7 +15094,7 @@ cultureInfo es-CO
 			        }
 			      ]
 			    },
-			    "con_fallas_equipo_has_ETTR_dias": {
+			    "con_fallas_equipo_has_ETTR_días": {
 			      "Binding": {
 			        "ConceptualEntity": "con_fallasEquipos"
 			      },
@@ -14544,9 +15105,9 @@ cultureInfo es-CO
 			            "Entity": "con_fallas_equipo"
 			          }
 			        },
-			        "con_fallas_equipo.ETTR_dias": {
+			        "con_fallas_equipo.ETTR_días": {
 			          "Target": {
-			            "Entity": "con_fallas_equipo.ETTR_dias"
+			            "Entity": "con_fallas_equipo.ETTR_días"
 			          }
 			        }
 			      },
@@ -14557,12 +15118,12 @@ cultureInfo es-CO
 			              "Role": "con_fallas_equipo"
 			            },
 			            "Object": {
-			              "Role": "con_fallas_equipo.ETTR_dias"
+			              "Role": "con_fallas_equipo.ETTR_días"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "con_fallas_equipos_have_ETTR_dias"
+			          "ID": "con_fallas_equipos_have_ETTR_días"
 			        }
 			      ]
 			    },

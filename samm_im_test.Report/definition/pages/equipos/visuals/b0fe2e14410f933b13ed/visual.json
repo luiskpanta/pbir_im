@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.MTBF (dias)",
-              "nativeQueryRef": "MTBF (Días)",
-              "displayName": "MTBF (Días)",
+              "nativeQueryRef": "MTBF (> 90 Días)",
+              "displayName": "MTBF (> 90 Días)",
               "format": "0.0"
             },
             {
@@ -39,12 +39,12 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "ETTR (horas)"
+                  "Property": "ETTR (días)"
                 }
               },
               "queryRef": "con_fallasEquipos.ETTR (dias)",
-              "nativeQueryRef": "ETTR (Días)",
-              "displayName": "ETTR (Días)",
+              "nativeQueryRef": "ETTR (< 5 Días)",
+              "displayName": "ETTR (< 5 Días)",
               "format": "0.0"
             },
             {
@@ -59,8 +59,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.MTTR Sin Partes (dias)",
-              "nativeQueryRef": "MTTR Sin P (hrs)",
-              "displayName": "MTTR Sin P (hrs)",
+              "nativeQueryRef": "MTTR SP (< 8 hrs)",
+              "displayName": "MTTR SP (< 8 hrs)",
               "format": "0.0"
             },
             {
@@ -75,7 +75,8 @@
                 }
               },
               "queryRef": "con_fallasEquipos.UPTIME %",
-              "nativeQueryRef": "UPTIME %"
+              "nativeQueryRef": "UPTIME (> 95%)",
+              "displayName": "UPTIME (> 95%)"
             }
           ]
         }
@@ -462,12 +463,12 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "ETTR (horas)"
+                                  "Property": "ETTR (días)"
                                 }
                               },
                               "Right": {
                                 "Literal": {
-                                  "Value": "2D"
+                                  "Value": "5D"
                                 }
                               }
                             }
@@ -489,34 +490,7 @@
                                       "Entity": "con_fallasEquipos"
                                     }
                                   },
-                                  "Property": "ETTR (horas)"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "5D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#E8871E'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "ETTR (horas)"
+                                  "Property": "ETTR (días)"
                                 }
                               },
                               "Right": {
@@ -598,6 +572,52 @@
             "metadata": "con_fallasEquipos.MTBF (dias)"
           }
         }
+      ],
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTBF (dias)"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
+        }
+      ],
+      "glowCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -648,7 +668,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tiempos'"
+                  "Value": "'Indicadores'"
                 }
               }
             },
@@ -686,6 +706,19 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -715,7 +748,7 @@
                 "Entity": "con_fallasEquipos"
               }
             },
-            "Property": "ETTR (horas)"
+            "Property": "ETTR (días)"
           }
         },
         "type": "Advanced"

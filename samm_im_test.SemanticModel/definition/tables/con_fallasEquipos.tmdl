@@ -35,7 +35,7 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'ETTR (horas)' =
+	measure 'ETTR (días)' =
 			
 			AVERAGEX(
 			    FILTER(
@@ -43,7 +43,7 @@ table con_fallasEquipos
 			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
 			        NOT ISBLANK('con_fallasEquipos'[Fechafalla])
 			    ),
-			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], HOUR)
+			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], DAY)
 			)
 		formatString: 0.0" días"
 		lineageTag: 4e288335-5aee-4f5c-9761-9ec4062dfc07

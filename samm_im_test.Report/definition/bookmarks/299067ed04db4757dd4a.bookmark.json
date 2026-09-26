@@ -659,7 +659,7 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "ETTR (horas)"
+                      "Property": "ETTR (días)"
                     }
                   },
                   "howCreated": 0
@@ -904,7 +904,7 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "ETTR (horas)"
+                      "Property": "ETTR (días)"
                     }
                   },
                   "howCreated": 0
@@ -1189,7 +1189,7 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "ETTR (horas)"
+                      "Property": "ETTR (días)"
                     }
                   },
                   "howCreated": 0
