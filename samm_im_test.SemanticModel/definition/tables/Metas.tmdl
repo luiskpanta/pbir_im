@@ -9,6 +9,17 @@ table Metas
 	measure 'Color Fondo Efectividad Remota' = IF ( [%EfectREM] < [Meta Efectividad Remota], "#FF0000", "#00B050" )
 		lineageTag: 1886B266-7169-490E-B37C-FB0A562EF3F3
 
+	measure 'Meta MTTR SP' = AVERAGE(Metas[MTTR SP])
+		lineageTag: c45deea1-4d80-4266-b63d-29074b0808ce
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Color MTTR SP' = IF ( [MTTR Sin Partes (hrs)] <= [Meta MTTR SP], "#2E8B57", "#D64550" )
+		lineageTag: b658fb04-9874-43e8-810a-a534b6df2225
+
+	measure 'Etiqueta MTTR SP' = "MTTR SP (< " & FORMAT ( [Meta MTTR SP], "0.#" ) & " hrs)"
+		lineageTag: 18cbab86-70ec-4cef-8973-17e0ec406ac5
+
 	column MES
 		dataType: string
 		lineageTag: 3111C4BC-3408-4852-9319-43DB8B1A66A4
@@ -35,6 +46,16 @@ table Metas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'MTTR SP'
+		dataType: double
+		lineageTag: a95e4de8-ee56-44ed-8c27-9c6e24acd9fc
+		summarizeBy: none
+		sourceColumn: MTTR SP
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Metas = m
 		mode: import
 		source =
@@ -45,8 +66,9 @@ table Metas
 				    ConEncabezados = if EsGenerico then Table.PromoteHeaders(Metas_Table, [PromoteAllScalars=true]) else Metas_Table,
 				    NombresLimpios = Table.TransformColumnNames(ConEncabezados, Text.Trim),
 				    Efectividad = Table.TransformColumns(NombresLimpios, {{"Efectividad Remota", each Number.FromText(Text.Replace(Text.Trim(Text.From(_)), "%", "")) / 100, type number}}),
-				    Tipos = Table.TransformColumnTypes(Efectividad, {{"MES", type text}, {"FAMILIA", type text}}),
-				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota"}),
+				    ConMTTR = if Table.HasColumns(Efectividad, "MTTR SP") then Table.TransformColumns(Efectividad, {{"MTTR SP", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(Efectividad, "MTTR SP", each null, type number),
+				    Tipos = Table.TransformColumnTypes(ConMTTR, {{"MES", type text}, {"FAMILIA", type text}}),
+				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota", "MTTR SP"}),
 				    #"Columna multiplicada" = Table.TransformColumns(Seleccion, {{"Efectividad Remota", each _ * 100, type number}})
 				in
 				    #"Columna multiplicada"

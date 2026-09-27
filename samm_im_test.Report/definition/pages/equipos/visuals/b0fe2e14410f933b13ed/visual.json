@@ -166,6 +166,25 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metas"
+                    }
+                  },
+                  "Property": "Etiqueta MTTR SP"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_fallasEquipos.MTTR Sin Partes (dias)"
+          }
         }
       ],
       "shapeCustomRectangle": [
@@ -523,63 +542,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 4,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "MTTR Sin Partes (hrs)"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "8D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#2E8B57'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
-                                    }
-                                  },
-                                  "Property": "MTTR Sin Partes (hrs)"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "999999D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#D64550'"
-                            }
-                          }
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Metas"
                         }
-                      ]
+                      },
+                      "Property": "Color MTTR SP"
                     }
                   }
                 }
