@@ -224,5 +224,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "40139c32ccb506d6004c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "serial"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5e439af4265405667ded",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_fallasEquipos"
+                  }
+                },
+                "Property": "numDoc"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

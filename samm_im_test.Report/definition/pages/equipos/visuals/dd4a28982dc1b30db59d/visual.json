@@ -43,7 +43,7 @@
               },
               "queryRef": "con_fallasEquipos.equipo",
               "nativeQueryRef": "equipo",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -166,6 +166,16 @@
                   "isToggled": true
                 }
               ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'VIVA 1A IPS S.A.'"
+                  }
+                }
+              ],
+              "isToggled": true
             }
           ]
         }

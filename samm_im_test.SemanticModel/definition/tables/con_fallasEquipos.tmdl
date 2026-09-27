@@ -50,13 +50,16 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'UPTIME %' = ```
+	measure 'UPTIME %' =
 			
-						AVERAGEX(
-						    'con_fallasEquipos',
-						    DIVIDE(360 - ('con_fallasEquipos'[Dias Fuera de Servicio] ), 360)
-						)
-			```
+			VAR TotalDiasFuera =
+			    SUM('con_fallasEquipos'[DiasFueraServicio])
+			VAR TotalEquipos =
+			    DISTINCTCOUNT('con_fallasEquipos'[Serial])
+			VAR TotalDiasPosibles =
+			    TotalEquipos * 360
+			RETURN
+			    DIVIDE(TotalDiasPosibles - TotalDiasFuera, TotalDiasPosibles)
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 2db00436-1756-448f-b881-b219410ddb01
 

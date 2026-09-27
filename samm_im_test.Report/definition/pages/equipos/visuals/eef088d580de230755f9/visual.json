@@ -214,79 +214,45 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 3,
+                            "And": {
                               "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
+                                "Comparison": {
+                                  "ComparisonKind": 2,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "con_fallasEquipos"
+                                        }
+                                      },
+                                      "Property": "UPTIME %"
                                     }
                                   },
-                                  "Property": "UPTIME %"
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0D"
+                                    }
+                                  }
                                 }
                               },
                               "Right": {
-                                "RangePercent": {
-                                  "Min": {
-                                    "ScopedEval": {
+                                "Comparison": {
+                                  "ComparisonKind": 3,
+                                  "Left": {
+                                    "Measure": {
                                       "Expression": {
-                                        "Aggregation": {
-                                          "Expression": {
-                                            "ScopedEval": {
-                                              "Expression": {
-                                                "Measure": {
-                                                  "Expression": {
-                                                    "SourceRef": {
-                                                      "Entity": "con_fallasEquipos"
-                                                    }
-                                                  },
-                                                  "Property": "UPTIME %"
-                                                }
-                                              },
-                                              "Scope": [
-                                                {
-                                                  "AllRolesRef": {}
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          "Function": 3
+                                        "SourceRef": {
+                                          "Entity": "con_fallasEquipos"
                                         }
                                       },
-                                      "Scope": []
+                                      "Property": "UPTIME %"
                                     }
                                   },
-                                  "Max": {
-                                    "ScopedEval": {
-                                      "Expression": {
-                                        "Aggregation": {
-                                          "Expression": {
-                                            "ScopedEval": {
-                                              "Expression": {
-                                                "Measure": {
-                                                  "Expression": {
-                                                    "SourceRef": {
-                                                      "Entity": "con_fallasEquipos"
-                                                    }
-                                                  },
-                                                  "Property": "UPTIME %"
-                                                }
-                                              },
-                                              "Scope": [
-                                                {
-                                                  "AllRolesRef": {}
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          "Function": 4
-                                        }
-                                      },
-                                      "Scope": []
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0.95D"
                                     }
-                                  },
-                                  "Percent": 0.95
+                                  }
                                 }
                               }
                             }
@@ -299,79 +265,45 @@
                         },
                         {
                           "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 2,
+                            "And": {
                               "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "con_fallasEquipos"
+                                "Comparison": {
+                                  "ComparisonKind": 2,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "con_fallasEquipos"
+                                        }
+                                      },
+                                      "Property": "UPTIME %"
                                     }
                                   },
-                                  "Property": "UPTIME %"
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0.95D"
+                                    }
+                                  }
                                 }
                               },
                               "Right": {
-                                "RangePercent": {
-                                  "Min": {
-                                    "ScopedEval": {
+                                "Comparison": {
+                                  "ComparisonKind": 4,
+                                  "Left": {
+                                    "Measure": {
                                       "Expression": {
-                                        "Aggregation": {
-                                          "Expression": {
-                                            "ScopedEval": {
-                                              "Expression": {
-                                                "Measure": {
-                                                  "Expression": {
-                                                    "SourceRef": {
-                                                      "Entity": "con_fallasEquipos"
-                                                    }
-                                                  },
-                                                  "Property": "UPTIME %"
-                                                }
-                                              },
-                                              "Scope": [
-                                                {
-                                                  "AllRolesRef": {}
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          "Function": 3
+                                        "SourceRef": {
+                                          "Entity": "con_fallasEquipos"
                                         }
                                       },
-                                      "Scope": []
+                                      "Property": "UPTIME %"
                                     }
                                   },
-                                  "Max": {
-                                    "ScopedEval": {
-                                      "Expression": {
-                                        "Aggregation": {
-                                          "Expression": {
-                                            "ScopedEval": {
-                                              "Expression": {
-                                                "Measure": {
-                                                  "Expression": {
-                                                    "SourceRef": {
-                                                      "Entity": "con_fallasEquipos"
-                                                    }
-                                                  },
-                                                  "Property": "UPTIME %"
-                                                }
-                                              },
-                                              "Scope": [
-                                                {
-                                                  "AllRolesRef": {}
-                                                }
-                                              ]
-                                            }
-                                          },
-                                          "Function": 4
-                                        }
-                                      },
-                                      "Scope": []
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "100D"
                                     }
-                                  },
-                                  "Percent": 0.95
+                                  }
                                 }
                               }
                             }
@@ -642,5 +574,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e463e11746901b62ded9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "67bfc563691415071601",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_fallasEquipos"
+              }
+            },
+            "Property": "UPTIME %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
