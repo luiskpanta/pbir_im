@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c6ada0f6e2a9b2dd63c3",
   "position": {
     "x": 0,
@@ -127,26 +127,6 @@
               "nativeQueryRef": "% Remoto",
               "displayName": "% Remoto",
               "format": "0.00 %;-0.00 %;0.00 %"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_clasificacionOTs"
-                        }
-                      },
-                      "Property": "Meta%Remoto"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_clasificacionOTs.Meta%Remoto)",
-              "nativeQueryRef": "Meta Remoto 35%",
-              "displayName": "Meta Remoto 35%"
             }
           ]
         }
@@ -400,48 +380,6 @@
                 }
               }
             ]
-          }
-        },
-        {
-          "properties": {
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Above'"
-                }
-              }
-            },
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_clasificacionOTs.Meta%Remoto)"
           }
         }
       ],
@@ -881,32 +819,6 @@
           "selector": {
             "metadata": "con_clasificacionOTs.%EsRemoto"
           }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "69D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_clasificacionOTs.Meta%Remoto)"
-          }
         }
       ],
       "layout": [
@@ -1223,55 +1135,6 @@
         },
         {
           "properties": {
-            "showMarker": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            },
-            "lineChartType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'linear'"
-                }
-              }
-            },
-            "strokeTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "23D"
-                }
-              }
-            },
-            "lineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'dashed'"
-                }
-              }
-            },
-            "areaShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_clasificacionOTs.Meta%Remoto)"
-          }
-        },
-        {
-          "properties": {
             "areaShow": {
               "expr": {
                 "Literal": {
@@ -1332,50 +1195,6 @@
           },
           "selector": {
             "metadata": "con_clasificacionOTs.%EsRemoto"
-          }
-        },
-        {
-          "properties": {
-            "seriesColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#6d5a00'"
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(con_clasificacionOTs.Meta%Remoto)"
           }
         }
       ]

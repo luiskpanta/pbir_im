@@ -4,10 +4,10 @@
   "position": {
     "x": 13.80053908355795,
     "y": 176.81940700808624,
-    "z": 10000,
+    "z": 11000,
     "height": 485.60646900269541,
     "width": 222.53369272237197,
-    "tabOrder": 11000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -224,42 +224,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "40139c32ccb506d6004c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "serial"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "5e439af4265405667ded",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "con_fallasEquipos"
-                  }
-                },
-                "Property": "numDoc"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

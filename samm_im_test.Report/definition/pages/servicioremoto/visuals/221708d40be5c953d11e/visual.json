@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "221708d40be5c953d11e",
   "position": {
     "x": 1.4935822637106184,
@@ -13,6 +13,24 @@
     "visualType": "gauge",
     "query": {
       "queryState": {
+        "TargetValue": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metas"
+                    }
+                  },
+                  "Property": "Meta Efectividad Remota"
+                }
+              },
+              "queryRef": "Metas.Meta Efectividad Remota",
+              "nativeQueryRef": "Meta Efectividad Remota"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -328,8 +346,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#BFAD61'"
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Metas"
+                        }
+                      },
+                      "Property": "Color Fondo Efectividad Remota"
                     }
                   }
                 }
@@ -340,8 +363,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                      "ColorId": 8,
+                      "Percent": 0
                     }
                   }
                 }
@@ -915,7 +938,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -1083,22 +1106,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Metas"
-                        }
-                      },
-                      "Property": "Color Fondo Efectividad Remota"
-                    }
-                  }
                 }
               }
             }

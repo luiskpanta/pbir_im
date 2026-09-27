@@ -4,10 +4,10 @@
   "position": {
     "x": 661.60771704180058,
     "y": 76.141479099678449,
-    "z": 14000,
+    "z": 15000,
     "height": 96.720257234726688,
     "width": 608.1028938906752,
-    "tabOrder": 15000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1003,65 +1003,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a3bc186ed7d25584b999",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTBF (dias)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "467e1594e07a86ac5e6a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "ETTR (días)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9502bc774dac6dc74ec2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "MTTR Sin Partes (hrs)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "468677fc5745145d9626",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "UPTIME %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

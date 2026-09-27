@@ -4,10 +4,10 @@
   "position": {
     "x": 392.45283018867923,
     "y": 32.776280323450131,
-    "z": 8500,
+    "z": 9000,
     "height": 37.951482479784367,
     "width": 257.89757412398922,
-    "tabOrder": 8500
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -314,23 +314,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "917c0f9533340aa2cb87",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_PI_Opciones"
-              }
-            },
-            "Property": "Opcion"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

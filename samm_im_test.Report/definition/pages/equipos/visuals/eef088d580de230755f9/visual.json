@@ -4,10 +4,10 @@
   "position": {
     "x": 239.78436657681939,
     "y": 414.01617250673854,
-    "z": 13000,
+    "z": 14000,
     "height": 248.40970350404311,
     "width": 421.77897574123989,
-    "tabOrder": 14000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -574,37 +574,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e463e11746901b62ded9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "familia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "67bfc563691415071601",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_fallasEquipos"
-              }
-            },
-            "Property": "UPTIME %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

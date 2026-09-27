@@ -27,9 +27,9 @@ table Metas
 
 	column 'Efectividad Remota'
 		dataType: double
-		lineageTag: B032E7C5-EFC8-4ECF-8CE8-340B723F4C08
-		summarizeBy: none
-		sourceColumn: [Efectividad Remota]
+		lineageTag: ed5584ea-a9a4-45c1-9e98-65e03c7a8f4f
+		summarizeBy: sum
+		sourceColumn: Efectividad Remota
 
 		annotation SummarizationSetBy = Automatic
 
@@ -40,14 +40,18 @@ table Metas
 		source =
 				let
 				    Origen = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1GE1gPbQNrcap7dwGmaI8tRY2R9cVzCKPsoi03CCd6Bk/edit?gid=1247000452#gid=1247000452"),
-				    Hoja = Origen{[Name="Metas"]}[Data],
-				    EsGenerico = List.AnyTrue(List.Transform(Table.ColumnNames(Hoja), each Text.StartsWith(_, "Column"))),
-				    ConEncabezados = if EsGenerico then Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]) else Hoja,
+				    Metas_Table = Origen{[name="Metas",ItemKind="Table"]}[Data],
+				    EsGenerico = List.AnyTrue(List.Transform(Table.ColumnNames(Metas_Table), each Text.StartsWith(_, "Column"))),
+				    ConEncabezados = if EsGenerico then Table.PromoteHeaders(Metas_Table, [PromoteAllScalars=true]) else Metas_Table,
 				    NombresLimpios = Table.TransformColumnNames(ConEncabezados, Text.Trim),
 				    Efectividad = Table.TransformColumns(NombresLimpios, {{"Efectividad Remota", each Number.FromText(Text.Replace(Text.Trim(Text.From(_)), "%", "")) / 100, type number}}),
 				    Tipos = Table.TransformColumnTypes(Efectividad, {{"MES", type text}, {"FAMILIA", type text}}),
-				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota"})
+				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota"}),
+				    #"Columna multiplicada" = Table.TransformColumns(Seleccion, {{"Efectividad Remota", each _ * 100, type number}})
 				in
-				    Seleccion
+				    #"Columna multiplicada"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+
