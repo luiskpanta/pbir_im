@@ -1,0 +1,53 @@
+table Metas
+	lineageTag: 04944223-AD3E-49AC-ADDB-E92BF2B47A56
+
+	measure 'Meta Efectividad Remota' = AVERAGE(Metas[Efectividad Remota])
+		lineageTag: 8AB9852C-3518-433F-B646-7C3B35756D45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Color Fondo Efectividad Remota' = IF ( [%EfectREM] < [Meta Efectividad Remota], "#FF0000", "#00B050" )
+		lineageTag: 1886B266-7169-490E-B37C-FB0A562EF3F3
+
+	column MES
+		dataType: string
+		lineageTag: 3111C4BC-3408-4852-9319-43DB8B1A66A4
+		summarizeBy: none
+		sourceColumn: MES
+
+		annotation SummarizationSetBy = Automatic
+
+	column FAMILIA
+		dataType: string
+		lineageTag: BA326EB9-2B58-415F-9CE6-BF0DA731932D
+		summarizeBy: none
+		sourceColumn: FAMILIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Efectividad Remota'
+		dataType: double
+		lineageTag: B032E7C5-EFC8-4ECF-8CE8-340B723F4C08
+		summarizeBy: none
+		sourceColumn: [Efectividad Remota]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Metas = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/1GE1gPbQNrcap7dwGmaI8tRY2R9cVzCKPsoi03CCd6Bk/edit?gid=1247000452#gid=1247000452"),
+				    Hoja = Origen{[Name="Metas"]}[Data],
+				    EsGenerico = List.AnyTrue(List.Transform(Table.ColumnNames(Hoja), each Text.StartsWith(_, "Column"))),
+				    ConEncabezados = if EsGenerico then Table.PromoteHeaders(Hoja, [PromoteAllScalars=true]) else Hoja,
+				    NombresLimpios = Table.TransformColumnNames(ConEncabezados, Text.Trim),
+				    Efectividad = Table.TransformColumns(NombresLimpios, {{"Efectividad Remota", each Number.FromText(Text.Replace(Text.Trim(Text.From(_)), "%", "")) / 100, type number}}),
+				    Tipos = Table.TransformColumnTypes(Efectividad, {{"MES", type text}, {"FAMILIA", type text}}),
+				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota"})
+				in
+				    Seleccion
+
+	annotation PBI_ResultType = Table
