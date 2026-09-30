@@ -28,7 +28,7 @@ table con_fallasEquipos
 			        'con_fallasEquipos',
 			        'con_fallasEquipos'[tieneRequisicion] = 0
 			    ),
-			    'con_fallasEquipos'[HorasParada]
+			    'con_fallasEquipos'[HorasIngeniero]
 			)
 		formatString: 0.0" días"
 		lineageTag: c040e1ae-eb39-4a29-a5fe-dcde4c8599de
@@ -38,12 +38,16 @@ table con_fallasEquipos
 	measure 'ETTR (días)' =
 			
 			AVERAGEX(
-			    FILTER(
-			        'con_fallasEquipos',
-			        NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
-			        NOT ISBLANK('con_fallasEquipos'[Fechafalla])
+			    SUMMARIZE(
+			        FILTER(
+			            'con_fallasEquipos',
+			            NOT ISBLANK('con_fallasEquipos'[FechaReparacion]) &&
+			            NOT ISBLANK('con_fallasEquipos'[Fechafalla])
+			        ),
+			        'con_fallasEquipos'[numDoc],
+			        "DiasFueraServicioPorDoc", MAX('con_fallasEquipos'[DiasFueraServicio])
 			    ),
-			    DATEDIFF('con_fallasEquipos'[Fechafalla], 'con_fallasEquipos'[FechaReparacion], DAY)
+			    [DiasFueraServicioPorDoc]
 			)
 		formatString: 0.0" días"
 		lineageTag: 4e288335-5aee-4f5c-9761-9ec4062dfc07
@@ -253,7 +257,7 @@ table con_fallasEquipos
 		annotation SummarizationSetBy = Automatic
 
 	column DiasFueraServicio
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: abbaa8fa-92ee-4fb2-9865-71f2d59646b9
 		summarizeBy: sum
@@ -269,6 +273,16 @@ table con_fallasEquipos
 		sourceColumn: fallaPostInstalacion
 
 		annotation SummarizationSetBy = Automatic
+
+	column horasIngeniero
+		dataType: double
+		lineageTag: 1b0b6643-8986-44e1-888e-760a73d9a8c0
+		summarizeBy: sum
+		sourceColumn: horasIngeniero
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition con_fallasEquipos = m
 		mode: import
