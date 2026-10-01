@@ -99,14 +99,14 @@
                           "Entity": "con_clasificacionOTs"
                         }
                       },
-                      "Property": "id"
+                      "Property": "num_SOL"
                     }
                   },
-                  "Function": 5
+                  "Function": 2
                 }
               },
-              "queryRef": "Sum(con_clasificacionOTs.id)",
-              "nativeQueryRef": "Recuento de id"
+              "queryRef": "CountNonNull(con_clasificacionOTs.num_SOL)",
+              "nativeQueryRef": "Recuento de num_SOL1"
             }
           ]
         },
@@ -1392,6 +1392,103 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "3c60909ce3e044086e31",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6fda9ecd609d1008db30",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Dim_Fecha"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7b151ef0700964e6c554",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "tipoServicio"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6fd901c6aa50693e69dd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_clasificacionOTs"
+              }
+            },
+            "Property": "%EsRemoto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83fdc205326425b2e381",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "con_clasificacionOTs"
+                  }
+                },
+                "Property": "num_SOL"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

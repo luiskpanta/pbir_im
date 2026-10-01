@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1673.5857474467796,
+        "x": 997.08990522989563,
         "y": 0
       },
       "nodes": [
@@ -212,6 +212,58 @@
           "nodeLineageTag": "1e1c1715-f217-4720-8a44-0f86bab1f3c8",
           "size": {
             "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3896.8530718994575,
+            "y": 446.47542454634788
+          },
+          "nodeIndex": "_PI_Opciones",
+          "nodeLineageTag": "d1a61f1d-a67a-4d92-bf88-31ef06d0b134",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4130.8530718994571,
+            "y": 460.47542454634788
+          },
+          "nodeIndex": "_PreselectedSlicer",
+          "nodeLineageTag": "1f9b0820-14da-4a54-bdda-97117cc55609",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3612.8530718994575,
+            "y": 410.47542454634788
+          },
+          "nodeIndex": "Dim_PostInstalacion",
+          "nodeLineageTag": "74470dd1-75be-4d95-b1ac-4a6bb75e1116",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4414.8530718994571,
+            "y": 412.47542454634788
+          },
+          "nodeIndex": "Metas",
+          "nodeLineageTag": "04944223-AD3E-49AC-ADDB-E92BF2B47A56",
+          "size": {
+            "height": 296,
             "width": 234
           },
           "zIndex": 0
