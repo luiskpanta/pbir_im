@@ -1437,27 +1437,6 @@
   },
   "parentGroupName": "e3b9ca7fe03d5a2b9b26",
   "filterConfig": {
-    "filters": [
-      {
-        "name": "647a63a8ae631e70811c",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "met_contratos"
-                  }
-                },
-                "Property": "Meta"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      }
-    ]
+    "filters": []
   }
 }

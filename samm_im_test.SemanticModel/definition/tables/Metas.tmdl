@@ -24,6 +24,26 @@ table Metas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Meta CR' = AVERAGE(Metas[CR Capture Rate])
+		lineageTag: 24F903B8-8DA2-46AF-8B37-88E1B1DCFA7A
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta WC' = AVERAGE(Metas[Warranty Conversion])
+		lineageTag: 8E7B951E-4C6A-44BB-938C-5DF777C2ACB3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta WB' = AVERAGE(Metas[Win Back])
+		lineageTag: 05D692ED-5F54-477D-A165-43788EE7E586
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta Cobertura IB' = AVERAGE(Metas[Cobertura IB])
+		lineageTag: F8E72392-940C-42C2-BBAC-97AD7493B787
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	measure 'Color MTTR SP' = IF ( [MTTR Sin Partes (hrs)] <= [Meta MTTR SP], "#2E8B57", "#D64550" )
 		lineageTag: b658fb04-9874-43e8-810a-a534b6df2225
 
@@ -43,6 +63,31 @@ table Metas
 		lineageTag: BA326EB9-2B58-415F-9CE6-BF0DA731932D
 		summarizeBy: none
 		sourceColumn: FAMILIA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 7EF2B26F-06F4-48EE-9AC0-785A309F0C8D
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semestre
+		dataType: string
+		lineageTag: 94A58BA8-5D82-446C-ABD4-D18D9DD81BCB
+		summarizeBy: none
+		sourceColumn: Semestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Clave
+		dataType: string
+		lineageTag: 85D987E7-0999-41CC-A00B-060E084C17E0
+		summarizeBy: none
+		sourceColumn: Clave
 
 		annotation SummarizationSetBy = Automatic
 
@@ -86,6 +131,46 @@ table Metas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'CR Capture Rate'
+		dataType: double
+		lineageTag: 72AD5804-DDA7-4C08-A1CE-26B5D5D2B622
+		summarizeBy: none
+		sourceColumn: CR Capture Rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Warranty Conversion'
+		dataType: double
+		lineageTag: 2E3EBA63-48FF-4FBD-82FA-3675119CD85F
+		summarizeBy: none
+		sourceColumn: Warranty Conversion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Win Back'
+		dataType: double
+		lineageTag: 3E757CD4-A8E8-4FDE-81A1-CE0FE5ABD1A8
+		summarizeBy: none
+		sourceColumn: Win Back
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cobertura IB'
+		dataType: double
+		lineageTag: 8196B9C2-F7E1-470D-B1C2-91D44C1DB76A
+		summarizeBy: none
+		sourceColumn: Cobertura IB
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Metas = m
 		mode: import
 		source =
@@ -95,16 +180,25 @@ table Metas
 				    EsGenerico = List.AnyTrue(List.Transform(Table.ColumnNames(Metas_Table), each Text.StartsWith(_, "Column"))),
 				    ConEncabezados = if EsGenerico then Table.PromoteHeaders(Metas_Table, [PromoteAllScalars=true]) else Metas_Table,
 				    NombresLimpios = Table.TransformColumnNames(ConEncabezados, Text.Trim),
-				    Efectividad = Table.TransformColumns(NombresLimpios, {{"Efectividad Remota", each Number.FromText(Text.Replace(Text.Trim(Text.From(_)), "%", "")) / 100, type number}}),
-				    ConMTTR = if Table.HasColumns(Efectividad, "MTTR SP") then Table.TransformColumns(Efectividad, {{"MTTR SP", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(Efectividad, "MTTR SP", each null, type number),
-				    ConRT = if Table.HasColumns(ConMTTR, "RT Remoto") then Table.TransformColumns(ConMTTR, {{"RT Remoto", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(ConMTTR, "RT Remoto", each null, type number),
-				    ConSitio = if Table.HasColumns(ConRT, "RT Sitio") then Table.TransformColumns(ConRT, {{"RT Sitio", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(ConRT, "RT Sitio", each null, type number),
-				    Tipos = Table.TransformColumnTypes(ConSitio, {{"MES", type text}, {"FAMILIA", type text}}),
-				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota", "MTTR SP", "RT Remoto", "RT Sitio"})
+				    Pct = (v) => let t = Text.Trim(Text.From(v)) in if Text.Contains(t, "%") then (try Number.FromText(Text.Replace(t, "%", "")) otherwise null) / 100 else (try Number.FromText(t) otherwise null),
+				    Num = (v) => try Number.FromText(Text.Trim(Text.From(v))) otherwise null,
+				    Conv = (tbl, col, fn) => if Table.HasColumns(tbl, col) then Table.TransformColumns(tbl, {{col, fn, type number}}) else Table.AddColumn(tbl, col, each null, type number),
+				    C1 = Conv(NombresLimpios, "Efectividad Remota", Pct),
+				    C2 = Conv(C1, "MTTR SP", Num),
+				    C3 = Conv(C2, "RT Remoto", Num),
+				    C4 = Conv(C3, "RT Sitio", Num),
+				    C5 = Conv(C4, "CR Capture Rate", Pct),
+				    C6 = Conv(C5, "Warranty Conversion", Pct),
+				    C7 = Conv(C6, "Win Back", Pct),
+				    C8 = Conv(C7, "Cobertura IB", Pct),
+				    #"Año" = Table.AddColumn(C8, "Año", each try Number.FromText(Text.Start(Text.Trim(Text.From([MES])), 4)) otherwise null, Int64.Type),
+				    #"Semestre" = Table.AddColumn(#"Año", "Semestre", each Text.AfterDelimiter(Text.Trim(Text.From([MES])), "-"), type text),
+				    #"Clave" = Table.AddColumn(#"Semestre", "Clave", each Text.Trim(Text.From([FAMILIA])) & "|" & Text.From([Año]) & "-" & [Semestre], type text),
+				    Tipos = Table.TransformColumnTypes(#"Clave", {{"MES", type text}, {"FAMILIA", type text}}),
+				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Año", "Semestre", "Clave", "Efectividad Remota", "MTTR SP", "RT Remoto", "RT Sitio", "CR Capture Rate", "Warranty Conversion", "Win Back", "Cobertura IB"})
 				in
 				    Seleccion
 
 	annotation PBI_ResultType = Table
 
 	annotation PBI_NavigationStepName = Navegación
-

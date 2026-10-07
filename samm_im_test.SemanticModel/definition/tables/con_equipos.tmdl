@@ -252,7 +252,14 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column meta = related(met_contratos[%Meta])
+	column ClaveMeta =
+			TRIM(con_equipos[familia]) & "|" & YEAR(TODAY()) & "-" & IF(MONTH(TODAY())<=6,"H1","H2")
+		lineageTag: 32F67120-B852-4B02-A147-A291353D378C
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta = related(Metas[CR Capture Rate])
 		lineageTag: 2853c2e8-68ca-4e73-88ff-014098ad774d
 		summarizeBy: sum
 

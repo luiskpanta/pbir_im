@@ -108,9 +108,13 @@ relationship d309ecbc-4a37-f485-f372-9e2f3fbb8826
 	fromColumn: con_estadoEquipos.id
 	toColumn: con_equipos.id
 
-relationship c97b6e3c-f92e-1f3e-1fce-669b4d5faacf
-	fromColumn: con_equipos.familia
-	toColumn: met_contratos.Codigo
+relationship C312874E-F66B-4FF5-96A8-9A895B033110
+	fromColumn: con_equipos.ClaveMeta
+	toColumn: Metas.Clave
+
+relationship 751A8603-F49C-4409-B78A-AD2AFE1AC8BD
+	fromColumn: con_equiposContrato.ClaveMeta
+	toColumn: Metas.Clave
 
 relationship 7bab45e7-1779-4da7-92f1-6e330791297b
 	joinOnDateBehavior: datePartOnly
@@ -138,11 +142,6 @@ relationship a9a5ceb8-63e3-725f-0f10-5024e65f7f0b
 relationship db4a8536-1918-8014-4ff5-ba1d96ce3433
 	fromColumn: con_equiposContrato.equipo_serial
 	toColumn: con_equipos.equipo_serial
-
-relationship ce39c9f8-20a5-0849-7316-39b5edf45941
-	isActive: false
-	fromColumn: con_equiposContrato.CodFam
-	toColumn: met_contratos.Codigo
 
 relationship 5640ce27-5a4e-41f7-85ef-5473f89b0667
 	joinOnDateBehavior: datePartOnly
