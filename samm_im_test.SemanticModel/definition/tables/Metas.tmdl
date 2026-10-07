@@ -14,6 +14,16 @@ table Metas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Meta Response Time' = AVERAGE(Metas[RT Remoto])
+		lineageTag: 64440A2E-AFD3-441F-84D7-5D8C0633C94D
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta RT Sitio' = AVERAGE(Metas[RT Sitio])
+		lineageTag: D0F0C0E6-F6A3-4721-AFC1-FA8954E50D1C
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	measure 'Color MTTR SP' = IF ( [MTTR Sin Partes (hrs)] <= [Meta MTTR SP], "#2E8B57", "#D64550" )
 		lineageTag: b658fb04-9874-43e8-810a-a534b6df2225
 
@@ -56,6 +66,26 @@ table Metas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'RT Remoto'
+		dataType: double
+		lineageTag: D7928572-4B9F-4E23-8292-DA61BD1ABCE3
+		summarizeBy: none
+		sourceColumn: RT Remoto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'RT Sitio'
+		dataType: double
+		lineageTag: 89F91973-1F15-46B8-B604-683D32741B21
+		summarizeBy: none
+		sourceColumn: RT Sitio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Metas = m
 		mode: import
 		source =
@@ -67,11 +97,12 @@ table Metas
 				    NombresLimpios = Table.TransformColumnNames(ConEncabezados, Text.Trim),
 				    Efectividad = Table.TransformColumns(NombresLimpios, {{"Efectividad Remota", each Number.FromText(Text.Replace(Text.Trim(Text.From(_)), "%", "")) / 100, type number}}),
 				    ConMTTR = if Table.HasColumns(Efectividad, "MTTR SP") then Table.TransformColumns(Efectividad, {{"MTTR SP", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(Efectividad, "MTTR SP", each null, type number),
-				    Tipos = Table.TransformColumnTypes(ConMTTR, {{"MES", type text}, {"FAMILIA", type text}}),
-				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota", "MTTR SP"}),
-				    #"Columna multiplicada" = Table.TransformColumns(Seleccion, {{"Efectividad Remota", each _ * 100, type number}})
+				    ConRT = if Table.HasColumns(ConMTTR, "RT Remoto") then Table.TransformColumns(ConMTTR, {{"RT Remoto", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(ConMTTR, "RT Remoto", each null, type number),
+				    ConSitio = if Table.HasColumns(ConRT, "RT Sitio") then Table.TransformColumns(ConRT, {{"RT Sitio", each try Number.FromText(Text.Trim(Text.From(_))) otherwise null, type number}}) else Table.AddColumn(ConRT, "RT Sitio", each null, type number),
+				    Tipos = Table.TransformColumnTypes(ConSitio, {{"MES", type text}, {"FAMILIA", type text}}),
+				    Seleccion = Table.SelectColumns(Tipos, {"MES", "FAMILIA", "Efectividad Remota", "MTTR SP", "RT Remoto", "RT Sitio"})
 				in
-				    #"Columna multiplicada"
+				    Seleccion
 
 	annotation PBI_ResultType = Table
 
