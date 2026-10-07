@@ -110,7 +110,7 @@ table con_equiposContrato
 
 		annotation SummarizationSetBy = Automatic
 
-	column metaCR2 = related(Metas[CR Capture Rate])
+	column metaCR2 = LOOKUPVALUE(Metas[CR Capture Rate], Metas[Clave], con_equiposContrato[ClaveMeta])
 		lineageTag: 7eca9871-fd02-4100-98b6-f28a9fbcaacb
 		summarizeBy: sum
 
@@ -144,7 +144,7 @@ table con_equiposContrato
 
 		annotation SummarizationSetBy = Automatic
 
-	column MetWC = related(Metas[Warranty Conversion])
+	column MetWC = LOOKUPVALUE(Metas[Warranty Conversion], Metas[Clave], con_equiposContrato[ClaveMeta])
 		lineageTag: 79da0dfb-3416-4cd2-a2f0-6231fbf471f1
 		summarizeBy: sum
 
@@ -152,7 +152,7 @@ table con_equiposContrato
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column MetWB = related(Metas[Win Back])
+	column MetWB = LOOKUPVALUE(Metas[Win Back], Metas[Clave], con_equiposContrato[ClaveMeta])
 		lineageTag: 8d3bbe1e-f6e8-44f9-943f-fbd34a4a6211
 		summarizeBy: sum
 

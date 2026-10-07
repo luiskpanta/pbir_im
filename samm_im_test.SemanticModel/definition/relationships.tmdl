@@ -108,14 +108,6 @@ relationship d309ecbc-4a37-f485-f372-9e2f3fbb8826
 	fromColumn: con_estadoEquipos.id
 	toColumn: con_equipos.id
 
-relationship C312874E-F66B-4FF5-96A8-9A895B033110
-	fromColumn: con_equipos.ClaveMeta
-	toColumn: Metas.Clave
-
-relationship 751A8603-F49C-4409-B78A-AD2AFE1AC8BD
-	fromColumn: con_equiposContrato.ClaveMeta
-	toColumn: Metas.Clave
-
 relationship 7bab45e7-1779-4da7-92f1-6e330791297b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: con_fallasEquipos.FechaReparacion

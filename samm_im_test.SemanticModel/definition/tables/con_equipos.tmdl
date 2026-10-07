@@ -259,7 +259,7 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column meta = related(Metas[CR Capture Rate])
+	column meta = LOOKUPVALUE(Metas[CR Capture Rate], Metas[Clave], con_equipos[ClaveMeta])
 		lineageTag: 2853c2e8-68ca-4e73-88ff-014098ad774d
 		summarizeBy: sum
 
