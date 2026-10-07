@@ -38,6 +38,32 @@ table con_equipos
 		formatString: 0
 		lineageTag: c0df18e5-e340-4835-b59c-7b2b27bae9c4
 
+	measure 'Base Instalada Atendida 12m' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(con_equipos[equipo_serial]),
+			    con_equipos[intervencionUltimoAnio] > 0,
+			    NOT (con_equipos[grupo] IN {"CONTRATO","GARANTIA"})
+			)
+			```
+		formatString: 0
+		lineageTag: 4850F9A2-6DE5-4F56-8C5E-4F05F8BDD2CE
+
+	measure 'Total Base Instalada' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT(con_equipos[equipo_serial]),
+			    NOT (con_equipos[grupo] IN {"CONTRATO","GARANTIA"})
+			)
+			```
+		formatString: 0
+		lineageTag: 85A3BB0C-0E33-4F70-95DC-D1D168DCDBAD
+
+	measure 'Cobertura IB' = DIVIDE([Base Instalada Atendida 12m], [Total Base Instalada])
+		lineageTag: BA320DD3-9E16-4B94-BB90-1FD2CB7427C3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column id
 		dataType: int64
 		formatString: 0

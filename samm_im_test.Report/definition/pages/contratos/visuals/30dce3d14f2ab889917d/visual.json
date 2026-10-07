@@ -109,6 +109,21 @@
               "queryRef": "Sum(con_equipos.meta)",
               "nativeQueryRef": "Promedio de meta",
               "format": "0.0 %;-0.0 %;0.0 %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "con_equipos"
+                    }
+                  },
+                  "Property": "Cobertura IB"
+                }
+              },
+              "queryRef": "con_equipos.Cobertura IB",
+              "nativeQueryRef": "Cobertura IB",
+              "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
         }
@@ -957,6 +972,24 @@
           },
           "selector": {
             "metadata": "con_equipos.%CR"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#7F9D66'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "con_equipos.Cobertura IB"
           }
         },
         {
