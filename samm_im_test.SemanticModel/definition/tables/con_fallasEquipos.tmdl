@@ -57,7 +57,14 @@ table con_fallasEquipos
 	measure 'UPTIME %' =
 			
 			VAR TotalDiasFuera =
-			    SUM('con_fallasEquipos'[DiasFueraServicio])
+			    SUMX(
+			        SUMMARIZE(
+			            'con_fallasEquipos',
+			            'con_fallasEquipos'[numDoc],
+			            "DiasFueraServicioPorDoc", MAX('con_fallasEquipos'[DiasFueraServicio])
+			        ),
+			        [DiasFueraServicioPorDoc]
+			    )
 			VAR TotalEquipos =
 			    DISTINCTCOUNT('con_fallasEquipos'[Serial])
 			VAR TotalDiasPosibles =
