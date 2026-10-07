@@ -252,13 +252,6 @@ table con_equipos
 
 		annotation SummarizationSetBy = Automatic
 
-	column ClaveMeta =
-			TRIM(con_equipos[familia]) & "|" & YEAR(TODAY()) & "-" & IF(MONTH(TODAY())<=6,"H1","H2")
-		lineageTag: 32F67120-B852-4B02-A147-A291353D378C
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	column meta = LOOKUPVALUE(Metas[CR Capture Rate], Metas[Clave], con_equipos[ClaveMeta])
 		lineageTag: 2853c2e8-68ca-4e73-88ff-014098ad774d
 		summarizeBy: sum
@@ -266,6 +259,21 @@ table con_equipos
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ClaveMeta = TRIM(con_equipos[familia]) & "|" & YEAR(TODAY()) & "-" & IF(MONTH(TODAY())<=6,"H1","H2")
+		lineageTag: 32F67120-B852-4B02-A147-A291353D378C
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column intervencionUltimoAnio
+		dataType: int64
+		formatString: 0
+		lineageTag: 975b63cc-0d2d-4607-8c37-0accc61ebba4
+		summarizeBy: sum
+		sourceColumn: intervencionUltimoAnio
+
+		annotation SummarizationSetBy = Automatic
 
 	partition con_equipos = m
 		mode: import
