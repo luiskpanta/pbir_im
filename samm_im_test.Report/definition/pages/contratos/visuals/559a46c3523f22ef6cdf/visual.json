@@ -62,6 +62,13 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
             }
           },
           "selector": {
@@ -73,7 +80,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             }
@@ -155,7 +162,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             },

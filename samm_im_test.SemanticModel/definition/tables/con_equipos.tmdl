@@ -286,6 +286,14 @@ table con_equipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column metaCoberturaIB = LOOKUPVALUE(Metas[Cobertura IB], Metas[Clave], con_equipos[ClaveMeta])
+		lineageTag: 908D61D6-CEA1-412E-AD74-8F8328F1FE12
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column ClaveMeta = TRIM(con_equipos[familia]) & "|" & YEAR(TODAY()) & "-" & IF(MONTH(TODAY())<=6,"H1","H2")
 		lineageTag: 32F67120-B852-4B02-A147-A291353D378C
 		summarizeBy: none
