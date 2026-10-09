@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "e07c4f3cb6fef2f35e79",
   "position": {
     "x": 0.93960920694259009,
     "y": 3.4178905206942587,
-    "z": 2000,
+    "z": 1000,
     "height": 713.62496680041568,
     "width": 1278.9115038523048,
-    "tabOrder": 9000
+    "tabOrder": 12000
   },
   "visualGroup": {
     "displayName": "Eq en contrato",

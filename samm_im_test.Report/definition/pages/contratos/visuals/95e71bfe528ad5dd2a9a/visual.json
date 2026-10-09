@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "95e71bfe528ad5dd2a9a",
   "position": {
     "x": 544.25034044494578,
     "y": 21.061086919828377,
-    "z": 4000,
+    "z": 7000,
     "height": 81.175802804693276,
     "width": 95.608435298006057,
-    "tabOrder": 4000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -116,7 +116,28 @@
                           [
                             {
                               "Literal": {
+                                "Value": "'junio'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'julio'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
                                 "Value": "'agosto'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'septiembre'"
                               }
                             }
                           ]
@@ -155,7 +176,40 @@
                                 "0": [
                                   {
                                     "Literal": {
+                                      "Value": "'junio'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'julio'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
                                       "Value": "'agosto'"
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "'septiembre'"
                                     }
                                   }
                                 ]
@@ -179,7 +233,16 @@
                         },
                         "valueMap": [
                           {
+                            "0": "junio"
+                          },
+                          {
+                            "0": "julio"
+                          },
+                          {
                             "0": "agosto"
+                          },
+                          {
+                            "0": "septiembre"
                           }
                         ]
                       }
