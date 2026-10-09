@@ -51,6 +51,14 @@ table Dim_Fecha
 
 		annotation SummarizationSetBy = Automatic
 
+	column Ult12M
+		lineageTag: 412E7030-48D6-44AE-B55D-E16CA362FD68
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ult12M]
+
+		annotation SummarizationSetBy = Automatic
+
 	column Recientes =
 			SWITCH(
 				TRUE,
@@ -106,7 +114,8 @@ table Dim_Fecha
 				    "Año", YEAR([Date]),
 				    "Mes", FORMAT([Date], "MMM"),
 				    "MesNúmero", MONTH([Date]),
-				    "Año-Mes", FORMAT([Date], "YYYY-MM")
+				    "Año-Mes", FORMAT([Date], "YYYY-MM"),
+				    "Ult12M", IF([Date] >= EOMONTH(TODAY(),-12)+1 && [Date] <= EOMONTH(TODAY(),0), "Últimos 12 meses", "Anterior")
 				)
 				```
 
