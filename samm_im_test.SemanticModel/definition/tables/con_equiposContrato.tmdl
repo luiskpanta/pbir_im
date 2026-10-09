@@ -32,6 +32,107 @@ table con_equiposContrato
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Meta CR mes' = AVERAGE(con_equiposContrato[metaCR2])
+		lineageTag: D9570E6D-081F-49F0-AD42-40B1D0B5049A
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Meta WC mes' = AVERAGE(con_equiposContrato[MetWC])
+		lineageTag: B85A3BDA-2972-48CD-BB95-875459586F41
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Win back cant' = SUM(con_equiposContrato[paso_percall_evento_a_contrato])
+		formatString: 0
+		lineageTag: DB35DAB3-DA83-441D-ACFA-5A4EE76DA62C
+
+	measure 'Mes actual' = CALCULATE(MAX(con_equiposContrato[mes]), ALLSELECTED(con_equiposContrato))
+		formatString: Long Date
+		lineageTag: 2ED2C39C-B343-4EA3-9561-A28A7C0478D5
+
+	measure 'WC actual' = VAR m = [Mes actual] RETURN CALCULATE([WC], con_equiposContrato[mes] = m)
+		lineageTag: 0A05AB6F-3143-46C0-9EC6-FA9515089B40
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'WC ant' = VAR m = EDATE([Mes actual], -1) RETURN CALCULATE([WC], con_equiposContrato[mes] = m)
+		lineageTag: 2AC5F536-1AEA-4001-BD3E-07B0D559F2F8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var pp WC' = ([WC actual] - [WC ant]) * 100
+		formatString: +0.0;-0.0;0.0
+		lineageTag: DE266BFB-AC70-41F6-A3C1-635258748817
+
+	measure 'CR actual' = VAR m = [Mes actual] RETURN CALCULATE([CR], con_equiposContrato[mes] = m)
+		lineageTag: 123A8658-1E2C-49D2-BBD7-436F39EB2532
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CR ant' = VAR m = EDATE([Mes actual], -1) RETURN CALCULATE([CR], con_equiposContrato[mes] = m)
+		lineageTag: 9B77F964-7858-4EA7-A34C-B3A66488451F
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var pp CR' = ([CR actual] - [CR ant]) * 100
+		formatString: +0.0;-0.0;0.0
+		lineageTag: FC951835-8568-4F84-89E2-48F407D14A9F
+
+	measure 'Win back actual' = VAR m = [Mes actual] RETURN CALCULATE([Win back cant], con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: 49CEFA02-83F0-4870-8B01-CD1D41ABD73F
+
+	measure 'Win back ant' = VAR m = EDATE([Mes actual], -1) RETURN CALCULATE([Win back cant], con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: DF5EDEE1-414D-4A81-99B0-D07E395CCC23
+
+	measure 'Var % Win back' = DIVIDE([Win back actual] - [Win back ant], [Win back ant])
+		lineageTag: 169D9489-526C-416B-B4EA-CB88A32766FC
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Garantia mes actual' = VAR m = [Mes actual] RETURN CALCULATE(SUM(con_equiposContrato[enGarantia]), con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: E97B581B-7AE8-4E78-A8B7-B7122C638D77
+
+	measure 'Contrato mes actual' = VAR m = [Mes actual] RETURN CALCULATE(SUM(con_equiposContrato[enContrato]), con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: BDFE6A84-2517-4DD2-A1BA-07022015BEA7
+
+	measure 'Sin cobertura mes actual' = VAR m = [Mes actual] RETURN CALCULATE(COUNTROWS(con_equiposContrato) - SUM(con_equiposContrato[enGarantia]) - SUM(con_equiposContrato[enContrato]), con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: DC5FC0B0-EDCF-4890-BB4A-4332DCA01941
+
+	measure 'Cobertura actual' = DIVIDE([Garantia mes actual] + [Contrato mes actual], [Garantia mes actual] + [Contrato mes actual] + [Sin cobertura mes actual])
+		lineageTag: 1E443300-0EAD-4848-ACE1-18E217AC4930
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cobertura ant' = VAR m = EDATE([Mes actual], -1) VAR G = CALCULATE(SUM(con_equiposContrato[enGarantia]), con_equiposContrato[mes] = m) VAR C = CALCULATE(SUM(con_equiposContrato[enContrato]), con_equiposContrato[mes] = m) VAR T = CALCULATE(COUNTROWS(con_equiposContrato), con_equiposContrato[mes] = m) RETURN DIVIDE(G + C, T)
+		lineageTag: 44D561B7-DF89-4BB4-BB23-A59994AC9A86
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Var pp Cobertura' = ([Cobertura actual] - [Cobertura ant]) * 100
+		formatString: +0.0;-0.0;0.0
+		lineageTag: C55948DF-4EDD-4EDC-A03F-71804B06DD23
+
+	measure 'Equipos mes actual' = VAR m = [Mes actual] RETURN CALCULATE(DISTINCTCOUNT(con_equiposContrato[equipo_serial]), con_equiposContrato[mes] = m)
+		formatString: 0
+		lineageTag: CF2264C6-B119-4FC9-8E81-035E026A9878
+
+	measure 'Color Var WC' = IF([Var pp WC] >= 0, "#2E8B57", "#D64550")
+		lineageTag: 768A6E9A-A874-49AC-9E78-4B14C155FC43
+
+	measure 'Color Var CR' = IF([Var pp CR] >= 0, "#2E8B57", "#D64550")
+		lineageTag: E51FB01F-1EB0-4D23-95A3-513DEE000871
+
+	measure 'Color Var Cobertura' = IF([Var pp Cobertura] >= 0, "#2E8B57", "#D64550")
+		lineageTag: F88420F3-94D6-4BE8-80CF-55963FA61DB2
+
+	measure 'Color Var WB' = IF([Var % Win back] >= 0, "#2E8B57", "#D64550")
+		lineageTag: 8A45DB4F-C428-4C04-8266-EC42760E79D3
+
 	column equipo_serial
 		dataType: string
 		lineageTag: 205f9a13-de29-451f-a8de-6c15243901c2
@@ -100,13 +201,6 @@ table con_equiposContrato
 		lineageTag: dfd0a37a-c2a3-4924-adc1-f413f377c361
 		summarizeBy: sum
 		sourceColumn: paso_percall_evento_a_contrato
-
-		annotation SummarizationSetBy = Automatic
-
-	column ClaveMeta =
-			TRIM(con_equiposContrato[familia]) & "|" & YEAR(con_equiposContrato[mes]) & "-" & IF(MONTH(con_equiposContrato[mes])<=6,"H1","H2")
-		lineageTag: 070ED7FA-FB81-43B0-BA7B-19DB10F9185F
-		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -194,6 +288,12 @@ table con_equiposContrato
 		lineageTag: 5080c945-fda0-4095-8a45-2648e6d5a50d
 		summarizeBy: none
 		sourceColumn: cod_familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClaveMeta = TRIM(con_equiposContrato[familia]) & "|" & YEAR(con_equiposContrato[mes]) & "-" & IF(MONTH(con_equiposContrato[mes])<=6,"H1","H2")
+		lineageTag: 070ED7FA-FB81-43B0-BA7B-19DB10F9185F
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

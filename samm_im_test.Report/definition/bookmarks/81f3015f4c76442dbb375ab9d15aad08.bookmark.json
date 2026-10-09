@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
-  "displayName": "📊Cobertura BI",
+  "displayName": "📊 Indicadores",
   "name": "81f3015f4c76442dbb375ab9d15aad08",
   "options": {
     "applyOnlyToTargetVisuals": true,
@@ -12,7 +12,11 @@
       "40fdb682d6dc4c618e32fcbabf47b6c5",
       "3f6f31ed87e204ca07da",
       "95e71bfe528ad5dd2a9a",
-      "6291151660111750aa64"
+      "6291151660111750aa64",
+      "488678d3eb8f9b1c91dc",
+      "3ced33317514db1d6aa4",
+      "a64ab1d073dd291e9c3b",
+      "9470518a54446d3ebec0"
     ],
     "suppressData": true
   },
@@ -22,16 +26,30 @@
     "sections": {
       "7d9b773a701ce03934ee": {
         "visualContainers": {
-          "ebaf32a252cb4905879273965fda7d79": {
-            "singleVisual": {
-              "visualType": "lineStackedColumnComboChart",
-              "objects": {}
-            }
-          },
           "40fdb682d6dc4c618e32fcbabf47b6c5": {
             "singleVisual": {
               "visualType": "cardVisual",
               "objects": {}
+            }
+          },
+          "488678d3eb8f9b1c91dc": {
+            "singleVisual": {
+              "visualType": "barChart"
+            }
+          },
+          "3ced33317514db1d6aa4": {
+            "singleVisual": {
+              "visualType": "lineChart"
+            }
+          },
+          "a64ab1d073dd291e9c3b": {
+            "singleVisual": {
+              "visualType": "clusteredColumnChart"
+            }
+          },
+          "9470518a54446d3ebec0": {
+            "singleVisual": {
+              "visualType": "lineChart"
             }
           }
         },

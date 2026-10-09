@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "30dce3d14f2ab889917d",
   "position": {
     "x": 205.17663580121959,
@@ -88,41 +88,6 @@
               },
               "queryRef": "con_equipos.%CR",
               "nativeQueryRef": "%CR",
-              "format": "0.0 %;-0.0 %;0.0 %"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "con_equipos"
-                        }
-                      },
-                      "Property": "meta"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(con_equipos.meta)",
-              "nativeQueryRef": "Promedio de meta",
-              "format": "0.0 %;-0.0 %;0.0 %"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_equipos"
-                    }
-                  },
-                  "Property": "Cobertura IB"
-                }
-              },
-              "queryRef": "con_equipos.Cobertura IB",
-              "nativeQueryRef": "Cobertura IB",
               "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
@@ -980,24 +945,6 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#7F9D66'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "con_equipos.Cobertura IB"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
                       "Percent": -0.6
@@ -1085,7 +1032,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CAPTURE RATE'"
+                  "Value": "'Análisis por familia'"
                 }
               }
             },

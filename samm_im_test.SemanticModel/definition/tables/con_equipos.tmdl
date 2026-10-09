@@ -38,24 +38,22 @@ table con_equipos
 		formatString: 0
 		lineageTag: c0df18e5-e340-4835-b59c-7b2b27bae9c4
 
-	measure 'Base Instalada Atendida 12m' = ```
+	measure 'Base Instalada Atendida 12m' =
 			
 			CALCULATE(
 			    DISTINCTCOUNT(con_equipos[equipo_serial]),
 			    con_equipos[intervencionUltimoAnio] > 0,
 			    NOT (con_equipos[grupo] IN {"CONTRATO","GARANTIA"})
 			)
-			```
 		formatString: 0
 		lineageTag: 4850F9A2-6DE5-4F56-8C5E-4F05F8BDD2CE
 
-	measure 'Total Base Instalada' = ```
+	measure 'Total Base Instalada' =
 			
 			CALCULATE(
 			    DISTINCTCOUNT(con_equipos[equipo_serial]),
 			    NOT (con_equipos[grupo] IN {"CONTRATO","GARANTIA"})
 			)
-			```
 		formatString: 0
 		lineageTag: 85A3BB0C-0E33-4F70-95DC-D1D168DCDBAD
 
@@ -286,14 +284,6 @@ table con_equipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column metaCoberturaIB = LOOKUPVALUE(Metas[Cobertura IB], Metas[Clave], con_equipos[ClaveMeta])
-		lineageTag: 908D61D6-CEA1-412E-AD74-8F8328F1FE12
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ClaveMeta = TRIM(con_equipos[familia]) & "|" & YEAR(TODAY()) & "-" & IF(MONTH(TODAY())<=6,"H1","H2")
 		lineageTag: 32F67120-B852-4B02-A147-A291353D378C
 		summarizeBy: none
@@ -308,6 +298,14 @@ table con_equipos
 		sourceColumn: intervencionUltimoAnio
 
 		annotation SummarizationSetBy = Automatic
+
+	column metaCoberturaIB = LOOKUPVALUE(Metas[Cobertura IB], Metas[Clave], con_equipos[ClaveMeta])
+		lineageTag: 908D61D6-CEA1-412E-AD74-8F8328F1FE12
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition con_equipos = m
 		mode: import

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "33a5baff29ac42fcbd750ff0e44f5fba",
   "position": {
     "x": 0,
-    "y": 0,
-    "z": 2500,
-    "height": 663.84,
-    "width": 1280.16,
-    "tabOrder": 11000
+    "y": 156.98113207547169,
+    "z": 2000,
+    "height": 145.76819407008085,
+    "width": 204.42048517520215,
+    "tabOrder": 4000
   },
   "visualGroup": {
     "displayName": "Cobertura BI",
