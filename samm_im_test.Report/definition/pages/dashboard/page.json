@@ -51,23 +51,14 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'6v fondo IM mia.png'"
+                    "Value": "''"
                   }
                 }
               },
               "url": {
                 "expr": {
-                  "ResourcePackageItem": {
-                    "PackageName": "RegisteredResources",
-                    "PackageType": 1,
-                    "ItemName": "6v_fondo_IM_mia.png"
-                  }
-                }
-              },
-              "scaling": {
-                "expr": {
                   "Literal": {
-                    "Value": "'Normal'"
+                    "Value": "''"
                   }
                 }
               }
@@ -77,6 +68,36 @@
             "expr": {
               "Literal": {
                 "Value": "0D"
+              }
+            }
+          },
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 3,
+                    "Percent": -0.25
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 3,
+                    "Percent": -0.25
+                  }
+                }
               }
             }
           }
