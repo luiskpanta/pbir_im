@@ -17,10 +17,7 @@ table con_fallasEquipos
 			                )
 			            RETURN
 			                DIVIDE(360, NumFallas + 1)
-			        ),
-			        REMOVEFILTERS('Dim_Fecha'),
-			        REMOVEFILTERS('con_fallasEquipos'[FechaParada]),
-			        REMOVEFILTERS('LocalDateTable_a3bf2546-fc06-4bcd-a44d-428fb5805a42')
+			        )
 			    )
 		formatString: 0.0" días"
 		lineageTag: 77bb24e0-0dcd-4729-8ac1-01f02f205264
