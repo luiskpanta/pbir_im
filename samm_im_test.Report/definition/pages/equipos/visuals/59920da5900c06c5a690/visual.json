@@ -389,7 +389,21 @@
             "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Both'"
+                  "Value": "'Data'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'preferOutside'"
+                }
+              }
+            },
+            "overflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -415,7 +429,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -430,7 +444,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fallos por Marca'"
+                  "Value": "'Incidentes Por Marca'"
                 }
               }
             }

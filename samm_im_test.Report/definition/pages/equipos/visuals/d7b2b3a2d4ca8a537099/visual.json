@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "d7b2b3a2d4ca8a537099",
   "position": {
     "x": 838.38274932614547,
@@ -98,7 +98,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cantidad de Fallos por Mes'"
+                  "Value": "'Cantidad de Incidentes por Mes'"
                 }
               }
             }

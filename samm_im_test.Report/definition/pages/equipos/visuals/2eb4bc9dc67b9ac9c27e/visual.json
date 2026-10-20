@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2eb4bc9dc67b9ac9c27e",
   "position": {
     "x": 352.92604501607718,
@@ -25,15 +25,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "serial"
+                      "Property": "numDoc"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Count(con_fallasEquipos.serial)",
-              "nativeQueryRef": "Equipos con Fallo",
-              "displayName": "Equipos con Fallo"
+              "queryRef": "Sum(con_fallasEquipos.numDoc)",
+              "nativeQueryRef": "Cantidad",
+              "displayName": "Cantidad"
             },
             {
               "field": {
@@ -45,15 +45,15 @@
                           "Entity": "con_fallasEquipos"
                         }
                       },
-                      "Property": "numDoc"
+                      "Property": "serial"
                     }
                   },
                   "Function": 2
                 }
               },
-              "queryRef": "Sum(con_fallasEquipos.numDoc)",
-              "nativeQueryRef": "Cantidad Fallas",
-              "displayName": "Cantidad Fallas"
+              "queryRef": "Count(con_fallasEquipos.serial)",
+              "nativeQueryRef": "Equipos",
+              "displayName": "Equipos"
             }
           ]
         }
@@ -70,7 +70,7 @@
                         "Entity": "con_fallasEquipos"
                       }
                     },
-                    "Property": "serial"
+                    "Property": "numDoc"
                   }
                 },
                 "Function": 2
@@ -372,7 +372,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Fallos'"
+                  "Value": "'Incidentes'"
                 }
               }
             },

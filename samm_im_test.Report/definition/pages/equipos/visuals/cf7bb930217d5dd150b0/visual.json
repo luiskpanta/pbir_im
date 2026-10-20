@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "cf7bb930217d5dd150b0",
   "position": {
     "x": 504.58221024258756,
@@ -168,7 +168,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos con falla por subfamilia'"
+                  "Value": "'Equipos con incidente por subfamilia'"
                 }
               }
             }
