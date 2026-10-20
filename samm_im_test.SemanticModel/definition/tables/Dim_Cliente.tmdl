@@ -13,7 +13,7 @@ table Dim_Cliente
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select distinct tercero from view_ter_tercero"])
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select distinct tercero from view_ter_tercero"])
 				in
 				    Origen
 

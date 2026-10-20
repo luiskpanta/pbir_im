@@ -301,7 +301,7 @@ table con_equiposContrato
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT * FROM v_historicoEstadosEquipos"])
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="SELECT * FROM v_historicoEstadosEquipos"])
 				in
 				    Origen
 

@@ -81,7 +81,7 @@ table con_efds
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="SELECT * FROM v_efds"])
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="SELECT * FROM v_efds"])
 				in
 				    Origen
 

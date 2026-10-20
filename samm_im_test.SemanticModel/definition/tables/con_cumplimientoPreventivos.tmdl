@@ -273,7 +273,7 @@ table con_cumplimientoPreventivos
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select * from v_ind_cumplimientoPMs", CreateNavigationProperties=false]),
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from v_ind_cumplimientoPMs", CreateNavigationProperties=false]),
 				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"cumplida"})
 				in
 				    #"Columnas quitadas"

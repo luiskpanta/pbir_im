@@ -13,7 +13,7 @@ table Dim_TipoServicio
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221:13001", "wh_impulmedicos", [Query="select distinct tiposervicio_codigo from view_gen_tiposervicio"])
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select distinct tiposervicio_codigo from view_gen_tiposervicio"])
 				in
 				    Origen
 
