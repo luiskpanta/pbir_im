@@ -141,6 +141,11 @@
           "type": "Image"
         },
         {
+          "name": "6v_fondo_IM_mia15061994015900815.png",
+          "path": "6v_fondo_IM_mia15061994015900815.png",
+          "type": "Image"
+        },
+        {
           "name": "IM_Fallas_Maquinas_Theme",
           "path": "IM_Fallas_Maquinas_Theme",
           "type": "CustomTheme"

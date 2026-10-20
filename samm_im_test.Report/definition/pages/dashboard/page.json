@@ -51,14 +51,23 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "''"
+                    "Value": "'6v_fondo_IM_mia.png'"
                   }
                 }
               },
               "url": {
                 "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "6v_fondo_IM_mia15061994015900815.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
                   "Literal": {
-                    "Value": "''"
+                    "Value": "'Normal'"
                   }
                 }
               }
@@ -76,8 +85,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 3,
-                    "Percent": -0.25
+                    "ColorId": 0,
+                    "Percent": 0
                   }
                 }
               }
@@ -94,8 +103,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 3,
-                    "Percent": -0.25
+                    "ColorId": 0,
+                    "Percent": 0
                   }
                 }
               }

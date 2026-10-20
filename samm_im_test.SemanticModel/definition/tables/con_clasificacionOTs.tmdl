@@ -398,6 +398,29 @@ table con_clasificacionOTs
 
 		annotation SummarizationSetBy = Automatic
 
+	column fecha_fh
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f7409024-ba33-4b85-aea0-996169a313dc
+		summarizeBy: none
+		sourceColumn: fecha_fh
+
+		variation Variation
+			isDefault
+			relationship: 5a054a01-31b7-4811-ac9d-44785786e31e
+			defaultHierarchy: LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column numReportes
+		dataType: int64
+		formatString: 0
+		lineageTag: ec17ca98-7da4-464a-a351-cf2e76ad6e4d
+		summarizeBy: sum
+		sourceColumn: numReportes
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_clasificacionOTs = m
 		mode: import
 		source =

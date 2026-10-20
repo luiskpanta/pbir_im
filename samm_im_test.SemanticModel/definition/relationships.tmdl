@@ -162,3 +162,8 @@ relationship 17535a34-1f12-43a0-a26c-3a16e4361f1b
 	fromColumn: _PI_Opciones.Valor
 	toColumn: Dim_PostInstalacion.Valor
 
+relationship 5a054a01-31b7-4811-ac9d-44785786e31e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: con_clasificacionOTs.fecha_fh
+	toColumn: LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9.Date
+
