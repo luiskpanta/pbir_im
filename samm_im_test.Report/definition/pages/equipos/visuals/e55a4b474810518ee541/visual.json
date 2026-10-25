@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e55a4b474810518ee541",
   "position": {
     "x": 667.60107816711593,
@@ -23,11 +23,11 @@
                       "Entity": "con_fallasEquipos"
                     }
                   },
-                  "Property": "cliente"
+                  "Property": "buscar"
                 }
               },
-              "queryRef": "con_fallasEquipos.cliente",
-              "nativeQueryRef": "cliente"
+              "queryRef": "con_fallasEquipos.buscar",
+              "nativeQueryRef": "buscar"
             }
           ]
         }
@@ -92,7 +92,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cliente'"
+                  "Value": "'Buscar por cliente o serial'"
                 }
               }
             },

@@ -294,6 +294,14 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column buscar
+		dataType: string
+		lineageTag: 75017fc9-fa66-49cc-9549-b03d9c4fc5fc
+		summarizeBy: none
+		sourceColumn: buscar
+
+		annotation SummarizationSetBy = Automatic
+
 	partition con_fallasEquipos = m
 		mode: import
 		source =
