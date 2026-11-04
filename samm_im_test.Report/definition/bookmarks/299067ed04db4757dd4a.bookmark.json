@@ -1234,7 +1234,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "con_fallasEquipos"
+                          "Entity": "Dim_Marca"
                         }
                       },
                       "Property": "marca"
@@ -1289,7 +1289,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "con_fallasEquipos"
+                          "Entity": "Dim_Marca"
                         }
                       },
                       "Property": "marca"

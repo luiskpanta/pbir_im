@@ -19,14 +19,14 @@
               "field": {
                 "Column": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "con_fallasEquipos"
-                    }
-                  },
-                  "Property": "marca"
-                }
-              },
-              "queryRef": "con_fallasEquipos.marca",
+                      "SourceRef": {
+                        "Entity": "Dim_Marca"
+                      }
+                    },
+                    "Property": "marca"
+                  }
+                },
+                "queryRef": "Dim_Marca.marca",
               "nativeQueryRef": "marca",
               "active": true
             }
