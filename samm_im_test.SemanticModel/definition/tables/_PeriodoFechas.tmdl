@@ -1,0 +1,51 @@
+table _PeriodoFechas
+	lineageTag: 38166b56-d097-4287-ac06-977eb7e09947
+
+	column Fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 304bae46-4eb9-4d81-a974-fedf20b340ed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaPeriodo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8423c2d2-ecaa-49ea-a094-1e2de5ff9c15
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [FechaPeriodo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _PeriodoFechas = calculated
+		mode: import
+		source =
+				
+				VAR Fin = TODAY ()
+				VAR Inicio = TODAY () - 730
+				VAR Cortes =
+				    SELECTCOLUMNS (
+				        CALENDAR ( Inicio, Fin ),
+				        "FechaCorteKey", [Date]
+				    )
+				VAR Puente =
+				    GENERATE (
+				        Cortes,
+				        SELECTCOLUMNS (
+				            CALENDAR ( [FechaCorteKey] - 360, [FechaCorteKey] ),
+				            "FechaPeriodo", [Date]
+				        )
+				    )
+				RETURN
+				    SELECTCOLUMNS (
+				        Puente,
+				        "Fecha", [FechaCorteKey],
+				        "FechaPeriodo", [FechaPeriodo]
+				    )
+
+	annotation PBI_Id = 71fd43d46cb444bab3ddf5ae813cdbeb
+

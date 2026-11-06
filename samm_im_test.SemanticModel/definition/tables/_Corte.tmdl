@@ -1,0 +1,24 @@
+table _Corte
+	lineageTag: cc59265a-e4ca-4b10-aad0-827cde9f37f5
+
+	column Fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 496f1606-732b-4abc-96b4-4e5b954fbefb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Corte = calculated
+		mode: import
+		source =
+				
+				SELECTCOLUMNS (
+				    CALENDAR ( TODAY () - 730, TODAY () ),
+				    "Fecha", [Date]
+				)
+
+	annotation PBI_Id = 04e69ec026c1416d8f710a8672ca1e01
+

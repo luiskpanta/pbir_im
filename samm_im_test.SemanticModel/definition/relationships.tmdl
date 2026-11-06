@@ -167,3 +167,11 @@ relationship 5a054a01-31b7-4811-ac9d-44785786e31e
 	fromColumn: con_clasificacionOTs.fecha_fh
 	toColumn: LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9.Date
 
+relationship 3efe58df-06b1-4520-8569-da5230b13bbb
+	fromColumn: _PeriodoFechas.FechaPeriodo
+	toColumn: Dim_Fecha.Date
+
+relationship 44e15345-5eb9-4cb2-9a01-d9360dc11cfe
+	fromColumn: _PeriodoFechas.Fecha
+	toColumn: _Corte.Fecha
+
