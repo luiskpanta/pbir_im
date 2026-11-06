@@ -38,17 +38,57 @@
       "data": [
         {
           "properties": {
-            "endDate": {
-              "expr": {
-                "Literal": {
-                  "Value": "datetime'2026-09-01T00:00:00'"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Before'"
+                  "Value": "'RelativeDatePicker'"
+                }
+              }
+            },
+            "relativeRange": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Last'"
+                }
+              }
+            },
+            "relativePeriod": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Days'"
+                }
+              }
+            },
+            "relativeDuration": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dateRange": [
+        {
+          "properties": {
+            "includeToday": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -109,9 +149,8 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 3,
-                        "Left": {
+                      "Between": {
+                        "Expression": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
@@ -121,9 +160,32 @@
                             "Property": "Fecha"
                           }
                         },
-                        "Right": {
-                          "Literal": {
-                            "Value": "datetime'2026-09-02T00:00:00'"
+                        "LowerBound": {
+                          "DateSpan": {
+                            "Expression": {
+                              "DateAdd": {
+                                "Expression": {
+                                  "DateAdd": {
+                                    "Expression": {
+                                      "Now": {}
+                                    },
+                                    "Amount": 1,
+                                    "TimeUnit": 0
+                                  }
+                                },
+                                "Amount": -1,
+                                "TimeUnit": 0
+                              }
+                            },
+                            "TimeUnit": 0
+                          }
+                        },
+                        "UpperBound": {
+                          "DateSpan": {
+                            "Expression": {
+                              "Now": {}
+                            },
+                            "TimeUnit": 0
                           }
                         }
                       }

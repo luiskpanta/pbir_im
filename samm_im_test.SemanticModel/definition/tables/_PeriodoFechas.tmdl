@@ -25,7 +25,7 @@ table _PeriodoFechas
 		mode: import
 		source =
 				
-				VAR Fin = TODAY ()
+				VAR Fin = TODAY () + 2
 				VAR Inicio = TODAY () - 730
 				VAR Cortes =
 				    SELECTCOLUMNS (
@@ -36,7 +36,7 @@ table _PeriodoFechas
 				    GENERATE (
 				        Cortes,
 				        SELECTCOLUMNS (
-				            CALENDAR ( [FechaCorteKey] - 360, [FechaCorteKey] ),
+				            CALENDAR ( [FechaCorteKey] - 365, [FechaCorteKey] ),
 				            "FechaPeriodo", [Date]
 				        )
 				    )

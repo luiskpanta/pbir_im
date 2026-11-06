@@ -168,6 +168,7 @@ relationship 5a054a01-31b7-4811-ac9d-44785786e31e
 	toColumn: LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9.Date
 
 relationship 3efe58df-06b1-4520-8569-da5230b13bbb
+	crossFilteringBehavior: bothDirections
 	fromColumn: _PeriodoFechas.FechaPeriodo
 	toColumn: Dim_Fecha.Date
 

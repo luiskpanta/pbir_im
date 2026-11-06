@@ -3,7 +3,7 @@ table con_fallasEquipos
 
 	measure 'MTBF (dias)' =
 			
-			VAR FechaCorte = TODAY()
+			VAR FechaCorte = MAX('_Corte'[Fecha])
 			VAR Inicio = FechaCorte - 365
 			RETURN
 			    CALCULATE(
@@ -16,7 +16,7 @@ table con_fallasEquipos
 			                    'con_fallasEquipos'[Fechafalla] <= FechaCorte
 			                )
 			            RETURN
-			                DIVIDE(360, NumFallas + 1)
+			                DIVIDE(365, NumFallas + 1)
 			        )
 			    )
 		formatString: 0.0" días"
@@ -71,7 +71,7 @@ table con_fallasEquipos
 			VAR TotalEquipos =
 			    DISTINCTCOUNT('con_fallasEquipos'[Serial])
 			VAR TotalDiasPosibles =
-			    TotalEquipos * 360
+			    TotalEquipos * 365
 			RETURN
 			    DIVIDE(TotalDiasPosibles - TotalDiasFuera, TotalDiasPosibles)
 		formatString: 0.0%;-0.0%;0.0%
@@ -79,11 +79,11 @@ table con_fallasEquipos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure MinFecha = MIN(con_fallasEquipos[Fechafalla])
+	measure MinFecha = MAX('_Corte'[Fecha]) - 365
 		formatString: General Date
 		lineageTag: 29ccd409-d544-43ee-a912-ab52d9b557b1
 
-	measure MaxFecha = MAX(con_fallasEquipos[Fechafalla])
+	measure MaxFecha = MAX('_Corte'[Fecha])
 		formatString: General Date
 		lineageTag: 4e8131c8-0747-486e-a51a-d01f98ff1398
 

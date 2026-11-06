@@ -16,7 +16,7 @@ table _Corte
 		source =
 				
 				SELECTCOLUMNS (
-				    CALENDAR ( TODAY () - 730, TODAY () ),
+				    CALENDAR ( TODAY () - 730, TODAY () + 2 ),
 				    "Fecha", [Date]
 				)
 
