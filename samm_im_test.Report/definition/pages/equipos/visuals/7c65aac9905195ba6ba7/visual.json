@@ -6,7 +6,7 @@
     "y": 14.663072776280323,
     "z": 21000,
     "height": 53.477088948787063,
-    "width": 218.22102425876011,
+    "width": 170.78167115902966,
     "tabOrder": 21000
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "_Corte.Fecha",
               "nativeQueryRef": "Fecha de corte",
-              "active": true
+              "active": true,
+              "format": "dd MMM yyyy"
             }
           ]
         }
@@ -42,27 +43,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'RelativeDatePicker'"
-                }
-              }
-            },
-            "relativeRange": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Last'"
-                }
-              }
-            },
-            "relativePeriod": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Days'"
-                }
-              }
-            },
-            "relativeDuration": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }
@@ -86,6 +66,13 @@
         {
           "properties": {
             "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "singleDate": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -149,43 +136,45 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Between": {
-                        "Expression": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "_"
-                              }
-                            },
-                            "Property": "Fecha"
-                          }
-                        },
-                        "LowerBound": {
-                          "DateSpan": {
-                            "Expression": {
-                              "DateAdd": {
+                      "And": {
+                        "Left": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Column": {
                                 "Expression": {
-                                  "DateAdd": {
-                                    "Expression": {
-                                      "Now": {}
-                                    },
-                                    "Amount": 1,
-                                    "TimeUnit": 0
+                                  "SourceRef": {
+                                    "Source": "_"
                                   }
                                 },
-                                "Amount": -1,
-                                "TimeUnit": 0
+                                "Property": "Fecha"
                               }
                             },
-                            "TimeUnit": 0
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2026-11-08T00:00:00'"
+                              }
+                            }
                           }
                         },
-                        "UpperBound": {
-                          "DateSpan": {
-                            "Expression": {
-                              "Now": {}
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "_"
+                                  }
+                                },
+                                "Property": "Fecha"
+                              }
                             },
-                            "TimeUnit": 0
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2026-11-09T00:00:00'"
+                              }
+                            }
                           }
                         }
                       }
@@ -234,9 +223,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
+                    "Literal": {
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -246,6 +234,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }

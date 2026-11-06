@@ -43,9 +43,9 @@ ref table _PreselectedSlicer
 ref table Dim_PostInstalacion
 ref table _PI_Opciones
 ref table Metas
+ref table LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9
 ref table _PeriodoFechas
 ref table _Corte
-ref table LocalDateTable_bed2b6e6-6d18-4ebc-8420-be6f41ee94d9
 
 ref cultureInfo es-CO
 
