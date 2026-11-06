@@ -17,54 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "Dim_Fecha"
                     }
                   },
-                  "Level": "Año"
+                  "Property": "Año-Mes"
                 }
               },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año",
-              "nativeQueryRef": "Date Año",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
-                  "Level": "Mes"
-                }
-              },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "Date Mes",
+              "queryRef": "Dim_Fecha.Año-Mes",
+              "nativeQueryRef": "Año-Mes",
               "active": true
             }
           ]
@@ -578,5 +541,63 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d36551602c5d42c6a6311605d8a9d897",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_PeriodoFechas"
+              }
+            },
+            "Property": "EsVentana4M"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "_PeriodoFechas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "EsVentana4M"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
 }

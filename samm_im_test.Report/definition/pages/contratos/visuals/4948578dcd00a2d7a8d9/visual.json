@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "4948578dcd00a2d7a8d9",
   "position": {
-    "x": 912.57676902536707,
-    "y": 367.42323097463282,
+    "x": 912.5767690253671,
+    "y": 367.4232309746328,
     "z": 4000,
     "height": 63.23097463284379,
-    "width": 367.42323097463282,
+    "width": 367.4232309746328,
     "tabOrder": 10000
   },
   "visual": {
@@ -1119,5 +1119,63 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "058fe3a9110c48129f4654a409401c8c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_PeriodoFechas"
+              }
+            },
+            "Property": "EsMesCorte"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "_PeriodoFechas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "EsMesCorte"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
 }

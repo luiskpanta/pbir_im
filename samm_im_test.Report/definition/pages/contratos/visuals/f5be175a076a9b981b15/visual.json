@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "f5be175a076a9b981b15",
   "position": {
-    "x": 912.57676902536707,
+    "x": 912.5767690253671,
     "y": 160.64085447263017,
     "z": 2000,
     "height": 206.78237650200265,
-    "width": 367.42323097463282,
+    "width": 367.4232309746328,
     "tabOrder": 7000
   },
   "visual": {
@@ -17,54 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "Dim_Fecha"
                     }
                   },
-                  "Level": "Año"
+                  "Property": "Año-Mes"
                 }
               },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año",
-              "nativeQueryRef": "Date Año",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Dim_Fecha"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "Date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
-                    }
-                  },
-                  "Level": "Mes"
-                }
-              },
-              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "Date Mes",
+              "queryRef": "Dim_Fecha.Año-Mes",
+              "nativeQueryRef": "Año-Mes",
               "active": true
             }
           ]
@@ -702,5 +665,63 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e3b9ca7fe03d5a2b9b26"
+  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "46c1a7cb42ec4e7ea903841c19e2728f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_PeriodoFechas"
+              }
+            },
+            "Property": "EsVentana4M"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "_PeriodoFechas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "EsVentana4M"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
 }

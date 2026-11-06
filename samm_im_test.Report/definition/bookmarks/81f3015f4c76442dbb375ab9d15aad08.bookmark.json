@@ -5,14 +5,9 @@
   "options": {
     "applyOnlyToTargetVisuals": true,
     "targetVisualNames": [
-      "e07c4f3cb6fef2f35e79",
       "e3b9ca7fe03d5a2b9b26",
       "33a5baff29ac42fcbd750ff0e44f5fba",
-      "ebaf32a252cb4905879273965fda7d79",
       "40fdb682d6dc4c618e32fcbabf47b6c5",
-      "3f6f31ed87e204ca07da",
-      "95e71bfe528ad5dd2a9a",
-      "6291151660111750aa64",
       "488678d3eb8f9b1c91dc",
       "3ced33317514db1d6aa4",
       "a64ab1d073dd291e9c3b",
@@ -54,9 +49,6 @@
           }
         },
         "visualContainerGroups": {
-          "e07c4f3cb6fef2f35e79": {
-            "isHidden": true
-          },
           "e3b9ca7fe03d5a2b9b26": {
             "isHidden": true
           },

@@ -3,7 +3,7 @@
   "name": "33a5baff29ac42fcbd750ff0e44f5fba",
   "position": {
     "x": 0,
-    "y": 156.98113207547169,
+    "y": 156.9811320754717,
     "z": 2000,
     "height": 145.76819407008085,
     "width": 204.42048517520215,
@@ -13,5 +13,5 @@
     "displayName": "Cobertura BI",
     "groupMode": "ScaleMode"
   },
-  "isHidden": true
+  "isHidden": false
 }

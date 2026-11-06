@@ -21,6 +21,37 @@ table _PeriodoFechas
 
 		annotation SummarizationSetBy = Automatic
 
+	column EsVentana4M =
+			VAR MesCorte =
+			    DATE ( YEAR ( '_PeriodoFechas'[Fecha] ), MONTH ( '_PeriodoFechas'[Fecha] ), 1 )
+			VAR InicioVentana = EDATE ( MesCorte, -3 )
+			VAR FinVentana = EDATE ( MesCorte, 1 )
+			RETURN
+			    IF (
+			        '_PeriodoFechas'[FechaPeriodo] >= InicioVentana
+			            && '_PeriodoFechas'[FechaPeriodo] < FinVentana,
+			        1,
+			        0
+			    )
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+
+	column EsMesCorte =
+			VAR MesCorte =
+			    DATE ( YEAR ( '_PeriodoFechas'[Fecha] ), MONTH ( '_PeriodoFechas'[Fecha] ), 1 )
+			VAR FinMes = EDATE ( MesCorte, 1 )
+			RETURN
+			    IF (
+			        '_PeriodoFechas'[FechaPeriodo] >= MesCorte
+			            && '_PeriodoFechas'[FechaPeriodo] < FinMes,
+			        1,
+			        0
+			    )
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+
 	partition _PeriodoFechas = calculated
 		mode: import
 		source =

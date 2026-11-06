@@ -6,7 +6,7 @@
     "y": 380.16884113584035,
     "z": 16000,
     "height": 283.89869531849575,
-    "width": 524.57405986185722,
+    "width": 524.5740598618572,
     "tabOrder": 17000
   },
   "visual": {
@@ -290,5 +290,63 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "isHidden": true
+  "isHidden": false,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b72a6b9915924f669e6ce9538d4d7ecd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_PeriodoFechas"
+              }
+            },
+            "Property": "EsVentana4M"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "_PeriodoFechas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "EsVentana4M"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
 }
