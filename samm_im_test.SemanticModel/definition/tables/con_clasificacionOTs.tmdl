@@ -98,8 +98,6 @@ table con_clasificacionOTs
 		summarizeBy: none
 		sourceColumn: fecha_OT
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -425,9 +423,10 @@ table con_clasificacionOTs
 		mode: import
 		source =
 				let
-				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from v_analisisOTs"])
+				    Origen = Sql.Database("158.69.115.221,13001", "wh_impulmedicos", [Query="select * from v_analisisOTs"]),
+				  #"Tipo de columna cambiado" = Table.TransformColumnTypes(Origen, {{"fecha_OT", type date}})
 				in
-				    Origen
+				    #"Tipo de columna cambiado"
 
 	annotation PBI_ResultType = Table
 
