@@ -35,6 +35,7 @@ table _PeriodoFechas
 			    )
 		dataType: int64
 		formatString: 0
+		lineageTag: 8b6342c2-1b19-4b23-9616-618a2ebc27d8
 		summarizeBy: none
 
 	column EsMesCorte =
@@ -50,6 +51,7 @@ table _PeriodoFechas
 			    )
 		dataType: int64
 		formatString: 0
+		lineageTag: 57fc232a-cbac-43fc-a814-1b8bad335509
 		summarizeBy: none
 
 	partition _PeriodoFechas = calculated
