@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a7b03c88a7cd5407dcc9",
   "position": {
-    "x": 627.355623100304,
-    "y": 156.59574468085108,
-    "z": 34000,
-    "height": 85.59270516717325,
-    "width": 73.9209726443769,
-    "tabOrder": 29000
+    "x": 727.749887268081,
+    "y": 134.69281763518924,
+    "z": 35000,
+    "height": 73.795470144131784,
+    "width": 73.795470144131784,
+    "tabOrder": 28000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Meta % Cerradas",
+                    "value": "Meta",
                     "textStyle": {
                       "color": "#09124f"
                     }
@@ -77,6 +77,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

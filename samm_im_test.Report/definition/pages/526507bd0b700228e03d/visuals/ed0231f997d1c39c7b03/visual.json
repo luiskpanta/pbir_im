@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "647a117e277510635c05",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ed0231f997d1c39c7b03",
   "position": {
-    "x": 505.85891077714086,
-    "y": 82.0948245764065,
-    "z": 48000,
-    "height": 41.76,
-    "width": 197.28,
-    "tabOrder": 46000
+    "x": 155.36413469068128,
+    "y": 0,
+    "z": 1000,
+    "height": 82.192638997650747,
+    "width": 580.36021926389981,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "C"
+                    "value": ""
                   }
                 ]
               }
@@ -101,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTs'"
+                  "Value": "'Dashboard General'"
                 }
               }
             },
@@ -110,8 +110,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                      "ColorId": 2,
+                      "Percent": 0.6
                     }
                   }
                 }
@@ -120,21 +120,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "45D"
                 }
               }
             },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
             }

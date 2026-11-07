@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "0dfbae5a037153537d1e",
   "position": {
-    "x": 1140.5774278215222,
-    "y": 8.3989501312335957,
-    "z": 36000,
-    "height": 73.910761154855635,
-    "width": 120.94488188976378,
-    "tabOrder": 33000
+    "x": 1078.032786885246,
+    "y": 8.7431693989071029,
+    "z": 14000,
+    "height": 73.442622950819668,
+    "width": 183.60655737704917,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "slicer",
@@ -34,12 +34,64 @@
                       "Hierarchy": "Jerarquía de fechas"
                     }
                   },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "Date Año",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Dim_Fecha"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "Date Trimestre",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Dim_Fecha"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
                   "Level": "Mes"
                 }
               },
               "queryRef": "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes",
               "nativeQueryRef": "Date Mes",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -51,6 +103,20 @@
           "Values"
         ],
         "levels": [
+          {
+            "queryRefs": [
+              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Año"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Dim_Fecha.Date.Variación.Jerarquía de fechas.Trimestre"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
           {
             "queryRefs": [
               "Dim_Fecha.Date.Variación.Jerarquía de fechas.Mes"

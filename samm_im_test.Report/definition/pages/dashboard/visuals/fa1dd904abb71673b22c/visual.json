@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "fa1dd904abb71673b22c",
   "position": {
-    "x": 914.72668810289383,
-    "y": 156.39871382636656,
-    "z": 24000,
-    "height": 231.51125401929261,
-    "width": 338.52090032154337,
+    "x": 921.86745049216211,
+    "y": 134.80263232290372,
+    "z": 27000,
+    "height": 231.69398907103823,
+    "width": 333.98907103825132,
     "tabOrder": 18000
   },
   "visual": {
@@ -102,14 +102,14 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'preferInside'"
+                  "Value": "'inside'"
                 }
               }
             },
             "overflow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -443,7 +443,7 @@
             "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -1252,7 +1252,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'LeftCenter'"
+                  "Value": "'RightCenter'"
                 }
               }
             },
@@ -1439,6 +1439,78 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "1b9942b0441434b3f3b8",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "1df8d91397089a6cd731",
   "position": {
-    "x": 15.380507343124165,
-    "y": 411.8558077436582,
-    "z": 28000,
-    "height": 42.723631508678231,
-    "width": 322.99065420560743,
-    "tabOrder": 22000
+    "x": 7.3973723156023539,
+    "y": 1.7871322687141884,
+    "z": 48000,
+    "height": 41.76,
+    "width": 197.28,
+    "tabOrder": 46000
   },
   "visual": {
     "visualType": "textbox",
@@ -101,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'OTs Tipo de Servicio'"
+                  "Value": "'OTs'"
                 }
               }
             },
@@ -209,5 +209,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "28b76c2fc7dae52a7356"
 }

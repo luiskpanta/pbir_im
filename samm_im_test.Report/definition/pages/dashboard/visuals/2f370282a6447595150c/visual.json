@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2f370282a6447595150c",
   "position": {
-    "x": 482.09973753280838,
-    "y": 564.40944881889766,
-    "z": 55000,
-    "height": 134.38320209973753,
-    "width": 183.09711286089239,
-    "tabOrder": 52000
+    "x": 429.93245418640618,
+    "y": 213.75939278961616,
+    "z": 24000,
+    "height": 144.07687028140015,
+    "width": 180.97460535346605,
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "gauge",
