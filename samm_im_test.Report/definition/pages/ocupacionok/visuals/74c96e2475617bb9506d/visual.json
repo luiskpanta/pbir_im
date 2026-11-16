@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "74c96e2475617bb9506d",
   "position": {
-    "x": 803.52,
-    "y": 33.120000000000005,
+    "x": 798.45659163987136,
+    "y": 32.926045016077168,
     "z": 18000,
-    "height": 56.160000000000004,
-    "width": 236.16,
+    "height": 55.562700964630224,
+    "width": 241.80064308681671,
     "tabOrder": 17000
   },
   "visual": {
@@ -41,56 +41,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "con_indice_de_ocupacion",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "cargo"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'INGENIERO DE SERVICIO'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'APLICACIONISTA'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
@@ -126,7 +77,7 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "2D"
                 }
               }
             },
@@ -140,14 +91,14 @@
             "autoGrid": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "style": {
               "expr": {
                 "Literal": {
-                  "Value": "'Table'"
+                  "Value": "'Cards'"
                 }
               }
             },
@@ -171,6 +122,13 @@
                   "Value": "10L"
                 }
               }
+            },
+            "maxTiles": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
             }
           }
         }
@@ -181,7 +139,7 @@
             "overFlowDirection": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             }
@@ -431,10 +389,53 @@
             "show": {
               "expr": {
                 "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "overlayToggle": {
+              "expr": {
+                "Literal": {
                   "Value": "false"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default",
+            "hierarchyMatching": 1
+          }
+        },
+        {
+          "properties": {
+            "spacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            },
+            "showIconByState": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "size": {
+              "expr": {
+                "Literal": {
+                  "Value": "12L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
@@ -568,17 +569,6 @@
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
             "transparency": {
               "expr": {
                 "Literal": {
@@ -597,17 +587,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
                 }
               }
             },
@@ -983,5 +962,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8f7670111c155cec762a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_indice_de_ocupacion"
+              }
+            },
+            "Property": "cargo"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
