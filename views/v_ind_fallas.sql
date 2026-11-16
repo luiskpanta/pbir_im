@@ -1,4 +1,4 @@
-CREATE OR ALTER   view [dbo].[v_ind_fallas]
+create or alter view v_ind_fallas
 as
 
 select 
@@ -10,6 +10,7 @@ select
 	,equ_equipo_equipo as equipo
 	,equ_equipo_equipo_serial as serial
 	,OT.doc_documento_ot_ter_tercero_cliente_tercero as cliente
+	,OT.doc_documento_ot_ter_tercero_cliente_tercero + ' ' + equ_equipo_equipo_serial as buscar
 	,motivoservicio
 	,case when doc_documento_ot_id_documento>0 then doc_documento_ot_doc_documento_padre_fecha_fh else doc_documento_ot_fecha_fh end as Fechafalla	
 	,doc_documento_ot_fecha_fh as FechaParada	
@@ -45,8 +46,5 @@ from view_doc_documento_ot OT
 		from view_doc_documento_requisicion rq
 		where rq.doc_documento_requisicion_id_documento=OT.id
 	) RQ
-where OT.gen_tiposervicio_tiposervicio_codigo ='02 CORRECTIVO'
-	and OT.equ_equipo_id_estadoEquipo != 12 --PARTNER
-GO
-
-
+where OT.gen_tiposervicio_tiposervicio_codigo like '%CORRECTIVO'
+	
