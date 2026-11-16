@@ -276,7 +276,7 @@ table con_clasificacionOTs
 	column 0402Correctivo =
 			IF(
 			    OR(
-			    'con_clasificacionOTs'[tipoServicio] = "04 SOPORTE REMOTO", 'con_clasificacionOTs'[tipoServicio] = "02 CORRECTIVO"),
+			    'con_clasificacionOTs'[tipoServicio] = "04 SOPORTE REMOTO", 'con_clasificacionOTs'[tipoServicio] = "05 CORRECTIVO"),
 			    1,
 			    0)
 		formatString: 0
@@ -357,9 +357,9 @@ table con_clasificacionOTs
 
 	column ResponseTime =
 			if(
-			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY)<0,
+			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],HOUR)<0,
 			    blank(),
-			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],DAY)
+			    DATEDIFF(con_clasificacionOTs[fecha_ort],con_clasificacionOTs[fecha_atencion],HOUR)
 			)
 		formatString: 0
 		lineageTag: a939c59e-947d-4849-9e82-2e56ef404347
