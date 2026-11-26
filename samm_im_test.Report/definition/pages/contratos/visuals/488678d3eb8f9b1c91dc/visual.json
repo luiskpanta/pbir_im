@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "488678d3eb8f9b1c91dc",
   "position": {
-    "x": 748.54950115118947,
-    "y": 380.16884113584035,
+    "x": 188.76971608832807,
+    "y": 150.41009463722398,
     "z": 17000,
-    "height": 283.89869531849575,
-    "width": 520.64466615502681,
-    "tabOrder": 15000
+    "height": 546.11987381703466,
+    "width": 819.68454258675081,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "barChart",
@@ -311,5 +311,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

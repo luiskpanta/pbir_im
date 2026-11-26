@@ -1,17 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "e3b9ca7fe03d5a2b9b26",
   "position": {
-    "x": 0,
-    "y": 47.439353099730454,
+    "x": 9.8778763075004363,
+    "y": 13.800316275993342,
     "z": 0,
-    "height": 664.15094339622635,
-    "width": 1280,
-    "tabOrder": 13000
+    "height": 701.5108299768948,
+    "width": 1009.8863321711107,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "Evolucion CR",
     "groupMode": "ScaleMode"
-  },
-  "isHidden": true
+  }
 }

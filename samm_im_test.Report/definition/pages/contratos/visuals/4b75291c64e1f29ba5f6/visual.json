@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "4b75291c64e1f29ba5f6",
   "position": {
-    "x": 912.96,
-    "y": 430.56,
+    "x": 226.77522105999961,
+    "y": 499.733052199117,
     "z": 1000,
-    "height": 233.28,
-    "width": 367.2,
-    "tabOrder": 2000
+    "height": 201.77777777777777,
+    "width": 783.11111111111109,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -51,8 +51,8 @@
                 }
               },
               "queryRef": "Sum(con_equiposContrato.paso_percall_evento_a_contrato)",
-              "nativeQueryRef": "de Percall o Evento a Contrato",
-              "displayName": "de Percall o Evento a Contrato"
+              "nativeQueryRef": "de Per/Ev a Contrato",
+              "displayName": "de Per/Ev a Contrato"
             },
             {
               "field": {
@@ -303,7 +303,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
+                      "ColorId": 6,
                       "Percent": 0.2
                     }
                   }
@@ -322,7 +322,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
+                      "ColorId": 6,
                       "Percent": 0.2
                     }
                   }
@@ -361,6 +361,20 @@
                   }
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "secBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -397,7 +411,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'LeftCenter'"
                 }
               }
             }
@@ -432,7 +446,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'WIN BACK'"
+                  "Value": "'Equipos convertidos de Evento o Percall a contrato / Eq. en Evento o Percall'"
                 }
               }
             },
@@ -446,14 +460,14 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             },
@@ -462,10 +476,24 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": 0.2
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading4'"
                 }
               }
             }
@@ -511,7 +539,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

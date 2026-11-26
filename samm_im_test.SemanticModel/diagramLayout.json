@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 748.75824025344377,
-            "y": 539.3934636376398
+            "y": 564.3934636376398
           },
           "nodeIndex": "con_indice_de_ocupacion",
           "nodeLineageTag": "5fe143c7-10d8-4d6b-8e6b-2d06e349cf9e",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 0,
-            "y": 648.991754040864
+            "y": 673.991754040864
           },
           "nodeIndex": "con_ocupacion_meta",
           "nodeLineageTag": "72cefbb5-78df-430e-a750-9eec3d79e996",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1558.8811391409017,
-            "y": 0
+            "y": 25
           },
           "nodeIndex": "con_primer_visita",
           "nodeLineageTag": "1336de14-832b-4542-a951-63b125617e34",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 1645.5574302838172,
-            "y": 857.862311634779
+            "y": 882.862311634779
           },
           "nodeIndex": "Dim_Fecha",
           "nodeLineageTag": "6be4d61f-5393-44d5-b3cf-777061406a56",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 0,
-            "y": 260.83180419064428
+            "y": 285.83180419064428
           },
           "nodeIndex": "con_cumplimientoPreventivos",
           "nodeLineageTag": "5267ab6b-53a0-452d-9392-dda580807db7",
@@ -76,7 +76,7 @@
         {
           "location": {
             "x": 1036.5229005422268,
-            "y": 555.09793272932427
+            "y": 580.09793272932427
           },
           "nodeIndex": "Dim_TipoServicio",
           "nodeLineageTag": "66a40f38-4c1b-46b6-a8f0-c2e658e63192",
@@ -89,7 +89,7 @@
         {
           "location": {
             "x": 1433.6222071360164,
-            "y": 610.59260537931652
+            "y": 635.59260537931652
           },
           "nodeIndex": "Dim_Marca",
           "nodeLineageTag": "a97a8c62-caa1-4a76-a1ca-f26eccf448e4",
@@ -102,7 +102,7 @@
         {
           "location": {
             "x": 1834.5351382012691,
-            "y": 0
+            "y": 25
           },
           "nodeIndex": "Dim_Cliente",
           "nodeLineageTag": "075c038b-09c3-4250-9b74-80b4f014f3dd",
@@ -115,7 +115,7 @@
         {
           "location": {
             "x": 1131.5141183677345,
-            "y": 70.615432381720609
+            "y": 95.615432381720609
           },
           "nodeIndex": "con_clasificacionOTs",
           "nodeLineageTag": "07fe3770-e0eb-4c14-8a2c-5127e3b6ca3a",
@@ -128,7 +128,7 @@
         {
           "location": {
             "x": 2063.6378258064474,
-            "y": 380.82618995581026
+            "y": 405.82618995581026
           },
           "nodeIndex": "con_equipos",
           "nodeLineageTag": "def03de1-1667-48fb-84b5-2a8e198981a9",
@@ -141,7 +141,7 @@
         {
           "location": {
             "x": 2060.9391703366614,
-            "y": 875.69416695086534
+            "y": 900.69416695086534
           },
           "nodeIndex": "con_estadoEquipos",
           "nodeLineageTag": "e5264835-42d5-4b6d-860b-88ea37e7fb00",
@@ -154,7 +154,7 @@
         {
           "location": {
             "x": 2710.8530718994575,
-            "y": 400.47542454634788
+            "y": 425.47542454634788
           },
           "nodeIndex": "con_fallasEquipos",
           "nodeLineageTag": "b9eb2b01-56b7-4a84-8571-c1f93b0fcace",
@@ -167,7 +167,7 @@
         {
           "location": {
             "x": 2422.8680696075203,
-            "y": 33.958212960755077
+            "y": 58.958212960755077
           },
           "nodeIndex": "con_equiposContrato",
           "nodeLineageTag": "b471f57d-081b-4494-9844-8aa10ae872b2",
@@ -180,7 +180,7 @@
         {
           "location": {
             "x": 2994.8530718994575,
-            "y": 484.47542454634788
+            "y": 509.47542454634788
           },
           "nodeIndex": "refreshDate",
           "nodeLineageTag": "e00c7e1a-77f9-4f87-bd74-ab540d5da2a0",
@@ -193,7 +193,7 @@
         {
           "location": {
             "x": 3278.8530718994575,
-            "y": 436.47542454634788
+            "y": 461.47542454634788
           },
           "nodeIndex": "con_efds",
           "nodeLineageTag": "1e1c1715-f217-4720-8a44-0f86bab1f3c8",
@@ -206,7 +206,7 @@
         {
           "location": {
             "x": 3896.8530718994575,
-            "y": 446.47542454634788
+            "y": 471.47542454634788
           },
           "nodeIndex": "_PI_Opciones",
           "nodeLineageTag": "d1a61f1d-a67a-4d92-bf88-31ef06d0b134",
@@ -219,7 +219,7 @@
         {
           "location": {
             "x": 4130.8530718994571,
-            "y": 460.47542454634788
+            "y": 485.47542454634788
           },
           "nodeIndex": "_PreselectedSlicer",
           "nodeLineageTag": "1f9b0820-14da-4a54-bdda-97117cc55609",
@@ -232,7 +232,7 @@
         {
           "location": {
             "x": 3612.8530718994575,
-            "y": 410.47542454634788
+            "y": 435.47542454634788
           },
           "nodeIndex": "Dim_PostInstalacion",
           "nodeLineageTag": "74470dd1-75be-4d95-b1ac-4a6bb75e1116",
@@ -245,12 +245,38 @@
         {
           "location": {
             "x": 4414.8530718994571,
-            "y": 412.47542454634788
+            "y": 437.47542454634788
           },
           "nodeIndex": "Metas",
           "nodeLineageTag": "04944223-AD3E-49AC-ADDB-E92BF2B47A56",
           "size": {
             "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5032.8530718994571,
+            "y": 411.47542454634788
+          },
+          "nodeIndex": "_Corte",
+          "nodeLineageTag": "cc59265a-e4ca-4b10-aad0-827cde9f37f5",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4748.8530718994571,
+            "y": 423.47542454634788
+          },
+          "nodeIndex": "_PeriodoFechas",
+          "nodeLineageTag": "38166b56-d097-4287-ac06-977eb7e09947",
+          "size": {
+            "height": 176,
             "width": 234
           },
           "zIndex": 0

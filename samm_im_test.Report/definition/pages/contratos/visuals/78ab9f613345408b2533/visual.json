@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "847d9553e5c069c7e551",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "78ab9f613345408b2533",
   "position": {
-    "x": 0,
-    "y": 249.56,
+    "x": 1039.7476340694006,
+    "y": 204.9211356466877,
     "z": 7000,
-    "height": 182,
-    "width": 204.48000000000002,
-    "tabOrder": 9000
+    "height": 183.72239747634069,
+    "width": 236.21451104100947,
+    "tabOrder": 0
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "pieChart",
     "query": {
       "queryState": {
         "Category": {
@@ -50,9 +50,8 @@
                   "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(con_equiposContrato.equipo_serial)",
-              "nativeQueryRef": "Cant",
-              "displayName": "Cant"
+              "queryRef": "Count(con_equiposContrato.equipo_serial)",
+              "nativeQueryRef": "Cant"
             }
           ]
         }
@@ -917,7 +916,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Equipos en contrato (sin Garantia)'"
+                  "Value": "'Equipos por Estado'"
                 }
               }
             },
@@ -1000,7 +999,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e3b9ca7fe03d5a2b9b26",
   "filterConfig": {
     "filters": [
       {

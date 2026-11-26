@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "f5be175a076a9b981b15",
   "position": {
-    "x": 912.57676902536707,
-    "y": 160.64085447263017,
+    "x": 224.88888888888889,
+    "y": 81.066385532450369,
     "z": 2000,
-    "height": 206.78237650200265,
-    "width": 367.42323097463282,
-    "tabOrder": 7000
+    "height": 202.66666666666666,
+    "width": 784,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -521,7 +521,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomCenter'"
+                  "Value": "'LeftCenter'"
                 }
               }
             }
@@ -556,7 +556,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'WARRANTY CONVERSION '"
+                  "Value": "'Equipos convertidos de garantia a contrato / Eq. en Garantía'"
                 }
               }
             },
@@ -570,7 +570,7 @@
             "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -579,8 +579,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0.2
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
                 }
@@ -589,7 +589,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading4'"
                 }
               }
             }
@@ -635,7 +642,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

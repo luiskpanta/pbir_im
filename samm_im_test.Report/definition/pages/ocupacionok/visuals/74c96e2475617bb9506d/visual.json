@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "74c96e2475617bb9506d",
   "position": {
     "x": 798.45659163987136,
@@ -962,23 +962,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8f7670111c155cec762a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "con_indice_de_ocupacion"
-              }
-            },
-            "Property": "cargo"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

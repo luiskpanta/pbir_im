@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "3cf32fdb03336097ba44",
   "position": {
     "x": 392.697323266987,
@@ -7,7 +7,7 @@
     "z": 18000,
     "height": 231.05010295126976,
     "width": 271.46190803019908,
-    "tabOrder": 4000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "treemap",

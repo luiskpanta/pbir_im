@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "99d930627c3dddc4a380",
   "position": {
-    "x": 8.9552238805970141,
-    "y": 0,
+    "x": 24.888888888888889,
+    "y": 10.666666666666666,
     "z": 9000,
-    "height": 94.02985074626865,
-    "width": 461.19402985074623,
-    "tabOrder": 3000
+    "height": 59.555555555555557,
+    "width": 362.66666666666669,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "textbox",
@@ -140,7 +140,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

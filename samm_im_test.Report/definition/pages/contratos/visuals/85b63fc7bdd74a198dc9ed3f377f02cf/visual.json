@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
   "name": "85b63fc7bdd74a198dc9ed3f377f02cf",
   "position": {
-    "x": 462,
-    "y": 15,
+    "x": 1039.7476340694006,
+    "y": 4.0378548895899051,
     "z": 21000,
-    "height": 70,
-    "width": 300,
-    "tabOrder": 21000
+    "height": 31.293375394321767,
+    "width": 236.21451104100947,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -152,7 +152,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2026-11-06T00:00:00'"
+                                "Value": "datetime'2026-10-31T00:00:00'"
                               }
                             }
                           }
@@ -172,7 +172,7 @@
                             },
                             "Right": {
                               "Literal": {
-                                "Value": "datetime'2026-11-07T00:00:00'"
+                                "Value": "datetime'2026-11-01T00:00:00'"
                               }
                             }
                           }
@@ -194,7 +194,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

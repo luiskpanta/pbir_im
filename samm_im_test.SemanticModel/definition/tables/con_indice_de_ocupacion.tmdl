@@ -277,7 +277,7 @@ table con_indice_de_ocupacion
 	column EsCorrectivo =
 			IF(
 			    OR(
-			    'con_indice_de_ocupacion'[TipoServicio] = "04 SOPORTE REMOTO", 'con_indice_de_ocupacion'[TipoServicio] = "02 CORRECTIVO"),
+			    'con_indice_de_ocupacion'[TipoServicio] = "04 SOPORTE REMOTO", 'con_indice_de_ocupacion'[TipoServicio] = "05 CORRECTIVO"),
 			    1,
 			    0
 			)
