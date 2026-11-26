@@ -3,14 +3,15 @@
   "name": "e3b9ca7fe03d5a2b9b26",
   "position": {
     "x": 9.8778763075004363,
-    "y": 13.800316275993342,
+    "y": 93.977812919554822,
     "z": 0,
-    "height": 701.5108299768948,
+    "height": 621.33333333333326,
     "width": 1009.8863321711107,
     "tabOrder": 6000
   },
   "visualGroup": {
-    "displayName": "Evolucion CR",
+    "displayName": "Evolución Indicadores",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

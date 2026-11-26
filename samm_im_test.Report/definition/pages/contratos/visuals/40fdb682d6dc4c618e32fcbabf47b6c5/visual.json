@@ -5,9 +5,8 @@
     "x": 0,
     "y": 0,
     "z": 0,
-    "height": 70.662460567823345,
-    "width": 233.18611987381703,
-    "tabOrder": 0
+    "height": 117.03371070381758,
+    "width": 155.11181018198542
   },
   "visual": {
     "visualType": "cardVisual",
@@ -173,5 +172,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "33a5baff29ac42fcbd750ff0e44f5fba"
+  "parentGroupName": "33a5baff29ac42fcbd750ff0e44f5fba",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b407e115208ced68cf49",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "con_equipos"
+              }
+            },
+            "Property": "Cobertura IB"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }
