@@ -3,28 +3,521 @@
   "displayName": "📈 Indicadores",
   "name": "d73f9ed660061be0c473",
   "options": {
-    "applyOnlyToTargetVisuals": true,
-    "targetVisualNames": [
-      "e3b9ca7fe03d5a2b9b26",
-      "33a5baff29ac42fcbd750ff0e44f5fba",
-      "488678d3eb8f9b1c91dc",
-      "3ced33317514db1d6aa4",
-      "a64ab1d073dd291e9c3b",
-      "9470518a54446d3ebec0"
-    ],
+    "targetVisualNames": [],
     "suppressData": true
   },
   "explorationState": {
     "version": "1.3",
     "activeSection": "7d9b773a701ce03934ee",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "399d659c4c35e1163add",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "c",
+                "Entity": "con_clasificacionOTs",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "c"
+                                }
+                              },
+                              "Property": "estadoOT"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Cancelada'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "con_clasificacionOTs"
+                }
+              },
+              "Property": "estadoOT"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
     "sections": {
       "7d9b773a701ce03934ee": {
         "visualContainers": {
+          "2c177906f2b6426e9b6b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a4d09957b901dfa00d14",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_equipos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "grupo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "grupo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "08f2f3f6936c9c5f101e",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_equiposContrato",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "estado_fin_mes"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "estado_fin_mes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {}
+            }
+          },
+          "40fdb682d6dc4c618e32fcbabf47b6c5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "85501cf1e38ad8271920",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "Cobertura IB"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "4948578dcd00a2d7a8d9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "058fe3a9110c48129f4654a409401c8c",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsMesCorte"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsMesCorte"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "778591edadec72aa4513",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WB"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f3e4fafed67a3f0ded0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "MetWB"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ee6cc7f780d5877af2ff",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "paso_percall_evento_a_contrato"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WB"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "4b75291c64e1f29ba5f6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d36551602c5d42c6a6311605d8a9d897",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsVentana4M"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsVentana4M"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "42179cdd11715a31b5b9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1846f3ac7d00e7582a4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "paso_percall_evento_a_contrato"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "04e588221516d4003345",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enEvento_Percall"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fd9de66d58f5384c4166",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WB"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "559a46c3523f22ef6cdf": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
           "6c9b58e1637c20cb0d0e": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "026555f05cd6b28af8ce",
+                  "name": "a364572bcb64f2f0548d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -39,7 +532,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5368d3b44b409181fb7e",
+                  "name": "4d62673120fe7ed674a2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -148,17 +641,355 @@
               ]
             }
           },
+          "78ab9f613345408b2533": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2f8b0dda664719ddf2e8",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "con_equipos",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "In": {
+                                "Expressions": [
+                                  {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Source": "c"
+                                        }
+                                      },
+                                      "Property": "grupo"
+                                    }
+                                  }
+                                ],
+                                "Values": [
+                                  [
+                                    {
+                                      "Literal": {
+                                        "Value": "null"
+                                      }
+                                    }
+                                  ]
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "grupo"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "fff96f1cbc01434e838ba171f5252737",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsMesCorte"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsMesCorte"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "d83d23fd4a78b78dd6b1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "estado_fin_mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c804da00e913bfb5f3c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "equipo_serial"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pieChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "equipo_serial"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "estado_fin_mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "7ea83289ac055a3de728": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
+          "85b63fc7bdd74a198dc9ed3f377f02cf": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "29df84d2bdc0dbd01fdf",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Corte"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "_",
+                                "Entity": "_Corte",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "And": {
+                                    "Left": {
+                                      "Comparison": {
+                                        "ComparisonKind": 2,
+                                        "Left": {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "_"
+                                              }
+                                            },
+                                            "Property": "Fecha"
+                                          }
+                                        },
+                                        "Right": {
+                                          "Literal": {
+                                            "Value": "datetime'2026-10-31T00:00:00'"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "Right": {
+                                      "Comparison": {
+                                        "ComparisonKind": 3,
+                                        "Left": {
+                                          "Column": {
+                                            "Expression": {
+                                              "SourceRef": {
+                                                "Source": "_"
+                                              }
+                                            },
+                                            "Property": "Fecha"
+                                          }
+                                        },
+                                        "Right": {
+                                          "Literal": {
+                                            "Value": "datetime'2026-11-01T00:00:00'"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "singleDate": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "dateRange": [
+                    {
+                      "properties": {
+                        "includeToday": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Corte"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "8e02905588be29d37a77": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "1bd2fd0c62e9b73d7e64",
+                  "name": "828872c9ddf83b61c761",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -235,11 +1066,481 @@
               "objects": {}
             }
           },
+          "9c5878e2a082c5437566": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "95bf8089e8947d500bd4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "GrupoServ"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "4d9bb56dc0064712b6c5ab73d3305c72",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsMesCorte"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsMesCorte"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e7e98332bc78cba6a72b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "familia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "78d15410e98252670e6b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "equipo_serial"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "equipo_serial"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "familia"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a55e424dfe4aee40eb32": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "5aa4f4c55bcb4f768eccb9ae70bbbd3a",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsMesCorte"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsMesCorte"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "184742cfeb3613ce81fa",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "CR"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1b8e1bec20ca1f423bf1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "metaCR2"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cacf9c2083c4124b1ad2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "equipo_serial"
+                        }
+                      },
+                      "Function": 2
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "CR"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "bf1618144e8091d526ba": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "535e0bdc0cde4b22a2ee453a10d62a56",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsVentana4M"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsVentana4M"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "564fc441e8bef19b9809",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "322ab555761edb4737f3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enContrato"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb93bc8c489861968e0e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enEvento_Percall"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "955669f5cfd3537d634a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enGarantia"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "63cee26b452a2290d0d8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enSinClasificar"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "062b0069e82739a23a22",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "CR"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "d5fb4f9667b9482e4fff": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "6641d870931a5f02af73",
+                  "name": "6074c116ff556cb09337",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -266,13 +1567,6 @@
                           "expr": {
                             "Literal": {
                               "Value": "'Dropdown'"
-                            }
-                          }
-                        },
-                        "isInvertedSelectionMode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
                             }
                           }
                         }
@@ -310,51 +1604,404 @@
               }
             }
           },
-          "559a46c3523f22ef6cdf": {
+          "de92966067a1b49d0127": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "409f5855caba4dcc829b4394cdc40e57",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsMesCorte"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsMesCorte"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "a5317f833e004409cbe5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WC"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "219751045a245d88ae5a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "MetWC"
+                        }
+                      },
+                      "Function": 1
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7461e6e91f30fa7aef92",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "paso_garantia_a_contrato"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "bookmarkNavigator",
-              "objects": {}
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WC"
+                    }
+                  }
+                }
+              ]
             }
           },
-          "488678d3eb8f9b1c91dc": {
+          "f5be175a076a9b981b15": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "46c1a7cb42ec4e7ea903841c19e2728f",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "_PeriodoFechas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "EsVentana4M"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "1L"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_PeriodoFechas"
+                        }
+                      },
+                      "Property": "EsVentana4M"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "0eb73b97f4b71b26dbd7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ee09f170dff574932181",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "enGarantia"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8eccfa2ec190138bf6ae",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equiposContrato"
+                            }
+                          },
+                          "Property": "paso_garantia_a_contrato"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cc924a30a6844d8b3cb4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equiposContrato"
+                        }
+                      },
+                      "Property": "WC"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "barChart",
-              "display": {
-                "mode": "hidden"
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Fecha"
+                        }
+                      },
+                      "Property": "Año-Mes"
+                    }
+                  }
+                ]
               }
             }
           },
-          "3ced33317514db1d6aa4": {
+          "f60466f37da5731a5c3e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0371c6a90ae2254bf962",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "familia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d918f1f352c6a638c9c8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "grupo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "10a622ad7b9831c06733",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equipos"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "827a1f25e00d51414e26",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "%CR"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "lineChart",
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "a64ab1d073dd291e9c3b": {
-            "singleVisual": {
-              "visualType": "clusteredColumnChart",
-              "display": {
-                "mode": "hidden"
-              }
-            }
-          },
-          "9470518a54446d3ebec0": {
-            "singleVisual": {
-              "visualType": "lineChart",
-              "display": {
-                "mode": "hidden"
+              "visualType": "lineStackedColumnComboChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "con_equipos"
+                            }
+                          },
+                          "Property": "id"
+                        }
+                      },
+                      "Function": 5
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "con_equipos"
+                        }
+                      },
+                      "Property": "familia"
+                    }
+                  }
+                ]
               }
             }
           }
         },
         "visualContainerGroups": {
-          "e3b9ca7fe03d5a2b9b26": {
-            "isHidden": false
-          },
           "33a5baff29ac42fcbd750ff0e44f5fba": {
             "isHidden": true
+          },
+          "e3b9ca7fe03d5a2b9b26": {
+            "isHidden": false
           }
         }
       }
@@ -368,6 +2015,13 @@
                 "expr": {
                   "Literal": {
                     "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
                   }
                 }
               }
